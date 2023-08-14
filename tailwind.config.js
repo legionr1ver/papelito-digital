@@ -13,9 +13,10 @@ export default {
     },
     extend: {
       colors: {
-        primary: '#774FCC',
-        secondary: '#C89BDA',
-        paragraph: '#5B5B5B',
+        primary: '#5C24D6',
+        secondary: '#CDABDB',
+        paragraph: '#292929',
+        background: '#D2B4DE'
       },
     },
   },
