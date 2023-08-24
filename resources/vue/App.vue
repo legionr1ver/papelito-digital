@@ -9,12 +9,13 @@
     <header class="shadow-md mb-16 sticky top-0 bg-white">
         <div class="max-w-[1200px] mx-auto flex">
             <div class="flex-initial flex items-center justify-center">
-                <img class="max-w-[5rem] me-10" src="/assets/images/logo.png">
+                <img class="max-w-[5rem] me-10" src="/assets/images/logo.png" alt="Logo Papelito Digital">
             </div>
             <div class="flex-1">
                 <form id="search" class="p-2 flex text-sm text-gray-400">
                     <select class="p-3 border border-[rgb(225, 227, 230)]">
-                        <option value="estaticas">Estaticas</option>
+                        <option value="todas">Todas</option>
+                        <option value="fijas">Fijas</option>
                         <option value="animadas">Animadas</option>
                     </select>
                     <button type="submit" class="p-3 border-t border-b border-[rgb(225, 227, 230)]">
@@ -50,22 +51,9 @@
                 </div>
             </div>
             <div>
-                <img src="/assets/invitacion-rapunzel.png">
+                <img src="/assets/invitacion-rapunzel.png" alt="Invitacion animada rapunzel">
             </div>
         </section>
-
-        <!--section id="invitaciones-interactivas" class="mb-9 grid grid-cols-[1fr_2fr] items-center justify-center">
-            <div>
-                <img class="max-w-[170px] ms-auto" src="/assets/static-invitations/cumple-oliver.jpg">
-            </div>
-            <div class="grid items-center justify-center gap-1">
-                <h2 class="text-5xl text-center font-serif font-bold tracking-wider text-black">Interactivas</h2>
-                <p class="text-center text-black max-w-[50ch]">Con botones a la ubicación de tu evento en el mapa y confirmación de asistencia.</p>
-                <div class="text-center">
-                    <button class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver invitaciones</button>
-                </div>
-            </div>
-        </section-->
 
         <section id="categorias" class="max-w-[1200px] mx-auto mb-16">
             <header class="mb-7">
@@ -102,14 +90,35 @@
                     </div>
                 </div>
                 <div class="flex-initial">
-                    <img src="/assets/images/preguntas.jpg">
+                    <img src="/assets/images/preguntas.jpg" alt="Preguntas">
                 </div>
             </div>
         </section>
-    </main>
-    <footer>
 
+        <div id="whatsapp-sticky" class="fixed bottom-5 right-5">
+            <a href="#">
+                <img class="w-16 h-16" src="/assets/images/icons/whatsapp-original.png" alt="Logo Whatsapp">
+            </a>
+        </div>
+    </main>
+    <footer class="max-w-[1200px] mx-auto mb-16">
+        <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-8 text-primary">Seguinos en nuestras redes sociales!</h3>
+        <div class="grid grid-cols-3 justify-evenly">
+            <a href="#" class="flex items-center justify-center border-e border-e-primary pt-3">
+                <img class="w-10" src="/assets/images/icons/instagram.png" alt="Logo Instagram">
+                <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
+            </a>
+            <a href="#" class="flex items-center justify-center border-e border-e-primary">
+                <img class="w-10" src="/assets/images/icons/facebook.png" alt="Logo Facebook">
+                <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
+            </a>
+            <a href="#" class="flex items-center justify-center">
+                <img class="w-10" src="/assets/images/icons/whatsapp.png" alt="Logo Whatsapp">
+                <p class="ms-3 font-bold tracking-wide">+54 9 11 2166 4157</p>
+            </a>
+        </div>
     </footer>
+    <div class="bg-primary w-full h-2"></div>
 </template>
 
 <style scoped></style>
