@@ -2,94 +2,114 @@
 </script>
 
 <template>
-    <header
-        class="bg-[url('/images/fondo.jpg')] bg-[center_80%] bg-cover bg-no-repeat flex items-center justify-center py-7">
-        <img class="max-w-[10rem] lg:max-w-[14rem] inline-block" src="/images/logo.png" alt="logo-papelito-digital">
-        <h1 class="inline-block text-4xl lg:text-6xl text-[#FAF2FB] font-['Chela_One'] ms-2">
-            Invitaciones<br>
-            Digitales
-        </h1>
+    <div id="top-banner" class="bg-[#101b21]">
+        <p class="max-w-[1200px] mx-auto text-white text-center font-serif text-xl tracking-wide py-1">Pedí tu invitación y
+            te la entregamos en menos de 72Hs!</p>
+    </div>
+    <header class="shadow-md mb-16">
+        <div class="max-w-[1200px] mx-auto flex">
+            <div class="flex-initial flex items-center justify-center">
+                <img class="max-w-[5rem] me-10" src="/assets/images/logo.png">
+            </div>
+            <div class="flex-1">
+                <form id="search" class="p-2 flex text-sm text-gray-400">
+                    <select class="p-3 border border-[rgb(225, 227, 230)]">
+                        <option value="estaticas">Estaticas</option>
+                        <option value="animadas">Animadas</option>
+                    </select>
+                    <button type="submit" class="p-3 border-t border-b border-[rgb(225, 227, 230)]">
+                        <svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z">
+                            </path>
+                        </svg>
+                    </button>
+                    <input class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" type="search"
+                        placeholder="Busca invitaciones por tema">
+                </form>
+                <nav>
+                    <ul class="flex justify-evenly py-4 text-primary font-serif text-xl">
+                        <li><a href="#">Baby Shower</a></li>
+                        <li><a href="#">Casamientos</a></li>
+                        <li><a href="#">Comuniones</a></li>
+                        <li><a href="#">Cumpleaños</a></li>
+                        <li><a href="#">Animadas</a></li>
+                        <li><a href="#">Estáticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     <main>
-        <section class="px-4 py-12 text-center lg:container lg:mx-auto">
-            <h2 class="text-center font-serif text-primary text-4xl mb-5">¡Por que invitaciones digitales?</h2>
-            <ul class="grid lg:grid-cols-3 lg:mt-10 items-center justify-center gap-12 px-10 text-xl">
-                <li class="grid grid-rows-[100px_40px_auto] items-center justify-center">
-                    <img class="mx-auto" src="/images/icons/item_creative.svg" alt="Icono creatividad">
-                    <h3 class="font-serif text-secondary text-2xl">Creatividad</h3>
-                    <p class="text-paragraph max-w-[40ch]">Puedes incluir música y videos que no son posibles con las
-                        invitaciones impresas.</p>
-                </li>
-                <li class="grid grid-rows-[100px_30px_auto] items-center justify-center">
-                    <img class="mx-auto" src="/images/icons/item_email.svg" alt="Icono facil de compartir">
-                    <h3 class="font-serif text-secondary text-2xl">Facil de compartir!</h3>
-                    <p class="text-paragraph max-w-[40ch]">Se pueden enviar instantáneamente por correo electrónico,
-                        mensajes de texto o redes sociales.</p>
-                </li>
-                <li class="grid grid-rows-[100px_30px_auto] items-center justify-center">
-                    <img class="mx-auto" src="/images/icons/item_money.svg" alt="Icono accesible">
-                    <h3 class="font-serif text-secondary text-2xl">Accesibles</h3>
-                    <p class="text-paragraph max-w-[40ch]">Como no estan impresas te ahorras el costo de impresión!</p>
-                </li>
-            </ul>
-        </section>
-        <section class="px-4 py-12 grid items-center justify-center lg:container lg:mx-auto lg:grid-cols-[2fr_1fr]">
+        <section id="invitaciones-animadas" class="max-w-[1200px] mx-auto min-h-[600px] mb-16 bg-[url('/assets/bg-nubes.jpg')] bg-cover bg-no-repeat bg-right-bottom grid grid-cols-[2fr_1fr] items-center justify-center rounded-lg">
+            <div class="grid items-center justify-center gap-1">
+                <h2 class="text-7xl text-center font-serif font-bold tracking-wider text-black">Animadas</h2>
+                <p class="text-center text-black max-w-[50ch]">Con música de fondo y hasta 30 segundos de duración!</p>
+                <div class="text-center">
+                    <button class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver invitaciones</button>
+                </div>
+            </div>
             <div>
-                <h2 class="text-center font-serif text-primary text-4xl mb-2">Galeria</h2>
-                <p class="px-10 text-paragraph max-w-[60ch] mx-auto text-xl text-center">Ponemos a tu disposición una
-                    galería completa de invitaciones
-                    para que veas
-                    nuestro trabajo! Ingresa y conoce
-                    como trabajamos.</p>
-                <div class="text-center">
-                    <a href="#"
-                        class="bg-primary text-white font-bold text-center py-3 px-10 rounded shadow-lg inline-block mx-auto my-5">Ir
-                        a Galeria</a>
-                </div>
-            </div>
-            <div class="grid justify-center lg:block">
-                <img src="/images/mario-iphone.png" alt="Invitación Mario Iphone">
+                <img src="/assets/invitacion-rapunzel.png">
             </div>
         </section>
-        <section class="bg-background text-white">
-            <div class="px-4 py-12 lg:container lg:mx-auto lg:grid lg:grid-cols-[2fr_1fr]">
+
+        <!--section id="invitaciones-interactivas" class="mb-9 grid grid-cols-[1fr_2fr] items-center justify-center">
+            <div>
+                <img class="max-w-[170px] ms-auto" src="/assets/static-invitations/cumple-oliver.jpg">
+            </div>
+            <div class="grid items-center justify-center gap-1">
+                <h2 class="text-5xl text-center font-serif font-bold tracking-wider text-black">Interactivas</h2>
+                <p class="text-center text-black max-w-[50ch]">Con botones a la ubicación de tu evento en el mapa y confirmación de asistencia.</p>
                 <div class="text-center">
-                    <h2 class="text-center font-serif text-4xl mb-2">Contacto</h2>
-                    <p class="px-10 pb-7 text-center text-xl max-w-[60ch] mx-auto">Podes comunicarte con nosotros a traves de nuestras redes sociales o complemando
-                        el
-                        formulario.</p>
-                    <form action="mailto:contacto@papelitodigital.com" class="px-10 pb-10 grid gap-2 text-paragraph max-w-2xl mx-auto">
-                        <input class="px-4 py-2 rounded" type="tel" placeholder="Teléfono">
-                        <input class="px-4 py-2 rounded" type="email" placeholder="Email">
-                        <textarea rows="5" class="px-4 py-2 rounded"
-                            placeholder="Hola Papelito Digital! Te consulto lo siguiente…"></textarea>
-                        <button class="bg-primary text-white font-bold text-center py-3 px-10 rounded shadow-lg">Enviar</button>
-                    </form>
+                    <button class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver invitaciones</button>
                 </div>
-                <ul class="space-y-5 self-center px-10 lg:px-0">
-                    <li>
-                        <a href="https://www.instagram.com/papelitodigital.ar/" class="flex items-center">
-                            <img class="w-11" src="/images/icons/social_instagram.svg">
-                            <span class="ms-3">/papelitodigital.ar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0"
-                            class="flex items-center">
-                            <img class="w-11" src="/images/icons/social_whatsapp.svg">
-                            <span class="ms-3">+54 9 11 2166-4157</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.tiktok.com/@papelitodigital" class="flex items-center">
-                            <img class="w-11" src="/images/icons/social_tiktok.svg">
-                            <span class="ms-3">@papelitodigital</span>
-                        </a>
-                    </li>
-                </ul>
+            </div>
+        </section-->
+
+        <section id="categorias" class="max-w-[1200px] mx-auto mb-16">
+            <header class="mb-7">
+                <h3 class="text-center text-4xl font-serif font-bold tracking-wider">Cualquier razón para celebrar</h3>
+                <p class="text-center text-sm">Hay muchos modelos para elegir</p>
+            </header>
+            <div class="grid grid-cols-3 auto-rows-[120px] gap-3 text-white font-bold">
+                <a class="bg-[url('/assets/images/links/baby-shower.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Baby Shower</h4></a>
+                <a class="bg-[url('/assets/images/links/comunion.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Comunión</h4></a>
+                <a class="bg-[url('/assets/images/links/bautismo.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Bautismo</h4></a>
+                <a class="bg-[url('/assets/images/links/boda.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Boda</h4></a>
+                <a class="bg-[url('/assets/images/links/cumpleanos-adulto.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Cumpleaños<br>adultos</h4></a>
+                <a class="bg-[url('/assets/images/links/cumpleanos-infantil.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Cumpleaños<br>infantiles</h4></a>
+            </div>
+        </section>
+
+        <section id="informacion" class="bg-gray-100 py-10">
+            <div class="max-w-[1200px] mx-auto mb-16 flex">
+                <div class="flex-1 p-10">
+                    <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-5">Plazos de entrega</h3>
+                    <div class="mb-7">
+                        <h4 class="text-2xl font-serif">Invitaciones interactivas y fijas</h4>
+                        <p>
+                            Si elegis un diseño del catálogo se entrega el mismo día del pago.<br>
+                            En caso de querer un nuevo diseño el plazo de entrega es de 24hs como mínimo y 48hs como máximo.
+                        </p>
+                    </div>
+                    <div class="mb-7">
+                        <h4 class="text-2xl font-serif">Invitaciones animadas</h4>
+                        <p>
+                            Para diseños del catálogo se entrega en el mismo día o 48hs maximo segun disponibilidad.<br>
+                            En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según disponibilidad.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-initial">
+                    <img src="/assets/images/preguntas.jpg">
+                </div>
             </div>
         </section>
     </main>
+    <footer>
+
+    </footer>
 </template>
 
 <style scoped></style>

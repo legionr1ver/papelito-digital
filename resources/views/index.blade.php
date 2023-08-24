@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Papelito Digital</title>
-        <link rel="icon" href="/images/logo.png" type="image/png">
+        <link rel="icon" href="/assets/images/logo.png" type="image/png">
 
         @vite('resources/js/app.js')
     </head>
-    <body>
+    <body class="box-border">
         <div id="app"></div>
     </body>
 </html>
