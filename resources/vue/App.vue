@@ -6,7 +6,7 @@
         <p class="max-w-[1200px] mx-auto text-white text-center font-serif text-xl tracking-wide py-1">Pedí tu invitación y
             te la entregamos en menos de 72Hs!</p>
     </div>
-    <header class="shadow-md mb-16">
+    <header class="shadow-md mb-16 sticky top-0 bg-white">
         <div class="max-w-[1200px] mx-auto flex">
             <div class="flex-initial flex items-center justify-center">
                 <img class="max-w-[5rem] me-10" src="/assets/images/logo.png">
@@ -43,10 +43,10 @@
     <main>
         <section id="invitaciones-animadas" class="max-w-[1200px] mx-auto min-h-[600px] mb-16 bg-[url('/assets/bg-nubes.jpg')] bg-cover bg-no-repeat bg-right-bottom grid grid-cols-[2fr_1fr] items-center justify-center rounded-lg">
             <div class="grid items-center justify-center gap-1">
-                <h2 class="text-7xl text-center font-serif font-bold tracking-wider text-black">Animadas</h2>
-                <p class="text-center text-black max-w-[50ch]">Con música de fondo y hasta 30 segundos de duración!</p>
+                <h2 class="text-7xl text-center font-serif font-bold tracking-wider text-white" style="text-shadow: 2px 2px 15px rgba(0,0,0,1);">Invitaciones<br>Animadas</h2>
+                <p class="text-center text-white max-w-[40ch] text-xl">Con música de fondo y hasta 30 segundos de duración!</p>
                 <div class="text-center">
-                    <button class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver invitaciones</button>
+                    <button class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver diseños</button>
                 </div>
             </div>
             <div>
@@ -85,16 +85,16 @@
         <section id="informacion" class="bg-gray-100 py-10">
             <div class="max-w-[1200px] mx-auto mb-16 flex">
                 <div class="flex-1 p-10">
-                    <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-5">Plazos de entrega</h3>
+                    <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-5 text-primary">Plazos de entrega</h3>
                     <div class="mb-7">
-                        <h4 class="text-2xl font-serif">Invitaciones interactivas y fijas</h4>
+                        <h4 class="text-2xl font-serif text-primary">Invitaciones interactivas y fijas</h4>
                         <p>
                             Si elegis un diseño del catálogo se entrega el mismo día del pago.<br>
                             En caso de querer un nuevo diseño el plazo de entrega es de 24hs como mínimo y 48hs como máximo.
                         </p>
                     </div>
                     <div class="mb-7">
-                        <h4 class="text-2xl font-serif">Invitaciones animadas</h4>
+                        <h4 class="text-2xl font-serif text-primary">Invitaciones animadas</h4>
                         <p>
                             Para diseños del catálogo se entrega en el mismo día o 48hs maximo segun disponibilidad.<br>
                             En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según disponibilidad.

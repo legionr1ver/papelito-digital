@@ -13,7 +13,8 @@ export default {
     },
     extend: {
       colors: {
-        primary: '#B86FD6',
+        primary: '#B2A0D9',
+        'light-primary': '#d2b4de',
         secondary: '#CDABDB',
         paragraph: '#292929',
         background: '#D2B4DE'
