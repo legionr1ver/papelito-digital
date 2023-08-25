@@ -47,13 +47,13 @@ import Invitacion from './Invitacion.vue';
             <div class="mb-12">
                 <h2 class="font-serif text-4xl text-primary mb-4">Temáticas</h2>
                 <ul class="space-y-1 text-md text-gray-500">
-                    <li><a href="#">Baby Shower</a></li>
-                    <li><a href="#">Casamientos</a></li>
-                    <li><a href="#">Comuniones</a></li>
-                    <li><a href="#">Cumpleaños Infantiles</a></li>
-                    <li><a href="#">Cumpleaños Adultos</a></li>
-                    <li><a href="#">Cumpleaños de 15</a></li>
-                    <li><a href="#">Graduaciones</a></li>
+                    <li><a class="hover:underline" href="#">Baby Shower</a></li>
+                    <li><a class="hover:underline" href="#">Casamientos</a></li>
+                    <li><a class="hover:underline" href="#">Comuniones</a></li>
+                    <li><a class="hover:underline" href="#">Cumpleaños Infantiles</a></li>
+                    <li><a class="hover:underline" href="#">Cumpleaños Adultos</a></li>
+                    <li><a class="hover:underline" href="#">Cumpleaños de 15</a></li>
+                    <li><a class="hover:underline" href="#">Graduaciones</a></li>
                 </ul>
             </div>
             <div class="mb-12">
