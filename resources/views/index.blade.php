@@ -9,7 +9,7 @@
 
         @vite('resources/js/app.js')
     </head>
-    <body class="box-border">
+    <body>
         <div id="app"></div>
     </body>
 </html>

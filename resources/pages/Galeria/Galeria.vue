@@ -43,10 +43,10 @@ import Invitacion from './Invitacion.vue';
         </div>
     </header>
     <main class="max-w-[1200px] mx-auto mb-16 flex">
-        <div id="buscador-galeria" class="flex-initial p-10 font-bold">
-            <div class="mb-10">
-                <h2 class="font-serif text-3xl text-primary mb-2">Temáticas</h2>
-                <ul class="space-y-0.5 text-sm text-gray-500">
+        <div id="buscador-galeria" class="flex-initial p-10">
+            <div class="mb-12">
+                <h2 class="font-serif text-4xl text-primary mb-4">Temáticas</h2>
+                <ul class="space-y-1 text-md text-gray-500">
                     <li><a href="#">Baby Shower</a></li>
                     <li><a href="#">Casamientos</a></li>
                     <li><a href="#">Comuniones</a></li>
@@ -56,9 +56,9 @@ import Invitacion from './Invitacion.vue';
                     <li><a href="#">Graduaciones</a></li>
                 </ul>
             </div>
-            <div class="mb-10">
-                <h2 class="font-serif text-3xl text-primary mb-2">Tipo de invitación</h2>
-                <ul class="space-y-0.5 text-sm text-gray-500">
+            <div class="mb-12">
+                <h2 class="font-serif text-4xl text-primary mb-4">Tipo</h2>
+                <ul class="space-y-1 text-md text-gray-500">
                     <li class="flex items-center">
                         <input id="chk-animada" type="checkbox" class="block w-4 h-4 me-2 accent-primary text-white">
                         <label for="chk-animada">Animada</label>
@@ -69,9 +69,9 @@ import Invitacion from './Invitacion.vue';
                     </li>
                 </ul>
             </div>
-            <div class="mb-10">
-                <h2 class="font-serif text-3xl text-primary mb-2">Extras</h2>
-                <ul class="space-y-0.5 text-sm text-gray-500">
+            <div class="mb-12">
+                <h2 class="font-serif text-4xl text-primary mb-4">Extras</h2>
+                <ul class="space-y-1 text-md text-gray-500">
                     <li class="flex items-center">
                         <input id="chk-ubicacion" type="checkbox" class="block w-4 h-4 me-2 accent-primary text-white">
                         <label for="chk-ubicacion">Ubicación en el mapa</label>
@@ -84,10 +84,12 @@ import Invitacion from './Invitacion.vue';
             </div>
             
         </div>
-        <div id="galeria" class="flex-1 grid grid-cols-4 gap-x-10 gap-y-16">
+        <div id="galeria" class="flex-1 grid grid-cols-4 auto-rows-[400px] gap-x-4 gap-y-8">
             <Invitacion title="Baby Shower Juli" src="/assets/static-invitations/baby-shower-juli.jpg" />
             <Invitacion title="Cumple Bruno" src="/assets/static-invitations/cumple-bruno.jpg" />
             <Invitacion title="Cumple Gino y Mirko" src="/assets/static-invitations/cumple-gino-y-mirko.jpg" />
+            <Invitacion title="Cumple Giselle" src="/assets/static-invitations/cumple-giselle.jpg" />
+            <Invitacion title="Cumple Giselle" src="/assets/static-invitations/cumple-giselle.jpg" />
             <Invitacion title="Cumple Giselle" src="/assets/static-invitations/cumple-giselle.jpg" />
         </div>
     </main>
