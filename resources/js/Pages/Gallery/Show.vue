@@ -1,5 +1,5 @@
 <script setup>
-import Invitacion from './Invitacion.vue';
+import Invitacion from './Partials/Invitation.vue';
 </script>
 
 <template>

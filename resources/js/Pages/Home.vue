@@ -1,4 +1,5 @@
 <script setup>
+import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
@@ -29,13 +30,13 @@
                         placeholder="Busca invitaciones por tema">
                 </form>
                 <nav>
-                    <ul class="flex justify-evenly py-4 text-primary font-serif text-xl">
-                        <li><a href="#">Baby Shower</a></li>
-                        <li><a href="#">Casamientos</a></li>
-                        <li><a href="#">Comuniones</a></li>
-                        <li><a href="#">Cumpleaños</a></li>
-                        <li><a href="#">Animadas</a></li>
-                        <li><a href="#">Estáticas</a></li>
+                    <ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl">
+                        <li><Link href="/gallery?tag=baby%20shower">Baby Shower</link></li>
+                        <li><Link href="/gallery?tag=comunion">Comuniones</Link></li>
+                        <li><Link href="/gallery?tag=bautismos">Bautismos</Link></li>
+                        <li><Link href="/gallery?tag=bodas">Bodas</Link></li>
+                        <li><Link href="/gallery?tag=cumpleaños%20adultos">Cumpleaños<br>Adultos</Link></li>
+                        <li><Link href="/gallery?tag=cumpleaños%20niños">Cumpleaños<br>Niños</Link></li>
                     </ul>
                 </nav>
             </div>
@@ -61,16 +62,16 @@
                 <p class="text-center text-sm">Hay muchos modelos para elegir</p>
             </header>
             <div class="grid grid-cols-3 auto-rows-[120px] gap-3 text-white font-bold">
-                <a class="bg-[url('/assets/images/links/baby-shower.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Baby Shower</h4></a>
-                <a class="bg-[url('/assets/images/links/comunion.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Comunión</h4></a>
-                <a class="bg-[url('/assets/images/links/bautismo.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Bautismo</h4></a>
-                <a class="bg-[url('/assets/images/links/boda.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Boda</h4></a>
-                <a class="bg-[url('/assets/images/links/cumpleanos-adulto.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Cumpleaños<br>adultos</h4></a>
-                <a class="bg-[url('/assets/images/links/cumpleanos-infantil.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="#"><h4>Cumpleaños<br>infantiles</h4></a>
+                <a class="bg-[url('/assets/images/links/baby-shower.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery"><h4>Baby Shower</h4></a>
+                <a class="bg-[url('/assets/images/links/comunion.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery"><h4>Comunión</h4></a>
+                <a class="bg-[url('/assets/images/links/bautismo.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery"><h4>Bautismo</h4></a>
+                <a class="bg-[url('/assets/images/links/boda.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery"><h4>Boda</h4></a>
+                <a class="bg-[url('/assets/images/links/cumpleanos-adulto.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery"><h4>Cumpleaños<br>adultos</h4></a>
+                <a class="bg-[url('/assets/images/links/cumpleanos-infantil.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery"><h4>Cumpleaños<br>infantiles</h4></a>
             </div>
         </section>
 
-        <section id="informacion" class="bg-gray-100 py-10">
+        <section id="informacion" class="bg-gray-100 py-10 mb-16">
             <div class="max-w-[1200px] mx-auto mb-16 flex">
                 <div class="flex-1 p-10">
                     <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-5 text-primary">Plazos de entrega</h3>
