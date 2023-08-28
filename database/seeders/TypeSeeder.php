@@ -17,8 +17,8 @@ class TypeSeeder extends Seeder
         Type::factory()
             ->count(2)
             ->state(new Sequence(
-                ['name' => 'Fija', 'slug' => 'fija'],
-                ['name' => 'Video', 'slug' => 'video'],
+                ['id' => Type::FIJA, 'name' => 'Fija', 'slug' => 'fija'],
+                ['id' => Type::ANIMADA, 'name' => 'Animada', 'slug' => 'animada'],
             ))
             ->create();
     }

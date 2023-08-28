@@ -8,12 +8,23 @@ use Inertia\Response;
 
 class GalleryController extends Controller
 {
-    public function __invoke(Request $request): Response
+    public function __invoke(Request $request, string $slug = null): Response
     {
-        if( $request->has('search') ){
-            $invitations = Invitation::where('title','like','%'.$request->search.'%')
-                ->orWhere('description','like','%'.$request->search.'%')
-                ->get();
+        if( $slug ){
+            $invitations = Invitation::WhereRelation('tags', 'slug', $slug)->get();
+
+        }else if( $request->has('search') ){
+            $q = Invitation::where(function($query) use ($request){
+                    $query->where('title','like','%'.$request->search.'%')
+                        ->orWhere('description','like','%'.$request->search.'%')
+                        ->orWhereRelation('tags', 'label', 'like', '%' . $request->seach . '%');
+                });
+                
+            if( $request->type )
+                $q->whereRelation('type', 'slug', $request->type);
+
+            $invitations = $q->get();
+
         }else{
             $invitations = Invitation::all();
         }

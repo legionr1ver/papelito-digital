@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('source');
             $table->string('thumbnail')->nullable();
             $table->decimal('price');
+            $table->boolean('ubicacion_en_mapa');
+            $table->boolean('confirmacion_asistencia');
             $table->timestamps();
         });
     }

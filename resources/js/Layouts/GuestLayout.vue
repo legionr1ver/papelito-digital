@@ -4,7 +4,7 @@ import { router } from '@inertiajs/vue3';
 import { reactive } from 'vue';
 
 const search = reactive({
-    type: 'todas',
+    type: '',
     search: '',
 });
 
@@ -28,9 +28,9 @@ function submitSearch(){
             <div class="flex-1">
                 <form id="search" class="p-2 flex text-sm text-gray-400" @submit.prevent="submitSearch">
                     <select v-model="search.type" class="p-3 border border-[rgb(225, 227, 230)]">
-                        <option value="todas">Todas</option>
-                        <option value="fijas">Fijas</option>
-                        <option value="animadas">Animadas</option>
+                        <option value="">Todas</option>
+                        <option value="fija">Fijas</option>
+                        <option value="animada">Animadas</option>
                     </select>
                     <button type="submit" class="p-3 border-t border-b border-[rgb(225, 227, 230)]">
                         <svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -40,16 +40,16 @@ function submitSearch(){
                         </svg>
                     </button>
                     <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" name="search" type="search"
-                        placeholder="Busca invitaciones por tema">
+                        placeholder="Busca invitaciones por tema" required>
                 </form>
                 <nav>
                     <ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl">
-                        <li><Link href="/gallery?search=baby%20shower">Baby Shower</link></li>
-                        <li><Link href="/gallery?search=comunion">Comuniones</Link></li>
-                        <li><Link href="/gallery?search=bautismos">Bautismos</Link></li>
-                        <li><Link href="/gallery?search=bodas">Bodas</Link></li>
-                        <li><Link href="/gallery?search=cumpleaños%20adultos">Cumpleaños<br>Adultos</Link></li>
-                        <li><Link href="/gallery?search=cumpleaños%20niños">Cumpleaños<br>Niños</Link></li>
+                        <li><Link href="/gallery/baby-shower">Baby Shower</link></li>
+                        <li><Link href="/gallery/comunion">Comuniones</Link></li>
+                        <li><Link href="/gallery/bautismos">Bautismos</Link></li>
+                        <li><Link href="/gallery/bodas">Bodas</Link></li>
+                        <li><Link href="/gallery/cumpleaños-adultos">Cumpleaños<br>Adultos</Link></li>
+                        <li><Link href="/gallery/cumpleaños-niños">Cumpleaños<br>Niños</Link></li>
                     </ul>
                 </nav>
             </div>
@@ -61,22 +61,22 @@ function submitSearch(){
     <footer class="max-w-[1200px] mx-auto mb-16">
         <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-8 text-primary">Seguinos en nuestras redes sociales!</h3>
         <div class="grid grid-cols-3 justify-evenly">
-            <a href="#" class="flex items-center justify-center border-e border-e-primary pt-3">
+            <a href="https://www.instagram.com/papelitodigital.ar/" class="flex items-center justify-center border-e border-e-primary pt-3" target="_blank">
                 <img class="w-10" src="/assets/images/icons/instagram.png" alt="Logo Instagram">
                 <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
             </a>
-            <a href="#" class="flex items-center justify-center border-e border-e-primary">
+            <a href="https://www.facebook.com/papelitodigital.ar" class="flex items-center justify-center border-e border-e-primary" target="_blank">
                 <img class="w-10" src="/assets/images/icons/facebook.png" alt="Logo Facebook">
                 <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
             </a>
-            <a href="#" class="flex items-center justify-center">
+            <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" class="flex items-center justify-center" target="_blank">
                 <img class="w-10" src="/assets/images/icons/whatsapp.png" alt="Logo Whatsapp">
                 <p class="ms-3 font-bold tracking-wide">+54 9 11 2166 4157</p>
             </a>
         </div>
 
         <div id="whatsapp-sticky" class="fixed bottom-5 right-5">
-            <a href="#">
+            <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank">
                 <img class="w-16 h-16" src="/assets/images/icons/whatsapp-original.png" alt="Logo Whatsapp">
             </a>
         </div>

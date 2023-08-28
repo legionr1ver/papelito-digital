@@ -19,7 +19,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', HomeController::class)->name('home');
-Route::get('/gallery', GalleryController::class)->name('gallery');
+Route::get('/gallery/{slug?}', GalleryController::class)->name('gallery');
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [

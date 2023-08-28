@@ -10,5 +10,5 @@ class Type extends Model
     use HasFactory;
 
     const FIJA = 1;
-    const VIDEO = 2;
+    const ANIMADA = 2;
 }
