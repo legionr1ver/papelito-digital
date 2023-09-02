@@ -28,6 +28,7 @@ class Invitation extends Model
      * @var array
      */
     protected $visible = [
+        'id',
         'title',
         'description',
         'type_id',

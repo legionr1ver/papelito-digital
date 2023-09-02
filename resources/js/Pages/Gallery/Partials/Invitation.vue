@@ -1,5 +1,11 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
+
 defineProps({
+    id: {
+        type: Number,
+        required: true,
+    },
     source_url: {
         type: String,
         required: true,
@@ -22,14 +28,17 @@ defineProps({
 </script>
 
 <template>
-    <article class="cursor-pointer hover:-translate-y-2 transition-transform flex flex-col">
-        <div class="relative shadow-xl flex items-center justify-center flex-1">
-            <small class="absolute bottom-2 right-2 bg-primary py-0 px-2 rounded-xl text-white font-bold tracking-wider">Fija</small>
-            <img :src="source_url" class="max-w-full max-h-full object-contain">
+    <article class="grid grid-rows-[350px_auto_auto]">
+        <div class="flex justify-center items-center">
+            <img :src="source_url" class="max-h-full">
         </div>
-        <div class="flex-initial">
-            <div class="text-sm font-semibold py-1">{{ title }}</div>
+        <div class="p-2 flex">
+            <strong class="flex-1">{{ title }}</strong>
+            <span class="flex-initial">${{ price }}</span>
         </div>
+        <Link :href="`/order/invitation/${id}`" as="button" class="bg-primary text-white py-2 mt-1 mx-2 rounded shadow-lg">
+            Comprar
+        </Link>
     </article>
 </template>
 

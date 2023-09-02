@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <section id="invitaciones-animadas" class="max-w-[1200px] mx-auto min-h-[600px] mb-16 bg-[url('/assets/bg-nubes.jpg')] bg-cover bg-no-repeat bg-right-bottom grid grid-cols-[2fr_1fr] items-center justify-center rounded-lg">
+    <section id="invitaciones-animadas" class="relative max-w-[1200px] mx-auto min-h-[450px] mb-16 bg-[url('/assets/images/bg-nubes.jpg')] bg-cover bg-no-repeat bg-right-bottom grid grid-cols-[2fr_1fr] items-center justify-center rounded-lg">
         <div class="grid items-center justify-center gap-1">
             <h2 class="text-7xl text-center font-serif font-bold tracking-wider text-white" style="text-shadow: 2px 2px 15px rgba(0,0,0,1);">Invitaciones<br>Animadas</h2>
             <p class="text-center text-white max-w-[40ch] text-xl">Con música de fondo y hasta 30 segundos de duración!</p>
@@ -19,7 +19,10 @@ export default {
             </div>
         </div>
         <div>
-            <img src="/assets/invitacion-rapunzel.png" alt="Invitacion animada rapunzel">
+            <div class="w-[200px] relative">
+                <img class="w-full h-[380px] relative z-20" src="/assets/images/cellphone-mockup.png" alt="Cellphone Mockup">
+                <video class="absolute z-10 top-[13px] left-0 rounded-[25px] shadow-[10px_25px_15px_2px_rgba(0,0,0,0.75)]" src="/assets/video-invitations/rapunzel.mp4" autoplay loop playsinline muted></video>
+            </div>
         </div>
     </section>
 

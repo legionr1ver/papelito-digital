@@ -9,8 +9,8 @@ export default {
 
     theme: {
         fontFamily: {
-            'serif': 'Lazy Dog',
-            'sans': 'sans-serif',
+            'serif': 'Cherry Bomb One, cursive',
+            'sans': 'Noto Sans, sans-serif',
             'mono': 'ui-monospace, SFMono-Regular',
         },
         extend: {

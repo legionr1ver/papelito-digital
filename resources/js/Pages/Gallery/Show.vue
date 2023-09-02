@@ -7,7 +7,7 @@ export default {
 </script>
 
 <script setup>
-import Invitacion from './Partials/Invitation.vue';
+import Invitation from './Partials/Invitation.vue';
 
 defineProps({
     invitations: {
@@ -61,8 +61,8 @@ defineProps({
             
         </div>
         <div id="galeria" class="flex-1">
-            <div v-if="invitations.length > 0" class="grid grid-cols-4 auto-rows-[400px] gap-x-4 gap-y-8">
-                <Invitacion v-for="invitation in invitations" v-bind="invitation" />
+            <div v-if="invitations.length > 0" class="grid grid-cols-4 gap-x-4 gap-y-8">
+                <Invitation v-for="invitation in invitations" v-bind="invitation" />
             </div>
             <div v-else class="text-md text-gray-500 grid justify-center">
                 <p class="text-2xl">Contanos por Whatsapp tu idea y la armamos a tu gusto.</p>
