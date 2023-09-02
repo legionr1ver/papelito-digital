@@ -7,8 +7,10 @@ use Inertia\Response as InertiaResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Client\Response as HttpClienteResponse;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Notification;
 use App\Models\Invitation;
 use App\Models\Order;
+use App\Notifications\OrderCreated;
 use App\Exceptions\PaymentRejectedException;
 
 class OrderController extends Controller
@@ -59,6 +61,9 @@ class OrderController extends Controller
         $order->payment_id = $response['id'];
         $order->email = $request->input('payer.email');
         $order->save();
+
+        //Notification::route('mail',$order->mail)
+            //->notify( new OrderCreated() );
 
         return $order;
     }

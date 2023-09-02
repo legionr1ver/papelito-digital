@@ -187,7 +187,8 @@ function createMercadoPagoPayment() {
                 <div v-show="page_step === PAGE_STEP_SUCCESS">
                     <h2 class="text-primary text-3xl text-center p-5 mb-3">Invitación confirmada</h2>
                     <p class="text-center mb-3">
-                        Recibirá un mail con la confirmación del pedido al mail ingresado.<br>
+                        Nos pondremos en contacto a la brevedad al número indicado.<br>
+                        Por favor tenga en cuenta los tiempos para la realización se un invitación.<br>
                         Muchas gracias por su compra!
                     </p>
                     <img class="max-w-[200px] mx-auto mb-5" src="/assets/images/stickers/pago-confirmado.png"

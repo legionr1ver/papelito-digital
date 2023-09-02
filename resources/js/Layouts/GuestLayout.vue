@@ -75,7 +75,7 @@ function submitSearch(){
             </a>
         </div>
 
-        <div id="whatsapp-sticky" class="fixed bottom-5 right-5">
+        <div id="whatsapp-sticky" class="fixed bottom-5 right-5 shadow-lg rounded-full">
             <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank">
                 <img class="w-16 h-16" src="/assets/images/icons/whatsapp-original.png" alt="Logo Whatsapp">
             </a>
