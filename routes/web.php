@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\InvitationController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,7 +22,7 @@ use Inertia\Inertia;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/gallery/{slug?}', GalleryController::class)->name('gallery');
-Route::get('/order/invitation/{id}', [OrderController::class,'invitation'])->name('order.invitation');
+Route::get('/invitation/{id}', [InvitationController::class,'show'])->name('invitation.show');
 Route::post('/order', [OrderController::class,'store'])->name('order.store');
 
 Route::get('/welcome', function () {

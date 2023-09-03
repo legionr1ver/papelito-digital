@@ -36,7 +36,7 @@ defineProps({
             <strong class="flex-1">{{ title }}</strong>
             <span class="flex-initial">${{ price }}</span>
         </div>
-        <Link :href="`/order/invitation/${id}`" as="button" class="bg-primary text-white py-2 mt-1 mx-2 rounded shadow-lg">
+        <Link :href="`/invitation/${id}`" as="button" class="bg-primary text-white py-2 mt-1 mx-2 rounded shadow-lg">
             Comprar
         </Link>
     </article>

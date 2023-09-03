@@ -2,29 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Inertia\Inertia;
-use Inertia\Response as InertiaResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Client\Response as HttpClienteResponse;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
-use App\Models\Invitation;
 use App\Models\Order;
 use App\Notifications\OrderCreated;
 use App\Exceptions\PaymentRejectedException;
 
 class OrderController extends Controller
 {
-    /**
-     * Display the confirmation for the invitation
-     */
-    public function invitation(int $id) : InertiaResponse
-    {
-        return Inertia::render('Order/Invitation', [
-            'invitation' => Invitation::findOrFail($id),
-        ]);
-    }
-
     public function store(Request $request)
     {
         $request->validate([

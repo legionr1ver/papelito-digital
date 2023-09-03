@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
+use Inertia\Response;
 use App\Models\Invitation;
 use App\Http\Requests\StoreInvitationRequest;
 use App\Http\Requests\UpdateInvitationRequest;
@@ -35,9 +37,11 @@ class InvitationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Invitation $invitation)
+    public function show($id) : Response
     {
-        //
+        return Inertia::render('Order/Invitation', [
+            'invitation' => Invitation::findOrFail($id),
+        ]);
     }
 
     /**
