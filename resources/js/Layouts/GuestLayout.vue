@@ -25,7 +25,7 @@ function submitSearch(){
                     <img class="max-w-[5rem] me-10" src="/assets/images/logo.png" alt="Logo Papelito Digital">
                 </Link>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 items-center">
                 <form id="search" class="p-2 flex text-sm text-gray-400" @submit.prevent="submitSearch">
                     <select v-model="search.type" class="p-3 border border-[rgb(225, 227, 230)]">
                         <option value="">Todas</option>
@@ -42,7 +42,7 @@ function submitSearch(){
                     <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" name="search" type="search"
                         placeholder="Busca invitaciones por tema" required>
                 </form>
-                <nav>
+                <nav class="hidden lg:block">
                     <ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl">
                         <li><Link href="/gallery/baby-shower">Baby Shower</link></li>
                         <li><Link href="/gallery/comunion">Comuniones</Link></li>
@@ -60,12 +60,12 @@ function submitSearch(){
     </main>
     <footer class="max-w-[1200px] mx-auto mb-16">
         <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-8 text-primary">Seguinos en nuestras redes sociales!</h3>
-        <div class="grid grid-cols-3 justify-evenly">
-            <a href="https://www.instagram.com/papelitodigital.ar/" class="flex items-center justify-center border-e border-e-primary pt-3" target="_blank">
+        <div class="grid lg:grid-cols-3 gap-7 justify-evenly">
+            <a href="https://www.instagram.com/papelitodigital.ar/" class="flex items-center justify-center lg:border-e lg:border-e-primary pt-3" target="_blank">
                 <img class="w-10" src="/assets/images/icons/instagram.png" alt="Logo Instagram">
                 <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
             </a>
-            <a href="https://www.facebook.com/papelitodigital.ar" class="flex items-center justify-center border-e border-e-primary" target="_blank">
+            <a href="https://www.facebook.com/papelitodigital.ar" class="flex items-center justify-center lg:border-e lg:border-e-primary" target="_blank">
                 <img class="w-10" src="/assets/images/icons/facebook.png" alt="Logo Facebook">
                 <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
             </a>
