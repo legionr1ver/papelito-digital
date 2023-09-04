@@ -19,7 +19,7 @@ defineProps({
 
 <template>
     <div class="max-w-[1200px] mx-auto mb-16 flex">
-        <div id="buscador-galeria" class="flex-initial p-10">
+        <div id="buscador-galeria" class="hidden lg:block flex-initial p-10">
             <div class="mb-12">
                 <h2 class="font-serif text-4xl text-primary mb-4">Temáticas</h2>
                 <ul class="space-y-1 text-md text-gray-500">
@@ -60,13 +60,16 @@ defineProps({
             </div>
             
         </div>
-        <div id="galeria" class="flex-1">
-            <div v-if="invitations.length > 0" class="grid grid-cols-4 gap-x-4 gap-y-8">
+        <div id="galeria" class="flex-1 px-5">
+            <div v-if="invitations.length > 0" class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
                 <Invitation v-for="invitation in invitations" v-bind="invitation" />
             </div>
             <div v-else class="text-md text-gray-500 grid justify-center">
-                <p class="text-2xl">Contanos por Whatsapp tu idea y la armamos a tu gusto.</p>
-                <img class="mx-auto w-96" src="/assets/images/stickers/sin-resultados.png" alt="No hay resultados para la búsqueda">
+                <p class="text-2xl text-center">
+                    No se encontraron invitaciones.<br>
+                    Contanos por Whatsapp tu idea y la armamos a tu gusto.
+                </p>
+                <img class="mx-auto max-w-[200px] p-3" src="/assets/images/stickers/sin-resultados.png" alt="No hay resultados para la búsqueda">
             </div>
         </div>
     </div>

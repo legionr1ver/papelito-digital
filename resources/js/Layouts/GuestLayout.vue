@@ -20,9 +20,9 @@ function submitSearch(){
     </div>
     <header class="shadow-md mb-16 sticky top-0 bg-white z-30">
         <div class="max-w-[1200px] mx-auto flex">
-            <div class="flex-initial flex items-center justify-center">
+            <div class="flex-initial flex items-center">
                 <Link href="/">
-                    <img class="max-w-[5rem] me-10" src="/assets/images/logo.png" alt="Logo Papelito Digital">
+                    <img class="max-w-[5rem] lg:max-w-[7rem] mx-auto p-3" src="/assets/images/logo.png" alt="Logo Papelito Digital">
                 </Link>
             </div>
             <div class="flex-1 items-center">
@@ -59,7 +59,7 @@ function submitSearch(){
         <slot></slot>
     </main>
     <footer class="max-w-[1200px] mx-auto mb-16">
-        <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-8 text-primary">Seguinos en nuestras redes sociales!</h3>
+        <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-8 text-primary p-3">Seguinos en nuestras redes sociales!</h3>
         <div class="grid lg:grid-cols-3 gap-7 justify-evenly">
             <a href="https://www.instagram.com/papelitodigital.ar/" class="flex items-center justify-center lg:border-e lg:border-e-primary pt-3" target="_blank">
                 <img class="w-10" src="/assets/images/icons/instagram.png" alt="Logo Instagram">

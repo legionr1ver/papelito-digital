@@ -103,11 +103,11 @@ function createMercadoPagoPayment() {
 </script>
 
 <template>
-    <div class="max-w-[1200px] mx-auto mb-16 flex">
-        <div class="flex-1">
-            <img :src="invitation.source_url">
+    <div class="max-w-[1200px] mx-auto mb-16 grid md:grid-cols-2">
+        <div class="">
+            <img class="p-2" :src="invitation.source_url">
         </div>
-        <div class="flex-1 p-5">
+        <div class="p-5">
             <header class="pb-10 text-5xl text-primary font-serif">
                 <h2 class="mb-4">{{ invitation.title }}</h2>
                 <div>${{ invitation.price }}</div>
