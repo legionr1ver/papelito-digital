@@ -46,10 +46,10 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'db5014061560.hosting-data.io'),
+            'host' => env('DB_HOST', 'mysql'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'dbs11737534'),
-            'username' => env('DB_USERNAME', 'dbu1502741'),
+            'database' => env('DB_DATABASE', 'papelito'),
+            'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', '{falcon4!0}'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
