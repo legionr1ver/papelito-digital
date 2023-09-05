@@ -58,7 +58,7 @@ const filteredInvitations = computed(() => {
 
         return (type.value === '' || type.value == invitation.type.slug)
             && (selectedTags.value.length === 0 || invitationHasTag)
-            && (!search.value || invitation.title.includes(search.value) || invitationTagsLabel.some(label => label.includes(search.value)));
+            && (!search.value || invitation.title.toLowerCase().includes(search.value.toLowerCase()) || invitationTagsLabel.some(label => label.toLowerCase().includes(search.value.toLowerCase())));
     });
 });
 
@@ -107,7 +107,7 @@ const filteredInvitations = computed(() => {
         <div id="galeria" class="flex-1 px-5">
             <div class="flex p-4 text-md text-gray-500">
                 <div class="flex-1">
-                    <p v-show="selectedTags.length === 0 && type === ''">Mostrando todas las invitaciones</p>
+                    <p v-show="!selectedTags.length && !type && !search">Mostrando todas las invitaciones</p>
 
                     <button v-if="type === 'animada'" @click="type = ''" class="bg-primary text-white rounded-full px-3 py-1 m-1 text-sm inline-flex items-center hover:outline hover:outline-1 hover:outline-gray-400">
                         <span class="me-2">Invitaciones animadas</span>
@@ -116,6 +116,11 @@ const filteredInvitations = computed(() => {
 
                     <button v-if="type === 'fija'" @click="type = ''" class="bg-primary text-white rounded-full px-3 py-1 m-1 text-sm inline-flex items-center hover:outline hover:outline-1 hover:outline-gray-400">
                         <span class="me-2">Invitaciones fijas</span>
+                        <span class="font-bold">x</span>
+                    </button>
+
+                    <button v-if="search" @click="search = ''" class="bg-primary text-white rounded-full px-3 py-1 m-1 text-sm inline-flex items-center hover:outline hover:outline-1 hover:outline-gray-400">
+                        <span class="me-2">Buscando "{{ search }}"</span>
                         <span class="font-bold">x</span>
                     </button>
 

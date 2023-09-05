@@ -1,6 +1,9 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
 
+const TYPE_FIJA = 1;
+const TYPE_ANIMADA = 2;
+
 defineProps({
     id: {
         type: Number,
@@ -30,7 +33,8 @@ defineProps({
 <template>
     <article class="grid grid-rows-[350px_auto_auto]">
         <div class="flex justify-center items-center">
-            <img :src="source_url" class="max-h-full">
+            <img v-if="type_id == TYPE_FIJA" :src="source_url" class="max-h-full">
+            <video v-if="type_id == TYPE_ANIMADA" :src="source_url" class="max-h-full"></video>
         </div>
         <div class="p-2 flex">
             <strong class="flex-1">{{ title }}</strong>

@@ -22,7 +22,7 @@ import { Link } from '@inertiajs/vue3';
         <div class="p-5">
             <div class="w-[200px] relative mx-auto lg:ms-0 me-auto">
                 <img class="w-full h-[380px] relative z-20" src="/assets/images/cellphone-mockup.png" alt="Cellphone Mockup">
-                <video class="absolute z-10 top-[13px] left-0 rounded-[25px] shadow-[10px_25px_15px_2px_rgba(0,0,0,0.75)]" src="/assets/video-invitations/rapunzel.mp4" autoplay loop playsinline muted></video>
+                <video class="absolute z-10 top-[13px] left-0 rounded-[25px] shadow-[10px_25px_15px_2px_rgba(0,0,0,0.75)]" src="/storage/invitations/rapunzel.mp4" autoplay loop playsinline muted></video>
             </div>
         </div>
     </section>

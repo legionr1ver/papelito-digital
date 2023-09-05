@@ -17,6 +17,8 @@ const PAGE_STEP_SUCCESS = 3;
 const PAYMENT_STATE_LOADING = 1;
 const PAYMENT_STATE_READY = 2;
 const PAYMENT_STATE_ERROR = 3;
+const INVITATION_TYPE_FIJA = 1;
+const INVITATION_TYPE_ANIMADA = 2;
 
 const props = defineProps({
     invitation: {
@@ -105,7 +107,8 @@ function createMercadoPagoPayment() {
 <template>
     <div class="max-w-[1200px] mx-auto mb-16 grid md:grid-cols-2">
         <div class="">
-            <img class="p-2" :src="invitation.source_url">
+            <img v-if="invitation.type_id == INVITATION_TYPE_FIJA" class="p-2 mx-auto max-w-md" :src="invitation.source_url">
+            <video v-if="invitation.type_id == INVITATION_TYPE_ANIMADA" class="p-2 mx-auto max-w-md" :src="invitation.source_url" loop controls></video>
         </div>
         <div class="p-5">
             <header class="pb-10 text-5xl text-primary font-serif">
