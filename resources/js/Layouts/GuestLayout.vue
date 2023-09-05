@@ -40,16 +40,16 @@ function submitSearch(){
                         </svg>
                     </button>
                     <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" name="search" type="search"
-                        placeholder="Busca invitaciones por tema" required>
+                        placeholder="Busca invitaciones por tema">
                 </form>
                 <nav class="hidden lg:block">
                     <ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl">
                         <li><Link href="/gallery/baby-shower">Baby Shower</link></li>
-                        <li><Link href="/gallery/comunion">Comuniones</Link></li>
+                        <li><Link href="/gallery/comuniones">Comuniones</Link></li>
                         <li><Link href="/gallery/bautismos">Bautismos</Link></li>
                         <li><Link href="/gallery/bodas">Bodas</Link></li>
-                        <li><Link href="/gallery/cumpleaños-adultos">Cumpleaños<br>Adultos</Link></li>
-                        <li><Link href="/gallery/cumpleaños-niños">Cumpleaños<br>Niños</Link></li>
+                        <li><Link href="/gallery/cumpleanos-adultos">Cumpleaños<br>Adultos</Link></li>
+                        <li><Link href="/gallery/cumpleanos-ninos">Cumpleaños<br>Niños</Link></li>
                     </ul>
                 </nav>
             </div>

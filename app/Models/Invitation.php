@@ -34,6 +34,8 @@ class Invitation extends Model
         'type_id',
         'price',
         'source_url',
+        'type',
+        'tags',
     ];
 
     /**

@@ -10,6 +10,7 @@ class GalleryController extends Controller
 {
     public function __invoke(Request $request, string $slug = null): Response
     {
+        /*
         if( $slug ){
             $invitations = Invitation::WhereRelation('tags', 'slug', $slug)->get();
 
@@ -28,9 +29,13 @@ class GalleryController extends Controller
         }else{
             $invitations = Invitation::all();
         }
+        */
 
         return Inertia::render('Gallery/Show', [
-            'invitations' => $invitations,
+            'initialSearch' => $request->input('search'),
+            'initialType' => $request->input('type'),
+            'initialSelectedTagSlug' => $slug,
+            'invitations' => Invitation::with('tags','type')->get(),
         ]);
     }
 }
