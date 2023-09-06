@@ -8,7 +8,10 @@ RUN service apache2 restart
 #Installing the app
 COPY . /var/www/html
 RUN chmod -R 777 /var/www/html/storage
-RUN composer install
+RUN composer install --optimize-autoloader --no-dev
 RUN npm install
 RUN npm run build
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
 EXPOSE 80
