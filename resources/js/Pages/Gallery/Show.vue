@@ -107,7 +107,7 @@ const filteredInvitations = computed(() => {
         <div id="galeria" class="flex-1 px-5">
             <div class="flex p-4 text-md text-gray-500">
                 <div class="flex-1">
-                    <p v-show="!selectedTags.length && !type && !search">Mostrando todas las invitaciones</p>
+                    <p v-if="!selectedTags.length && !type && !search">Mostrando todas las invitaciones</p>
 
                     <button v-if="type === 'animada'" @click="type = ''" class="bg-primary text-white rounded-full px-3 py-1 m-1 text-sm inline-flex items-center hover:outline hover:outline-1 hover:outline-gray-400">
                         <span class="me-2">Invitaciones animadas</span>

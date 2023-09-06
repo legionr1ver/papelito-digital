@@ -25,6 +25,10 @@ const props = defineProps({
         type: Object,
         required: true,
     },
+    mercadopago_public_key: {
+        type: String,
+        required: true,
+    },
 });
 
 let page_step = ref(PAGE_STEP_INFORMATION);
@@ -58,7 +62,7 @@ function createMercadoPagoPayment() {
 
     payment.state = PAYMENT_STATE_LOADING;
 
-    const mp = new MercadoPago('TEST-156dcf7a-f88c-4f7c-b0fc-91ec8fc3662e', {
+    const mp = new MercadoPago(props.mercadopago_public_key, {
         locale: 'es-AR',
     });
     const bricksBuilder = mp.bricks();

@@ -30,7 +30,7 @@ class OrderController extends Controller
         ]);
 
         $response = Http::acceptJson()
-            ->withToken('TEST-750988694504250-082811-571214c6f435ea6a10b33a1c2018ea5d-634973768')
+            ->withToken( config('mercadopago.access_token') )
             ->post('https://api.mercadopago.com/v1/payments', $request->except('name','address','observation','phone_number','invitation_id'));
 
         $response->throw();
