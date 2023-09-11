@@ -8,8 +8,12 @@ const search = reactive({
     search: '',
 });
 
-function submitSearch(){
+function submitSearch() {
     router.get('/gallery', search);
+};
+
+function suscribe(){
+    console.log('suscribe');
 };
 </script>
 
@@ -22,7 +26,8 @@ function submitSearch(){
         <div class="max-w-[1200px] mx-auto flex">
             <div class="flex-initial flex items-center">
                 <Link href="/">
-                    <img class="max-w-[5rem] lg:max-w-[7rem] mx-auto p-3" src="/assets/images/logo.png" alt="Logo Papelito Digital">
+                <img class="max-w-[5rem] lg:max-w-[7rem] mx-auto p-3" src="/assets/images/logo.png"
+                    alt="Logo Papelito Digital">
                 </Link>
             </div>
             <div class="flex-1 grid items-center">
@@ -39,17 +44,29 @@ function submitSearch(){
                             </path>
                         </svg>
                     </button>
-                    <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" name="search" type="search"
-                        placeholder="Busca invitaciones por tema">
+                    <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full"
+                        name="search" type="search" placeholder="Busca invitaciones por tema">
                 </form>
                 <nav class="hidden lg:block">
                     <ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl">
-                        <li><Link href="/gallery/baby-shower">Baby Shower</link></li>
-                        <li><Link href="/gallery/comuniones">Comuniones</Link></li>
-                        <li><Link href="/gallery/bautismos">Bautismos</Link></li>
-                        <li><Link href="/gallery/bodas">Bodas</Link></li>
-                        <li><Link href="/gallery/cumpleanos-adultos">Cumpleaños<br>Adultos</Link></li>
-                        <li><Link href="/gallery/cumpleanos-ninos">Cumpleaños<br>Niños</Link></li>
+                        <li>
+                            <Link href="/gallery/baby-shower">Baby Shower</link>
+                        </li>
+                        <li>
+                            <Link href="/gallery/comuniones">Comuniones</Link>
+                        </li>
+                        <li>
+                            <Link href="/gallery/bautismos">Bautismos</Link>
+                        </li>
+                        <li>
+                            <Link href="/gallery/bodas">Bodas</Link>
+                        </li>
+                        <li>
+                            <Link href="/gallery/cumpleanos-adultos">Cumpleaños<br>Adultos</Link>
+                        </li>
+                        <li>
+                            <Link href="/gallery/cumpleanos-ninos">Cumpleaños<br>Niños</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -59,27 +76,99 @@ function submitSearch(){
         <slot></slot>
     </main>
     <footer class="max-w-[1200px] mx-auto mb-16">
-        <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-8 text-primary p-3">Seguinos en nuestras redes sociales!</h3>
-        <div class="grid lg:grid-cols-3 gap-7 justify-evenly">
-            <a href="https://www.instagram.com/papelitodigital.ar/" class="flex items-center justify-center lg:border-e lg:border-e-primary pt-3" target="_blank">
-                <img class="w-10" src="/assets/images/icons/instagram.png" alt="Logo Instagram">
-                <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
-            </a>
-            <a href="https://www.facebook.com/papelitodigital.ar" class="flex items-center justify-center lg:border-e lg:border-e-primary" target="_blank">
-                <img class="w-10" src="/assets/images/icons/facebook.png" alt="Logo Facebook">
-                <p class="ms-3 font-bold tracking-wide">/papelitodigital.ar</p>
-            </a>
-            <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" class="flex items-center justify-center" target="_blank">
-                <img class="w-10" src="/assets/images/icons/whatsapp.png" alt="Logo Whatsapp">
-                <p class="ms-3 font-bold tracking-wide">+54 9 11 2166 4157</p>
-            </a>
-        </div>
 
         <div id="whatsapp-sticky" class="fixed bottom-5 right-5 shadow-lg rounded-full">
             <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank">
                 <img class="w-16 h-16" src="/assets/images/icons/whatsapp-original.png" alt="Logo Whatsapp">
             </a>
         </div>
+
+        <div class="p-5 grid lg:grid-cols-4 gap-3">
+            <div>
+                <h4 class="text-lg pt-5 pb-2">Navegación</h4>
+                <ul class="grid grid-cols-2 lg:block">
+                    <li>
+                        <Link href="/gallery/baby-shower">Baby Shower</link>
+                    </li>
+                    <li>
+                        <Link href="/gallery/comuniones">Comuniones</Link>
+                    </li>
+                    <li>
+                        <Link href="/gallery/bautismos">Bautismos</Link>
+                    </li>
+                    <li>
+                        <Link href="/gallery/bodas">Bodas</Link>
+                    </li>
+                    <li>
+                        <Link href="/gallery/cumpleanos-adultos">Cumpleaños<br>Adultos</Link>
+                    </li>
+                    <li>
+                        <Link href="/gallery/cumpleanos-ninos">Cumpleaños<br>Niños</Link>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg pt-5 pb-2">Medios de Pago</h4>
+                <ul>
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/tarjeta-shopping.png">
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/visa.png">
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/mastercard.png">
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/amex.png">
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/tarjeta-naranja.png">
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/cabal.png">
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/mercadopago.png">
+                    <img class="inline-block w-12 p-1" src="/assets/images/cards/mercadopago.png">
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg pt-5 pb-2">Contactanos</h4>
+                <ul>
+                    <li class="flex items-center">
+                        <svg class="w-5 py-1 pe-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M476.5 22.9L382.3 1.2c-21.6-5-43.6 6.2-52.3 26.6l-43.5 101.5c-8 18.6-2.6 40.6 13.1 53.4l40 32.7C311 267.8 267.8 311 215.4 339.5l-32.7-40c-12.8-15.7-34.8-21.1-53.4-13.1L27.7 329.9c-20.4 8.7-31.5 30.7-26.6 52.3l21.7 94.2c4.8 20.9 23.2 35.5 44.6 35.5C312.3 512 512 313.7 512 67.5c0-21.4-14.6-39.8-35.5-44.6zM69.3 464l-20.9-90.7 98.2-42.1 55.7 68.1c98.8-46.4 150.6-98 197-197l-68.1-55.7 42.1-98.2L464 69.3C463 286.9 286.9 463 69.3 464z">
+                            </path>
+                        </svg>
+                        <a href="tel:+5491121664157">+54 9 11 2166 4157</a>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 py-1 pe-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M504 232C504 95.751 394.053 8 256 8 118.94 8 8 118.919 8 256c0 137.059 110.919 248 248 248 52.926 0 104.681-17.079 147.096-48.321 5.501-4.052 6.423-11.924 2.095-17.211l-15.224-18.597c-4.055-4.954-11.249-5.803-16.428-2.041C339.547 442.517 298.238 456 256 456c-110.28 0-200-89.72-200-200S145.72 56 256 56c109.469 0 200 65.02 200 176 0 63.106-42.478 98.29-83.02 98.29-19.505 0-20.133-12.62-16.366-31.463l28.621-148.557c1.426-7.402-4.245-14.27-11.783-14.27h-39.175a12.005 12.005 0 0 0-11.784 9.735c-1.102 5.723-1.661 8.336-2.28 13.993-11.923-19.548-35.878-31.068-65.202-31.068C183.412 128.66 120 191.149 120 281.53c0 61.159 32.877 102.11 93.18 102.11 29.803 0 61.344-16.833 79.749-42.239 4.145 30.846 28.497 38.01 59.372 38.01C451.467 379.41 504 315.786 504 232zm-273.9 97.35c-28.472 0-45.47-19.458-45.47-52.05 0-57.514 39.56-93.41 74.61-93.41 30.12 0 45.471 21.532 45.471 51.58 0 46.864-33.177 93.88-74.611 93.88z">
+                            </path>
+                        </svg>
+                        <a href="mailto:info@papelitodigital.com.ar">info@papelitodigital.com.ar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <section>
+                    <h4 class="text-lg pt-5 pb-2">Redes Sociales</h4>
+                    <ul class="flex">
+                        <li><a href="https://www.facebook.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/facebook.png"></a></li>
+                        <li><a href="https://www.instagram.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/instagram.png"></a></li>
+                        <li><a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/whatsapp.png"></a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="text-lg pt-5 pb-2">Suscribite y enterate de las novedades!</h4>
+                    <form @submit.prevent="suscribe" class="grid grid-cols-[1fr_auto]">
+                        <input class="p-1 border-t border-s border-b border-[rgb(225, 227, 230)]" type="email" required>
+                        <button class="bg-primary text-white p-2 rounded-tr-md rounded-br-md" type="submit">
+                            <svg class="w-5" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z">
+                                </path>
+                            </svg>
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </div>
     </footer>
-    <div class="bg-primary w-full h-2"></div>
-</template>
+<div class="bg-primary w-full h-2"></div></template>
