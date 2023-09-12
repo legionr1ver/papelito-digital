@@ -23,8 +23,6 @@ class InvitationFactory extends Factory
             'type_id' => Type::FIJA,
             'source' => 'SOURCE',
             'price' => fake()->numberBetween(1000,2000),
-            'ubicacion_en_mapa' => fake()->boolean(),
-            'confirmacion_asistencia' => fake()->boolean(),
         ];
     }
 }
