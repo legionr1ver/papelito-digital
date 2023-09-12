@@ -32,10 +32,10 @@ defineProps({
 
 <template>
     <article class="grid grid-rows-[350px_auto_auto]">
-        <div class="flex justify-center items-center">
+        <Link :href="`/invitation/${id}`" class="group flex justify-center items-center hover:brightness-50 transition-all relative">
             <img v-if="type_id == TYPE_FIJA" :src="source_url" class="max-h-full">
             <video v-if="type_id == TYPE_ANIMADA" :src="source_url" class="max-h-full"></video>
-        </div>
+        </Link>
         <div class="p-2 flex">
             <strong class="flex-1">{{ title }}</strong>
             <span class="flex-initial">${{ price }}</span>

@@ -40,8 +40,9 @@ class InvitationController extends Controller
     public function show($id) : Response
     {
         return Inertia::render('Order/Invitation', [
+            'previous_url' => url()->previous('/gallery'),
             'mercadopago_public_key' => config('mercadopago.public_key'),
-            'invitation' => Invitation::findOrFail($id),
+            'invitation' => Invitation::with('type')->findOrFail($id),
         ]);
     }
 
