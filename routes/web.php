@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\InvitationController;
+use App\Http\Controllers\MercadoPagoController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,8 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('/gallery/{slug?}', GalleryController::class)->name('gallery');
 Route::get('/invitation/{id}', [InvitationController::class,'show'])->name('invitation.show');
 Route::post('/order', [OrderController::class,'store'])->name('order.store');
+Route::post('/mercado-pago/preference/{orderId}', [MercadoPagoController::class, 'preference'])->name('mercado-pago.preference');
+Route::post('/mercado-pago/process', [MercadoPagoController::class, 'process'])->name('mercado-pago.process');
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [

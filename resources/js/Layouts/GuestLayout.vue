@@ -34,8 +34,8 @@ function suscribe(){
                 <form id="search" class="p-2 flex text-sm text-gray-400" @submit.prevent="submitSearch">
                     <select v-model="search.type" class="hidden lg:block p-3 border border-[rgb(225, 227, 230)]">
                         <option value="">Todas</option>
-                        <option value="fija">Fijas</option>
-                        <option value="animada">Animadas</option>
+                        <option value="1">Fijas</option>
+                        <option value="2">Animadas</option>
                     </select>
                     <button type="submit" class="border-s p-3 border-t border-b border-[rgb(225, 227, 230)]">
                         <svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -50,22 +50,22 @@ function suscribe(){
                 <nav class="hidden lg:block">
                     <ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl">
                         <li>
-                            <Link href="/gallery/baby-shower">Baby Shower</link>
+                            <Link href="/gallery" :data="{tag:1}">Baby Shower</link>
                         </li>
                         <li>
-                            <Link href="/gallery/comuniones">Comuniones</Link>
+                            <Link href="/gallery" :data="{tag:2}">Comuniones</Link>
                         </li>
                         <li>
-                            <Link href="/gallery/bautismos">Bautismos</Link>
+                            <Link href="/gallery" :data="{tag:3}">Bautismos</Link>
                         </li>
                         <li>
-                            <Link href="/gallery/bodas">Bodas</Link>
+                            <Link href="/gallery" :data="{tag:4}">Bodas</Link>
                         </li>
                         <li>
-                            <Link href="/gallery/cumpleanos-adultos">Cumpleaños<br>Adultos</Link>
+                            <Link href="/gallery" :data="{tag:5}">Cumpleaños<br>Adultos</Link>
                         </li>
                         <li>
-                            <Link href="/gallery/cumpleanos-ninos">Cumpleaños<br>Niños</Link>
+                            <Link href="/gallery" :data="{tag:6}">Cumpleaños<br>Niños</Link>
                         </li>
                     </ul>
                 </nav>
@@ -88,22 +88,22 @@ function suscribe(){
                 <h4 class="text-lg pt-5 pb-2">Navegación</h4>
                 <ul class="grid grid-cols-2 lg:block">
                     <li>
-                        <Link href="/gallery/baby-shower">Baby Shower</link>
+                        <Link href="/gallery" :data="{tag:1}">Baby Shower</link>
                     </li>
                     <li>
-                        <Link href="/gallery/comuniones">Comuniones</Link>
+                        <Link href="/gallery" :data="{tag:2}">Comuniones</Link>
                     </li>
                     <li>
-                        <Link href="/gallery/bautismos">Bautismos</Link>
+                        <Link href="/gallery" :data="{tag:3}">Bautismos</Link>
                     </li>
                     <li>
-                        <Link href="/gallery/bodas">Bodas</Link>
+                        <Link href="/gallery" :data="{tag:4}">Bodas</Link>
                     </li>
                     <li>
-                        <Link href="/gallery/cumpleanos-adultos">Cumpleaños<br>Adultos</Link>
+                        <Link href="/gallery" :data="{tag:5}">Cumpleaños<br>Adultos</Link>
                     </li>
                     <li>
-                        <Link href="/gallery/cumpleanos-ninos">Cumpleaños<br>Niños</Link>
+                        <Link href="/gallery" :data="{tag:6}">Cumpleaños<br>Niños</Link>
                     </li>
                 </ul>
             </div>

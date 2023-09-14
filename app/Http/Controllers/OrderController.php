@@ -3,40 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
 use App\Models\Order;
+use App\Models\Invitation;
 use App\Notifications\OrderCreated;
-use App\Exceptions\PaymentRejectedException;
 
 class OrderController extends Controller
 {
     public function store(Request $request)
     {
         $request->validate([
-            'installments' => 'required|integer',
-            'issuer_id' => 'required|integer',
-            'payer.email' => 'required|email',
-            'payer.identification.number' => 'required|integer',
-            'payer.identification.type' => 'required',
-            'payment_method_id' => 'required',
-            'token' => 'required',
-            'transaction_amount' => 'required',
+            'invitation_id' => 'required|exists:invitations,id',
             'name' => 'required',
             'address' => 'required',
             'observation' => 'nullable',
-            'phone_number' => 'required|integer',
-            'invitation_id' => 'nullable|integer',
+            'phone_number' => 'required',
+            'map_ubication' => 'required|boolean',
+            'whatsapp_confirmation' => 'required|boolean',
+            'payment_method' => 'required|in:mercado_pago,transferencia',
         ]);
 
-        $response = Http::acceptJson()
-            ->withToken( config('mercadopago.access_token') )
-            ->post('https://api.mercadopago.com/v1/payments', $request->except('name','address','observation','phone_number','invitation_id'));
-
-        $response->throw();
-
-        if( $response['status'] !== 'approved' )
-            throw new PaymentRejectedException($response);
+        $invitation = Invitation::findOrFail($request->invitation_id);
+        $price = floor((
+                $invitation->price
+                + ( $request->boolean('map_ubication') ? 150 : 0 )
+                + ( $request->boolean('whatsapp_confirmation') ? 150 : 0 )
+            ) * ( $request->input('payment_method') === 'transferencia' ? 0.9 : 1 ));
 
         $order = new Order();
         $order->invitation_id = $request->input('invitation_id');
@@ -44,8 +36,10 @@ class OrderController extends Controller
         $order->address = $request->input('address');
         $order->observation = $request->input('observation');
         $order->phone_number = $request->input('phone_number');
-        $order->payment_id = $response['id'];
-        $order->email = $request->input('payer.email');
+        $order->map_ubication = $request->boolean('map_ubication');
+        $order->whatsapp_confirmation = $request->boolean('whatsapp_confirmation');
+        $order->payment_method = $request->input('payment_method');
+        $order->price = $price;
         $order->save();
 
         //Notification::route('mail',$order->mail)

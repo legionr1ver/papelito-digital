@@ -7,20 +7,19 @@ export default {
 </script>
 
 <script setup>
-import { ref, computed } from 'vue';
-import { Link } from '@inertiajs/vue3'
-import InformationStep from './Partials/InformationStep.vue';
-import PayMentMethodSelectionStep from './Partials/PayMentMethodSelectionStep.vue';
-import ConfirmationStep from './Partials/ConfirmationStep.vue';
-import PaymentStep from './Partials/PaymentStep.vue';
+import { ref, reactive } from 'vue';
+import { Link } from '@inertiajs/vue3';
+import Step1Information from './Partials/Step1Information.vue';
+import Step2PayMentMethodSelection from './Partials/Step2PayMentMethodSelection.vue';
+import Step3Confirmation from './Partials/Step3Confirmation.vue';
+import Step4Payment from './Partials/Step4Payment.vue';
 
-const PAGE_STEP_INFORMATION = 1;
-const PAGE_STEP_PAYMENT_METHOD_SELECTION = 2;
-const PAGE_STEP_CONFIRMATION = 3;
-const PAGE_STEP_PAYMENT = 4;
-
-const INVITATION_TYPE_FIJA = 1;
-const INVITATION_TYPE_ANIMADA = 2;
+const constants = Object.freeze({
+    PAGE_STEP_1_INFORMATION: Symbol(),
+    PAGE_STEP_2_PAYMENT_METHOD: Symbol(),
+    PAGE_STEP_3_CONFIRMATION: Symbol(),
+    PAGE_STEP_4_PAYMENT: Symbol(),
+});
 
 const props = defineProps({
     previous_url: {
@@ -37,47 +36,61 @@ const props = defineProps({
     },
 });
 
-let page_step = ref(PAGE_STEP_INFORMATION);
-const payment_method = ref('transferencia');
-
-const information_step_form = ref({
-    map_ubication: false,
-    whatsapp_confirmation: false,
+const page_step = ref(constants.PAGE_STEP_1_INFORMATION);
+const form = reactive({
     name: '',
     address: '',
     observation: '',
-    phone_number: ''
+    phone_number: '',
+    map_ubication: false,
+    whatsapp_confirmation: false,
+    payment_method: 'transferencia',
 });
+const order = ref(null);
 
-const final_price = computed(() => {
-    console.log('final_price');
-    return Math.floor( (
-                props.invitation.price
-                + (information_step_form.value.map_ubication ? 150 : 0)
-                + (information_step_form.value.whatsapp_confirmation ? 150 : 0)
-            ) * (payment_method.value === 'transferencia' ? 0.9 : 1) );
-});
+function step1Submitted(data){
+    form.name = data.name;
+    form.address = data.address;
+    form.observation = data.observation;
+    form.phone_number = data.phone_number;
+    form.map_ubication = data.map_ubication;
+    form.whatsapp_confirmation = data.whatsapp_confirmation;
+
+    page_step.value = constants.PAGE_STEP_2_PAYMENT_METHOD;
+}
+
+function step2Submitted(payment_method){
+    form.payment_method = payment_method;
+
+    page_step.value = constants.PAGE_STEP_3_CONFIRMATION;
+}
+
+async function step3Submitted(createdOrder){
+    order.value = createdOrder;
+
+    page_step.value = constants.PAGE_STEP_4_PAYMENT;
+}
 </script>
 
 <template>
     <div class="max-w-[1200px] mx-auto mb-16 grid md:grid-cols-2">
         <div class="">
-            <img v-if="invitation.type_id == INVITATION_TYPE_FIJA" class="p-2 mx-auto max-w-md" :src="invitation.source_url">
-            <video v-if="invitation.type_id == INVITATION_TYPE_ANIMADA" class="p-2 mx-auto max-w-md" :src="invitation.source_url" loop controls></video>
+            <img v-if="invitation.type_id == 1" class="p-2 mx-auto max-w-md" :src="invitation.source_url">
+            <video v-if="invitation.type_id == 2" class="p-2 mx-auto max-w-md" :src="invitation.source_url" loop controls></video>
         </div>
         <div class="p-5">
             <header class="pb-10">
                 <Link :href="previous_url" class="text-primary">Volver a galeria</Link>
                 <div class="text-5xl text-primary font-serif">
                     <h2 class="mb-4">{{ invitation.title }}</h2>
-                    <div>${{ invitation.price }}</div>
+                    <!--div>${{ invitation.price }}</div-->
                 </div>
             </header>
             <div>
-                <InformationStep v-show="page_step === PAGE_STEP_INFORMATION" :invitation="props.invitation" v-model="information_step_form" @submitted="page_step = PAGE_STEP_PAYMENT_METHOD_SELECTION" />
-                <PayMentMethodSelectionStep v-show="page_step === PAGE_STEP_PAYMENT_METHOD_SELECTION" v-model="payment_method" @goBack="page_step = PAGE_STEP_INFORMATION" @submitted="page_step = PAGE_STEP_CONFIRMATION" />
-                <ConfirmationStep v-show="page_step === PAGE_STEP_CONFIRMATION" :invitation="props.invitation" :information_step_form="information_step_form" :payment_method="payment_method" :final_price="final_price" @goBack="page_step = PAGE_STEP_PAYMENT_METHOD_SELECTION" @submitted="page_step = PAGE_STEP_PAYMENT" />
-                <PaymentStep v-show="page_step === PAGE_STEP_PAYMENT" :payment_method="payment_method" :final_price="final_price" :mercadopago_public_key="mercadopago_public_key" @goBack="page_step = PAGE_STEP_CONFIRMATION" />
+                <Step1Information v-if="page_step === constants.PAGE_STEP_1_INFORMATION" :invitation="props.invitation" v-bind="form" @submitted="step1Submitted" />
+                <Step2PayMentMethodSelection v-if="page_step === constants.PAGE_STEP_2_PAYMENT_METHOD" v-bind="form" @goBack="page_step = constants.PAGE_STEP_1_INFORMATION" @submitted="step2Submitted" />
+                <Step3Confirmation v-if="page_step === constants.PAGE_STEP_3_CONFIRMATION" :invitation="props.invitation" v-bind="form" @goBack="page_step = constants.PAGE_STEP_2_PAYMENT_METHOD" @submitted="step3Submitted" />
+                <Step4Payment v-if="page_step === constants.PAGE_STEP_4_PAYMENT" :order="order" :mercadopago_public_key="mercadopago_public_key" />
             </div>
         </div>
     </div>

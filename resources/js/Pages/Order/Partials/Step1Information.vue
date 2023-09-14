@@ -1,34 +1,34 @@
 <script setup>
-import { reactive } from 'vue';
+import { ref, reactive } from 'vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 
-const INVITATION_TYPE_ANIMADA = 2;
+const emit = defineEmits(['submitted']);
+const props = defineProps([
+    'invitation',
+    'name',
+    'address',
+    'observation',
+    'phone_number',
+    'map_ubication',
+    'whatsapp_confirmation',
+]);
 
-const props = defineProps({
-    invitation: {
-        type: Object,
-        required: true,
-    },
-    modelValue: {
-        type: Object,
-        required: true,
-    },
-});
-
-const emit = defineEmits(['submitted','update:modelValue']);
-
-const form = reactive({
-    map_ubication: false,
-    whatsapp_confirmation: false,
-    name: '',
-    address: '',
-    observation: '',
-    phone_number: ''
-});
+const name = ref(props.name);
+const address = ref(props.address);
+const observation = ref(props.observation);
+const phone_number = ref(props.phone_number);
+const map_ubication = ref(props.map_ubication);
+const whatsapp_confirmation = ref(props.whatsapp_confirmation);
 
 function submit(){
-    emit('update:modelValue', form);
-    emit('submitted');
+    emit('submitted',{
+        name: name.value,
+        address: address.value,
+        observation: observation.value,
+        phone_number: phone_number.value,
+        map_ubication: map_ubication.value,
+        whatsapp_confirmation: whatsapp_confirmation.value,
+    });
 }
 
 </script>
@@ -55,11 +55,11 @@ function submit(){
                 <h2 class="text-2xl mb-5">Extras</h2>
                 <ul>
                     <li class="flex items-center">
-                        <input v-model="form.map_ubication" true-value="1" false-value="0" id="add-map-ubication" type="checkbox" class="m-2 accent-primary">
+                        <input v-model="map_ubication" id="add-map-ubication" type="checkbox" class="m-2 accent-primary">
                         <label for="add-map-ubication">+$150 Agregar ubiación en mapa.</label>
                     </li>
                     <li class="flex items-center">
-                        <input v-model="form.whatsapp_confirmation" true-value="1" false-value="0" id="add-whatsapp-confirmation" type="checkbox" class="m-2 accent-primary">
+                        <input v-model="whatsapp_confirmation" id="add-whatsapp-confirmation" type="checkbox" class="m-2 accent-primary">
                         <label for="add-whatsapp-confirmation">+$150 Agregar confirmación de asistencia por
                             whatsapp.</label>
                     </li>
@@ -68,19 +68,19 @@ function submit(){
         </div>
         <form id="information-step-form" class="grid text-gray-400" @submit.prevent="submit">
             <label class="mt-1" for="name">Nombre</label>
-            <input v-model="form.name" class="p-2 border border-[rgb(225, 227, 230)]" id="name" name="name" type="text"
+            <input v-model="name" class="p-2 border border-[rgb(225, 227, 230)]" id="name" name="name" type="text"
                 required>
 
             <label class="mt-1" for="address">Dirección</label>
-            <input v-model="form.address" class="p-2 border border-[rgb(225, 227, 230)]" id="address" name="address"
+            <input v-model="address" class="p-2 border border-[rgb(225, 227, 230)]" id="address" name="address"
                 type="text" required>
 
             <label class="mt-1" for="observation">Observación</label>
-            <textarea v-model="form.observation" rows="4" class="resize-y p-2 border border-[rgb(225, 227, 230)]"
+            <textarea v-model="observation" rows="4" class="resize-y p-2 border border-[rgb(225, 227, 230)]"
                 id="observation" name="observation"></textarea>
 
             <label class="mt-1" for="phone_number">Teléfono</label>
-            <input v-model="form.phone_number" class="p-2 border border-[rgb(225, 227, 230)]" id="phone_number"
+            <input v-model="phone_number" class="p-2 border border-[rgb(225, 227, 230)]" id="phone_number"
                 name="phone_number" type="text" required>
         </form>
 

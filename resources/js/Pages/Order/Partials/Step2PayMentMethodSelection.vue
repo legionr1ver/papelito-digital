@@ -2,19 +2,18 @@
 import { ref } from 'vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 
+const emit = defineEmits(['goBack','submitted']);
 const props = defineProps({
-    modelValue: {
+    payment_method: {
+        type: String,
         required: true,
     },
 });
 
-const emit = defineEmits(['goBack','submitted','update:modelValue']);
-
-const payment_method = ref(props.modelValue);
+const payment_method = ref(props.payment_method);
 
 function submit(){
-    emit('update:modelValue', payment_method.value);
-    emit('submitted');
+    emit('submitted', payment_method.value);
 }
 
 </script>

@@ -16,7 +16,7 @@ import { Link } from '@inertiajs/vue3';
             <h2 class="p-3 text-5xl lg:text-7xl text-center font-serif font-bold tracking-wider text-white" style="text-shadow: 2px 2px 15px rgba(0,0,0,1);">Invitaciones<br>Animadas</h2>
             <p class="text-center text-white max-w-[40ch] text-xl mb-3">Con música de fondo y hasta 30 segundos de duración!</p>
             <div class="text-center">
-                <Link href="/gallery" :data="{type:'animada'}" class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver diseños</link>
+                <Link href="/gallery" :data="{type:2}" class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver diseños</link>
             </div>
         </div>
         <div class="p-5">
@@ -33,12 +33,12 @@ import { Link } from '@inertiajs/vue3';
             <p class="text-center text-sm">Hay muchos modelos para elegir</p>
         </header>
         <div class="p-3 grid lg:grid-cols-3 auto-rows-[120px] gap-3 text-white font-bold">
-            <Link class="bg-[url('/assets/images/links/baby-shower.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery/baby-shower"><h4>Baby Shower</h4></Link>
-            <Link class="bg-[url('/assets/images/links/comunion.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery/comuniones"><h4>Comunión</h4></Link>
-            <Link class="bg-[url('/assets/images/links/bautismo.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery/bautismos"><h4>Bautismo</h4></Link>
-            <Link class="bg-[url('/assets/images/links/boda.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery/bodas"><h4>Boda</h4></Link>
-            <Link class="bg-[url('/assets/images/links/cumpleanos-adulto.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery/cumpleanos-adultos"><h4>Cumpleaños<br>adultos</h4></Link>
-            <Link class="bg-[url('/assets/images/links/cumpleanos-infantil.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery/cumpleanos-ninos"><h4>Cumpleaños<br>infantiles</h4></Link>
+            <Link class="bg-[url('/assets/images/links/baby-shower.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:1}"><h4>Baby Shower</h4></Link>
+            <Link class="bg-[url('/assets/images/links/comunion.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:2}"><h4>Comunión</h4></Link>
+            <Link class="bg-[url('/assets/images/links/bautismo.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:3}"><h4>Bautismo</h4></Link>
+            <Link class="bg-[url('/assets/images/links/boda.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:4}"><h4>Boda</h4></Link>
+            <Link class="bg-[url('/assets/images/links/cumpleanos-adulto.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:5}"><h4>Cumpleaños<br>adultos</h4></Link>
+            <Link class="bg-[url('/assets/images/links/cumpleanos-infantil.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:6}"><h4>Cumpleaños<br>infantiles</h4></Link>
         </div>
     </section>
 

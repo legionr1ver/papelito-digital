@@ -13,13 +13,17 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('invitation_id')->nullable()->constrained();
+            $table->foreignId('invitation_id')->constrained();
             $table->string('name', 50);
             $table->string('address', 500);
             $table->string('observation', 500)->nullable();
-            $table->string('phone_number', 50)->nullable();
-            $table->foreignId('payment_id');
-            $table->string('email', 500);
+            $table->string('phone_number', 50);
+            $table->boolean('map_ubication')->default(false);
+            $table->boolean('whatsapp_confirmation')->default(false);
+            $table->decimal('price');
+            $table->string('payment_method', 50);
+            $table->string('payment_external_id')->nullable();
+            $table->string('payment_extra')->nullable();
             $table->timestamps();
         });
     }
