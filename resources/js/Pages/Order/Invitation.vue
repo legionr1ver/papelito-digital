@@ -75,8 +75,8 @@ async function step3Submitted(createdOrder){
 <template>
     <div class="max-w-[1200px] mx-auto mb-16 grid md:grid-cols-2">
         <div class="">
-            <img v-if="invitation.type_id == 1" class="p-2 mx-auto max-w-md" :src="invitation.source_url">
-            <video v-if="invitation.type_id == 2" class="p-2 mx-auto max-w-md" :src="invitation.source_url" loop controls></video>
+            <img v-if="invitation.type_id == 1" class="p-2 mx-auto max-w-full" :src="invitation.source_url">
+            <video v-if="invitation.type_id == 2" class="p-2 mx-auto max-w-full" :src="invitation.source_url" loop controls></video>
         </div>
         <div class="p-5">
             <header class="pb-10">
