@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive } from 'vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Button from '@/Components/Button.vue';
 
 const emit = defineEmits(['submitted']);
 const props = defineProps([
@@ -85,8 +85,8 @@ function submit(){
         </form>
 
         <div class="grid grid-cols-2 gap-2">
-            <PrimaryButton type="buttom" disabled>Volver</PrimaryButton>
-            <PrimaryButton type="submit" form="information-step-form">Siguiente</PrimaryButton>
+            <Button type="buttom" disabled>Volver</Button>
+            <Button type="submit" form="information-step-form">Siguiente</Button>
         </div>
     </div>
 </template>

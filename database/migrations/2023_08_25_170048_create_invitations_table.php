@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('source');
             $table->string('thumbnail')->nullable();
             $table->decimal('price');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

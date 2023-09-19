@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Button from '@/Components/Button.vue';
 
 const emit = defineEmits(['goBack','submitted']);
 const props = defineProps({
@@ -38,8 +38,8 @@ function submit(){
         </ul>            
 
         <div class="grid grid-cols-2 gap-2">
-            <PrimaryButton type="button" @click="$emit('goBack')">Volver</PrimaryButton>
-            <PrimaryButton type="submit" form="payment-method-selection-step-form">Siguiente</PrimaryButton>
+            <Button type="button" @click="$emit('goBack')">Volver</Button>
+            <Button type="submit" form="payment-method-selection-step-form">Siguiente</Button>
         </div>
     </form>
 </template>

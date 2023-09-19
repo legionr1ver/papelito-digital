@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { Link } from '@inertiajs/vue3';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Button from '@/Components/Button.vue';
 
 const props = defineProps({
     mercadopago_public_key: {
@@ -141,7 +141,7 @@ async function createMercadoPagoPayment() {
                 <div>
                     <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.png" alt="Ocurrio un error">
                     <div>
-                        <PrimaryButton @click="createMercadoPagoPayment">Volver a intentar</PrimaryButton>
+                        <Button @click="createMercadoPagoPayment">Volver a intentar</Button>
                     </div>
                 </div>
             </div>

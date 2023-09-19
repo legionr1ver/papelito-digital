@@ -32,7 +32,7 @@ defineProps({
 
 <template>
     <article class="grid grid-rows-[350px_auto_auto]">
-        <Link :href="`/invitation/${id}`" class="group flex justify-center items-center hover:brightness-50 transition-all relative">
+        <Link :href="`/checkout/${id}`" class="group flex justify-center items-center hover:brightness-50 transition-all relative">
             <img v-if="type_id == TYPE_FIJA" :src="source_url" class="max-h-full">
             <video v-if="type_id == TYPE_ANIMADA" :src="source_url" class="max-h-full"></video>
         </Link>
@@ -40,7 +40,7 @@ defineProps({
             <strong class="flex-1">{{ title }}</strong>
             <span class="flex-initial">${{ price }}</span>
         </div>
-        <Link :href="`/invitation/${id}`" as="button" class="bg-primary text-white py-2 mt-1 mx-2 rounded shadow-lg">
+        <Link :href="`/checkout/${id}`" as="button" class="bg-primary text-white py-2 mt-1 mx-2 rounded shadow-lg">
             Comprar
         </Link>
     </article>

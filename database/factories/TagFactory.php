@@ -22,7 +22,6 @@ class TagFactory extends Factory
             'slug' => function(array $attributes){
                 return Str::of($attributes['name'])->slug('-');
             },
-            'color' => '#b2a0d9',
         ];
     }
 }

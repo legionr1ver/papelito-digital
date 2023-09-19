@@ -23,28 +23,24 @@ use Inertia\Inertia;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/gallery/{slug?}', GalleryController::class)->name('gallery');
-Route::get('/invitation/{id}', [InvitationController::class,'show'])->name('invitation.show');
-Route::post('/order', [OrderController::class,'store'])->name('order.store');
+Route::get('/checkout/{id}', [InvitationController::class,'show'])->name('checkout');
 Route::post('/mercado-pago/preference/{orderId}', [MercadoPagoController::class, 'preference'])->name('mercado-pago.preference');
 Route::post('/mercado-pago/process', [MercadoPagoController::class, 'process'])->name('mercado-pago.process');
 
-Route::get('/welcome', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::middleware('auth')->group(function(){
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
 
-Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::resources([
+        'invitations' => InvitationController::class,
+        'orders' => OrderController::class,
+    ]);
 });
 
 require __DIR__.'/auth.php';

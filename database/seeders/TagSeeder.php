@@ -17,12 +17,12 @@ class TagSeeder extends Seeder
         Tag::factory()
             ->count(6)
             ->state(new Sequence(
-                ['label' => 'Baby Shower', 'slug' => 'baby-shower', 'color' => 'rgb(178 160 217)'],
-                ['label' => 'Comuniones', 'slug' => 'comuniones', 'color' => 'rgb(178 160 217)'],
-                ['label' => 'Bautismos', 'slug' => 'bautismos', 'color' => 'rgb(178 160 217)'],
-                ['label' => 'Bodas', 'slug' => 'bodas', 'color' => 'rgb(178 160 217)'],
-                ['label' => 'Cumpleaños Adultos', 'slug' => 'cumpleaños-adultos', 'color' => 'rgb(178 160 217)'],
-                ['label' => 'Cumpleaños Niños', 'slug' => 'cumpleaños-niños', 'color' => 'rgb(178 160 217)'],
+                ['label' => 'Baby Shower', 'slug' => 'baby-shower'],
+                ['label' => 'Comuniones', 'slug' => 'comuniones'],
+                ['label' => 'Bautismos', 'slug' => 'bautismos'],
+                ['label' => 'Bodas', 'slug' => 'bodas'],
+                ['label' => 'Cumpleaños Adultos', 'slug' => 'cumpleaños-adultos'],
+                ['label' => 'Cumpleaños Niños', 'slug' => 'cumpleaños-niños'],
             ))
             ->create();
     }

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Button from '@/Components/Button.vue';
 
 const emit = defineEmits(['goBack','submitted']);
 const props = defineProps([
@@ -73,8 +73,8 @@ async function submit(){
             </div>
 
             <div class="grid grid-cols-2 gap-2">
-                <PrimaryButton type="button" @click="$emit('goBack')">Volver</PrimaryButton>
-                <PrimaryButton type="button" @click="submit">Confirmar</PrimaryButton>
+                <Button type="button" @click="$emit('goBack')">Volver</Button>
+                <Button type="button" @click="submit">Confirmar</Button>
             </div>
         </div>
 
@@ -89,7 +89,7 @@ async function submit(){
             <div>
                 <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.png" alt="Ocurrio un error">
                 <div>
-                    <PrimaryButton @click="submit">Volver a intentar</PrimaryButton>
+                    <Button @click="submit">Volver a intentar</Button>
                 </div>
             </div>
         </div>
