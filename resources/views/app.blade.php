@@ -13,8 +13,6 @@
     @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
     @inertiaHead
 
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9JTQWJKPJ"></script>
     <script>
