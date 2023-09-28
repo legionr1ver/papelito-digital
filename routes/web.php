@@ -6,7 +6,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\InvitationController;
 use App\Http\Controllers\MercadoPagoController;
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -23,7 +23,7 @@ use Inertia\Inertia;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/gallery/{slug?}', GalleryController::class)->name('gallery');
-Route::get('/checkout/{id}', [InvitationController::class,'show'])->name('checkout');
+Route::get('/checkout/{id}', [CheckoutController::class,'show'])->name('checkout');
 Route::post('/mercado-pago/preference/{orderId}', [MercadoPagoController::class, 'preference'])->name('mercado-pago.preference');
 Route::post('/mercado-pago/process', [MercadoPagoController::class, 'process'])->name('mercado-pago.process');
 

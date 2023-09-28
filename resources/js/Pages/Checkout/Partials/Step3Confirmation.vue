@@ -36,7 +36,7 @@ async function submit(){
     try {
         state.value = states.LOADING;
 
-        const response = await axios.post('/order', {
+        const response = await axios.post('/orders', {
             invitation_id: props.invitation.id,
             name: props.name,
             address: props.address,
