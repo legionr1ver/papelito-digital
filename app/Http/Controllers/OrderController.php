@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
+use Inertia\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 use App\Models\Order;
@@ -10,6 +12,19 @@ use App\Notifications\OrderCreated;
 
 class OrderController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        return Inertia::render('Orders/List', [
+            'paginatedOrders' => Order::with('invitation.type')->paginate(15),
+        ]);
+    }
+
+    /**
+     * Create a new order
+     */
     public function store(Request $request)
     {
         $request->validate([
