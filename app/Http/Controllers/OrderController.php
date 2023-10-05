@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use Inertia\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
+use App\Models\User;
 use App\Models\Order;
 use App\Models\Invitation;
 use App\Notifications\OrderCreated;
@@ -15,11 +16,63 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Inertia::render('Orders/List', [
-            'paginatedOrders' => Order::with('invitation.type')->paginate(15),
+        $request->validate([
+            'query' => 'nullable',
+            'finished' => 'nullable|boolean',
         ]);
+
+        $q = Order::with('invitation.type')
+            ->orderBy('created_at','desc');
+
+        if( $searchQuery = $request->input('query') )
+        {
+            $q->where(function($query)use($searchQuery){
+                $query->where('name','like',"%$searchQuery%")
+                    ->orWhereRelation('invitation','title','like',"%$searchQuery%");
+            });
+        }
+
+        if( $request->input('finished') )
+        {
+            $q->where('finished', $request->boolean('finished'));
+        }
+
+        return Inertia::render('Orders/List', [
+            'search' => [
+                'query' => $request->input('query'),
+                'finished' => $request->input('finished'),
+            ],
+            'paginatedOrders' => $q->paginate(15),
+        ]);
+    }
+
+    /**
+     * Display the specified resource
+     */
+    public function show(Order $order)
+    {
+        $order->load('invitation');
+
+        return Inertia::render('Orders/Show', [
+            'order' => $order,
+        ]);
+    }
+
+    /**
+     * Updates the specified resource
+     */
+    public function update(Order $order, Request $request)
+    {
+        $request->validate([
+            'finished' => 'required|boolean',
+        ]);
+        
+        $order->finished = $request->finished;
+        $order->save();
+
+        return back();
     }
 
     /**
@@ -57,8 +110,7 @@ class OrderController extends Controller
         $order->price = $price;
         $order->save();
 
-        //Notification::route('mail',$order->mail)
-            //->notify( new OrderCreated() );
+        Notification::send( User::all(), new OrderCreated($order) );
 
         return $order;
     }
