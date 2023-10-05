@@ -102,7 +102,7 @@ async function createMercadoPagoPayment() {
                 <p class="py-1">
                     Por favor luego de realizar la transferencia envianos el comprobante por whatsapp a 
                     <a class="underline text-primary" href="tel:+549111521664157">+54 9 11 2166 4157</a>
-                    o por mail a <a class="underline text-primary" href="mailto:info@papelitodigital.com.ar">info@papelitodigital.com.ar</a>
+                    o por mail a <a class="underline text-primary" href="mailto:contacto@papelitodigital.com.ar">contacto@papelitodigital.com.ar</a>
                 </p>
                 <p class="py-1">
                     El monto a abonar es de <strong class="text-xl p-2">${{ props.order.price }}</strong>
@@ -114,15 +114,15 @@ async function createMercadoPagoPayment() {
                 <div class="divide-y-2">
                     <div class="flex p-2">
                         <span class="flex-initial">CBU</span>
-                        <strong class="ms-auto flex-initial">01702046600000087865</strong>
+                        <strong class="ms-auto flex-initial">0720071788000017486868</strong>
                     </div>
                     <div class="flex p-2">
                         <span class="flex-initial">Alias</span>
-                        <strong class="ms-auto flex-initial">PAPELITO.DIGITAL.AR</strong>
+                        <strong class="ms-auto flex-initial">PAPELITO.DIGITAL</strong>
                     </div>
                     <div class="flex p-2">
                         <span class="flex-initial">Titular de cuenta</span>
-                        <strong class="ms-auto flex-initial">Giselle Silvero</strong>
+                        <strong class="ms-auto flex-initial">Silvero Gabriela Giselle</strong>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,11 @@ Route::get('/checkout/{id}', [CheckoutController::class,'show'])->name('checkout
 Route::post('/mercado-pago/preference/{orderId}', [MercadoPagoController::class, 'preference'])->name('mercado-pago.preference');
 Route::post('/mercado-pago/process', [MercadoPagoController::class, 'process'])->name('mercado-pago.process');
 
+Route::resources([
+    'invitations' => InvitationController::class,
+    'orders' => OrderController::class,
+]);
+
 Route::middleware('auth')->group(function(){
 
     Route::get('/dashboard', function () {
@@ -36,11 +41,6 @@ Route::middleware('auth')->group(function(){
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    Route::resources([
-        'invitations' => InvitationController::class,
-        'orders' => OrderController::class,
-    ]);
 });
 
 require __DIR__.'/auth.php';
