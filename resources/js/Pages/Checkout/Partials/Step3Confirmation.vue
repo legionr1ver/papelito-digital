@@ -72,7 +72,7 @@ async function submit(){
                 <div>Metodo de pago: <strong>{{ props.payment_method == 'transferencia' ? 'Transferencia' : 'Mercado pago' }}</strong></div>
             </div>
 
-            <div class="grid grid-cols-2 gap-2">
+            <div class="grid grid-cols-2 gap-2 my-2">
                 <Button type="button" @click="$emit('goBack')">Volver</Button>
                 <Button type="button" @click="submit">Confirmar</Button>
             </div>

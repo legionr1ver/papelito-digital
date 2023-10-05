@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
-use Inertia\Response;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Notification;
-use App\Models\User;
 use App\Models\Order;
 use App\Models\Invitation;
-use App\Notifications\OrderCreated;
 
 class OrderController extends Controller
 {
@@ -109,8 +105,6 @@ class OrderController extends Controller
         $order->payment_method = $request->input('payment_method');
         $order->price = $price;
         $order->save();
-
-        Notification::send( User::all(), new OrderCreated($order) );
 
         return $order;
     }

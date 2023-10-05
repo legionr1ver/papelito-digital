@@ -69,7 +69,7 @@ const search = useForm({
             <span>Fija</span>
           </template>
           <template v-if="order.invitation.type_id === 2">
-            <FontAwesomeIcon :icon="['far', 'file-video']" />
+            <FontAwesomeIcon class="mx-2 text-2xl" :icon="['far', 'file-video']" />
             <span>Video</span>
           </template>
         </td>

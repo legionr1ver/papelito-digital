@@ -37,7 +37,7 @@ function submit(){
             </li>
         </ul>            
 
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-2 gap-2 my-2">
             <Button type="button" @click="$emit('goBack')">Volver</Button>
             <Button type="submit" form="payment-method-selection-step-form">Siguiente</Button>
         </div>

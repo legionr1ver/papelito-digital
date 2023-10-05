@@ -7,8 +7,8 @@ import Button from '@/Components/Button.vue';
 import Alert from '@/Components/Alert.vue';
 
 const form = useForm({
-  email: 'maurocurti1989@gmail.com',
-  password: '123456',
+  email: '',
+  password: '',
 })
 </script>
 

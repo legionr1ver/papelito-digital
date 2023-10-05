@@ -84,7 +84,7 @@ function submit(){
                 name="phone_number" type="text" required>
         </form>
 
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-2 gap-2 my-2">
             <Button type="buttom" disabled>Volver</Button>
             <Button type="submit" form="information-step-form">Siguiente</Button>
         </div>

@@ -176,7 +176,7 @@ const dropDownOpen = ref(false);
                     :class="dropDownOpen ? '' : 'hidden'">
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200">Account</a>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
+                    <Link href="/logout" method="post" class="block px-4 py-2 hover:bg-gray-200">Logout</Link>
                 </div>
                 <!-- dropdown menu end -->
 
