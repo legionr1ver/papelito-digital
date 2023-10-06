@@ -147,6 +147,7 @@ function suscribe(){
                         <li><a href="https://www.instagram.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/instagram.png"></a></li>
                         <li><a href="https://ar.pinterest.com/Papelitodigital" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/pinterest.png"></a></li>
                         <li><a href="https://www.tiktok.com/@papelitodigital?is_from_webapp=1&sender_device=pc" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/tiktok.png"></a></li>
+                        <li><a href="https://www.youtube.com/@papelitodigital" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/youtube.png"></a></li>
                     </ul>
                 </section>
 
