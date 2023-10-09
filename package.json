@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
@@ -22,6 +22,7 @@
         "@fortawesome/free-brands-svg-icons": "^6.4.2",
         "@fortawesome/free-regular-svg-icons": "^6.4.2",
         "@fortawesome/free-solid-svg-icons": "^6.4.2",
-        "@fortawesome/vue-fontawesome": "^3.0.3"
+        "@fortawesome/vue-fontawesome": "^3.0.3",
+        "@vue/server-renderer": "^3.3.4"
     }
 }
