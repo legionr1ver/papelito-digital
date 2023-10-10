@@ -44,7 +44,7 @@ const props = defineProps({
             Tiene un nuevo pedido. <Link class="m-1 text-primary font-bold hover:underline" :href="`/orders/${notification.data.order_id}`">Ir</Link>
           </template>
           <template v-if="notification.type.includes('OrderPaid')">
-            Un pedido pedido ya fue <strong class="text-red-500">pagado</strong>. <Link class="m-1 text-primary font-bold hover:underline" :href="`/orders/${notification.data.order_id}`">Ir</Link>
+            Un pedido pedido ya fue <strong class="text-green-500 m-1">Pagado</strong>. <Link class="m-1 text-primary font-bold hover:underline" :href="`/orders/${notification.data.order_id}`">Ir</Link>
           </template>
         </p>
         <span class="mx-2">

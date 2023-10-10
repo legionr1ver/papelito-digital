@@ -15,8 +15,9 @@ import Pagination from '@/Components/Pagination.vue';
 /* fontawesome */
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faFileImage, faFileVideo } from '@fortawesome/free-regular-svg-icons';
-library.add(faFileImage, faFileVideo);
+import { faFileImage, faFileVideo, faCircleCheck } from '@fortawesome/free-regular-svg-icons';
+import { faDollar } from '@fortawesome/free-solid-svg-icons';
+library.add(faFileImage, faFileVideo, faCircleCheck, faDollar);
 
 const props = defineProps({
   search: {
@@ -84,16 +85,22 @@ const search = useForm({
           <span v-else>Mercado Pago</span>
         </td>
         <td>
-          {{ order.payment_external_id ? 'Si' : 'No' }}
+          {{ order.paid ? 'Si' : 'No' }}
         </td>
         <td>{{ (new Date(order.created_at)).toLocaleDateString() }}</td>
         <td>
           <Link :href="`/orders/${order.id}`" as="button" class="py-1 px-4 rounded bg-primary font-bold text-white me-2">
           Ver</Link>
+
+          <Link v-if="order.paid" as="button" :href="`/orders/${order.id}`" :data="{ paid: false }" method="patch"
+            preserve-scroll class="py-1 px-4 me-2 rounded bg-green-600 font-bold text-white"><FontAwesomeIcon icon="fa-solid fa-dollar-sign" /></Link>
+          <Link v-else as="button" :href="`/orders/${order.id}`" :data="{ paid: true }" method="patch"
+            preserve-scroll class="py-1 px-4 me-2 rounded bg-red-600 font-bold text-white"><FontAwesomeIcon icon="fa-solid fa-dollar-sign" /></Link>
+
           <Link v-if="order.finished" as="button" :href="`/orders/${order.id}`" :data="{ finished: false }" method="patch"
-            preserve-scroll class="py-1 px-4 rounded bg-red-600 font-bold text-white">Pendiente</Link>
+            preserve-scroll class="py-1 px-4 rounded bg-green-600 font-bold text-white"><FontAwesomeIcon icon="fa-regular fa-circle-check" /></Link>
           <Link v-else as="button" :href="`/orders/${order.id}`" :data="{ finished: true }" method="patch" preserve-scroll
-            class="py-1 px-4 rounded bg-green-600 font-bold text-white">Finalizar</Link>
+            class="py-1 px-4 rounded bg-red-600 font-bold text-white"><FontAwesomeIcon icon="fa-regular fa-circle-check" /></Link>
         </td>
       </tr>
     </tbody>

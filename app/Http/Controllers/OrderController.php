@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Invitation;
 use App\Events\OrderCreated;
+use App\Events\OrderPaid;
 
 class OrderController extends Controller
 {
@@ -63,11 +64,15 @@ class OrderController extends Controller
     public function update(Order $order, Request $request)
     {
         $request->validate([
-            'finished' => 'required|boolean',
+            'finished' => 'boolean',
+            'paid' => 'boolean',
         ]);
         
-        $order->finished = $request->finished;
+        $order->finished = $request->input('finished', $order->finished);
+        $order->paid = $request->input('paid', $order->paid);
         $order->save();
+
+        OrderPaid::dispatchIf($order->paid, $order);
 
         return back();
     }

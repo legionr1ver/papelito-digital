@@ -47,7 +47,12 @@ defineProps({
       <div><span class="me-3">Código de pago</span><strong>{{ order.payment_external_id }}</strong></div>
       <div><span class="me-3">Fecha</span><strong>{{ (new Date(order.created_at)).toLocaleDateString() }}</strong></div>
       <div>
-        <span class="me-3">Estado</span>
+        <span class="me-3">Estado Pago</span>
+        <strong v-if="order.paid" class="text-green-600">Pagado</strong>
+        <strong v-else class="text-red-600">Impago</strong>
+      </div>
+      <div>
+        <span class="me-3">Estado Pedido</span>
         <strong v-if="order.finished" class="text-green-600">Finalizado</strong>
         <strong v-else class="text-red-600">Pendiente</strong>
       </div>

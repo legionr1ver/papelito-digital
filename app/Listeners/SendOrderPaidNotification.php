@@ -6,7 +6,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Notification;
 use App\Models\User;
-use App\Events\OrderCreated;
+use App\Events\OrderPaid;
 use App\Notifications\OrderPaid as OrderPaidNotification;
 
 class SendOrderPaidNotification
@@ -22,7 +22,7 @@ class SendOrderPaidNotification
     /**
      * Handle the event.
      */
-    public function handle(OrderCreated $event): void
+    public function handle(OrderPaid $event): void
     {
         $users = User::all();
 
