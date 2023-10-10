@@ -1,10 +1,13 @@
 <script setup>
 import { ref } from 'vue';
-import { Link } from '@inertiajs/vue3';
-import { router } from '@inertiajs/vue3';
+import { Link, usePage, router } from '@inertiajs/vue3';
 
 const sideBarOpen = ref(false);
 const dropDownOpen = ref(false);
+const notificationsDropDownOpen = ref(false);
+
+const page = usePage();
+const notifications = page.props.auth.notifications;
 </script>
 
 <template>
@@ -22,13 +25,14 @@ const dropDownOpen = ref(false);
 
                 <div class="mb-4 px-4">
                     <p class="pl-4 text-sm font-semibold mb-1">MAIN</p>
-                    <Link href="/dashboard" as="div" :class="{'bg-gray-200': $page.component === 'Dashboard'}" class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
-                        <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
-                            <path
-                                d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z">
-                            </path>
-                        </svg>
-                        <span class="text-gray-700">Dashboard</span>
+                    <Link href="/dashboard" as="div" :class="{ 'bg-gray-200': $page.component === 'Dashboard' }"
+                        class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
+                    <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
+                        <path
+                            d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z">
+                        </path>
+                    </svg>
+                    <span class="text-gray-700">Dashboard</span>
                     </Link>
                     <div
                         class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
@@ -57,33 +61,37 @@ const dropDownOpen = ref(false);
                         </svg>
                         <span class="text-gray-700">Enquiries</span>
                     </div>
-                    <Link href="/orders" as="div" :class="{'bg-gray-200': $page.component === 'Orders/Create'}" class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
-                        <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
-                            <path
-                                d="M16.557,4.467h-1.64v-0.82c0-0.225-0.183-0.41-0.409-0.41c-0.226,0-0.41,0.185-0.41,0.41v0.82H5.901v-0.82c0-0.225-0.185-0.41-0.41-0.41c-0.226,0-0.41,0.185-0.41,0.41v0.82H3.442c-0.904,0-1.64,0.735-1.64,1.639v9.017c0,0.904,0.736,1.64,1.64,1.64h13.114c0.904,0,1.64-0.735,1.64-1.64V6.106C18.196,5.203,17.461,4.467,16.557,4.467 M17.377,15.123c0,0.453-0.366,0.819-0.82,0.819H3.442c-0.453,0-0.82-0.366-0.82-0.819V8.976h14.754V15.123z M17.377,8.156H2.623V6.106c0-0.453,0.367-0.82,0.82-0.82h1.639v1.23c0,0.225,0.184,0.41,0.41,0.41c0.225,0,0.41-0.185,0.41-0.41v-1.23h8.196v1.23c0,0.225,0.185,0.41,0.41,0.41c0.227,0,0.409-0.185,0.409-0.41v-1.23h1.64c0.454,0,0.82,0.367,0.82,0.82V8.156z">
-                            </path>
-                        </svg>
-                        <span class="text-gray-700">Pedidos</span>
+                    <Link href="/orders" as="div" :class="{ 'bg-gray-200': $page.component === 'Orders/Create' }"
+                        class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
+                    <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
+                        <path
+                            d="M16.557,4.467h-1.64v-0.82c0-0.225-0.183-0.41-0.409-0.41c-0.226,0-0.41,0.185-0.41,0.41v0.82H5.901v-0.82c0-0.225-0.185-0.41-0.41-0.41c-0.226,0-0.41,0.185-0.41,0.41v0.82H3.442c-0.904,0-1.64,0.735-1.64,1.639v9.017c0,0.904,0.736,1.64,1.64,1.64h13.114c0.904,0,1.64-0.735,1.64-1.64V6.106C18.196,5.203,17.461,4.467,16.557,4.467 M17.377,15.123c0,0.453-0.366,0.819-0.82,0.819H3.442c-0.453,0-0.82-0.366-0.82-0.819V8.976h14.754V15.123z M17.377,8.156H2.623V6.106c0-0.453,0.367-0.82,0.82-0.82h1.639v1.23c0,0.225,0.184,0.41,0.41,0.41c0.225,0,0.41-0.185,0.41-0.41v-1.23h8.196v1.23c0,0.225,0.185,0.41,0.41,0.41c0.227,0,0.409-0.185,0.409-0.41v-1.23h1.64c0.454,0,0.82,0.367,0.82,0.82V8.156z">
+                        </path>
+                    </svg>
+                    <span class="text-gray-700">Pedidos</span>
                     </Link>
                 </div>
 
                 <div class="mb-4 px-4">
                     <p class="pl-4 text-sm font-semibold mb-1">INVITACIONES</p>
-                    <Link href="/invitations/create" as="div" :class="{'bg-gray-200': $page.component === 'Invitations/Create'}" class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
-                        <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
-                            <path
-                                d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10">
-                            </path>
-                        </svg>
-                        <span class="text-gray-700">Agregar</span>
+                    <Link href="/invitations/create" as="div"
+                        :class="{ 'bg-gray-200': $page.component === 'Invitations/Create' }"
+                        class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
+                    <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
+                        <path
+                            d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10">
+                        </path>
+                    </svg>
+                    <span class="text-gray-700">Agregar</span>
                     </Link>
-                    <Link href="/invitations" as="div" :class="{'bg-gray-200': $page.component === 'Invitations/List'}" class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
-                        <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
-                            <path
-                                d="M15.396,2.292H4.604c-0.212,0-0.385,0.174-0.385,0.386v14.646c0,0.212,0.173,0.385,0.385,0.385h10.792c0.211,0,0.385-0.173,0.385-0.385V2.677C15.781,2.465,15.607,2.292,15.396,2.292 M15.01,16.938H4.99v-2.698h1.609c0.156,0.449,0.586,0.771,1.089,0.771c0.638,0,1.156-0.519,1.156-1.156s-0.519-1.156-1.156-1.156c-0.503,0-0.933,0.321-1.089,0.771H4.99v-3.083h1.609c0.156,0.449,0.586,0.771,1.089,0.771c0.638,0,1.156-0.518,1.156-1.156c0-0.638-0.519-1.156-1.156-1.156c-0.503,0-0.933,0.322-1.089,0.771H4.99V6.531h1.609C6.755,6.98,7.185,7.302,7.688,7.302c0.638,0,1.156-0.519,1.156-1.156c0-0.638-0.519-1.156-1.156-1.156c-0.503,0-0.933,0.322-1.089,0.771H4.99V3.062h10.02V16.938z M7.302,13.854c0-0.212,0.173-0.386,0.385-0.386s0.385,0.174,0.385,0.386s-0.173,0.385-0.385,0.385S7.302,14.066,7.302,13.854 M7.302,10c0-0.212,0.173-0.385,0.385-0.385S8.073,9.788,8.073,10s-0.173,0.385-0.385,0.385S7.302,10.212,7.302,10 M7.302,6.146c0-0.212,0.173-0.386,0.385-0.386s0.385,0.174,0.385,0.386S7.899,6.531,7.688,6.531S7.302,6.358,7.302,6.146">
-                            </path>
-                        </svg>
-                        <span class="text-gray-700">Listar</span>
+                    <Link href="/invitations" as="div" :class="{ 'bg-gray-200': $page.component === 'Invitations/List' }"
+                        class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
+                    <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
+                        <path
+                            d="M15.396,2.292H4.604c-0.212,0-0.385,0.174-0.385,0.386v14.646c0,0.212,0.173,0.385,0.385,0.385h10.792c0.211,0,0.385-0.173,0.385-0.385V2.677C15.781,2.465,15.607,2.292,15.396,2.292 M15.01,16.938H4.99v-2.698h1.609c0.156,0.449,0.586,0.771,1.089,0.771c0.638,0,1.156-0.519,1.156-1.156s-0.519-1.156-1.156-1.156c-0.503,0-0.933,0.321-1.089,0.771H4.99v-3.083h1.609c0.156,0.449,0.586,0.771,1.089,0.771c0.638,0,1.156-0.518,1.156-1.156c0-0.638-0.519-1.156-1.156-1.156c-0.503,0-0.933,0.322-1.089,0.771H4.99V6.531h1.609C6.755,6.98,7.185,7.302,7.688,7.302c0.638,0,1.156-0.519,1.156-1.156c0-0.638-0.519-1.156-1.156-1.156c-0.503,0-0.933,0.322-1.089,0.771H4.99V3.062h10.02V16.938z M7.302,13.854c0-0.212,0.173-0.386,0.385-0.386s0.385,0.174,0.385,0.386s-0.173,0.385-0.385,0.385S7.302,14.066,7.302,13.854 M7.302,10c0-0.212,0.173-0.385,0.385-0.385S8.073,9.788,8.073,10s-0.173,0.385-0.385,0.385S7.302,10.212,7.302,10 M7.302,6.146c0-0.212,0.173-0.386,0.385-0.386s0.385,0.174,0.385,0.386S7.899,6.531,7.688,6.531S7.302,6.358,7.302,6.146">
+                        </path>
+                    </svg>
+                    <span class="text-gray-700">Listar</span>
                     </Link>
                 </div>
 
@@ -155,49 +163,73 @@ const dropDownOpen = ref(false);
                                     </svg>
                                 </button>
                             </div>
+                        </div>
+
+                        <!-- right navbar -->
+                        <div class="flex items-center relative">
+                            <button @click="notificationsDropDownOpen = !notificationsDropDownOpen"
+                                class="group relative mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                    class="fill-current group-hover:text-blue-500">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+                                </svg>
+                                <div v-if="notifications.length > 0"
+                                    class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></div>
+                            </button>
+                            <img src="https://a7sas.net/wp-content/uploads/2019/07/4060.jpeg"
+                                class="w-12 h-12 rounded-full shadow-lg" @click="dropDownOpen = !dropDownOpen">
+                        </div>
+
                     </div>
 
-                    <!-- right navbar -->
-                    <div class="flex items-center relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
-                            class="fill-current mr-3 hover:text-blue-500">
-                            <path d="M0 0h24v24H0z" fill="none" />
-                            <path
-                                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
-                        </svg>
-                        <img src="https://a7sas.net/wp-content/uploads/2019/07/4060.jpeg"
-                            class="w-12 h-12 rounded-full shadow-lg" @click="dropDownOpen = !dropDownOpen">
+                    <!-- dropdown menu -->
+                    <div class="absolute bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-96 top-17 right-0 mr-6"
+                        :class="notificationsDropDownOpen ? '' : 'hidden'">
+                        <p v-if="notifications.length === 0">No hay notificaciones.</p>
+                        <div v-else class="text-sm text-center">
+                            <ul class="divide-y-2">
+                                <li v-for="notification in notifications" class="cursor-pointer p-3">
+                                    <p class="">Tiene un nuevo pedido de invitación.</p>
+                                </li>
+                            </ul>
+                            <div class="p-3">
+                                <button method="post" href="/notifications/read"
+                                    class="text-primary font-bold hover:underline">Marcar todo como leido</button>
+                            </div>
+                        </div>
                     </div>
+                    <!-- dropdown menu end -->
+
+                    <!-- dropdown menu -->
+                    <div class="absolute bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-48 top-17 right-0 mr-6"
+                        :class="dropDownOpen ? '' : 'hidden'">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">Account</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
+                        <Link href="/logout" method="post" class="block px-4 py-2 hover:bg-gray-200">Logout</Link>
+                    </div>
+                    <!-- dropdown menu end -->
 
                 </div>
 
-                <!-- dropdown menu -->
-                <div class="absolute bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-48 top-17 right-0 mr-6"
-                    :class="dropDownOpen ? '' : 'hidden'">
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Account</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
-                    <Link href="/logout" method="post" class="block px-4 py-2 hover:bg-gray-200">Logout</Link>
+                <div class="p-6 bg-gray-100 mb-20">
+                    <slot></slot>
                 </div>
-                <!-- dropdown menu end -->
 
-            </div>
+                <div class="w-full border-t-2 px-8 py-6 lg:flex justify-between items-center">
+                    <p class="mb-2 lg:mb-0">© Copyright 2020</p>
 
-            <div class="p-6 bg-gray-100 mb-20">
-                <slot></slot>
-            </div>
-
-            <div class="w-full border-t-2 px-8 py-6 lg:flex justify-between items-center">
-                <p class="mb-2 lg:mb-0">© Copyright 2020</p>
-
-                <div class="flex">
-                    <a href="#" class="mr-6 hover:text-gray-900">Terms of Service</a>
-                    <a href="#" class="mr-6 hover:text-gray-900">Privacy Policy</a>
-                    <a href="#" class="hover:text-gray-900">About Us</a>
+                    <div class="flex">
+                        <a href="#" class="mr-6 hover:text-gray-900">Terms of Service</a>
+                        <a href="#" class="mr-6 hover:text-gray-900">Privacy Policy</a>
+                        <a href="#" class="hover:text-gray-900">About Us</a>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-</div></template>
+</template>
 
 <style scoped></style>

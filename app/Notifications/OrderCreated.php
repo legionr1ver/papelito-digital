@@ -29,7 +29,7 @@ class OrderCreated extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -52,7 +52,9 @@ class OrderCreated extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'action' => 'created',
+            'order_id' => $this->order->id,
+            'message' => 'Tiene un nuevo pedido de una invitación solicitada.',
         ];
     }
 }

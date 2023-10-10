@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\Order;
 use App\Exceptions\PaymentRejectedException;
+use App\Events\OrderPaid;
 
 class MercadoPagoController extends Controller
 {
@@ -68,5 +69,7 @@ class MercadoPagoController extends Controller
         $order = Order::findOrFail($request->input('external_reference'));
         $order->payment_external_id = $response['id'];
         $order->save();
+
+        OrderPaid::dispatch($order);
     }
 }

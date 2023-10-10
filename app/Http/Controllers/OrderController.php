@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Invitation;
+use App\Events\OrderCreated;
 
 class OrderController extends Controller
 {
@@ -105,6 +106,8 @@ class OrderController extends Controller
         $order->payment_method = $request->input('payment_method');
         $order->price = $price;
         $order->save();
+
+        OrderCreated::dispatch($order);
 
         return $order;
     }
