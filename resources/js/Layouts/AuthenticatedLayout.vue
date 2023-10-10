@@ -2,12 +2,18 @@
 import { ref } from 'vue';
 import { Link, usePage, router } from '@inertiajs/vue3';
 
+/* fontawesome */
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+library.add(faUser);
+
 const sideBarOpen = ref(false);
 const dropDownOpen = ref(false);
-const notificationsDropDownOpen = ref(false);
 
 const page = usePage();
 const notifications = page.props.auth.notifications;
+const user = page.props.auth.user;
 </script>
 
 <template>
@@ -52,15 +58,18 @@ const notifications = page.props.auth.notifications;
                         </svg>
                         <span class="text-gray-700">Inventory</span>
                     </div>
-                    <div
+                    <Link href="/notifications" as="div"
+                        :class="{ 'bg-gray-200': $page.component === 'Notifications/List' }"
                         class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
-                        <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
-                            <path
-                                d="M18.303,4.742l-1.454-1.455c-0.171-0.171-0.475-0.171-0.646,0l-3.061,3.064H2.019c-0.251,0-0.457,0.205-0.457,0.456v9.578c0,0.251,0.206,0.456,0.457,0.456h13.683c0.252,0,0.457-0.205,0.457-0.456V7.533l2.144-2.146C18.481,5.208,18.483,4.917,18.303,4.742 M15.258,15.929H2.476V7.263h9.754L9.695,9.792c-0.057,0.057-0.101,0.13-0.119,0.212L9.18,11.36h-3.98c-0.251,0-0.457,0.205-0.457,0.456c0,0.253,0.205,0.456,0.457,0.456h4.336c0.023,0,0.899,0.02,1.498-0.127c0.312-0.077,0.55-0.137,0.55-0.137c0.08-0.018,0.155-0.059,0.212-0.118l3.463-3.443V15.929z M11.241,11.156l-1.078,0.267l0.267-1.076l6.097-6.091l0.808,0.808L11.241,11.156z">
-                            </path>
-                        </svg>
-                        <span class="text-gray-700">Enquiries</span>
-                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                        class="h-6 w-6 fill-current mr-2">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z">
+                        </path>
+                    </svg>
+                    <span class="text-gray-700">Notificaciones</span>
+                    </Link>
                     <Link href="/orders" as="div" :class="{ 'bg-gray-200': $page.component === 'Orders/Create' }"
                         class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
                     <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
@@ -167,8 +176,7 @@ const notifications = page.props.auth.notifications;
 
                         <!-- right navbar -->
                         <div class="flex items-center relative">
-                            <button @click="notificationsDropDownOpen = !notificationsDropDownOpen"
-                                class="group relative mr-3">
+                            <Link as="button" href="/notifications" class="group relative mr-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
                                     class="fill-current group-hover:text-blue-500">
                                     <path d="M0 0h24v24H0z" fill="none" />
@@ -177,7 +185,7 @@ const notifications = page.props.auth.notifications;
                                 </svg>
                                 <div v-if="notifications.length > 0"
                                     class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></div>
-                            </button>
+                                </Link>
                             <img src="https://a7sas.net/wp-content/uploads/2019/07/4060.jpeg"
                                 class="w-12 h-12 rounded-full shadow-lg" @click="dropDownOpen = !dropDownOpen">
                         </div>
@@ -185,29 +193,15 @@ const notifications = page.props.auth.notifications;
                     </div>
 
                     <!-- dropdown menu -->
-                    <div class="absolute bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-96 top-17 right-0 mr-6"
-                        :class="notificationsDropDownOpen ? '' : 'hidden'">
-                        <p v-if="notifications.length === 0">No hay notificaciones.</p>
-                        <div v-else class="text-sm text-center">
-                            <ul class="divide-y-2">
-                                <li v-for="notification in notifications" class="cursor-pointer p-3">
-                                    <p class="">Tiene un nuevo pedido de invitación.</p>
-                                </li>
-                            </ul>
-                            <div class="p-3">
-                                <button method="post" href="/notifications/read"
-                                    class="text-primary font-bold hover:underline">Marcar todo como leido</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- dropdown menu end -->
-
-                    <!-- dropdown menu -->
                     <div class="absolute bg-gray-100 border border-t-0 shadow-xl text-gray-700 rounded-b-lg w-48 top-17 right-0 mr-6"
                         :class="dropDownOpen ? '' : 'hidden'">
+                        <a href="#" class="block text-xl border-b px-4 py-2 hover:bg-gray-200">
+                            <FontAwesomeIcon class="mx-2" icon="fa-regular fa-user" />
+                            <span>{{ user?.name || '' }}</span>
+                        </a>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-200">Account</a>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
-                        <Link href="/logout" method="post" class="block px-4 py-2 hover:bg-gray-200">Logout</Link>
+                        <Link as="button" href="/logout" method="post" class="block px-4 py-2 hover:bg-gray-200">Logout</Link>
                     </div>
                     <!-- dropdown menu end -->
 
@@ -227,9 +221,8 @@ const notifications = page.props.auth.notifications;
                     </div>
                 </div>
 
-            </div>
         </div>
     </div>
-</template>
+</div></template>
 
 <style scoped></style>

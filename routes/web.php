@@ -8,6 +8,7 @@ use App\Http\Controllers\InvitationController;
 use App\Http\Controllers\MercadoPagoController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NotificationController;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -42,7 +43,12 @@ Route::middleware('auth')->group(function(){
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::post('/notification/read', [NotificationController::class, 'read'])->name('notification.read');
+
+    Route::resources([
+        'notifications' => NotificationController::class,
+    ]);
+
+    Route::post('notifications-all/read', [NotificationController::class,'read'])->name('notifications-all.read');
 });
 
 require __DIR__.'/auth.php';

@@ -27,7 +27,5 @@ class SendOrderCreatedNotification
         $users = User::all();
 
         Notification::send($users, new OrderCreatedNotification($event->order));
-
-        //Crear tarea en trello
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use App\Models\Order;
 
-class OrderCreated extends Notification
+class OrderPaid extends Notification
 {
     use Queueable;
 
@@ -39,8 +39,8 @@ class OrderCreated extends Notification
     {
         return (new MailMessage)
                     ->greeting('Buenos días!')
-                    ->subject('Pedido confirmado')
-                    ->line('Tenes un nuevo pedido.')
+                    ->subject('Pedido Pagado')
+                    ->line('Se realizo el pago de un pedido.')
                     ->action('Ver', route('orders.show', ['order' => $this->order->id]));
     }
 

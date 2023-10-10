@@ -10,6 +10,7 @@ import { Link, useForm } from '@inertiajs/vue3';
 import Input from '@/Components/Input.vue';
 import Select from '@/Components/Select.vue';
 import Button from '@/Components/Button.vue';
+import Pagination from '@/Components/Pagination.vue';
 
 /* fontawesome */
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -98,13 +99,8 @@ const search = useForm({
     </tbody>
   </table>
 
-  <ul class="flex justify-center m-3">
-    <li v-for="link in paginatedOrders.links">
-      <Link as="button" class="bg-primary disabled:text-gray-300 py-1 px-2 mx-2 min-w-[100px] text-white rounded"
-        :class="{ outline: link.active }" :href="link.url || '#'" :disabled="!link.url"><span v-html="link.label"></span>
-      </Link>
-    </li>
-  </ul>
+  <Pagination :links="paginatedOrders.links" />
+  
 </template>
 
 <style scoped></style>
