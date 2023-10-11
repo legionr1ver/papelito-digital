@@ -19,7 +19,7 @@ function suscribe(){
 
 <template>
     <div id="top-banner" class="bg-[#101b21]">
-        <p class="max-w-[1200px] mx-auto text-white text-center font-serif text-xl tracking-wide py-1">Pedí tu invitación y
+        <p class="max-w-[1200px] mx-auto text-[#C4ADFF] text-center text-sm tracking-wide py-1">Pedí tu invitación y
             te la entregamos en menos de 72Hs!</p>
     </div>
     <header class="shadow-md mb-16 sticky top-0 bg-white z-30">
