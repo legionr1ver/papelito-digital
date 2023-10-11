@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Invitaciones digitales personalizadas para todos los eventos: cumpleaños, bodas, comuniones, etc. Animadas o fijas, ¡elige la que más te guste!" />
+        content="Invitaciones digitales personalizadas para todos los eventos: cumpleaños, bodas, comuniones, etc. Animadas o fijas, ¡Que nadie falte a tu fiesta!" />
 
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
     <link rel="icon" href="/assets/images/logo.webp" type="image/webp">

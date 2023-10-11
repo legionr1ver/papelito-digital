@@ -29,7 +29,7 @@ import { Link } from '@inertiajs/vue3';
 
     <section id="categorias" class="max-w-[1200px] mx-auto mb-16">
         <header class="mb-7">
-            <h3 class="text-center text-4xl font-serif font-bold tracking-wider">Cualquier razón para celebrar</h3>
+            <h3 class="text-center text-4xl font-serif font-bold tracking-wider">Que nadie falte a tu fiesta!</h3>
             <p class="text-center text-sm">Hay muchos modelos para elegir</p>
         </header>
         <div class="p-3 grid lg:grid-cols-3 auto-rows-[120px] gap-3 text-white font-bold">
