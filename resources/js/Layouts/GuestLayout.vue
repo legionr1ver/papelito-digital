@@ -85,7 +85,7 @@ function suscribe(){
 
         <div class="p-5 grid lg:grid-cols-4 gap-3">
             <div>
-                <h4 class="text-lg pt-5 pb-2">Navegación</h4>
+                <h4 class="text-lg font-bold pt-5 pb-2">Navegación</h4>
                 <ul class="grid grid-cols-2 lg:block">
                     <li>
                         <Link href="/gallery" :data="{tag:1}">Baby Shower</link>
@@ -109,7 +109,7 @@ function suscribe(){
             </div>
 
             <div>
-                <h4 class="text-lg pt-5 pb-2">Medios de Pago</h4>
+                <h4 class="text-lg font-bold pt-5 pb-2">Medios de Pago</h4>
                 <ul>
                     <img class="inline-block w-12 p-1" src="/assets/images/cards/visa.webp" alt="Tarjeta Visa">
                     <img class="inline-block w-12 p-1" src="/assets/images/cards/mastercard.webp" alt="Tarjeta Mastercard">
@@ -122,7 +122,7 @@ function suscribe(){
             </div>
 
             <div>
-                <h4 class="pt-5 pb-2">Contactanos</h4>
+                <h4 class="text-lg font-bold pt-5 pb-2">Contactanos</h4>
                 <ul>
                     <li>
                         <a class="flex items-center" href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank">
@@ -141,7 +141,7 @@ function suscribe(){
 
             <div>
                 <section>
-                    <h4 class="text-lg pt-5 pb-2">Redes Sociales</h4>
+                    <h4 class="text-lg font-bold pt-5 pb-2">Redes Sociales</h4>
                     <ul class="flex">
                         <li><a href="https://www.facebook.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/facebook.webp" alt="Facebook"></a></li>
                         <li><a href="https://www.instagram.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/instagram.webp" alt="Instagram"></a></li>
