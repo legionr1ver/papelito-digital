@@ -87,7 +87,7 @@ async function submit(){
 
         <div v-if="state === states.ERROR" class="flex justify-center items-center">
             <div>
-                <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.png" alt="Ocurrio un error">
+                <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error">
                 <div>
                     <Button @click="submit">Volver a intentar</Button>
                 </div>

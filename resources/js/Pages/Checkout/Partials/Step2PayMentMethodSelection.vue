@@ -26,13 +26,13 @@ function submit(){
             <li @click="payment_method = 'transferencia'" class="cursor-pointer flex items-center p-3 border border-primary rounded">
                 <input class="mx-2" type="radio" name="payment_method" value="transferencia" v-model="payment_method">
                 <div class="p-2">Transferencia</div>
-                <img class="w-14 p-2" src="/assets/images/icons/bank-transfer.png">
+                <img class="w-14 p-2" src="/assets/images/icons/bank-transfer.webp">
                 <div class="p-2 ms-auto font-bold">Descuento 10%</div>
             </li>
             <li @click="payment_method = 'mercado_pago'" class="cursor-pointer flex items-center p-3 border border-primary rounded">
                 <input class="mx-2" type="radio" name="payment_method" value="mercado_pago" v-model="payment_method">
                 <div class="p-2">Mercado pago</div>
-                <img class="w-14 p-2" src="/assets/images/cards/mercadopago.png">
+                <img class="w-14 p-2" src="/assets/images/cards/mercadopago.webp">
                 <div class="p-2 ms-auto font-bold">Sin descuento</div>
             </li>
         </ul>            

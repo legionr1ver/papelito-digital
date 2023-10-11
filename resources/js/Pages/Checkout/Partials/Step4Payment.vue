@@ -139,7 +139,7 @@ async function createMercadoPagoPayment() {
 
             <div v-show="state === states.ERROR" class="flex justify-center items-center">
                 <div>
-                    <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.png" alt="Ocurrio un error">
+                    <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error">
                     <div>
                         <Button @click="createMercadoPagoPayment">Volver a intentar</Button>
                     </div>
@@ -150,7 +150,7 @@ async function createMercadoPagoPayment() {
 
             <div v-show="state === states.SUCCESS" class="flex justify-center items-center m-5">
                 <div>
-                    <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/pedido-finalizado.png" alt="Pedido finalizado">
+                    <img class="max-w-[200px] mx-auto" src="/assets/images/stickers/pedido-finalizado.webp" alt="Pedido finalizado">
                     <div class="text-center my-3">
                         <Link href="/gallery" class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider disabled:cursor-not-allowed disabled:opacity-70">Ir a galeria</Link>
                     </div>

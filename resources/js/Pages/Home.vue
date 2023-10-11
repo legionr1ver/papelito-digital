@@ -11,7 +11,7 @@ import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <section id="invitaciones-animadas" class="relative max-w-[1200px] mx-auto min-h-[450px] mb-16 bg-[url('/assets/images/bg-nubes.jpg')] bg-cover bg-no-repeat bg-right-bottom grid lg:grid-cols-[2fr_1fr] items-center justify-center rounded-lg p-5">
+    <section id="invitaciones-animadas" class="relative max-w-[1200px] mx-auto min-h-[450px] mb-16 bg-[url('/assets/images/bg-nubes.webp')] bg-cover bg-no-repeat bg-right-bottom grid lg:grid-cols-[2fr_1fr] items-center justify-center rounded-lg p-5">
         <div class="grid items-center justify-center gap-1">
             <h2 class="p-3 text-5xl lg:text-7xl text-center font-serif font-bold tracking-wider text-white" style="text-shadow: 2px 2px 15px rgba(0,0,0,1);">Invitaciones<br>Animadas</h2>
             <p class="text-center text-white max-w-[40ch] text-xl mb-3">Con música de fondo y hasta 30 segundos de duración!</p>
@@ -21,8 +21,8 @@ import { Link } from '@inertiajs/vue3';
         </div>
         <div class="p-5">
             <div class="w-[200px] relative mx-auto lg:ms-0 me-auto">
-                <img class="w-full h-[380px] relative z-20" src="/assets/images/cellphone-mockup.png" alt="Cellphone Mockup">
-                <video class="absolute z-10 top-[13px] left-0 rounded-[25px] shadow-[10px_25px_15px_2px_rgba(0,0,0,0.75)]" src="/storage/invitations/rapunzel.mp4" autoplay loop playsinline muted></video>
+                <img class="w-full h-[380px] relative z-20" src="/assets/images/cellphone-mockup.webp" width="200" height="380" alt="Cellphone Mockup">
+                <video class="absolute z-10 top-[13px] left-0 rounded-[25px] shadow-[10px_25px_15px_2px_rgba(0,0,0,0.75)]" src="/assets/rapunzel-short.mp4" width="200" height="356" autoplay loop playsinline muted></video>
             </div>
         </div>
     </section>
@@ -33,12 +33,12 @@ import { Link } from '@inertiajs/vue3';
             <p class="text-center text-sm">Hay muchos modelos para elegir</p>
         </header>
         <div class="p-3 grid lg:grid-cols-3 auto-rows-[120px] gap-3 text-white font-bold">
-            <Link class="bg-[url('/assets/images/links/baby-shower.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:1}"><h4>Baby Shower</h4></Link>
-            <Link class="bg-[url('/assets/images/links/comunion.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:2}"><h4>Comunión</h4></Link>
-            <Link class="bg-[url('/assets/images/links/bautismo.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:3}"><h4>Bautismo</h4></Link>
-            <Link class="bg-[url('/assets/images/links/boda.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:4}"><h4>Boda</h4></Link>
-            <Link class="bg-[url('/assets/images/links/cumpleanos-adulto.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:5}"><h4>Cumpleaños<br>adultos</h4></Link>
-            <Link class="bg-[url('/assets/images/links/cumpleanos-infantil.jpg')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:6}"><h4>Cumpleaños<br>infantiles</h4></Link>
+            <Link class="bg-[url('/assets/images/links/baby-shower.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:1}"><h4>Baby Shower</h4></Link>
+            <Link class="bg-[url('/assets/images/links/comunion.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:2}"><h4>Comunión</h4></Link>
+            <Link class="bg-[url('/assets/images/links/bautismo.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:3}"><h4>Bautismo</h4></Link>
+            <Link class="bg-[url('/assets/images/links/boda.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:4}"><h4>Boda</h4></Link>
+            <Link class="bg-[url('/assets/images/links/cumpleanos-adulto.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:5}"><h4>Cumpleaños<br>adultos</h4></Link>
+            <Link class="bg-[url('/assets/images/links/cumpleanos-infantil.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:6}"><h4>Cumpleaños<br>infantiles</h4></Link>
         </div>
     </section>
 
@@ -62,7 +62,7 @@ import { Link } from '@inertiajs/vue3';
                 </div>
             </div>
             <div>
-                <img class="mx-auto" src="/assets/images/preguntas.jpg" alt="Preguntas">
+                <img class="mx-auto" src="/assets/images/preguntas.webp" alt="Preguntas">
             </div>
         </div>
     </section>

@@ -134,7 +134,7 @@ function filter(filter){
                     No se encontraron invitaciones.<br>
                     Contanos por Whatsapp tu idea y la armamos a tu gusto.
                 </p>
-                <img class="mx-auto max-w-[200px] p-3" src="/assets/images/stickers/sin-resultados.png" alt="No hay resultados para la búsqueda">
+                <img class="mx-auto max-w-[200px] p-3" src="/assets/images/stickers/sin-resultados.webp" alt="No hay resultados para la búsqueda">
             </div>
         </div>
     </div>
