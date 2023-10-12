@@ -47,7 +47,7 @@ function suscribe(){
                     <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full"
                         name="search" type="search" placeholder="Busca invitaciones por tema">
                 </form>
-                <nav class="hidden lg:block">
+                <nav class="hidden lg:grid grid-cols-[1fr_auto] items-center">
                     <ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl">
                         <li>
                             <Link href="/gallery" :data="{tag:1}">Baby Shower</link>
@@ -68,6 +68,7 @@ function suscribe(){
                             <Link href="/gallery" :data="{tag:6}">Cumpleaños<br>Niños</Link>
                         </li>
                     </ul>
+                    <Link class="bg-primary text-white font-bold py-2 px-4 rounded shadow-xl" href="/preguntas">Preguntas</Link>
                 </nav>
             </div>
         </div>
