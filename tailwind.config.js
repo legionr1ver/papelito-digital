@@ -9,17 +9,16 @@ export default {
 
     theme: {
         fontFamily: {
-            'serif': 'Cherry Bomb One, cursive',
+            'serif': 'More Sugar, serif',
             'sans': 'Noto Sans, sans-serif',
             'mono': 'ui-monospace, SFMono-Regular',
         },
         extend: {
             colors: {
-                primary: '#B2A0D9',
-                'light-primary': '#d2b4de',
-                secondary: '#CDABDB',
-                paragraph: '#292929',
-                background: '#D2B4DE'
+                primary: '#88a3e2',
+                secondary: '#beb4de',
+                /*paragraph: '#292929',
+                background: '#D2B4DE'*/
             },
         },
     },

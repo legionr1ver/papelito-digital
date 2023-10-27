@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Noto+Sans&display=swap');
-
-/*Template*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@font-face {
+  font-family: "More Sugar";
+  src: url("/assets/fonts/more-sugar-regular.woff2");
+}
   
 @tailwind base;
 @tailwind components;
