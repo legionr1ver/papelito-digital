@@ -2,7 +2,7 @@
 import Layout from './../Layouts/GuestLayout.vue';
 
 export default {
-  layout: Layout,
+    layout: Layout,
 }
 </script>
 
@@ -11,61 +11,247 @@ import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <section id="invitaciones-animadas" class="relative max-w-[1200px] mx-auto min-h-[450px] mb-16 bg-[url('/assets/images/bg-nubes.webp')] bg-cover bg-no-repeat bg-right-bottom grid lg:grid-cols-[2fr_1fr] items-center justify-center rounded-lg p-5">
-        <div class="grid items-center justify-center gap-1">
-            <h2 class="p-3 text-5xl lg:text-7xl text-center font-serif font-bold tracking-wider text-white" style="text-shadow: 2px 2px 15px rgba(0,0,0,1);">Invitaciones<br>Animadas</h2>
-            <p class="text-center text-white max-w-[40ch] text-xl mb-3">Con música de fondo y hasta 30 segundos de duración!</p>
+    <div id="banner" class="p-8 bg-[url('/assets/images/banner-background.webp')] bg-no-repeat bg-cover bg-center">
+        <div class="flex justify-center items-center">
             <div class="text-center">
-                <Link href="/gallery" :data="{type:2}" class="bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider">Ver diseños</link>
-            </div>
-        </div>
-        <div class="p-5">
-            <div class="w-[200px] relative mx-auto lg:ms-0 me-auto">
-                <img class="w-full h-[380px] relative z-20" src="/assets/images/cellphone-mockup.webp" width="200" height="380" alt="Cellphone Mockup">
-                <video class="absolute z-10 top-[13px] left-0 rounded-[25px] shadow-[10px_25px_15px_2px_rgba(0,0,0,0.75)]" src="/assets/rapunzel-short.mp4" poster="/assets/rapunzel-short-thumbnail.webp" width="200" height="356" autoplay loop playsinline muted></video>
-            </div>
-        </div>
-    </section>
-
-    <section id="categorias" class="max-w-[1200px] mx-auto mb-16">
-        <header class="mb-7">
-            <h3 class="text-center text-4xl font-serif font-bold tracking-wider">Que nadie falte a tu fiesta!</h3>
-            <p class="text-center text-sm">Hay muchos modelos para elegir</p>
-        </header>
-        <div class="p-3 grid lg:grid-cols-3 auto-rows-[120px] gap-3 text-white font-bold">
-            <Link class="bg-[url('/assets/images/links/baby-shower.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:1}"><h4>Baby Shower</h4></Link>
-            <Link class="bg-[url('/assets/images/links/comunion.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:2}"><h4>Comunión</h4></Link>
-            <Link class="bg-[url('/assets/images/links/bautismo.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:3}"><h4>Bautismo</h4></Link>
-            <Link class="bg-[url('/assets/images/links/boda.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:4}"><h4>Boda</h4></Link>
-            <Link class="bg-[url('/assets/images/links/cumpleanos-adulto.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:5}"><h4>Cumpleaños<br>adultos</h4></Link>
-            <Link class="bg-[url('/assets/images/links/cumpleanos-infantil.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg" href="/gallery" :data="{tag:6}"><h4>Cumpleaños<br>infantiles</h4></Link>
-        </div>
-    </section>
-
-    <section id="informacion" class="bg-gray-100 py-10 mb-16">
-        <div class="max-w-[1200px] mx-auto mb-16 grid lg:grid-cols-2">
-            <div class="p-10">
-                <h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-5 text-primary">Plazos de entrega</h3>
-                <div class="mb-7">
-                    <h4 class="text-2xl font-serif text-primary">Invitaciones interactivas y fijas</h4>
-                    <p>
-                        Si elegis un diseño del catálogo se entrega el mismo día del pago.<br>
-                        En caso de querer un nuevo diseño el plazo de entrega es de 24hs como mínimo y 48hs como máximo.
-                    </p>
-                </div>
-                <div class="mb-7">
-                    <h4 class="text-2xl font-serif text-primary">Invitaciones animadas</h4>
-                    <p>
-                        Para diseños del catálogo se entrega en el mismo día o 48hs maximo segun disponibilidad.<br>
-                        En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según disponibilidad.
-                    </p>
-                </div>
+                <header class="text-primary mb-5">
+                    <h1 class="text-[55px] font-serif leading-[4rem] mb-5">
+                        Las invitaciones digitales<br>
+                        mas lindas
+                    </h1>
+                    <p class="text-[38px]">Fijas, interactivas o en video</p>
+                </header>
+                <Link href="/gallery" class="bg-primary text-white py-2 px-4 rounded font-bold text-xl">
+                    Ver diseños
+                </Link>
             </div>
             <div>
-                <img class="mx-auto" src="/assets/images/preguntas.webp" alt="Preguntas">
+                <img class="w-[430px] animate-[2s_linear_0s_scale-in]" src="/assets/images/banner-cell-invitation.webp">
             </div>
         </div>
-    </section>
+    </div>
+    <div id="diseños" class="max-w-[1200px] mx-auto p-10">
+        <h2 class="text-[40px] text-primary text-center font-serif mb-8">Diseños más elegidos</h2>
+        <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
+                <Link href="/gallery" class="group">
+                    <img class="group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
+                </Link>
+                <div class="flex justify-center items-center">
+                    <h3 class="text-primary text-[43px] font-serif leading-10">Super Mario</h3>
+                </div>
+                <div>
+                    <Link as="button" href="/gallery" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</Link>
+                </div>
+            </div>
+            <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
+                <Link href="/gallery" class="group">
+                    <img class="group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
+                </Link>
+                <div class="flex justify-center items-center">
+                    <h3 class="text-primary text-[43px] font-serif leading-10">Granja acuarela rosa</h3>
+                </div>
+                <div>
+                    <Link as="button" href="/gallery" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</Link>
+                </div>
+            </div>
+            <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
+                <Link href="/gallery" class="group">
+                    <img class="group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
+                </Link>
+                <div class="flex justify-center items-center">
+                    <h3 class="text-primary text-[43px] font-serif leading-10">Barbie</h3>
+                </div>
+                <div>
+                    <Link as="button" href="/gallery" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</Link>
+                </div>
+            </div>
+        </div>
+        <div class="text-primary text-center font-serif text-[40px] m-10">
+            <Link href="/gallery">
+                Ver mas
+            </Link>
+        </div>
+    </div>
+    <div id="plazos-de-entrega" class="p-20 bg-[#d2b4de]">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-2 font-serif">
+            <div>
+                <div
+                    class="relative w-[560px] h-[545px] bg-[url('/assets/images/tiempos-de-entrega/times-background.svg')] bg-no-repeat bg-cover">
+                    <div class="absolute w-[370px] top-[86px] left-[96px]">
+                        <h2 class="text-[#5f86e1] text-[44px] mb-4">Plazos de entrega</h2>
+                        <ul class="text-[#88a3e2] text-[23px] list-disc leading-6 space-y-3">
+                            <li>Hasta 72Hs hábiles para todos los diseños</li>
+                            <li>Elegì la opcion “super rapida” si la necesitas para el mismo dìa (antes de las 16hs)
+                            </li>
+                            <li>En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según
+                                disponibilidad</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="absolute bottom-[-31px] right-[-31px] bg-[url('/assets/images/tiempos-de-entrega/star-background.svg')] w-[230px] h-[230px] bg-no-repeat bg-cover">
+                        <p class="text-white text-center w-[128px] absolute top-[50px] left-[50px]">Si no tenes algun
+                            dato podes reservarla igual y dejar pendiente el armado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-10 text-[25px] text-white">
+                <div class="flex justify-center items-center">
+                    <div
+                        class="skew-y-3 bg-[url('/assets/images/tiempos-de-entrega/sticky-background-1.svg')] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-11">
+                        <h3 class="mb-2">Que nadie falte a tu fiesta!</h3>
+                        <img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-1.webp">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div
+                        class="skew-x-2 bg-[url('/assets/images/tiempos-de-entrega/sticky-background-2.svg')] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-11">
+                        <img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-2.svg">
+                        <h3 class="text-3xl">No gaste de más</h3>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div
+                        class="skew-y-3 -rotate-1 bg-[url('/assets/images/tiempos-de-entrega/sticky-background-3.svg')] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-8">
+                        <img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-3.svg">
+                        <h3>Recibi tu invitacion en 72 hs hàbiles màximo</h3>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div
+                        class="skew-x-3 bg-[url('/assets/images/tiempos-de-entrega/sticky-background-4.svg')] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-8">
+                        <h3>Personalizamos con el diseño que busques</h3>
+                        <img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-4.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="categorias-mas-pedidas" class="max-w-[1200px] mx-auto p-20">
+        <h2 class="text-[40px] text-primary text-center font-serif mb-8">Categorías mas pedidas</h2>
+        <div class="grid grid-cols-3 gap-4 text-xl text-primary font-bold">
+            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+                <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
+                    <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/baby-shower.webp">
+                </div>
+                <h3 class="p-3 text-center group-hover:underline">Cumpleaños</h3>
+            </Link>
+            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+                <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
+                    <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/comunion.webp">
+                </div>
+                <h3 class="p-3 text-center group-hover:underline">Comunión</h3>
+            </Link>
+            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+                <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
+                    <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/eventos.webp">
+                </div>
+                <h3 class="p-3 text-center group-hover:underline">Eventos</h3>
+            </Link>
+            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+                <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
+                    <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/confirmacion.webp">
+                </div>
+                <h3 class="p-3 text-center group-hover:underline">Confirmación</h3>
+            </Link>
+            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+                <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
+                    <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/casamiento.webp">
+                </div>
+                <h3 class="p-3 text-center group-hover:underline">Casamientos</h3>
+            </Link>
+            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+                <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
+                    <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/cumpleanos.webp">
+                </div>
+                <h3 class="p-3 text-center group-hover:underline">Cumpleaños</h3>
+            </Link>
+        </div>
+        <div class="text-center p-10">
+            <h3 class="mb-8 text-primary text-[22px] font-serif">¿Buscas una tematica nueva?</h3>
+            <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank" class="text-white text-[16px] font-extrabold py-4 px-10 bg-primary rounded-full">CONTÁCTANOS
+                AHORA</a>
+        </div>
+    </div>
+    <div id="kits-imprimibles" class="p-20 bg-[#d2b4de]">
+        <div class="max-w-[1200px] mx-auto">
+            <header class="text-white text-center mb-12">
+                <h2 class="text-[56px] font-serif mb-4">Kits imprimibles para decoràr tus eventos</h2>
+                <p class="text-[26px] leading-8">
+                    No pierdas tiempo diseñando, empeza cuanto antes con tu<br>
+                    proyecto, decora tu fiesta o emprende con nuestras plantillas
+                </p>
+            </header>
+            <div class="grid grid-cols-3 gap-8 text-primary text-[26px] font-serif text-center uppercase">
+                <div class="bg-white rounded-xl py-12 px-8">
+                    <img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/imprimi.webp">
+                    <h3 class="mt-10">Imprimí</h3>
+                </div>
+                <div class="bg-white rounded-xl py-12 px-8">
+                    <img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/recorta.webp">
+                    <h3 class="mt-10">Recortá</h3>
+                </div>
+                <div class="bg-white rounded-xl py-12 px-8">
+                    <img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/pega.webp">
+                    <h3 class="mt-10">Pegá</h3>
+                </div>
+            </div>
+            <p class="text-center text-white text-[56px] font-serif mt-5">
+                y listo!
+            </p>
+        </div>
+    </div>
+    <div id="clientes-satisfechos" class="max-w-[1200px] mx-auto p-20">
+        <h2 class="text-[40px] text-primary text-center font-serif mb-8">Clientes satisfechos</h2>
+        <div class="grid grid-cols-3 gap-12">
+            <div>
+                <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
+            </div>
+            <div>
+                <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
+            </div>
+            <div>
+                <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
+            </div>
+        </div>
+    </div>
+    <div id="quienes-somos" class="grid grid-cols-[2fr_1fr] gap-6 max-w-[1200px] mx-auto p-20">
+        <div class="font-serif text-center">
+            <header>
+                <p class="text-[20px] text-[#fc8dca]">SOBRE NOSOTROS</p>
+                <h2 class="text-[77px] text-primary text-center mb-8">¿Quienes somos?</h2>
+            </header>
+            <div class="text-[#59524b] space-y-5 uppercase">
+                <p>¡SOY GISELLE, Y ESTOY ENCANTADA DE CONOCERTE!</p>
+                <p>SOY ESTUDIANTE DE LICENCIATURA EN ADMINISTRACIÓN. PERO MI VERDADERA PASIÓN RADICA EN EL MUNDO DEL
+                    DISEÑO. DESDE QUE ERA JOVEN, SIEMPRE SENTI UN AMOR PROFUNDO POR LA CREATIVIDAD Y LA EXPRESIÓN
+                    ARTÍSTICA.</p>
+                <p>DECIDÍ FUSIONAR MI AMOR POR EL DISEÑO CON MI CONOCIMIENTO EN ADMINISTRACIÓN Y EMPRENDER MI PROPIO
+                    CAMINO. ASÍ NACIÓ MI PROYECTO: CREAR INVITACIONES DIGITALES EN VIDEO QUE SON MÁS QUE SIMPLES
+                    PALABRAS EN UNA PANTALLA. SON PEQUEÑAS OBRAS DE ARTE ANIMADAS, LLENAS DE COLOR Y VIDA, DISEÑADAS
+                    PARA HACER QUE CADA OCASIÓN ESPECIAL SEA AÚN MÁS MEMORABLE.
+
+                    CADA PROYECTO ES UNA OPORTUNIDAD PARA MÍ DE DESPLEGAR MI CREATIVIDAD Y OFRECERTE ALGO ÚNICO Y
+                    PERSONALIZADO.
+
+                    TENGO UN PEQUEÑO EQUIPO QUE ME ACOMPAÑA EN ESTA HERMOSA TAREA, MI COMPAÑERO DE VIDA PROGRAMANDO LA
+                    WEB, LAS INVITACIONES MAS COMPLEJAS Y DANDOLE VIDA A MIS IDEAS.
+
+                    TAMBIEN ESTAN MIS AYUDANTES DE CONFIANZA MICA Y SABRI &lt;3.
+                </p>
+                <p>
+                    ¡GRACIAS POR VISITAR MI PÁGINA Y POR CONSIDERAR CONFIAR EN MÍ PARA TUS INVITACIONES ESPECIALES!<br>
+                    CON CARIÑO, GISELLE
+                </p>
+            </div>
+            <div class="mt-12">
+                <a href="mailto:contacto@papelitodigital.com.ar" target="_blank" class="text-[16px] text-[#fc8dca] underline underline-offset-8">ENVIAME UN EMAIL</a>
+            </div>
+        </div>
+        <div class="flex">
+            <img class="object-cover" src="/assets/images/quienes-somos.webp">
+        </div>
+    </div>
 </template>
 
 <style scoped></style>
