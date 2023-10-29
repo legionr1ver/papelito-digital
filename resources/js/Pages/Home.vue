@@ -12,7 +12,7 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <div id="banner" class="p-8 bg-[url('/assets/images/banner-background.webp')] bg-no-repeat bg-cover bg-center">
-        <div class="flex justify-center items-center">
+        <div class="grid grid-cols-1 gap-y-8 md:grid-cols-[auto_auto] justify-center items-center">
             <div class="text-center">
                 <header class="text-primary mb-5">
                     <h1 class="text-[55px] font-serif leading-[4rem] mb-5">
@@ -26,16 +26,16 @@ import { Link } from '@inertiajs/vue3';
                 </Link>
             </div>
             <div>
-                <img class="w-[430px] animate-[2s_linear_0s_scale-in]" src="/assets/images/banner-cell-invitation.webp">
+                <img class="w-[430px] mx-auto animate-[2s_linear_0s_scale-in]" src="/assets/images/banner-cell-invitation.webp">
             </div>
         </div>
     </div>
     <div id="diseños" class="max-w-[1200px] mx-auto p-10">
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Diseños más elegidos</h2>
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
             <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
                 <Link href="/gallery" class="group">
-                    <img class="group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
+                    <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
                 </Link>
                 <div class="flex justify-center items-center">
                     <h3 class="text-primary text-[43px] font-serif leading-10">Super Mario</h3>
@@ -46,7 +46,7 @@ import { Link } from '@inertiajs/vue3';
             </div>
             <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
                 <Link href="/gallery" class="group">
-                    <img class="group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
+                    <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
                 </Link>
                 <div class="flex justify-center items-center">
                     <h3 class="text-primary text-[43px] font-serif leading-10">Granja acuarela rosa</h3>
@@ -57,7 +57,7 @@ import { Link } from '@inertiajs/vue3';
             </div>
             <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
                 <Link href="/gallery" class="group">
-                    <img class="group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
+                    <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
                 </Link>
                 <div class="flex justify-center items-center">
                     <h3 class="text-primary text-[43px] font-serif leading-10">Barbie</h3>
@@ -74,11 +74,11 @@ import { Link } from '@inertiajs/vue3';
         </div>
     </div>
     <div id="plazos-de-entrega" class="p-20 bg-[#d2b4de]">
-        <div class="max-w-[1200px] mx-auto grid grid-cols-2 font-serif">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 gap-y-8 lg:grid-cols-2 font-serif">
             <div>
                 <div
-                    class="relative w-[560px] h-[545px] bg-[url('/assets/images/tiempos-de-entrega/times-background.svg')] bg-no-repeat bg-cover">
-                    <div class="absolute w-[370px] top-[86px] left-[96px]">
+                    class="relative max-w-[560px] mx-auto h-[545px] bg-[url('/assets/images/tiempos-de-entrega/times-background.svg')] bg-no-repeat bg-cover">
+                    <div class="absolute max-w-[370px] top-[86px] left-[96px]">
                         <h2 class="text-[#5f86e1] text-[44px] mb-4">Plazos de entrega</h2>
                         <ul class="text-[#88a3e2] text-[23px] list-disc leading-6 space-y-3">
                             <li>Hasta 72Hs hábiles para todos los diseños</li>
@@ -95,7 +95,7 @@ import { Link } from '@inertiajs/vue3';
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-10 text-[25px] text-white">
+            <div class="grid md:grid-cols-2 gap-10 text-[25px] text-white">
                 <div class="flex justify-center items-center">
                     <div
                         class="skew-y-3 bg-[url('/assets/images/tiempos-de-entrega/sticky-background-1.svg')] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-11">
@@ -129,7 +129,7 @@ import { Link } from '@inertiajs/vue3';
     </div>
     <div id="categorias-mas-pedidas" class="max-w-[1200px] mx-auto p-20">
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Categorías mas pedidas</h2>
-        <div class="grid grid-cols-3 gap-4 text-xl text-primary font-bold">
+        <div class="grid md:grid-cols-3 gap-4 text-xl text-primary font-bold">
             <Link href="/gallery" :data="{slug:'baby-showers'}" as="div" class="grid items-center cursor-pointer group">
                 <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
                     <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/baby-shower.webp">
@@ -182,7 +182,7 @@ import { Link } from '@inertiajs/vue3';
                     proyecto, decora tu fiesta o emprende con nuestras plantillas
                 </p>
             </header>
-            <div class="grid grid-cols-3 gap-8 text-primary text-[26px] font-serif text-center uppercase">
+            <div class="grid md:grid-cols-3 gap-8 text-primary text-[26px] font-serif text-center uppercase">
                 <div class="bg-white rounded-xl py-12 px-8">
                     <img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/imprimi.webp">
                     <h3 class="mt-10">Imprimí</h3>
@@ -203,7 +203,7 @@ import { Link } from '@inertiajs/vue3';
     </div>
     <div id="clientes-satisfechos" class="max-w-[1200px] mx-auto p-20">
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Clientes satisfechos</h2>
-        <div class="grid grid-cols-3 gap-12">
+        <div class="grid md:grid-cols-3 gap-12">
             <div>
                 <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
             </div>
