@@ -10,7 +10,7 @@ use Inertia\Response;
 
 class GalleryController extends Controller
 {
-    public function __invoke(Request $request, string $slug = null): Response
+    public function __invoke(Request $request): Response
     {
         $q = Invitation::select('id','title','type_id','source','thumbnail','price');
 
@@ -22,6 +22,9 @@ class GalleryController extends Controller
                     ->orWhereRelation('tags', 'label', 'like', "%$search%");
             });
         }
+
+        if( $slug = $request->input('slug') )
+            $q->whereRelation('tags', 'slug', $slug);
 
         if( $tag = $request->input('tag') )
             $q->whereRelation('tags', 'id', $tag);

@@ -47,42 +47,42 @@ function submitSearch() {
                 <nav class="hidden lg:grid grid-cols-[1fr_auto] items-center">
                     <ul class="grid grid-flow-col justify-evenly py-4 text-primary font-serif text-xl">
                         <Link as="li" class="relative flex items-center cursor-pointer group" href="/gallery"
-                            :data="{ tag: 1 }">
+                            :data="{ slug: 'cumpleanos' }">
                         <span>Cumpleaños</span>
                         <div
                             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full">
                         </div>
                         </Link>
                         <Link as="li" class="relative flex items-center cursor-pointer group" href="/gallery"
-                            :data="{ tag: 2 }">
-                        <span>Bodas</span>
+                            :data="{ slug: 'casamientos' }">
+                        <span>Casamientos</span>
                         <div
                             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full">
                         </div>
                         </Link>
                         <Link as="li" class="relative flex items-center cursor-pointer group" href="/gallery"
-                            :data="{ tag: 3 }">
+                            :data="{ slug: 'bautismos' }">
                         <span>Bautismos</span>
                         <div
                             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full">
                         </div>
                         </Link>
                         <Link as="li" class="relative flex items-center cursor-pointer group" href="/gallery"
-                            :data="{ tag: 4 }">
-                        <span>Comuniones<br>Confirmaciones</span>
+                            :data="{ slug: 'comuniones' }">
+                        <span>Comuniones</span>
                         <div
                             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full">
                         </div>
                         </Link>
                         <Link as="li" class="relative flex items-center cursor-pointer group" href="/gallery"
-                            :data="{ tag: 5 }">
+                            :data="{ slug: 'baby-showers' }">
                         <span>Baby<br>Showers</span>
                         <div
                             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full">
                         </div>
                         </Link>
                         <Link as="li" class="relative flex items-center cursor-pointer group" href="/gallery"
-                            :data="{ tag: 6 }">
+                            :data="{ slug: 'fechas-especiales' }">
                         <span>Fechas<br>Especiales</span>
                         <div
                             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full">

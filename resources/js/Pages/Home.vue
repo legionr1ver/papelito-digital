@@ -130,37 +130,37 @@ import { Link } from '@inertiajs/vue3';
     <div id="categorias-mas-pedidas" class="max-w-[1200px] mx-auto p-20">
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Categorías mas pedidas</h2>
         <div class="grid grid-cols-3 gap-4 text-xl text-primary font-bold">
-            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+            <Link href="/gallery" :data="{slug:'baby-showers'}" as="div" class="grid items-center cursor-pointer group">
                 <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
                     <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/baby-shower.webp">
                 </div>
-                <h3 class="p-3 text-center group-hover:underline">Cumpleaños</h3>
+                <h3 class="p-3 text-center group-hover:underline">Baby Showers</h3>
             </Link>
-            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+            <Link href="/gallery" :data="{slug:'comuniones'}" as="div" class="grid items-center cursor-pointer group">
                 <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
                     <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/comunion.webp">
                 </div>
-                <h3 class="p-3 text-center group-hover:underline">Comunión</h3>
+                <h3 class="p-3 text-center group-hover:underline">Comuniónes</h3>
             </Link>
-            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+            <Link href="/gallery" :data="{slug:'eventos'}" as="div" class="grid items-center cursor-pointer group">
                 <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
                     <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/eventos.webp">
                 </div>
                 <h3 class="p-3 text-center group-hover:underline">Eventos</h3>
             </Link>
-            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+            <Link href="/gallery" :data="{slug:'confirmaciones'}" as="div" class="grid items-center cursor-pointer group">
                 <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
                     <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/confirmacion.webp">
                 </div>
-                <h3 class="p-3 text-center group-hover:underline">Confirmación</h3>
+                <h3 class="p-3 text-center group-hover:underline">Confirmaciónes</h3>
             </Link>
-            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+            <Link href="/gallery" :data="{slug:'casamientos'}" as="div" class="grid items-center cursor-pointer group">
                 <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
                     <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/casamiento.webp">
                 </div>
                 <h3 class="p-3 text-center group-hover:underline">Casamientos</h3>
             </Link>
-            <Link href="/gallery" as="div" class="grid items-center cursor-pointer group">
+            <Link href="/gallery" :data="{slug:'cumpleanos'}" as="div" class="grid items-center cursor-pointer group">
                 <div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group">
                     <img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/cumpleanos.webp">
                 </div>
