@@ -8,7 +8,7 @@
         content="Invitaciones digitales personalizadas para todos los eventos: cumpleaños, bodas, comuniones, etc. Animadas o fijas, ¡Que nadie falte a tu fiesta!" />
 
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="icon" href="/assets/images/logo.webp" type="image/webp">
+    <link rel="icon" href="/assets/images/logo.png" type="image/webp">
 
     <!-- Scripts -->
     @routes
