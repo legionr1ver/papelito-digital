@@ -7,7 +7,7 @@ import { faUser, faPenToSquare, faCircleXmark, faTrashCan, faEnvelope, faEnvelop
 import { faDollar, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
-const _sfc_main$m = {
+const _sfc_main$n = {
   __name: "Input",
   __ssrInlineRender: true,
   props: ["modelValue"],
@@ -21,11 +21,11 @@ const _sfc_main$m = {
     };
   }
 };
-const _sfc_setup$m = _sfc_main$m.setup;
-_sfc_main$m.setup = (props, ctx) => {
+const _sfc_setup$n = _sfc_main$n.setup;
+_sfc_main$n.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Input.vue");
-  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
+  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
 };
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -34,20 +34,20 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$l = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+const _sfc_main$m = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   _push(`<label${ssrRenderAttrs(mergeProps({ class: "text-gray-400 text-md" }, _attrs))}>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</label>`);
 }
-const _sfc_setup$l = _sfc_main$l.setup;
-_sfc_main$l.setup = (props, ctx) => {
+const _sfc_setup$m = _sfc_main$m.setup;
+_sfc_main$m.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Label.vue");
-  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
+  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
 };
-const Label = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["ssrRender", _sfc_ssrRender]]);
-const _sfc_main$k = {
+const Label = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["ssrRender", _sfc_ssrRender$1]]);
+const _sfc_main$l = {
   __name: "Button",
   __ssrInlineRender: true,
   props: {
@@ -72,13 +72,13 @@ const _sfc_main$k = {
     };
   }
 };
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Button.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const _sfc_main$j = {
+const _sfc_main$k = {
   __name: "Alert",
   __ssrInlineRender: true,
   props: {
@@ -112,13 +112,13 @@ const _sfc_main$j = {
     };
   }
 };
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Alert.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
-const _sfc_main$i = {
+const _sfc_main$j = {
   __name: "Login",
   __ssrInlineRender: true,
   setup(__props) {
@@ -140,7 +140,7 @@ const _sfc_main$i = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         for: "email",
         modelValue: unref(form).email,
         "onUpdate:modelValue": ($event) => unref(form).email = $event,
@@ -160,7 +160,7 @@ const _sfc_main$i = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         for: "password",
         modelValue: unref(form).password,
         "onUpdate:modelValue": ($event) => unref(form).password = $event,
@@ -169,7 +169,7 @@ const _sfc_main$i = {
       }, null, _parent));
       _push(`</div>`);
       if (unref(form).errors.email) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.email)}`);
@@ -185,7 +185,7 @@ const _sfc_main$i = {
         _push(`<!---->`);
       }
       if (unref(form).errors.password) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.password)}`);
@@ -200,7 +200,7 @@ const _sfc_main$i = {
       } else {
         _push(`<!---->`);
       }
-      _push(ssrRenderComponent(_sfc_main$k, {
+      _push(ssrRenderComponent(_sfc_main$l, {
         loading: unref(form).processing,
         type: "submit"
       }, {
@@ -219,17 +219,17 @@ const _sfc_main$i = {
     };
   }
 };
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/Login.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$i
+  default: _sfc_main$j
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$h = {
+const _sfc_main$i = {
   __name: "Step1Information",
   __ssrInlineRender: true,
   props: [
@@ -258,7 +258,7 @@ const _sfc_main$h = {
         _push(`<!---->`);
       }
       _push(`</div><form id="information-step-form" class="grid text-gray-400"><label class="mt-1" for="name">Nombre</label><input${ssrRenderAttr("value", name.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="name" name="name" type="text" required><label class="mt-1" for="address">Dirección</label><input${ssrRenderAttr("value", address.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="address" name="address" type="text" required><label class="mt-1" for="observation">Observación</label><textarea rows="4" class="resize-y p-2 border border-[rgb(225, 227, 230)]" id="observation" name="observation">${ssrInterpolate(observation.value)}</textarea><label class="mt-1" for="phone_number">Teléfono</label><input${ssrRenderAttr("value", phone_number.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="phone_number" name="phone_number" type="text" required></form><div class="grid grid-cols-2 gap-2 my-2">`);
-      _push(ssrRenderComponent(_sfc_main$k, {
+      _push(ssrRenderComponent(_sfc_main$l, {
         type: "buttom",
         disabled: ""
       }, {
@@ -273,7 +273,7 @@ const _sfc_main$h = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$k, {
+      _push(ssrRenderComponent(_sfc_main$l, {
         type: "submit",
         form: "information-step-form"
       }, {
@@ -292,17 +292,17 @@ const _sfc_main$h = {
     };
   }
 };
-const _sfc_setup$h = _sfc_main$h.setup;
-_sfc_main$h.setup = (props, ctx) => {
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step1Information.vue");
-  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
 const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$h
+  default: _sfc_main$i
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$g = {
+const _sfc_main$h = {
   __name: "Step2PayMentMethodSelection",
   __ssrInlineRender: true,
   props: {
@@ -320,7 +320,7 @@ const _sfc_main$g = {
         id: "payment-method-selection-step-form",
         class: "mb-5"
       }, _attrs))}><h2 class="text-2xl mb-5">Seleccione el medio de pago </h2><ul class="mb-5 space-y-5"><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input class="mx-2" type="radio" name="payment_method" value="transferencia"${ssrIncludeBooleanAttr(ssrLooseEqual(payment_method.value, "transferencia")) ? " checked" : ""}><div class="p-2">Transferencia</div><img class="w-14 p-2" src="/assets/images/icons/bank-transfer.webp"><div class="p-2 ms-auto font-bold">Descuento 10%</div></li><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input class="mx-2" type="radio" name="payment_method" value="mercado_pago"${ssrIncludeBooleanAttr(ssrLooseEqual(payment_method.value, "mercado_pago")) ? " checked" : ""}><div class="p-2">Mercado pago</div><img class="w-14 p-2" src="/assets/images/cards/mercadopago.webp"><div class="p-2 ms-auto font-bold">Sin descuento</div></li></ul><div class="grid grid-cols-2 gap-2 my-2">`);
-      _push(ssrRenderComponent(_sfc_main$k, {
+      _push(ssrRenderComponent(_sfc_main$l, {
         type: "button",
         onClick: ($event) => _ctx.$emit("goBack")
       }, {
@@ -335,7 +335,7 @@ const _sfc_main$g = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$k, {
+      _push(ssrRenderComponent(_sfc_main$l, {
         type: "submit",
         form: "payment-method-selection-step-form"
       }, {
@@ -354,17 +354,17 @@ const _sfc_main$g = {
     };
   }
 };
-const _sfc_setup$g = _sfc_main$g.setup;
-_sfc_main$g.setup = (props, ctx) => {
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step2PayMentMethodSelection.vue");
-  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
 const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$g
+  default: _sfc_main$h
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$f = {
+const _sfc_main$g = {
   __name: "Step3Confirmation",
   __ssrInlineRender: true,
   props: [
@@ -415,7 +415,7 @@ const _sfc_main$f = {
       _push(`<div${ssrRenderAttrs(_attrs)}>`);
       if (state.value === unref(states).INITIAL) {
         _push(`<div><h2 class="text-2xl mb-5">Resumen de su compra</h2><div class="space-y-2"><div>Invitación: <strong>${ssrInterpolate(props.invitation.title)}</strong></div><div>Tipo: <strong>${ssrInterpolate(props.invitation.type.name)}</strong></div><div>Ubicación en mapa: <strong>${ssrInterpolate(props.map_ubication ? "Si" : "No")}</strong></div><div>Confirmación por whatsapp: <strong>${ssrInterpolate(props.whatsapp_confirmation ? "Si" : "No")}</strong></div><div>Observación: <strong>${ssrInterpolate(props.observation)}</strong></div><div>Precio final: <strong>$ ${ssrInterpolate(final_price.value)}</strong></div><div>Metodo de pago: <strong>${ssrInterpolate(props.payment_method == "transferencia" ? "Transferencia" : "Mercado pago")}</strong></div></div><div class="grid grid-cols-2 gap-2 my-2">`);
-        _push(ssrRenderComponent(_sfc_main$k, {
+        _push(ssrRenderComponent(_sfc_main$l, {
           type: "button",
           onClick: ($event) => _ctx.$emit("goBack")
         }, {
@@ -430,7 +430,7 @@ const _sfc_main$f = {
           }),
           _: 1
         }, _parent));
-        _push(ssrRenderComponent(_sfc_main$k, {
+        _push(ssrRenderComponent(_sfc_main$l, {
           type: "button",
           onClick: submit
         }, {
@@ -456,7 +456,7 @@ const _sfc_main$f = {
       }
       if (state.value === unref(states).ERROR) {
         _push(`<div class="flex justify-center items-center"><div><img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error"><div>`);
-        _push(ssrRenderComponent(_sfc_main$k, { onClick: submit }, {
+        _push(ssrRenderComponent(_sfc_main$l, { onClick: submit }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`Volver a intentar`);
@@ -481,17 +481,17 @@ const _sfc_main$f = {
     };
   }
 };
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step3Confirmation.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
 const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$f
+  default: _sfc_main$g
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$e = {
+const _sfc_main$f = {
   __name: "Step4Payment",
   __ssrInlineRender: true,
   props: {
@@ -574,7 +574,7 @@ const _sfc_main$e = {
     }
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "mb-5" }, _attrs))}><div style="${ssrRenderStyle(props.order.payment_method === "transferencia" ? null : { display: "none" })}"><div class="py-4"><h2 class="text-2xl mb-2">Pago por transferencia</h2><p class="py-1"> Por favor luego de realizar la transferencia envianos el comprobante por whatsapp a <a class="underline text-primary" href="tel:+549111521664157">+54 9 11 2166 4157</a> o por mail a <a class="underline text-primary" href="mailto:contacto@papelitodigital.com.ar">contacto@papelitodigital.com.ar</a></p><p class="py-1"> El monto a abonar es de <strong class="text-xl p-2">$${ssrInterpolate(props.order.price)}</strong></p></div><div class="py-4"><h2 class="text-2xl mb-2">Información de cuenta</h2><div class="divide-y-2"><div class="flex p-2"><span class="flex-initial">CBU</span><strong class="ms-auto flex-initial">0720071788000017486868</strong></div><div class="flex p-2"><span class="flex-initial">Alias</span><strong class="ms-auto flex-initial">PAPELITO.DIGITAL</strong></div><div class="flex p-2"><span class="flex-initial">Titular de cuenta</span><strong class="ms-auto flex-initial">Silvero Gabriela Giselle</strong></div></div></div></div><div style="${ssrRenderStyle(props.order.payment_method === "mercado_pago" ? null : { display: "none" })}"><div style="${ssrRenderStyle(state.value === unref(states).LOADING ? null : { display: "none" })}" class="flex justify-center items-center"><svg class="animate-spin -ml-1 mr-3 h-14 w-14 text-primary my-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></div><div style="${ssrRenderStyle(state.value === unref(states).ERROR ? null : { display: "none" })}" class="flex justify-center items-center"><div><img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error"><div>`);
-      _push(ssrRenderComponent(_sfc_main$k, { onClick: createMercadoPagoPayment }, {
+      _push(ssrRenderComponent(_sfc_main$l, { onClick: createMercadoPagoPayment }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Volver a intentar`);
@@ -606,17 +606,18 @@ const _sfc_main$e = {
     };
   }
 };
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step4Payment.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
 const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$e
+  default: _sfc_main$f
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$d = {
+const GuestLayout_vue_vue_type_style_index_0_lang = "";
+const _sfc_main$e = {
   __name: "GuestLayout",
   __ssrInlineRender: true,
   setup(__props) {
@@ -625,16 +626,16 @@ const _sfc_main$d = {
       search: ""
     });
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><div id="top-banner" class="bg-[#101b21]"><p class="max-w-[1200px] mx-auto text-white text-center font-serif text-xl tracking-wide py-1">Pedí tu invitación y te la entregamos en menos de 72Hs!</p></div><header class="shadow-md mb-16 sticky top-0 bg-white z-30"><div class="max-w-[1200px] mx-auto flex"><div class="flex-initial flex items-center">`);
+      _push(`<!--[--><header class="shadow-md mb-6"><div id="top" class="bg-secondary text-center text-white p-2 text-xl"><p class="font-serif">Envíos gratis por E-mail o Whatsapp</p></div><div class="max-w-[1200px] mx-auto flex"><div class="flex-initial flex items-center">`);
       _push(ssrRenderComponent(unref(Link), { href: "/" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img class="max-w-[5rem] lg:max-w-[7rem] mx-auto p-3" src="/assets/images/logo.webp" alt="Logo Papelito Digital"${_scopeId}>`);
+            _push2(`<img class="max-w-[5rem] lg:max-w-[7rem] mx-auto p-3" src="/assets/images/logo.png" alt="Logo Papelito Digital"${_scopeId}>`);
           } else {
             return [
               createVNode("img", {
                 class: "max-w-[5rem] lg:max-w-[7rem] mx-auto p-3",
-                src: "/assets/images/logo.webp",
+                src: "/assets/images/logo.png",
                 alt: "Logo Papelito Digital"
               })
             ];
@@ -642,119 +643,152 @@ const _sfc_main$d = {
         }),
         _: 1
       }, _parent));
-      _push(`</div><div class="flex-1 grid items-center"><form id="search" class="p-2 flex text-sm text-gray-400"><select class="hidden lg:block p-3 border border-[rgb(225, 227, 230)]" aria-label="Tipo de invitacion"><option value="">Todas</option><option value="1">Fijas</option><option value="2">Animadas</option></select><button type="submit" class="border-s p-3 border-t border-b border-[rgb(225, 227, 230)]" aria-label="Buscar"><svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg></button><input${ssrRenderAttr("value", search.search)} class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" name="search" type="search" placeholder="Busca invitaciones por tema"></form><nav class="hidden lg:block"><ul class="flex items-center justify-evenly py-4 text-primary font-serif text-xl"><li>`);
+      _push(`</div><div class="flex-1 grid items-center"><form id="search" class="p-2 flex text-sm text-gray-400"><select class="hidden lg:block p-3 border border-[rgb(225, 227, 230)]" aria-label="Tipo de invitacion"><option value="">Todas</option><option value="1">Fijas</option><option value="2">Animadas</option></select><button type="submit" class="border-s p-3 border-t border-b border-[rgb(225, 227, 230)]" aria-label="Buscar"><svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg></button><input${ssrRenderAttr("value", search.search)} class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" name="search" type="search" placeholder="Busca invitaciones por tema"></form><nav class="hidden lg:grid grid-cols-[1fr_auto] items-center"><ul class="grid grid-flow-col justify-evenly py-4 text-primary font-serif text-xl">`);
       _push(ssrRenderComponent(unref(Link), {
+        as: "li",
+        class: "relative flex items-center cursor-pointer group",
         href: "/gallery",
-        data: { tag: 1 }
+        data: { slug: "cumpleanos" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Baby Shower`);
+            _push2(`<span${_scopeId}>Cumpleaños</span><div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full"${_scopeId}></div>`);
           } else {
             return [
-              createTextVNode("Baby Shower")
+              createVNode("span", null, "Cumpleaños"),
+              createVNode("div", { class: "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full" })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</li><li>`);
       _push(ssrRenderComponent(unref(Link), {
+        as: "li",
+        class: "relative flex items-center cursor-pointer group",
         href: "/gallery",
-        data: { tag: 2 }
+        data: { slug: "casamientos" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Comuniones`);
+            _push2(`<span${_scopeId}>Casamientos</span><div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full"${_scopeId}></div>`);
           } else {
             return [
-              createTextVNode("Comuniones")
+              createVNode("span", null, "Casamientos"),
+              createVNode("div", { class: "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full" })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</li><li>`);
       _push(ssrRenderComponent(unref(Link), {
+        as: "li",
+        class: "relative flex items-center cursor-pointer group",
         href: "/gallery",
-        data: { tag: 3 }
+        data: { slug: "bautismos" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Bautismos`);
+            _push2(`<span${_scopeId}>Bautismos</span><div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full"${_scopeId}></div>`);
           } else {
             return [
-              createTextVNode("Bautismos")
+              createVNode("span", null, "Bautismos"),
+              createVNode("div", { class: "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full" })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</li><li>`);
       _push(ssrRenderComponent(unref(Link), {
+        as: "li",
+        class: "relative flex items-center cursor-pointer group",
         href: "/gallery",
-        data: { tag: 4 }
+        data: { slug: "comuniones" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Bodas`);
+            _push2(`<span${_scopeId}>Comuniones</span><div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full"${_scopeId}></div>`);
           } else {
             return [
-              createTextVNode("Bodas")
+              createVNode("span", null, "Comuniones"),
+              createVNode("div", { class: "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full" })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</li><li>`);
       _push(ssrRenderComponent(unref(Link), {
+        as: "li",
+        class: "relative flex items-center cursor-pointer group",
         href: "/gallery",
-        data: { tag: 5 }
+        data: { slug: "baby-showers" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Cumpleaños<br${_scopeId}>Adultos`);
+            _push2(`<span${_scopeId}>Baby<br${_scopeId}>Showers</span><div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full"${_scopeId}></div>`);
           } else {
             return [
-              createTextVNode("Cumpleaños"),
-              createVNode("br"),
-              createTextVNode("Adultos")
+              createVNode("span", null, [
+                createTextVNode("Baby"),
+                createVNode("br"),
+                createTextVNode("Showers")
+              ]),
+              createVNode("div", { class: "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full" })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</li><li>`);
       _push(ssrRenderComponent(unref(Link), {
+        as: "li",
+        class: "relative flex items-center cursor-pointer group",
         href: "/gallery",
-        data: { tag: 6 }
+        data: { slug: "fechas-especiales" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Cumpleaños<br${_scopeId}>Niños`);
+            _push2(`<span${_scopeId}>Fechas<br${_scopeId}>Especiales</span><div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full"${_scopeId}></div>`);
           } else {
             return [
-              createTextVNode("Cumpleaños"),
-              createVNode("br"),
-              createTextVNode("Niños")
+              createVNode("span", null, [
+                createTextVNode("Fechas"),
+                createVNode("br"),
+                createTextVNode("Especiales")
+              ]),
+              createVNode("div", { class: "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all group-hover:w-full" })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</li></ul></nav></div></div></header><main>`);
+      _push(`</ul>`);
+      _push(ssrRenderComponent(unref(Link), {
+        class: "bg-primary text-white font-bold py-2 px-4 rounded shadow-xl",
+        href: "/preguntas"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Info Importante`);
+          } else {
+            return [
+              createTextVNode("Info Importante")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</nav></div></div></header><main>`);
       ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-      _push(`</main><footer class="max-w-[1200px] mx-auto mb-16"><div id="whatsapp-sticky" class="fixed bottom-5 right-5 shadow-lg rounded-full"><a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&amp;app_absent=0" target="_blank"><img class="w-16 h-16" src="/assets/images/icons/whatsapp.webp" alt="Logo Whatsapp"></a></div><div class="p-5 grid lg:grid-cols-4 gap-3"><div><h4 class="text-lg pt-5 pb-2">Navegación</h4><ul class="grid grid-cols-2 lg:block"><li>`);
+      _push(`</main><footer><a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&amp;app_absent=0" target="_blank" class="fixed bottom-5 right-5 shadow-xl rounded-full"><img class="w-[60px] h-[60px]" src="/assets/images/icons/whatsapp.webp" alt="Whats App"></a><div><img class="max-w-[320px] mx-auto" src="/assets/images/logo.png" alt="Logo Papelito Digital"></div><div class="bg-secondary p-5"><div class="max-w-[1200px] mx-auto p-5 grid lg:grid-cols-4 gap-3"><div><h4 class="text-lg font-bold pt-5 pb-2">Navegación</h4><ul class="grid grid-cols-2 lg:block"><li>`);
       _push(ssrRenderComponent(unref(Link), {
         href: "/gallery",
         data: { tag: 1 }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Baby Shower`);
+            _push2(`Cumpleaños`);
           } else {
             return [
-              createTextVNode("Baby Shower")
+              createTextVNode("Cumpleaños")
             ];
           }
         }),
@@ -767,10 +801,10 @@ const _sfc_main$d = {
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Comuniones`);
+            _push2(`Bodas`);
           } else {
             return [
-              createTextVNode("Comuniones")
+              createTextVNode("Bodas")
             ];
           }
         }),
@@ -799,10 +833,10 @@ const _sfc_main$d = {
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Bodas`);
+            _push2(`Comuniones Confirmaciones`);
           } else {
             return [
-              createTextVNode("Bodas")
+              createTextVNode("Comuniones Confirmaciones")
             ];
           }
         }),
@@ -815,12 +849,10 @@ const _sfc_main$d = {
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Cumpleaños<br${_scopeId}>Adultos`);
+            _push2(`Baby Shower`);
           } else {
             return [
-              createTextVNode("Cumpleaños"),
-              createVNode("br"),
-              createTextVNode("Adultos")
+              createTextVNode("Baby Shower")
             ];
           }
         }),
@@ -833,31 +865,29 @@ const _sfc_main$d = {
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Cumpleaños<br${_scopeId}>Niños`);
+            _push2(`Fechas Especiales`);
           } else {
             return [
-              createTextVNode("Cumpleaños"),
-              createVNode("br"),
-              createTextVNode("Niños")
+              createTextVNode("Fechas Especiales")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</li></ul></div><div><h4 class="text-lg pt-5 pb-2">Medios de Pago</h4><ul><img class="inline-block w-12 p-1" src="/assets/images/cards/visa.webp" alt="Tarjeta Visa"><img class="inline-block w-12 p-1" src="/assets/images/cards/mastercard.webp" alt="Tarjeta Mastercard"><img class="inline-block w-12 p-1" src="/assets/images/cards/amex.webp" alt="Tarjeta American Express"><img class="inline-block w-12 p-1" src="/assets/images/cards/tarjeta-naranja.webp" alt="Tarjeta Naranja"><img class="inline-block w-12 p-1" src="/assets/images/cards/cabal.webp" alt="Tarjeta Cabal"><img class="inline-block w-12 p-1" src="/assets/images/cards/mercadopago.webp" alt="Mercado pago"><img class="inline-block w-12 p-1" src="/assets/images/icons/bank-transfer.webp" alt="Transferencia bancaria"></ul></div><div><h4 class="pt-5 pb-2">Contactanos</h4><ul><li><a class="flex items-center" href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&amp;app_absent=0" target="_blank"><img class="w-5 h-5 me-2" src="/assets/images/icons/whatsapp.webp" alt="Whats App"><span>+54 9 11 2166 4157</span></a></li><li><a class="flex items-center" href="mailto:contacto@papelitodigital.com.ar"><img class="w-5 h-5 me-2" src="/assets/images/icons/mail.webp" alt="Email"><span>contacto@papelitodigital.com.ar</span></a></li></ul></div><div><section><h4 class="text-lg pt-5 pb-2">Redes Sociales</h4><ul class="flex"><li><a href="https://www.facebook.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/facebook.webp" alt="Facebook"></a></li><li><a href="https://www.instagram.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/instagram.webp" alt="Instagram"></a></li><li><a href="https://ar.pinterest.com/Papelitodigital" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/pinterest.webp" alt="Pinterest"></a></li><li><a href="https://www.tiktok.com/@papelitodigital?is_from_webapp=1&amp;sender_device=pc" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/tiktok.webp" alt="TikTok"></a></li><li><a href="https://www.youtube.com/@papelitodigital" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/youtube.webp" alt="Youtube"></a></li></ul></section><section><h4 class="text-lg pt-5 pb-2">Suscribite y enterate de las novedades!</h4><form class="grid grid-cols-[1fr_auto]"><input class="p-1 border-t border-s border-b border-[rgb(225, 227, 230)]" type="email" aria-label="Suscribir email" required><button class="bg-primary text-white p-2 rounded-tr-md rounded-br-md" type="submit" aria-label="Suscribir"><svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"></path></svg></button></form></section></div></div></footer><div class="bg-primary w-full h-2"></div><!--]-->`);
+      _push(`</li></ul></div><div><h4 class="text-lg font-bold pt-5 pb-2">Medios de Pago</h4><ul><img class="inline-block w-12 p-1" src="/assets/images/cards/visa.webp" alt="Tarjeta Visa"><img class="inline-block w-12 p-1" src="/assets/images/cards/mastercard.webp" alt="Tarjeta Mastercard"><img class="inline-block w-12 p-1" src="/assets/images/cards/amex.webp" alt="Tarjeta American Express"><img class="inline-block w-12 p-1" src="/assets/images/cards/tarjeta-naranja.webp" alt="Tarjeta Naranja"><img class="inline-block w-12 p-1" src="/assets/images/cards/cabal.webp" alt="Tarjeta Cabal"><img class="inline-block w-12 p-1" src="/assets/images/cards/mercadopago.webp" alt="Mercado pago"><img class="inline-block w-12 p-1" src="/assets/images/icons/bank-transfer.webp" alt="Transferencia bancaria"></ul></div><div><h4 class="text-lg font-bold pt-5 pb-2">Contactanos</h4><ul><li><a class="flex items-center" href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&amp;app_absent=0" target="_blank"><img class="w-5 h-5 me-2" src="/assets/images/icons/whatsapp.webp" alt="Whats App"><span>+54 9 11 2166 4157</span></a></li><li><a class="flex items-center" href="mailto:contacto@papelitodigital.com.ar"><img class="w-5 h-5 me-2" src="/assets/images/icons/mail.webp" alt="Email"><span>contacto@papelitodigital.com.ar</span></a></li></ul></div><div><section><h4 class="text-lg font-bold pt-5 pb-2">Redes Sociales</h4><ul class="flex"><li><a href="https://www.facebook.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/facebook.webp" alt="Facebook"></a></li><li><a href="https://www.instagram.com/papelitodigital.ar" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/instagram.webp" alt="Instagram"></a></li><li><a href="https://ar.pinterest.com/Papelitodigital" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/pinterest.webp" alt="Pinterest"></a></li><li><a href="https://www.tiktok.com/@papelitodigital?is_from_webapp=1&amp;sender_device=pc" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/tiktok.webp" alt="TikTok"></a></li><li><a href="https://www.youtube.com/@papelitodigital" target="_blank"><img class="w-10 p-2" src="/assets/images/icons/youtube.webp" alt="Youtube"></a></li></ul></section><section><h4 class="text-lg pt-5 pb-2">Suscribite y enterate de las novedades!</h4><form class="grid grid-cols-[1fr_auto]"><input class="p-1 border-t border-s border-b border-[rgb(225, 227, 230)]" type="email" aria-label="Suscribir email" required><button class="bg-primary text-white p-2 rounded-tr-md rounded-br-md" type="submit" aria-label="Suscribir"><svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"></path></svg></button></form></section></div></div></div></footer><!--]-->`);
     };
   }
 };
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/GuestLayout.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
 const __default__$8 = {
-  layout: _sfc_main$d
+  layout: _sfc_main$e
 };
-const _sfc_main$c = /* @__PURE__ */ Object.assign(__default__$8, {
+const _sfc_main$d = /* @__PURE__ */ Object.assign(__default__$8, {
   __name: "Invitation",
   __ssrInlineRender: true,
   props: {
@@ -940,14 +970,14 @@ const _sfc_main$c = /* @__PURE__ */ Object.assign(__default__$8, {
       }, _parent));
       _push(`<div class="text-5xl text-primary font-serif"><h2 class="mb-4">${ssrInterpolate(__props.invitation.title)}</h2></div></header><div>`);
       if (page_step.value === unref(constants).PAGE_STEP_1_INFORMATION) {
-        _push(ssrRenderComponent(_sfc_main$h, mergeProps({
+        _push(ssrRenderComponent(_sfc_main$i, mergeProps({
           invitation: props.invitation
         }, form, { onSubmitted: step1Submitted }), null, _parent));
       } else {
         _push(`<!---->`);
       }
       if (page_step.value === unref(constants).PAGE_STEP_2_PAYMENT_METHOD) {
-        _push(ssrRenderComponent(_sfc_main$g, mergeProps(form, {
+        _push(ssrRenderComponent(_sfc_main$h, mergeProps(form, {
           onGoBack: ($event) => page_step.value = unref(constants).PAGE_STEP_1_INFORMATION,
           onSubmitted: step2Submitted
         }), null, _parent));
@@ -955,7 +985,7 @@ const _sfc_main$c = /* @__PURE__ */ Object.assign(__default__$8, {
         _push(`<!---->`);
       }
       if (page_step.value === unref(constants).PAGE_STEP_3_CONFIRMATION) {
-        _push(ssrRenderComponent(_sfc_main$f, mergeProps({
+        _push(ssrRenderComponent(_sfc_main$g, mergeProps({
           invitation: props.invitation
         }, form, {
           onGoBack: ($event) => page_step.value = unref(constants).PAGE_STEP_2_PAYMENT_METHOD,
@@ -965,7 +995,7 @@ const _sfc_main$c = /* @__PURE__ */ Object.assign(__default__$8, {
         _push(`<!---->`);
       }
       if (page_step.value === unref(constants).PAGE_STEP_4_PAYMENT) {
-        _push(ssrRenderComponent(_sfc_main$e, {
+        _push(ssrRenderComponent(_sfc_main$f, {
           order: order.value,
           mercadopago_public_key: __props.mercadopago_public_key
         }, null, _parent));
@@ -976,17 +1006,17 @@ const _sfc_main$c = /* @__PURE__ */ Object.assign(__default__$8, {
     };
   }
 });
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Invitation.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
 const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$c
+  default: _sfc_main$d
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$b = {
+const _sfc_main$c = {
   __name: "AuthenticatedLayout",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1188,16 +1218,16 @@ const _sfc_main$b = {
     };
   }
 };
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/AuthenticatedLayout.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
 const __default__$7 = {
-  layout: _sfc_main$b
+  layout: _sfc_main$c
 };
-const _sfc_main$a = /* @__PURE__ */ Object.assign(__default__$7, {
+const _sfc_main$b = /* @__PURE__ */ Object.assign(__default__$7, {
   __name: "Dashboard",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1206,19 +1236,19 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign(__default__$7, {
     };
   }
 });
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Dashboard.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
 const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$a
+  default: _sfc_main$b
 }, Symbol.toStringTag, { value: "Module" }));
 const TYPE_FIJA = 1;
 const TYPE_ANIMADA = 2;
-const _sfc_main$9 = {
+const _sfc_main$a = {
   __name: "Invitation",
   __ssrInlineRender: true,
   props: {
@@ -1302,20 +1332,20 @@ const _sfc_main$9 = {
     };
   }
 };
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Gallery/Partials/Invitation.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
 const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$9
+  default: _sfc_main$a
 }, Symbol.toStringTag, { value: "Module" }));
 const __default__$6 = {
-  layout: _sfc_main$d
+  layout: _sfc_main$e
 };
-const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$6, {
+const _sfc_main$9 = /* @__PURE__ */ Object.assign(__default__$6, {
   __name: "Show",
   __ssrInlineRender: true,
   props: {
@@ -1363,7 +1393,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$6, {
       if (props.invitations.data.length > 0) {
         _push(`<div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8"><!--[-->`);
         ssrRenderList(props.invitations.data, (invitation) => {
-          _push(ssrRenderComponent(_sfc_main$9, invitation, null, _parent));
+          _push(ssrRenderComponent(_sfc_main$a, invitation, null, _parent));
         });
         _push(`<!--]--></div><ul class="p-10 flex justify-center"><!--[-->`);
         ssrRenderList(props.invitations.links, (link) => {
@@ -1397,164 +1427,318 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$6, {
     };
   }
 });
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Gallery/Show.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
 const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$8
+  default: _sfc_main$9
 }, Symbol.toStringTag, { value: "Module" }));
 const __default__$5 = {
-  layout: _sfc_main$d
+  layout: _sfc_main$e
 };
-const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$5, {
+const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
   __name: "Home",
   __ssrInlineRender: true,
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><section id="invitaciones-animadas" class="relative max-w-[1200px] mx-auto min-h-[450px] mb-16 bg-[url(&#39;/assets/images/bg-nubes.webp&#39;)] bg-cover bg-no-repeat bg-right-bottom grid lg:grid-cols-[2fr_1fr] items-center justify-center rounded-lg p-5"><div class="grid items-center justify-center gap-1"><h2 class="p-3 text-5xl lg:text-7xl text-center font-serif font-bold tracking-wider text-white" style="${ssrRenderStyle({ "text-shadow": "2px 2px 15px rgba(0,0,0,1)" })}">Invitaciones<br>Animadas</h2><p class="text-center text-white max-w-[40ch] text-xl mb-3">Con música de fondo y hasta 30 segundos de duración!</p><div class="text-center">`);
+      _push(`<!--[--><div id="banner" class="p-8 bg-[url(&#39;/assets/images/banner-background.webp&#39;)] bg-no-repeat bg-cover bg-center"><div class="grid grid-cols-1 gap-y-8 md:grid-cols-[auto_auto] justify-center items-center"><div class="text-center"><header class="text-primary mb-5"><h1 class="text-[55px] font-serif leading-[4rem] mb-5"> Las invitaciones digitales<br> mas lindas </h1><p class="text-[38px]">Fijas, interactivas o en video</p></header>`);
       _push(ssrRenderComponent(unref(Link), {
         href: "/gallery",
-        data: { type: 2 },
-        class: "bg-primary text-white py-2 px-6 mt-5 rounded text-xl shadow-xl tracking-wider"
+        class: "bg-primary text-white py-2 px-4 rounded font-bold text-xl"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Ver diseños`);
+            _push2(` Ver diseños `);
           } else {
             return [
-              createTextVNode("Ver diseños")
+              createTextVNode(" Ver diseños ")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</div></div><div class="p-5"><div class="w-[200px] relative mx-auto lg:ms-0 me-auto"><img class="w-full h-[380px] relative z-20" src="/assets/images/cellphone-mockup.webp" width="200" height="380" alt="Cellphone Mockup"><video class="absolute z-10 top-[13px] left-0 rounded-[25px] shadow-[10px_25px_15px_2px_rgba(0,0,0,0.75)]" src="/assets/rapunzel-short.mp4" poster="/assets/rapunzel-short-thumbnail.webp" width="200" height="356" autoplay loop playsinline muted></video></div></div></section><section id="categorias" class="max-w-[1200px] mx-auto mb-16"><header class="mb-7"><h3 class="text-center text-4xl font-serif font-bold tracking-wider">Cualquier razón para celebrar</h3><p class="text-center text-sm">Hay muchos modelos para elegir</p></header><div class="p-3 grid lg:grid-cols-3 auto-rows-[120px] gap-3 text-white font-bold">`);
+      _push(`</div><div><img class="w-[430px] mx-auto animate-[2s_linear_0s_scale-in]" src="/assets/images/banner-cell-invitation.webp"></div></div></div><div id="diseños" class="max-w-[1200px] mx-auto p-10"><h2 class="text-[40px] text-primary text-center font-serif mb-8">Diseños más elegidos</h2><div class="grid grid-cols-1 gap-6 md:grid-cols-3"><div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">`);
       _push(ssrRenderComponent(unref(Link), {
-        class: "bg-[url('/assets/images/links/baby-shower.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg",
         href: "/gallery",
-        data: { tag: 1 }
+        class: "group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h4${_scopeId}>Baby Shower</h4>`);
+            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp"${_scopeId}>`);
           } else {
             return [
-              createVNode("h4", null, "Baby Shower")
+              createVNode("img", {
+                class: "mx-auto group-hover:-translate-y-3 transition-transform",
+                src: "/assets/images/diseños-mas-elegidos/1.webp"
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="flex justify-center items-center"><h3 class="text-primary text-[43px] font-serif leading-10">Super Mario</h3></div><div>`);
+      _push(ssrRenderComponent(unref(Link), {
+        as: "button",
+        href: "/gallery",
+        class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Comprar`);
+          } else {
+            return [
+              createTextVNode("Comprar")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div><div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">`);
+      _push(ssrRenderComponent(unref(Link), {
+        href: "/gallery",
+        class: "group"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp"${_scopeId}>`);
+          } else {
+            return [
+              createVNode("img", {
+                class: "mx-auto group-hover:-translate-y-3 transition-transform",
+                src: "/assets/images/diseños-mas-elegidos/1.webp"
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="flex justify-center items-center"><h3 class="text-primary text-[43px] font-serif leading-10">Granja acuarela rosa</h3></div><div>`);
+      _push(ssrRenderComponent(unref(Link), {
+        as: "button",
+        href: "/gallery",
+        class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Comprar`);
+          } else {
+            return [
+              createTextVNode("Comprar")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div><div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">`);
+      _push(ssrRenderComponent(unref(Link), {
+        href: "/gallery",
+        class: "group"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp"${_scopeId}>`);
+          } else {
+            return [
+              createVNode("img", {
+                class: "mx-auto group-hover:-translate-y-3 transition-transform",
+                src: "/assets/images/diseños-mas-elegidos/1.webp"
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="flex justify-center items-center"><h3 class="text-primary text-[43px] font-serif leading-10">Barbie</h3></div><div>`);
+      _push(ssrRenderComponent(unref(Link), {
+        as: "button",
+        href: "/gallery",
+        class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Comprar`);
+          } else {
+            return [
+              createTextVNode("Comprar")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div></div><div class="text-primary text-center font-serif text-[40px] m-10">`);
+      _push(ssrRenderComponent(unref(Link), { href: "/gallery" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Ver mas `);
+          } else {
+            return [
+              createTextVNode(" Ver mas ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div><div id="plazos-de-entrega" class="p-20 bg-[#d2b4de]"><div class="max-w-[1200px] mx-auto grid grid-cols-1 gap-y-8 lg:grid-cols-2 font-serif"><div><div class="relative max-w-[560px] mx-auto h-[545px] bg-[url(&#39;/assets/images/tiempos-de-entrega/times-background.svg&#39;)] bg-no-repeat bg-cover"><div class="absolute max-w-[370px] top-[86px] left-[96px]"><h2 class="text-[#5f86e1] text-[44px] mb-4">Plazos de entrega</h2><ul class="text-[#88a3e2] text-[23px] list-disc leading-6 space-y-3"><li>Hasta 72Hs hábiles para todos los diseños</li><li>Elegì la opcion “super rapida” si la necesitas para el mismo dìa (antes de las 16hs) </li><li>En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según disponibilidad</li></ul></div><div class="absolute bottom-[-31px] right-[-31px] bg-[url(&#39;/assets/images/tiempos-de-entrega/star-background.svg&#39;)] w-[230px] h-[230px] bg-no-repeat bg-cover"><p class="text-white text-center w-[128px] absolute top-[50px] left-[50px]">Si no tenes algun dato podes reservarla igual y dejar pendiente el armado</p></div></div></div><div class="grid md:grid-cols-2 gap-10 text-[25px] text-white"><div class="flex justify-center items-center"><div class="skew-y-3 bg-[url(&#39;/assets/images/tiempos-de-entrega/sticky-background-1.svg&#39;)] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-11"><h3 class="mb-2">Que nadie falte a tu fiesta!</h3><img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-1.webp"></div></div><div class="flex justify-center items-center"><div class="skew-x-2 bg-[url(&#39;/assets/images/tiempos-de-entrega/sticky-background-2.svg&#39;)] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-11"><img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-2.svg"><h3 class="text-3xl">No gaste de más</h3></div></div><div class="flex justify-center items-center"><div class="skew-y-3 -rotate-1 bg-[url(&#39;/assets/images/tiempos-de-entrega/sticky-background-3.svg&#39;)] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-8"><img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-3.svg"><h3>Recibi tu invitacion en 72 hs hàbiles màximo</h3></div></div><div class="flex justify-center items-center"><div class="skew-x-3 bg-[url(&#39;/assets/images/tiempos-de-entrega/sticky-background-4.svg&#39;)] bg-no-repeat bg-center bg-cover w-[318px] h-[309px] text-center px-8 py-8"><h3>Personalizamos con el diseño que busques</h3><img class="w-[132px] h-[138px] mx-auto" src="/assets/images/tiempos-de-entrega/sticky-4.svg"></div></div></div></div></div><div id="categorias-mas-pedidas" class="max-w-[1200px] mx-auto p-20"><h2 class="text-[40px] text-primary text-center font-serif mb-8">Categorías mas pedidas</h2><div class="grid md:grid-cols-3 gap-4 text-xl text-primary font-bold">`);
+      _push(ssrRenderComponent(unref(Link), {
+        href: "/gallery",
+        data: { slug: "baby-showers" },
+        as: "div",
+        class: "grid items-center cursor-pointer group"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group"${_scopeId}><img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/baby-shower.webp"${_scopeId}></div><h3 class="p-3 text-center group-hover:underline"${_scopeId}>Baby Showers</h3>`);
+          } else {
+            return [
+              createVNode("div", { class: "h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group" }, [
+                createVNode("img", {
+                  class: "group-hover:scale-125 transition-transform duration-500",
+                  src: "/assets/images/categorias-mas-pedidas/baby-shower.webp"
+                })
+              ]),
+              createVNode("h3", { class: "p-3 text-center group-hover:underline" }, "Baby Showers")
             ];
           }
         }),
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(Link), {
-        class: "bg-[url('/assets/images/links/comunion.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg",
         href: "/gallery",
-        data: { tag: 2 }
+        data: { slug: "comuniones" },
+        as: "div",
+        class: "grid items-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h4${_scopeId}>Comunión</h4>`);
+            _push2(`<div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group"${_scopeId}><img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/comunion.webp"${_scopeId}></div><h3 class="p-3 text-center group-hover:underline"${_scopeId}>Comuniónes</h3>`);
           } else {
             return [
-              createVNode("h4", null, "Comunión")
+              createVNode("div", { class: "h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group" }, [
+                createVNode("img", {
+                  class: "group-hover:scale-125 transition-transform duration-500",
+                  src: "/assets/images/categorias-mas-pedidas/comunion.webp"
+                })
+              ]),
+              createVNode("h3", { class: "p-3 text-center group-hover:underline" }, "Comuniónes")
             ];
           }
         }),
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(Link), {
-        class: "bg-[url('/assets/images/links/bautismo.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg",
         href: "/gallery",
-        data: { tag: 3 }
+        data: { slug: "eventos" },
+        as: "div",
+        class: "grid items-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h4${_scopeId}>Bautismo</h4>`);
+            _push2(`<div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group"${_scopeId}><img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/eventos.webp"${_scopeId}></div><h3 class="p-3 text-center group-hover:underline"${_scopeId}>Eventos</h3>`);
           } else {
             return [
-              createVNode("h4", null, "Bautismo")
+              createVNode("div", { class: "h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group" }, [
+                createVNode("img", {
+                  class: "group-hover:scale-125 transition-transform duration-500",
+                  src: "/assets/images/categorias-mas-pedidas/eventos.webp"
+                })
+              ]),
+              createVNode("h3", { class: "p-3 text-center group-hover:underline" }, "Eventos")
             ];
           }
         }),
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(Link), {
-        class: "bg-[url('/assets/images/links/boda.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg",
         href: "/gallery",
-        data: { tag: 4 }
+        data: { slug: "confirmaciones" },
+        as: "div",
+        class: "grid items-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h4${_scopeId}>Boda</h4>`);
+            _push2(`<div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group"${_scopeId}><img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/confirmacion.webp"${_scopeId}></div><h3 class="p-3 text-center group-hover:underline"${_scopeId}>Confirmaciónes</h3>`);
           } else {
             return [
-              createVNode("h4", null, "Boda")
+              createVNode("div", { class: "h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group" }, [
+                createVNode("img", {
+                  class: "group-hover:scale-125 transition-transform duration-500",
+                  src: "/assets/images/categorias-mas-pedidas/confirmacion.webp"
+                })
+              ]),
+              createVNode("h3", { class: "p-3 text-center group-hover:underline" }, "Confirmaciónes")
             ];
           }
         }),
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(Link), {
-        class: "bg-[url('/assets/images/links/cumpleanos-adulto.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg",
         href: "/gallery",
-        data: { tag: 5 }
+        data: { slug: "casamientos" },
+        as: "div",
+        class: "grid items-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h4${_scopeId}>Cumpleaños<br${_scopeId}>adultos</h4>`);
+            _push2(`<div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group"${_scopeId}><img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/casamiento.webp"${_scopeId}></div><h3 class="p-3 text-center group-hover:underline"${_scopeId}>Casamientos</h3>`);
           } else {
             return [
-              createVNode("h4", null, [
-                createTextVNode("Cumpleaños"),
-                createVNode("br"),
-                createTextVNode("adultos")
-              ])
+              createVNode("div", { class: "h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group" }, [
+                createVNode("img", {
+                  class: "group-hover:scale-125 transition-transform duration-500",
+                  src: "/assets/images/categorias-mas-pedidas/casamiento.webp"
+                })
+              ]),
+              createVNode("h3", { class: "p-3 text-center group-hover:underline" }, "Casamientos")
             ];
           }
         }),
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(Link), {
-        class: "bg-[url('/assets/images/links/cumpleanos-infantil.webp')] bg-cover bg-no-repeat flex items-center justify-start p-5 rounded-lg",
         href: "/gallery",
-        data: { tag: 6 }
+        data: { slug: "cumpleanos" },
+        as: "div",
+        class: "grid items-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h4${_scopeId}>Cumpleaños<br${_scopeId}>infantiles</h4>`);
+            _push2(`<div class="h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group"${_scopeId}><img class="group-hover:scale-125 transition-transform duration-500" src="/assets/images/categorias-mas-pedidas/cumpleanos.webp"${_scopeId}></div><h3 class="p-3 text-center group-hover:underline"${_scopeId}>Cumpleaños</h3>`);
           } else {
             return [
-              createVNode("h4", null, [
-                createTextVNode("Cumpleaños"),
-                createVNode("br"),
-                createTextVNode("infantiles")
-              ])
+              createVNode("div", { class: "h-[150px] border border-primary rounded-xl overflow-hidden flex items-center justify-center group" }, [
+                createVNode("img", {
+                  class: "group-hover:scale-125 transition-transform duration-500",
+                  src: "/assets/images/categorias-mas-pedidas/cumpleanos.webp"
+                })
+              ]),
+              createVNode("h3", { class: "p-3 text-center group-hover:underline" }, "Cumpleaños")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</div></section><section id="informacion" class="bg-gray-100 py-10 mb-16"><div class="max-w-[1200px] mx-auto mb-16 grid lg:grid-cols-2"><div class="p-10"><h3 class="text-center text-4xl font-serif font-bold tracking-wider mb-5 text-primary">Plazos de entrega</h3><div class="mb-7"><h4 class="text-2xl font-serif text-primary">Invitaciones interactivas y fijas</h4><p> Si elegis un diseño del catálogo se entrega el mismo día del pago.<br> En caso de querer un nuevo diseño el plazo de entrega es de 24hs como mínimo y 48hs como máximo. </p></div><div class="mb-7"><h4 class="text-2xl font-serif text-primary">Invitaciones animadas</h4><p> Para diseños del catálogo se entrega en el mismo día o 48hs maximo segun disponibilidad.<br> En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según disponibilidad. </p></div></div><div><img class="mx-auto" src="/assets/images/preguntas.webp" alt="Preguntas"></div></div></section><!--]-->`);
+      _push(`</div><div class="text-center p-10"><h3 class="mb-8 text-primary text-[22px] font-serif">¿Buscas una tematica nueva?</h3><a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&amp;app_absent=0" target="_blank" class="text-white text-[16px] font-extrabold py-4 px-10 bg-primary rounded-full">CONTÁCTANOS AHORA</a></div></div><div id="kits-imprimibles" class="p-20 bg-[#d2b4de]"><div class="max-w-[1200px] mx-auto"><header class="text-white text-center mb-12"><h2 class="text-[56px] font-serif mb-4">Kits imprimibles para decoràr tus eventos</h2><p class="text-[26px] leading-8"> No pierdas tiempo diseñando, empeza cuanto antes con tu<br> proyecto, decora tu fiesta o emprende con nuestras plantillas </p></header><div class="grid md:grid-cols-3 gap-8 text-primary text-[26px] font-serif text-center uppercase"><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/imprimi.webp"><h3 class="mt-10">Imprimí</h3></div><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/recorta.webp"><h3 class="mt-10">Recortá</h3></div><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/pega.webp"><h3 class="mt-10">Pegá</h3></div></div><p class="text-center text-white text-[56px] font-serif mt-5"> y listo! </p></div></div><div id="clientes-satisfechos" class="max-w-[1200px] mx-auto p-20"><h2 class="text-[40px] text-primary text-center font-serif mb-8">Clientes satisfechos</h2><div class="grid md:grid-cols-3 gap-12"><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div></div></div><div id="quienes-somos" class="grid grid-cols-[2fr_1fr] gap-6 max-w-[1200px] mx-auto p-20"><div class="font-serif text-center"><header><p class="text-[20px] text-[#fc8dca]">SOBRE NOSOTROS</p><h2 class="text-[77px] text-primary text-center mb-8">¿Quienes somos?</h2></header><div class="text-[#59524b] space-y-5 uppercase"><p>¡SOY GISELLE, Y ESTOY ENCANTADA DE CONOCERTE!</p><p>SOY ESTUDIANTE DE LICENCIATURA EN ADMINISTRACIÓN. PERO MI VERDADERA PASIÓN RADICA EN EL MUNDO DEL DISEÑO. DESDE QUE ERA JOVEN, SIEMPRE SENTI UN AMOR PROFUNDO POR LA CREATIVIDAD Y LA EXPRESIÓN ARTÍSTICA.</p><p>DECIDÍ FUSIONAR MI AMOR POR EL DISEÑO CON MI CONOCIMIENTO EN ADMINISTRACIÓN Y EMPRENDER MI PROPIO CAMINO. ASÍ NACIÓ MI PROYECTO: CREAR INVITACIONES DIGITALES EN VIDEO QUE SON MÁS QUE SIMPLES PALABRAS EN UNA PANTALLA. SON PEQUEÑAS OBRAS DE ARTE ANIMADAS, LLENAS DE COLOR Y VIDA, DISEÑADAS PARA HACER QUE CADA OCASIÓN ESPECIAL SEA AÚN MÁS MEMORABLE. CADA PROYECTO ES UNA OPORTUNIDAD PARA MÍ DE DESPLEGAR MI CREATIVIDAD Y OFRECERTE ALGO ÚNICO Y PERSONALIZADO. TENGO UN PEQUEÑO EQUIPO QUE ME ACOMPAÑA EN ESTA HERMOSA TAREA, MI COMPAÑERO DE VIDA PROGRAMANDO LA WEB, LAS INVITACIONES MAS COMPLEJAS Y DANDOLE VIDA A MIS IDEAS. TAMBIEN ESTAN MIS AYUDANTES DE CONFIANZA MICA Y SABRI &lt;3. </p><p> ¡GRACIAS POR VISITAR MI PÁGINA Y POR CONSIDERAR CONFIAR EN MÍ PARA TUS INVITACIONES ESPECIALES!<br> CON CARIÑO, GISELLE </p></div><div class="mt-12"><a href="mailto:contacto@papelitodigital.com.ar" target="_blank" class="text-[16px] text-[#fc8dca] underline underline-offset-8">ENVIAME UN EMAIL</a></div></div><div class="flex"><img class="object-cover" src="/assets/images/quienes-somos.webp"></div></div><!--]-->`);
     };
   }
 });
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Home.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
 const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$7
+  default: _sfc_main$8
 }, Symbol.toStringTag, { value: "Module" }));
 const __default__$4 = {
-  layout: _sfc_main$b
+  layout: _sfc_main$c
 };
-const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
+const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
   __name: "Create",
   __ssrInlineRender: true,
   props: {
@@ -1586,7 +1770,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(_attrs)}><h1 class="text-3xl">Nueva Invitacion</h1>`);
       if (_ctx.$page.props.flash.message) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "success" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "success" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
@@ -1614,7 +1798,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         modelValue: unref(form).title,
         "onUpdate:modelValue": ($event) => unref(form).title = $event,
         id: "title",
@@ -1622,7 +1806,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
         required: ""
       }, null, _parent));
       if (unref(form).errors.title) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.title)}`);
@@ -1650,14 +1834,14 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         modelValue: unref(form).description,
         "onUpdate:modelValue": ($event) => unref(form).description = $event,
         id: "description",
         type: "text"
       }, null, _parent));
       if (unref(form).errors.description) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.description)}`);
@@ -1685,7 +1869,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         modelValue: unref(form).price,
         "onUpdate:modelValue": ($event) => unref(form).price = $event,
         id: "price",
@@ -1695,7 +1879,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
         required: ""
       }, null, _parent));
       if (unref(form).errors.price) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.price)}`);
@@ -1723,7 +1907,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         modelValue: unref(form).tagInput,
         "onUpdate:modelValue": ($event) => unref(form).tagInput = $event,
         id: "tags",
@@ -1747,7 +1931,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
       }
       _push(`</div>`);
       if (unref(form).errors.tags) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.tags)}`);
@@ -1777,7 +1961,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
       }, _parent));
       _push(`<input class="block" id="source" type="file" accept="video/*,image/*" required>`);
       if (unref(form).errors.source) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.source)}`);
@@ -1807,7 +1991,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
       }, _parent));
       _push(`<input class="block" id="thumbnail" type="file" accept="image/*">`);
       if (unref(form).errors.thumbnail) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.thumbnail)}`);
@@ -1823,7 +2007,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
         _push(`<!---->`);
       }
       _push(`</div>`);
-      _push(ssrRenderComponent(_sfc_main$k, {
+      _push(ssrRenderComponent(_sfc_main$l, {
         disabled: unref(form).processing
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -1841,20 +2025,20 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
     };
   }
 });
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/Create.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
 const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$6
+  default: _sfc_main$7
 }, Symbol.toStringTag, { value: "Module" }));
 const __default__$3 = {
-  layout: _sfc_main$b
+  layout: _sfc_main$c
 };
-const _sfc_main$5 = /* @__PURE__ */ Object.assign(__default__$3, {
+const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
   __name: "List",
   __ssrInlineRender: true,
   props: {
@@ -1868,7 +2052,7 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign(__default__$3, {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><h1 class="text-3xl">Invitaciones</h1>`);
       if (_ctx.$page.props.flash.message) {
-        _push(ssrRenderComponent(_sfc_main$j, { type: "success" }, {
+        _push(ssrRenderComponent(_sfc_main$k, { type: "success" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
@@ -1914,17 +2098,17 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign(__default__$3, {
     };
   }
 });
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/List.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
 const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$5
+  default: _sfc_main$6
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   __name: "Pagination",
   __ssrInlineRender: true,
   props: {
@@ -1964,16 +2148,16 @@ const _sfc_main$4 = {
     };
   }
 };
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Pagination.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
 const __default__$2 = {
-  layout: _sfc_main$b
+  layout: _sfc_main$c
 };
-const _sfc_main$3 = /* @__PURE__ */ Object.assign(__default__$2, {
+const _sfc_main$4 = /* @__PURE__ */ Object.assign(__default__$2, {
   __name: "List",
   __ssrInlineRender: true,
   props: {
@@ -2122,24 +2306,24 @@ const _sfc_main$3 = /* @__PURE__ */ Object.assign(__default__$2, {
         });
         _push(`<!--]--></ul></div>`);
       }
-      _push(ssrRenderComponent(_sfc_main$4, {
+      _push(ssrRenderComponent(_sfc_main$5, {
         links: __props.paginatedNotifications.links
       }, null, _parent));
       _push(`<!--]-->`);
     };
   }
 });
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Notifications/List.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
 const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$3
+  default: _sfc_main$4
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$2 = {
+const _sfc_main$3 = {
   __name: "Select",
   __ssrInlineRender: true,
   props: ["modelValue"],
@@ -2155,16 +2339,16 @@ const _sfc_main$2 = {
     };
   }
 };
-const _sfc_setup$2 = _sfc_main$2.setup;
-_sfc_main$2.setup = (props, ctx) => {
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Select.vue");
-  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
 const __default__$1 = {
-  layout: _sfc_main$b
+  layout: _sfc_main$c
 };
-const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__$1, {
+const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
   __name: "List",
   __ssrInlineRender: true,
   props: {
@@ -2186,14 +2370,14 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__$1, {
     });
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><h1 class="text-3xl">Pedidos</h1><form class="py-2 flex">`);
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         modelValue: unref(search).query,
         "onUpdate:modelValue": ($event) => unref(search).query = $event,
         class: "max-w-xs me-3",
         type: "search",
         placeholder: "Buscar.."
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$2, {
+      _push(ssrRenderComponent(_sfc_main$3, {
         modelValue: unref(search).finished,
         "onUpdate:modelValue": ($event) => unref(search).finished = $event,
         class: "max-w-xs me-3"
@@ -2211,7 +2395,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__$1, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$k, {
+      _push(ssrRenderComponent(_sfc_main$l, {
         class: "p-0",
         type: "submit"
       }, {
@@ -2368,27 +2552,27 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__$1, {
         });
         _push(`<!--]--></tbody></table>`);
       }
-      _push(ssrRenderComponent(_sfc_main$4, {
+      _push(ssrRenderComponent(_sfc_main$5, {
         links: __props.paginatedOrders.links
       }, null, _parent));
       _push(`<!--]-->`);
     };
   }
 });
-const _sfc_setup$1 = _sfc_main$1.setup;
-_sfc_main$1.setup = (props, ctx) => {
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/List.vue");
-  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$1
+  default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
 const __default__ = {
-  layout: _sfc_main$b
+  layout: _sfc_main$c
 };
-const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
+const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
   __name: "Show",
   __ssrInlineRender: true,
   props: {
@@ -2482,22 +2666,40 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
     };
   }
 });
-const _sfc_setup = _sfc_main.setup;
-_sfc_main.setup = (props, ctx) => {
+const _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/Show.vue");
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main
+  default: _sfc_main$1
+}, Symbol.toStringTag, { value: "Module" }));
+const Show_vue_vue_type_style_index_0_scoped_898ece04_lang = "";
+const _sfc_main = {
+  layout: _sfc_main$e
+};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-[800px] mx-auto space-y-7" }, _attrs))} data-v-898ece04><section data-v-898ece04><h2 data-v-898ece04>Horarios de atención</h2><ul class="list-disc" data-v-898ece04><li data-v-898ece04>Lunes a viernes de 10:00 a 18:00.</li><li data-v-898ece04>Sábados de 09:00 a 13:00</li><li data-v-898ece04>No trabajamos domingos ni feriados, en caso de necesitar algo con urgencia, escribir por WhatsApp indicándonos lo que necesitas, pero no aseguramos la respuesta en el momento. </li></ul></section><section data-v-898ece04><h2 data-v-898ece04>¿En qué tamaño se envían los archivos?</h2><p data-v-898ece04><strong data-v-898ece04>Kits imprimibles: </strong>Enviamos los archivos a tu dirección de correo electrónico en formato PDF y tamaño A4 (21x29,7cm), a menos que solicites el tamaño A3. Los archivos se abren utilizando Adobe Acrobat Reader, que se encuentra disponible en todas las computadoras y es GRATUITO. Vas a recibir un archivo con INSTRUCCIONES sobre el tipo de papel recomendado para cada elemento a imprimir. Al tener los archivos en tu correo electrónico, no tienen fecha de caducidad, por lo que podés utilizarlos en cualquier momento. En cuanto a los afiches de bienvenida son los únicos que van en ambos tamaños A4 y A3, no lo enviamos en otros tamaños, ante cualquier duda consultar antes de comprar. </p><p data-v-898ece04><strong data-v-898ece04>Invitación fija (estática):</strong> Formato PNG. </p><p data-v-898ece04><strong data-v-898ece04>Invitación interactiva (botones):</strong> Formato PDF. </p><p data-v-898ece04><strong data-v-898ece04>Invitación animada(video):</strong> Formato MP4. </p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cuál es el costo de envío?</h2><p data-v-898ece04>El envío es <strong data-v-898ece04>GRATUITO</strong>.</p><p data-v-898ece04>Para <strong data-v-898ece04>kits imprimibles</strong> los archivos se envían por mail, en caso de necesitarlo por WhatsApp, por favor aclararlo al momento de la confirmación de la compra.</p><p data-v-898ece04>Para <strong data-v-898ece04>invitaciones digitales</strong>, el archivo se enviará por mail y por WhatsApp, es responsabilidad del cliente guardar el archivo, no podemos reenviarlo después de 48hs de haberlo hecho ya que manejamos un gran volumen de archivos y nos resulta imposible tenerlos a todos guardados, es probable que luego de una semana su archivo ya no exista en nuestra base y cualquier cambio implicaría hacerla nuevamente. Por favor tenga esto en cuenta antes de pasar los datos del evento. Si no está seguro de la fecha y horario, puede dejar pendiente la creación de esta para el momento adecuado, se puede abonar con anticipación para reservar precio 😉.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cómo se realizan los envíos?</h2><p data-v-898ece04>Por mail a la cuenta que nos indiques en el mail de confirmación.</p><p data-v-898ece04>Las invitaciones también se enviarán por WhatsApp para que puedas compartirla en el momento.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cuánto tarda en llegar mi pedido?</h2><p data-v-898ece04>Si se trata de un kit personalizado, el plazo es 48 horas desde el momento en que nos envías los datos para editarlo. Los kits sin personalizar se envían normalmente en el día.</p><p data-v-898ece04>Si lo necesitas urgente por favor escribinos por whatsapp para ver si tenemos disponibilidad de envío.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Se pueden pedir cambios una vez recibido el pedido?</h2><p data-v-898ece04>No, una vez recibido no se puede reenviar, en caso de necesitar algún cambio el mismo tendrá un costo extra, por eso pedimos que aclaren todo al momento de hacer la compra y ANTES de recibir su archivo. </p><p data-v-898ece04>En <strong data-v-898ece04>invitaciones digitales</strong> pedimos que no pasen los datos hasta no estar seguros del horario y dirección del evento ya que un mínimo cambio puede significar tener que armarla desde cero, por lo tanto, se cobrará un extra si la invitación ya fue enviada.</p><p data-v-898ece04>Para DISEÑOS NUEVOS de invitaciones, donde el cliente no ve un ejemplo previo de como es la invitación, SI están permitidas hasta dos modificaciones luego de recibir el archivo, las modificaciones las hacemos en una sola tanda de cambios, luego de eso cualquier otra modificación llevará un costo extra. Asegurarse de pedir todo ANTES de que empecemos el proceso creativo, ya sean frases, música de fondo, colores o tonos, etc. también pueden enviar un ejemplo que les guste para guiarnos y asegurarnos que su invitación sea justo lo que esperaban.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cómo envío los datos para editarlo?</h2><p data-v-898ece04>Una vez confirmado el pago tendrá la opción de cargar los datos o seleccionar la opción “Datos pendientes”, en ese caso les llegará un mail/WhatsApp con el asunto/mensaje COMPRA PENDIENTE DE DATOS, con lo que necesitamos para avanzar con el envío del archivo.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Los kits se pueden editar?</h2><p data-v-898ece04>No, por el momento únicamente hacemos pedidos personalizados.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Se puede pedir más de una invitación?</h2><p data-v-898ece04>Los kits traen una invitación en archivo imprimible y en JPG para enviar por whatsapp, si por algún motivo necesita dos invitaciones iguales pero con diferente fecha u horario, puede abonar un costo extra mínimo para recibirlas.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Hacen envíos internacionales?</h2><p data-v-898ece04>¡Por supuesto! Podes abonar a través de Paypal y recibir tu archivo en el mismo plazo, solo tener en cuenta que la franja horaria de atención puede variar. Los medios de envío son los mismos, E-mail y WhatsApp. Asegurate de agendar el numero completo de WhatsApp indicando formato internacional completo.</p></section><section data-v-898ece04><h2 data-v-898ece04>Otras consultas</h2><p data-v-898ece04>Escribinos por WhatsApp o envianos un E-mail y te responderemos a la brevedad 😊.</p></section></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Preguntas/Show.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const Show = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-898ece04"]]);
+const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: Show
 }, Symbol.toStringTag, { value: "Module" }));
 createServer(
   (page) => createInertiaApp({
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Auth/Login.vue": __vite_glob_0_0, "./Pages/Checkout/Invitation.vue": __vite_glob_0_1, "./Pages/Checkout/Partials/Step1Information.vue": __vite_glob_0_2, "./Pages/Checkout/Partials/Step2PayMentMethodSelection.vue": __vite_glob_0_3, "./Pages/Checkout/Partials/Step3Confirmation.vue": __vite_glob_0_4, "./Pages/Checkout/Partials/Step4Payment.vue": __vite_glob_0_5, "./Pages/Dashboard.vue": __vite_glob_0_6, "./Pages/Gallery/Partials/Invitation.vue": __vite_glob_0_7, "./Pages/Gallery/Show.vue": __vite_glob_0_8, "./Pages/Home.vue": __vite_glob_0_9, "./Pages/Invitations/Create.vue": __vite_glob_0_10, "./Pages/Invitations/List.vue": __vite_glob_0_11, "./Pages/Notifications/List.vue": __vite_glob_0_12, "./Pages/Orders/List.vue": __vite_glob_0_13, "./Pages/Orders/Show.vue": __vite_glob_0_14 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Auth/Login.vue": __vite_glob_0_0, "./Pages/Checkout/Invitation.vue": __vite_glob_0_1, "./Pages/Checkout/Partials/Step1Information.vue": __vite_glob_0_2, "./Pages/Checkout/Partials/Step2PayMentMethodSelection.vue": __vite_glob_0_3, "./Pages/Checkout/Partials/Step3Confirmation.vue": __vite_glob_0_4, "./Pages/Checkout/Partials/Step4Payment.vue": __vite_glob_0_5, "./Pages/Dashboard.vue": __vite_glob_0_6, "./Pages/Gallery/Partials/Invitation.vue": __vite_glob_0_7, "./Pages/Gallery/Show.vue": __vite_glob_0_8, "./Pages/Home.vue": __vite_glob_0_9, "./Pages/Invitations/Create.vue": __vite_glob_0_10, "./Pages/Invitations/List.vue": __vite_glob_0_11, "./Pages/Notifications/List.vue": __vite_glob_0_12, "./Pages/Orders/List.vue": __vite_glob_0_13, "./Pages/Orders/Show.vue": __vite_glob_0_14, "./Pages/Preguntas/Show.vue": __vite_glob_0_15 });
       return pages[`./Pages/${name}.vue`];
     },
     setup({ App, props, plugin }) {
