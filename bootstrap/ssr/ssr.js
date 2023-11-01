@@ -1461,115 +1461,92 @@ const _sfc_main$9 = /* @__PURE__ */ Object.assign(__default__$6, {
         }),
         _: 1
       }, _parent));
-      _push(`</div><div><img class="w-[430px] mx-auto animate-[2s_linear_0s_scale-in]" src="/assets/images/banner-cell-invitation.webp"></div></div></div><div id="diseños" class="max-w-[1200px] mx-auto p-10"><h2 class="text-[40px] text-primary text-center font-serif mb-8">Diseños más elegidos</h2><div class="grid grid-cols-1 gap-6 md:grid-cols-3"><div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">`);
+      _push(`</div><div><img class="w-[430px] mx-auto animate-[2s_linear_0s_scale-in]" src="/assets/images/banner-cell-invitation.webp"></div></div></div><div id="diseños" class="max-w-[1200px] mx-auto p-10"><h2 class="text-[40px] text-primary text-center font-serif mb-8">Diseños más elegidos</h2><div class="grid grid-cols-1 gap-6 md:grid-cols-3">`);
       _push(ssrRenderComponent(unref(Link), {
-        href: "/gallery",
-        class: "group"
+        as: "div",
+        href: "/checkout/18",
+        class: "grid grid-rows-[auto_1fr_auto] gap-5 text-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp"${_scopeId}>`);
+            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/super-mario-bross.png"${_scopeId}><div class="flex justify-center items-center"${_scopeId}><h3 class="text-primary text-[43px] font-serif leading-10 group-hover:underline"${_scopeId}>Super Mario</h3></div><div${_scopeId}><button type="button" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"${_scopeId}>Comprar</button></div>`);
           } else {
             return [
               createVNode("img", {
                 class: "mx-auto group-hover:-translate-y-3 transition-transform",
-                src: "/assets/images/diseños-mas-elegidos/1.webp"
-              })
+                src: "/assets/images/diseños-mas-elegidos/super-mario-bross.png"
+              }),
+              createVNode("div", { class: "flex justify-center items-center" }, [
+                createVNode("h3", { class: "text-primary text-[43px] font-serif leading-10 group-hover:underline" }, "Super Mario")
+              ]),
+              createVNode("div", null, [
+                createVNode("button", {
+                  type: "button",
+                  class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+                }, "Comprar")
+              ])
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<div class="flex justify-center items-center"><h3 class="text-primary text-[43px] font-serif leading-10">Super Mario</h3></div><div>`);
       _push(ssrRenderComponent(unref(Link), {
-        as: "button",
-        href: "/gallery",
-        class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+        as: "div",
+        href: "/checkout/19",
+        class: "grid grid-rows-[auto_1fr_auto] gap-5 text-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Comprar`);
-          } else {
-            return [
-              createTextVNode("Comprar")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</div></div><div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">`);
-      _push(ssrRenderComponent(unref(Link), {
-        href: "/gallery",
-        class: "group"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp"${_scopeId}>`);
+            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/granja-acuarela-rosa.png"${_scopeId}><div class="flex justify-center items-center"${_scopeId}><h3 class="text-primary text-[43px] font-serif leading-10 group-hover:underline"${_scopeId}>Granja acuarela rosa</h3></div><div${_scopeId}><button type="button" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"${_scopeId}>Comprar</button></div>`);
           } else {
             return [
               createVNode("img", {
                 class: "mx-auto group-hover:-translate-y-3 transition-transform",
-                src: "/assets/images/diseños-mas-elegidos/1.webp"
-              })
+                src: "/assets/images/diseños-mas-elegidos/granja-acuarela-rosa.png"
+              }),
+              createVNode("div", { class: "flex justify-center items-center" }, [
+                createVNode("h3", { class: "text-primary text-[43px] font-serif leading-10 group-hover:underline" }, "Granja acuarela rosa")
+              ]),
+              createVNode("div", null, [
+                createVNode("button", {
+                  type: "button",
+                  class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+                }, "Comprar")
+              ])
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<div class="flex justify-center items-center"><h3 class="text-primary text-[43px] font-serif leading-10">Granja acuarela rosa</h3></div><div>`);
       _push(ssrRenderComponent(unref(Link), {
-        as: "button",
-        href: "/gallery",
-        class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+        as: "div",
+        href: "/checkout/17",
+        class: "grid grid-rows-[auto_1fr_auto] gap-5 text-center cursor-pointer group"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Comprar`);
-          } else {
-            return [
-              createTextVNode("Comprar")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</div></div><div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">`);
-      _push(ssrRenderComponent(unref(Link), {
-        href: "/gallery",
-        class: "group"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp"${_scopeId}>`);
+            _push2(`<img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/plim-plim.png"${_scopeId}><div class="flex justify-center items-center"${_scopeId}><h3 class="text-primary text-[43px] font-serif leading-10 group-hover:underline"${_scopeId}>Plim Plim</h3></div><div${_scopeId}><button type="button" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"${_scopeId}>Comprar</button></div>`);
           } else {
             return [
               createVNode("img", {
                 class: "mx-auto group-hover:-translate-y-3 transition-transform",
-                src: "/assets/images/diseños-mas-elegidos/1.webp"
-              })
+                src: "/assets/images/diseños-mas-elegidos/plim-plim.png"
+              }),
+              createVNode("div", { class: "flex justify-center items-center" }, [
+                createVNode("h3", { class: "text-primary text-[43px] font-serif leading-10 group-hover:underline" }, "Plim Plim")
+              ]),
+              createVNode("div", null, [
+                createVNode("button", {
+                  type: "button",
+                  class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
+                }, "Comprar")
+              ])
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<div class="flex justify-center items-center"><h3 class="text-primary text-[43px] font-serif leading-10">Barbie</h3></div><div>`);
-      _push(ssrRenderComponent(unref(Link), {
-        as: "button",
-        href: "/gallery",
-        class: "font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Comprar`);
-          } else {
-            return [
-              createTextVNode("Comprar")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</div></div></div><div class="text-primary text-center font-serif text-[40px] m-10">`);
+      _push(`</div><div class="text-primary text-center font-serif text-[40px] m-10">`);
       _push(ssrRenderComponent(unref(Link), { href: "/gallery" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

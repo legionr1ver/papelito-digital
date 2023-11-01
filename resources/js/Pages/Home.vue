@@ -33,39 +33,37 @@ import { Link } from '@inertiajs/vue3';
     <div id="diseños" class="max-w-[1200px] mx-auto p-10">
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Diseños más elegidos</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
-                <Link href="/gallery" class="group">
-                    <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
-                </Link>
+
+            <Link as="div" href="/checkout/18" class="grid grid-rows-[auto_1fr_auto] gap-5 text-center cursor-pointer group">
+                <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/super-mario-bross.png">
                 <div class="flex justify-center items-center">
-                    <h3 class="text-primary text-[43px] font-serif leading-10">Super Mario</h3>
+                    <h3 class="text-primary text-[43px] font-serif leading-10 group-hover:underline">Super Mario</h3>
                 </div>
                 <div>
-                    <Link as="button" href="/gallery" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</Link>
+                    <button type="button" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</button>
                 </div>
-            </div>
-            <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
-                <Link href="/gallery" class="group">
-                    <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
-                </Link>
+            </Link>
+
+            <Link as="div" href="/checkout/19" class="grid grid-rows-[auto_1fr_auto] gap-5 text-center cursor-pointer group">
+                <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/granja-acuarela-rosa.png">
                 <div class="flex justify-center items-center">
-                    <h3 class="text-primary text-[43px] font-serif leading-10">Granja acuarela rosa</h3>
+                    <h3 class="text-primary text-[43px] font-serif leading-10 group-hover:underline">Granja acuarela rosa</h3>
                 </div>
                 <div>
-                    <Link as="button" href="/gallery" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</Link>
+                    <button type="button" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</button>
                 </div>
-            </div>
-            <div class="grid grid-rows-[auto_1fr_auto] gap-5 text-center">
-                <Link href="/gallery" class="group">
-                    <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/1.webp">
-                </Link>
+            </Link>
+
+            <Link as="div" href="/checkout/17" class="grid grid-rows-[auto_1fr_auto] gap-5 text-center cursor-pointer group">
+                <img class="mx-auto group-hover:-translate-y-3 transition-transform" src="/assets/images/diseños-mas-elegidos/plim-plim.png">
                 <div class="flex justify-center items-center">
-                    <h3 class="text-primary text-[43px] font-serif leading-10">Barbie</h3>
+                    <h3 class="text-primary text-[43px] font-serif leading-10 group-hover:underline">Plim Plim</h3>
                 </div>
                 <div>
-                    <Link as="button" href="/gallery" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</Link>
+                    <button type="button" class="font-serif text-white bg-primary w-[230px] h-[65px] rounded-[70px]">Comprar</button>
                 </div>
-            </div>
+            </Link>
+            
         </div>
         <div class="text-primary text-center font-serif text-[40px] m-10">
             <Link href="/gallery">
