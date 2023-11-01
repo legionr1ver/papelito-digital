@@ -9,12 +9,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Tag;
 use App\Models\Order;
 
 class Invitation extends Model
 {
     use HasFactory, SoftDeletes;
+
+    const INVITATIONS_STORAGE_PATH = 'storage/invitations/';
 
     /**
      * The attributes that should be cast.
@@ -37,6 +40,7 @@ class Invitation extends Model
         'type_id',
         'price',
         'source_url',
+        'thumbnail_url',
         'type',
         'tags',
     ];
@@ -48,6 +52,7 @@ class Invitation extends Model
      */
     protected $appends = [
         'source_url',
+        'thumbnail_url',
     ];
 
     /**
@@ -77,7 +82,16 @@ class Invitation extends Model
     protected function sourceUrl(): Attribute
     {
         return Attribute::make(
-            get: fn () => "/storage/invitations/$this->source",
+            get: fn () => '/' . self::INVITATIONS_STORAGE_PATH . $this->source,
+        );
+    }
+
+    protected function thumbnailUrl(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->thumbnail
+                ? '/' . self::INVITATIONS_STORAGE_PATH . $this->thumbnail
+                : null,
         );
     }
 }

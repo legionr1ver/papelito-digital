@@ -78,7 +78,12 @@ class InvitationController extends Controller
      */
     public function edit(Invitation $invitation)
     {
-        //
+        $invitation->load('tags','type');
+
+        return Inertia::render('Invitations/Edit', [
+            'tags' => Tag::all(),
+            'invitation' => $invitation,
+        ]);
     }
 
     /**
@@ -86,7 +91,27 @@ class InvitationController extends Controller
      */
     public function update(UpdateInvitationRequest $request, Invitation $invitation)
     {
-        //
+        $tagsId = [];
+        foreach( $request->input('tags', []) as $tag )
+        {
+            $tagsId[] = Tag::firstOrCreate([
+                'label' => $tag,
+                'slug' => Str::slug($tag),
+            ])->id;
+        }
+
+        $invitation->title = $request->input('title');
+        $invitation->description = $request->input('description');
+        $invitation->price = $request->input('price');
+
+        if( $thumbnailFile = $request->file('thumbnail') )
+            $invitation->thumbnail = basename($thumbnailFile->store('invitations', 'public'));
+            
+        $invitation->save();
+
+        $invitation->tags()->sync($tagsId);
+
+        return to_route('invitations.edit', ['invitation' => $invitation->id])->with('message', 'Invitación editada correctamente.');
     }
 
     /**

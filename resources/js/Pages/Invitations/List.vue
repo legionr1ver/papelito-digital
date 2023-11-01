@@ -7,7 +7,7 @@ export default {
 </script>
 
 <script setup>
-import { router } from '@inertiajs/vue3';
+import { Link } from '@inertiajs/vue3';
 import Alert from '@/Components/Alert.vue';
 
 /* fontawesome */
@@ -22,12 +22,6 @@ defineProps({
     requird: true,
   },
 });
-
-function deleteInvitation(invitation){
-  router.delete(`/invitations/${invitation.id}`, {
-    preserveScroll: true,
-  });
-}
 </script>
 
 <template>
@@ -40,12 +34,12 @@ function deleteInvitation(invitation){
         <header class="flex items-center">
           <h2 class="flex-1 text-xl py-2 text-blue-400">{{ invitation.title }}</h2>
           <div class="flex-initial text-xl">
-            <!--button class="p-1 hover:text-blue-400 transition-colors">
+            <Link as="button" :href="`/invitations/${invitation.id}/edit`" class="p-1 hover:text-blue-400 transition-colors">
               <FontAwesomeIcon :icon="['far', 'pen-to-square']" />
-            </button-->
-            <button @click="deleteInvitation(invitation)" class="p-1 hover:text-blue-400 transition-colors">
+            </Link>
+            <Link as="button" :href="`/invitations/${invitation.id}`" method="delete" class="p-1 hover:text-blue-400 transition-colors" preserve-scroll>
               <FontAwesomeIcon :icon="['far', 'circle-xmark']" />
-            </button>
+            </Link>
           </div>
         </header>
         <div class="py-1">

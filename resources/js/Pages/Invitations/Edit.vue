@@ -15,6 +15,10 @@ import Button from '@/Components/Button.vue';
 import Alert from '@/Components/Alert.vue';
 
 const props = defineProps({
+  invitation: {
+    type: Object,
+    required: true,
+  },
   tags: {
     type: Array,
     required: true,
@@ -22,16 +26,14 @@ const props = defineProps({
 });
 
 const form = useForm({
-  title: null,
-  description: null,
-  price: null,
+  _method: 'put',
+  title: props.invitation.title,
+  description: props.invitation.description,
+  price: props.invitation.price,
   tagInput: null,
-  tags: [],
-  source: null,
+  tags: props.invitation.tags.map(t => t.label),
   thumbnail: null,
 });
-const sourceInput = ref(null);
-const thumbnailInput = ref(null);
 
 const unselectedTags = computed(() => {
   return props.tags.filter(t => !form.tags.includes(t.label));
@@ -48,25 +50,22 @@ function deselectTag(tag){
   const index = form.tags.indexOf(tag);
   form.tags.splice(index, 1);
 }
-
-function submit(){
-  form.post('/invitations', {
-    onSuccess: () => {
-      form.reset();
-      sourceInput.value.value = '';
-      thumbnailInput.value.value = '';
-    },
-  });
-}
 </script>
 
 <template>
   <div>
-    <h1 class="text-3xl">Nueva Invitacion</h1>
+    <h1 class="text-3xl">Editar Invitacion</h1>
 
     <Alert v-if="$page.props.flash.message" type="success">{{ $page.props.flash.message }}</Alert>
 
-    <form @submit.prevent="submit" class="py-5 space-y-5">
+    <div class="max-w-[400px]">
+      <img class="max-w-full" v-if="invitation.type_id === 1" :src="invitation.source_url" :alt="`Invitation ${invitation.title}`">
+      <video class="max-w-full" v-if="invitation.type_id === 2" :src="invitation.source_url" controls>
+        No puede reproducir la invitation "{{ invitation.title }}"
+      </video>
+    </div>
+
+    <form @submit.prevent="form.post(`/invitations/${invitation.id}`)" class="py-5 space-y-5">
       <div>
         <Label for="title">Titulo</Label>
         <Input v-model="form.title" id="title" type="text" required />
@@ -99,13 +98,12 @@ function submit(){
         <Alert v-if="form.errors.tags" type="danger">{{ form.errors.tags }}</Alert>
       </div>
       <div>
-        <Label for="source">Imagen o Video de la invitacion</Label>
-        <input ref="sourceInput" @input="form.source = $event.target.files[0]" class="block" id="source" type="file" accept="video/*,image/*" required >
-        <Alert v-if="form.errors.source" type="danger">{{ form.errors.source }}</Alert>
-      </div>
-      <div>
         <Label for="thumbnail">Thumbnail o carátula (para el video)</Label>
-        <input ref="thumbnailInput" @input="form.thumbnail = $event.target.files[0]" class="block" id="thumbnail" type="file" accept="image/*" >
+        <div class="max-w-[400px] m-7 font-bold text-xl">
+          <img v-if="invitation.thumbnail_url" :src="invitation.thumbnail_url">
+          <p v-else>Sin carátula.</p>
+        </div>
+        <input @input="form.thumbnail = $event.target.files[0]" class="block" id="thumbnail" type="file" accept="image/*" >
         <Alert v-if="form.errors.thumbnail" type="danger">{{ form.errors.thumbnail }}</Alert>
       </div>
 

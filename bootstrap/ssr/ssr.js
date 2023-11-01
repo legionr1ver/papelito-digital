@@ -7,7 +7,7 @@ import { faUser, faPenToSquare, faCircleXmark, faTrashCan, faEnvelope, faEnvelop
 import { faDollar, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
-const _sfc_main$n = {
+const _sfc_main$o = {
   __name: "Input",
   __ssrInlineRender: true,
   props: ["modelValue"],
@@ -21,11 +21,11 @@ const _sfc_main$n = {
     };
   }
 };
-const _sfc_setup$n = _sfc_main$n.setup;
-_sfc_main$n.setup = (props, ctx) => {
+const _sfc_setup$o = _sfc_main$o.setup;
+_sfc_main$o.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Input.vue");
-  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
+  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
 };
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -34,20 +34,20 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$m = {};
+const _sfc_main$n = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   _push(`<label${ssrRenderAttrs(mergeProps({ class: "text-gray-400 text-md" }, _attrs))}>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</label>`);
 }
-const _sfc_setup$m = _sfc_main$m.setup;
-_sfc_main$m.setup = (props, ctx) => {
+const _sfc_setup$n = _sfc_main$n.setup;
+_sfc_main$n.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Label.vue");
-  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
+  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
 };
-const Label = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["ssrRender", _sfc_ssrRender$1]]);
-const _sfc_main$l = {
+const Label = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["ssrRender", _sfc_ssrRender$1]]);
+const _sfc_main$m = {
   __name: "Button",
   __ssrInlineRender: true,
   props: {
@@ -72,13 +72,13 @@ const _sfc_main$l = {
     };
   }
 };
-const _sfc_setup$l = _sfc_main$l.setup;
-_sfc_main$l.setup = (props, ctx) => {
+const _sfc_setup$m = _sfc_main$m.setup;
+_sfc_main$m.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Button.vue");
-  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
+  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
 };
-const _sfc_main$k = {
+const _sfc_main$l = {
   __name: "Alert",
   __ssrInlineRender: true,
   props: {
@@ -112,13 +112,13 @@ const _sfc_main$k = {
     };
   }
 };
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Alert.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const _sfc_main$j = {
+const _sfc_main$k = {
   __name: "Login",
   __ssrInlineRender: true,
   setup(__props) {
@@ -140,7 +140,7 @@ const _sfc_main$j = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$n, {
+      _push(ssrRenderComponent(_sfc_main$o, {
         for: "email",
         modelValue: unref(form).email,
         "onUpdate:modelValue": ($event) => unref(form).email = $event,
@@ -160,7 +160,7 @@ const _sfc_main$j = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$n, {
+      _push(ssrRenderComponent(_sfc_main$o, {
         for: "password",
         modelValue: unref(form).password,
         "onUpdate:modelValue": ($event) => unref(form).password = $event,
@@ -169,7 +169,7 @@ const _sfc_main$j = {
       }, null, _parent));
       _push(`</div>`);
       if (unref(form).errors.email) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.email)}`);
@@ -185,7 +185,7 @@ const _sfc_main$j = {
         _push(`<!---->`);
       }
       if (unref(form).errors.password) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.password)}`);
@@ -200,7 +200,7 @@ const _sfc_main$j = {
       } else {
         _push(`<!---->`);
       }
-      _push(ssrRenderComponent(_sfc_main$l, {
+      _push(ssrRenderComponent(_sfc_main$m, {
         loading: unref(form).processing,
         type: "submit"
       }, {
@@ -219,17 +219,17 @@ const _sfc_main$j = {
     };
   }
 };
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/Login.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$j
+  default: _sfc_main$k
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$i = {
+const _sfc_main$j = {
   __name: "Step1Information",
   __ssrInlineRender: true,
   props: [
@@ -258,7 +258,7 @@ const _sfc_main$i = {
         _push(`<!---->`);
       }
       _push(`</div><form id="information-step-form" class="grid text-gray-400"><label class="mt-1" for="name">Nombre</label><input${ssrRenderAttr("value", name.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="name" name="name" type="text" required><label class="mt-1" for="address">Dirección</label><input${ssrRenderAttr("value", address.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="address" name="address" type="text" required><label class="mt-1" for="observation">Observación</label><textarea rows="4" class="resize-y p-2 border border-[rgb(225, 227, 230)]" id="observation" name="observation">${ssrInterpolate(observation.value)}</textarea><label class="mt-1" for="phone_number">Teléfono</label><input${ssrRenderAttr("value", phone_number.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="phone_number" name="phone_number" type="text" required></form><div class="grid grid-cols-2 gap-2 my-2">`);
-      _push(ssrRenderComponent(_sfc_main$l, {
+      _push(ssrRenderComponent(_sfc_main$m, {
         type: "buttom",
         disabled: ""
       }, {
@@ -273,7 +273,7 @@ const _sfc_main$i = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$l, {
+      _push(ssrRenderComponent(_sfc_main$m, {
         type: "submit",
         form: "information-step-form"
       }, {
@@ -292,17 +292,17 @@ const _sfc_main$i = {
     };
   }
 };
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step1Information.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
 const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$i
+  default: _sfc_main$j
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$h = {
+const _sfc_main$i = {
   __name: "Step2PayMentMethodSelection",
   __ssrInlineRender: true,
   props: {
@@ -320,7 +320,7 @@ const _sfc_main$h = {
         id: "payment-method-selection-step-form",
         class: "mb-5"
       }, _attrs))}><h2 class="text-2xl mb-5">Seleccione el medio de pago </h2><ul class="mb-5 space-y-5"><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input class="mx-2" type="radio" name="payment_method" value="transferencia"${ssrIncludeBooleanAttr(ssrLooseEqual(payment_method.value, "transferencia")) ? " checked" : ""}><div class="p-2">Transferencia</div><img class="w-14 p-2" src="/assets/images/icons/bank-transfer.webp"><div class="p-2 ms-auto font-bold">Descuento 10%</div></li><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input class="mx-2" type="radio" name="payment_method" value="mercado_pago"${ssrIncludeBooleanAttr(ssrLooseEqual(payment_method.value, "mercado_pago")) ? " checked" : ""}><div class="p-2">Mercado pago</div><img class="w-14 p-2" src="/assets/images/cards/mercadopago.webp"><div class="p-2 ms-auto font-bold">Sin descuento</div></li></ul><div class="grid grid-cols-2 gap-2 my-2">`);
-      _push(ssrRenderComponent(_sfc_main$l, {
+      _push(ssrRenderComponent(_sfc_main$m, {
         type: "button",
         onClick: ($event) => _ctx.$emit("goBack")
       }, {
@@ -335,7 +335,7 @@ const _sfc_main$h = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$l, {
+      _push(ssrRenderComponent(_sfc_main$m, {
         type: "submit",
         form: "payment-method-selection-step-form"
       }, {
@@ -354,17 +354,17 @@ const _sfc_main$h = {
     };
   }
 };
-const _sfc_setup$h = _sfc_main$h.setup;
-_sfc_main$h.setup = (props, ctx) => {
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step2PayMentMethodSelection.vue");
-  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
 const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$h
+  default: _sfc_main$i
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$g = {
+const _sfc_main$h = {
   __name: "Step3Confirmation",
   __ssrInlineRender: true,
   props: [
@@ -415,7 +415,7 @@ const _sfc_main$g = {
       _push(`<div${ssrRenderAttrs(_attrs)}>`);
       if (state.value === unref(states).INITIAL) {
         _push(`<div><h2 class="text-2xl mb-5">Resumen de su compra</h2><div class="space-y-2"><div>Invitación: <strong>${ssrInterpolate(props.invitation.title)}</strong></div><div>Tipo: <strong>${ssrInterpolate(props.invitation.type.name)}</strong></div><div>Ubicación en mapa: <strong>${ssrInterpolate(props.map_ubication ? "Si" : "No")}</strong></div><div>Confirmación por whatsapp: <strong>${ssrInterpolate(props.whatsapp_confirmation ? "Si" : "No")}</strong></div><div>Observación: <strong>${ssrInterpolate(props.observation)}</strong></div><div>Precio final: <strong>$ ${ssrInterpolate(final_price.value)}</strong></div><div>Metodo de pago: <strong>${ssrInterpolate(props.payment_method == "transferencia" ? "Transferencia" : "Mercado pago")}</strong></div></div><div class="grid grid-cols-2 gap-2 my-2">`);
-        _push(ssrRenderComponent(_sfc_main$l, {
+        _push(ssrRenderComponent(_sfc_main$m, {
           type: "button",
           onClick: ($event) => _ctx.$emit("goBack")
         }, {
@@ -430,7 +430,7 @@ const _sfc_main$g = {
           }),
           _: 1
         }, _parent));
-        _push(ssrRenderComponent(_sfc_main$l, {
+        _push(ssrRenderComponent(_sfc_main$m, {
           type: "button",
           onClick: submit
         }, {
@@ -456,7 +456,7 @@ const _sfc_main$g = {
       }
       if (state.value === unref(states).ERROR) {
         _push(`<div class="flex justify-center items-center"><div><img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error"><div>`);
-        _push(ssrRenderComponent(_sfc_main$l, { onClick: submit }, {
+        _push(ssrRenderComponent(_sfc_main$m, { onClick: submit }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`Volver a intentar`);
@@ -481,17 +481,17 @@ const _sfc_main$g = {
     };
   }
 };
-const _sfc_setup$g = _sfc_main$g.setup;
-_sfc_main$g.setup = (props, ctx) => {
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step3Confirmation.vue");
-  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
 const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$g
+  default: _sfc_main$h
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$f = {
+const _sfc_main$g = {
   __name: "Step4Payment",
   __ssrInlineRender: true,
   props: {
@@ -574,7 +574,7 @@ const _sfc_main$f = {
     }
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "mb-5" }, _attrs))}><div style="${ssrRenderStyle(props.order.payment_method === "transferencia" ? null : { display: "none" })}"><div class="py-4"><h2 class="text-2xl mb-2">Pago por transferencia</h2><p class="py-1"> Por favor luego de realizar la transferencia envianos el comprobante por whatsapp a <a class="underline text-primary" href="tel:+549111521664157">+54 9 11 2166 4157</a> o por mail a <a class="underline text-primary" href="mailto:contacto@papelitodigital.com.ar">contacto@papelitodigital.com.ar</a></p><p class="py-1"> El monto a abonar es de <strong class="text-xl p-2">$${ssrInterpolate(props.order.price)}</strong></p></div><div class="py-4"><h2 class="text-2xl mb-2">Información de cuenta</h2><div class="divide-y-2"><div class="flex p-2"><span class="flex-initial">CBU</span><strong class="ms-auto flex-initial">0720071788000017486868</strong></div><div class="flex p-2"><span class="flex-initial">Alias</span><strong class="ms-auto flex-initial">PAPELITO.DIGITAL</strong></div><div class="flex p-2"><span class="flex-initial">Titular de cuenta</span><strong class="ms-auto flex-initial">Silvero Gabriela Giselle</strong></div></div></div></div><div style="${ssrRenderStyle(props.order.payment_method === "mercado_pago" ? null : { display: "none" })}"><div style="${ssrRenderStyle(state.value === unref(states).LOADING ? null : { display: "none" })}" class="flex justify-center items-center"><svg class="animate-spin -ml-1 mr-3 h-14 w-14 text-primary my-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></div><div style="${ssrRenderStyle(state.value === unref(states).ERROR ? null : { display: "none" })}" class="flex justify-center items-center"><div><img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error"><div>`);
-      _push(ssrRenderComponent(_sfc_main$l, { onClick: createMercadoPagoPayment }, {
+      _push(ssrRenderComponent(_sfc_main$m, { onClick: createMercadoPagoPayment }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Volver a intentar`);
@@ -606,18 +606,18 @@ const _sfc_main$f = {
     };
   }
 };
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step4Payment.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
 const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$f
+  default: _sfc_main$g
 }, Symbol.toStringTag, { value: "Module" }));
 const GuestLayout_vue_vue_type_style_index_0_lang = "";
-const _sfc_main$e = {
+const _sfc_main$f = {
   __name: "GuestLayout",
   __ssrInlineRender: true,
   setup(__props) {
@@ -878,16 +878,16 @@ const _sfc_main$e = {
     };
   }
 };
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/GuestLayout.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const __default__$8 = {
-  layout: _sfc_main$e
+const __default__$9 = {
+  layout: _sfc_main$f
 };
-const _sfc_main$d = /* @__PURE__ */ Object.assign(__default__$8, {
+const _sfc_main$e = /* @__PURE__ */ Object.assign(__default__$9, {
   __name: "Invitation",
   __ssrInlineRender: true,
   props: {
@@ -970,14 +970,14 @@ const _sfc_main$d = /* @__PURE__ */ Object.assign(__default__$8, {
       }, _parent));
       _push(`<div class="text-5xl text-primary font-serif"><h2 class="mb-4">${ssrInterpolate(__props.invitation.title)}</h2></div></header><div>`);
       if (page_step.value === unref(constants).PAGE_STEP_1_INFORMATION) {
-        _push(ssrRenderComponent(_sfc_main$i, mergeProps({
+        _push(ssrRenderComponent(_sfc_main$j, mergeProps({
           invitation: props.invitation
         }, form, { onSubmitted: step1Submitted }), null, _parent));
       } else {
         _push(`<!---->`);
       }
       if (page_step.value === unref(constants).PAGE_STEP_2_PAYMENT_METHOD) {
-        _push(ssrRenderComponent(_sfc_main$h, mergeProps(form, {
+        _push(ssrRenderComponent(_sfc_main$i, mergeProps(form, {
           onGoBack: ($event) => page_step.value = unref(constants).PAGE_STEP_1_INFORMATION,
           onSubmitted: step2Submitted
         }), null, _parent));
@@ -985,7 +985,7 @@ const _sfc_main$d = /* @__PURE__ */ Object.assign(__default__$8, {
         _push(`<!---->`);
       }
       if (page_step.value === unref(constants).PAGE_STEP_3_CONFIRMATION) {
-        _push(ssrRenderComponent(_sfc_main$g, mergeProps({
+        _push(ssrRenderComponent(_sfc_main$h, mergeProps({
           invitation: props.invitation
         }, form, {
           onGoBack: ($event) => page_step.value = unref(constants).PAGE_STEP_2_PAYMENT_METHOD,
@@ -995,7 +995,7 @@ const _sfc_main$d = /* @__PURE__ */ Object.assign(__default__$8, {
         _push(`<!---->`);
       }
       if (page_step.value === unref(constants).PAGE_STEP_4_PAYMENT) {
-        _push(ssrRenderComponent(_sfc_main$f, {
+        _push(ssrRenderComponent(_sfc_main$g, {
           order: order.value,
           mercadopago_public_key: __props.mercadopago_public_key
         }, null, _parent));
@@ -1006,17 +1006,17 @@ const _sfc_main$d = /* @__PURE__ */ Object.assign(__default__$8, {
     };
   }
 });
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Invitation.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
 const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$d
+  default: _sfc_main$e
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$c = {
+const _sfc_main$d = {
   __name: "AuthenticatedLayout",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1218,16 +1218,16 @@ const _sfc_main$c = {
     };
   }
 };
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/AuthenticatedLayout.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const __default__$7 = {
-  layout: _sfc_main$c
+const __default__$8 = {
+  layout: _sfc_main$d
 };
-const _sfc_main$b = /* @__PURE__ */ Object.assign(__default__$7, {
+const _sfc_main$c = /* @__PURE__ */ Object.assign(__default__$8, {
   __name: "Dashboard",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1236,19 +1236,19 @@ const _sfc_main$b = /* @__PURE__ */ Object.assign(__default__$7, {
     };
   }
 });
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Dashboard.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
 const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$b
+  default: _sfc_main$c
 }, Symbol.toStringTag, { value: "Module" }));
 const TYPE_FIJA = 1;
 const TYPE_ANIMADA = 2;
-const _sfc_main$a = {
+const _sfc_main$b = {
   __name: "Invitation",
   __ssrInlineRender: true,
   props: {
@@ -1332,20 +1332,20 @@ const _sfc_main$a = {
     };
   }
 };
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Gallery/Partials/Invitation.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
 const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$a
+  default: _sfc_main$b
 }, Symbol.toStringTag, { value: "Module" }));
-const __default__$6 = {
-  layout: _sfc_main$e
+const __default__$7 = {
+  layout: _sfc_main$f
 };
-const _sfc_main$9 = /* @__PURE__ */ Object.assign(__default__$6, {
+const _sfc_main$a = /* @__PURE__ */ Object.assign(__default__$7, {
   __name: "Show",
   __ssrInlineRender: true,
   props: {
@@ -1393,7 +1393,7 @@ const _sfc_main$9 = /* @__PURE__ */ Object.assign(__default__$6, {
       if (props.invitations.data.length > 0) {
         _push(`<div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8"><!--[-->`);
         ssrRenderList(props.invitations.data, (invitation) => {
-          _push(ssrRenderComponent(_sfc_main$a, invitation, null, _parent));
+          _push(ssrRenderComponent(_sfc_main$b, invitation, null, _parent));
         });
         _push(`<!--]--></div><ul class="p-10 flex justify-center"><!--[-->`);
         ssrRenderList(props.invitations.links, (link) => {
@@ -1427,20 +1427,20 @@ const _sfc_main$9 = /* @__PURE__ */ Object.assign(__default__$6, {
     };
   }
 });
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Gallery/Show.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
 const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$9
+  default: _sfc_main$a
 }, Symbol.toStringTag, { value: "Module" }));
-const __default__$5 = {
-  layout: _sfc_main$e
+const __default__$6 = {
+  layout: _sfc_main$f
 };
-const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
+const _sfc_main$9 = /* @__PURE__ */ Object.assign(__default__$6, {
   __name: "Home",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1725,20 +1725,20 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
     };
   }
 });
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Home.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
 const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$8
+  default: _sfc_main$9
 }, Symbol.toStringTag, { value: "Module" }));
-const __default__$4 = {
-  layout: _sfc_main$c
+const __default__$5 = {
+  layout: _sfc_main$d
 };
-const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
+const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
   __name: "Create",
   __ssrInlineRender: true,
   props: {
@@ -1758,6 +1758,8 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
       source: null,
       thumbnail: null
     });
+    ref(null);
+    ref(null);
     const unselectedTags = computed(() => {
       return props.tags.filter((t) => !form.tags.includes(t.label));
     });
@@ -1770,7 +1772,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(_attrs)}><h1 class="text-3xl">Nueva Invitacion</h1>`);
       if (_ctx.$page.props.flash.message) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "success" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "success" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
@@ -1798,7 +1800,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$n, {
+      _push(ssrRenderComponent(_sfc_main$o, {
         modelValue: unref(form).title,
         "onUpdate:modelValue": ($event) => unref(form).title = $event,
         id: "title",
@@ -1806,7 +1808,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
         required: ""
       }, null, _parent));
       if (unref(form).errors.title) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.title)}`);
@@ -1834,14 +1836,14 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$n, {
+      _push(ssrRenderComponent(_sfc_main$o, {
         modelValue: unref(form).description,
         "onUpdate:modelValue": ($event) => unref(form).description = $event,
         id: "description",
         type: "text"
       }, null, _parent));
       if (unref(form).errors.description) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.description)}`);
@@ -1869,7 +1871,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$n, {
+      _push(ssrRenderComponent(_sfc_main$o, {
         modelValue: unref(form).price,
         "onUpdate:modelValue": ($event) => unref(form).price = $event,
         id: "price",
@@ -1879,7 +1881,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
         required: ""
       }, null, _parent));
       if (unref(form).errors.price) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.price)}`);
@@ -1907,13 +1909,15 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$n, {
+      _push(ssrRenderComponent(_sfc_main$o, {
+        onChange: selectTag,
+        onKeydown: selectTag,
         modelValue: unref(form).tagInput,
         "onUpdate:modelValue": ($event) => unref(form).tagInput = $event,
         id: "tags",
+        ref: "tagInput",
         type: "text",
-        list: "tagsDatalist",
-        onChange: selectTag
+        list: "tagsDatalist"
       }, null, _parent));
       _push(`<datalist id="tagsDatalist"><!--[-->`);
       ssrRenderList(unselectedTags.value, (tag) => {
@@ -1931,7 +1935,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
       }
       _push(`</div>`);
       if (unref(form).errors.tags) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.tags)}`);
@@ -1961,7 +1965,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
       }, _parent));
       _push(`<input class="block" id="source" type="file" accept="video/*,image/*" required>`);
       if (unref(form).errors.source) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.source)}`);
@@ -1991,7 +1995,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
       }, _parent));
       _push(`<input class="block" id="thumbnail" type="file" accept="image/*">`);
       if (unref(form).errors.thumbnail) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.thumbnail)}`);
@@ -2006,9 +2010,11 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
       } else {
         _push(`<!---->`);
       }
-      _push(`</div>`);
-      _push(ssrRenderComponent(_sfc_main$l, {
-        disabled: unref(form).processing
+      _push(`</div><div class="flex">`);
+      _push(ssrRenderComponent(_sfc_main$m, {
+        loading: unref(form).processing,
+        disabled: unref(form).processing,
+        class: "me-5"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -2021,22 +2027,349 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
         }),
         _: 1
       }, _parent));
-      _push(`</form></div>`);
+      _push(ssrRenderComponent(_sfc_main$m, {
+        type: "button",
+        onClick: ($event) => unref(form).cancel(),
+        disabled: !unref(form).processing
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Cancelar `);
+          } else {
+            return [
+              createTextVNode(" Cancelar ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></form></div>`);
+    };
+  }
+});
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/Create.vue");
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+};
+const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$8
+}, Symbol.toStringTag, { value: "Module" }));
+const __default__$4 = {
+  layout: _sfc_main$d
+};
+const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
+  __name: "Edit",
+  __ssrInlineRender: true,
+  props: {
+    invitation: {
+      type: Object,
+      required: true
+    },
+    tags: {
+      type: Array,
+      required: true
+    }
+  },
+  setup(__props) {
+    const props = __props;
+    const form = useForm({
+      _method: "put",
+      title: props.invitation.title,
+      description: props.invitation.description,
+      price: props.invitation.price,
+      tagInput: null,
+      tags: props.invitation.tags.map((t) => t.label),
+      thumbnail: null
+    });
+    const unselectedTags = computed(() => {
+      return props.tags.filter((t) => !form.tags.includes(t.label));
+    });
+    function selectTag() {
+      if (!form.tags.includes(form.tagInput)) {
+        form.tags.push(form.tagInput);
+      }
+      form.tagInput = "";
+    }
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(_attrs)}><h1 class="text-3xl">Editar Invitacion</h1>`);
+      if (_ctx.$page.props.flash.message) {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "success" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(_ctx.$page.props.flash.message), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<div class="max-w-[400px]">`);
+      if (__props.invitation.type_id === 1) {
+        _push(`<img class="max-w-full"${ssrRenderAttr("src", __props.invitation.source_url)}${ssrRenderAttr("alt", `Invitation ${__props.invitation.title}`)}>`);
+      } else {
+        _push(`<!---->`);
+      }
+      if (__props.invitation.type_id === 2) {
+        _push(`<video class="max-w-full"${ssrRenderAttr("src", __props.invitation.source_url)} controls> No puede reproducir la invitation &quot;${ssrInterpolate(__props.invitation.title)}&quot; </video>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><form class="py-5 space-y-5"><div>`);
+      _push(ssrRenderComponent(Label, { for: "title" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Titulo`);
+          } else {
+            return [
+              createTextVNode("Titulo")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$o, {
+        modelValue: unref(form).title,
+        "onUpdate:modelValue": ($event) => unref(form).title = $event,
+        id: "title",
+        type: "text",
+        required: ""
+      }, null, _parent));
+      if (unref(form).errors.title) {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.title)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.title), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "description" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Descripcion`);
+          } else {
+            return [
+              createTextVNode("Descripcion")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$o, {
+        modelValue: unref(form).description,
+        "onUpdate:modelValue": ($event) => unref(form).description = $event,
+        id: "description",
+        type: "text"
+      }, null, _parent));
+      if (unref(form).errors.description) {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.description)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.description), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "price" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Precio`);
+          } else {
+            return [
+              createTextVNode("Precio")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$o, {
+        modelValue: unref(form).price,
+        "onUpdate:modelValue": ($event) => unref(form).price = $event,
+        id: "price",
+        type: "number",
+        step: "1",
+        min: "1",
+        required: ""
+      }, null, _parent));
+      if (unref(form).errors.price) {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.price)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.price), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "tags" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Tags`);
+          } else {
+            return [
+              createTextVNode("Tags")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$o, {
+        onChange: selectTag,
+        onKeydown: selectTag,
+        modelValue: unref(form).tagInput,
+        "onUpdate:modelValue": ($event) => unref(form).tagInput = $event,
+        id: "tags",
+        ref: "tagInput",
+        type: "text",
+        list: "tagsDatalist"
+      }, null, _parent));
+      _push(`<datalist id="tagsDatalist"><!--[-->`);
+      ssrRenderList(unselectedTags.value, (tag) => {
+        _push(`<option>${ssrInterpolate(tag.label)}</option>`);
+      });
+      _push(`<!--]--></datalist><div class="p-2">`);
+      if (unref(form).tags.length === 0) {
+        _push(`<p>No se seleccionaron tags</p>`);
+      } else {
+        _push(`<ul class="flex"><!--[-->`);
+        ssrRenderList(unref(form).tags, (tag) => {
+          _push(`<li class="bg-blue-400 text-white text-xs rounded-full py-1 px-2 mx-1 hover:cursor-pointer hover:outline"><span class="me-1">${ssrInterpolate(tag)}</span></li>`);
+        });
+        _push(`<!--]--></ul>`);
+      }
+      _push(`</div>`);
+      if (unref(form).errors.tags) {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.tags)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.tags), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "thumbnail" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Thumbnail o carátula (para el video)`);
+          } else {
+            return [
+              createTextVNode("Thumbnail o carátula (para el video)")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="max-w-[400px] m-7 font-bold text-xl">`);
+      if (__props.invitation.thumbnail_url) {
+        _push(`<img${ssrRenderAttr("src", __props.invitation.thumbnail_url)}>`);
+      } else {
+        _push(`<p>Sin carátula.</p>`);
+      }
+      _push(`</div><input class="block" id="thumbnail" type="file" accept="image/*">`);
+      if (unref(form).errors.thumbnail) {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.thumbnail)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.thumbnail), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="flex">`);
+      _push(ssrRenderComponent(_sfc_main$m, {
+        loading: unref(form).processing,
+        disabled: unref(form).processing,
+        class: "me-5"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Guardar `);
+          } else {
+            return [
+              createTextVNode(" Guardar ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$m, {
+        type: "button",
+        onClick: ($event) => unref(form).cancel(),
+        disabled: !unref(form).processing
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Cancelar `);
+          } else {
+            return [
+              createTextVNode(" Cancelar ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></form></div>`);
     };
   }
 });
 const _sfc_setup$7 = _sfc_main$7.setup;
 _sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/Create.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/Edit.vue");
   return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$7
 }, Symbol.toStringTag, { value: "Module" }));
 const __default__$3 = {
-  layout: _sfc_main$c
+  layout: _sfc_main$d
 };
 const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
   __name: "List",
@@ -2052,7 +2385,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><h1 class="text-3xl">Invitaciones</h1>`);
       if (_ctx.$page.props.flash.message) {
-        _push(ssrRenderComponent(_sfc_main$k, { type: "success" }, {
+        _push(ssrRenderComponent(_sfc_main$l, { type: "success" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
@@ -2069,9 +2402,42 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
       }
       _push(`<ul class="p-7 grid lg:grid-cols-5 gap-10"><!--[-->`);
       ssrRenderList(__props.paginatedInvitations.data, (invitation) => {
-        _push(`<li><header class="flex items-center"><h2 class="flex-1 text-xl py-2 text-blue-400">${ssrInterpolate(invitation.title)}</h2><div class="flex-initial text-xl"><button class="p-1 hover:text-blue-400 transition-colors">`);
-        _push(ssrRenderComponent(unref(FontAwesomeIcon), { icon: ["far", "circle-xmark"] }, null, _parent));
-        _push(`</button></div></header><div class="py-1"><span>Descripcion: </span><strong class="ms-2">${ssrInterpolate(invitation.description)}</strong></div><div class="py-1"><span>Precio: </span><strong class="ms-2">$${ssrInterpolate(invitation.price)}</strong></div><div class="py-1"><span class="me-2">Tags:</span>`);
+        _push(`<li><header class="flex items-center"><h2 class="flex-1 text-xl py-2 text-blue-400">${ssrInterpolate(invitation.title)}</h2><div class="flex-initial text-xl">`);
+        _push(ssrRenderComponent(unref(Link), {
+          as: "button",
+          href: `/invitations/${invitation.id}/edit`,
+          class: "p-1 hover:text-blue-400 transition-colors"
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(ssrRenderComponent(unref(FontAwesomeIcon), { icon: ["far", "pen-to-square"] }, null, _parent2, _scopeId));
+            } else {
+              return [
+                createVNode(unref(FontAwesomeIcon), { icon: ["far", "pen-to-square"] })
+              ];
+            }
+          }),
+          _: 2
+        }, _parent));
+        _push(ssrRenderComponent(unref(Link), {
+          as: "button",
+          href: `/invitations/${invitation.id}`,
+          method: "delete",
+          class: "p-1 hover:text-blue-400 transition-colors",
+          "preserve-scroll": ""
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(ssrRenderComponent(unref(FontAwesomeIcon), { icon: ["far", "circle-xmark"] }, null, _parent2, _scopeId));
+            } else {
+              return [
+                createVNode(unref(FontAwesomeIcon), { icon: ["far", "circle-xmark"] })
+              ];
+            }
+          }),
+          _: 2
+        }, _parent));
+        _push(`</div></header><div class="py-1"><span>Descripcion: </span><strong class="ms-2">${ssrInterpolate(invitation.description)}</strong></div><div class="py-1"><span>Precio: </span><strong class="ms-2">$${ssrInterpolate(invitation.price)}</strong></div><div class="py-1"><span class="me-2">Tags:</span>`);
         if (invitation.tags.length === 0) {
           _push(`<strong>Sin tags</strong>`);
         } else {
@@ -2104,7 +2470,7 @@ _sfc_main$6.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/List.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$6
 }, Symbol.toStringTag, { value: "Module" }));
@@ -2155,7 +2521,7 @@ _sfc_main$5.setup = (props, ctx) => {
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
 const __default__$2 = {
-  layout: _sfc_main$c
+  layout: _sfc_main$d
 };
 const _sfc_main$4 = /* @__PURE__ */ Object.assign(__default__$2, {
   __name: "List",
@@ -2319,7 +2685,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Notifications/List.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$4
 }, Symbol.toStringTag, { value: "Module" }));
@@ -2346,7 +2712,7 @@ _sfc_main$3.setup = (props, ctx) => {
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
 const __default__$1 = {
-  layout: _sfc_main$c
+  layout: _sfc_main$d
 };
 const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
   __name: "List",
@@ -2370,7 +2736,7 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
     });
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><h1 class="text-3xl">Pedidos</h1><form class="py-2 flex">`);
-      _push(ssrRenderComponent(_sfc_main$n, {
+      _push(ssrRenderComponent(_sfc_main$o, {
         modelValue: unref(search).query,
         "onUpdate:modelValue": ($event) => unref(search).query = $event,
         class: "max-w-xs me-3",
@@ -2395,7 +2761,7 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$l, {
+      _push(ssrRenderComponent(_sfc_main$m, {
         class: "p-0",
         type: "submit"
       }, {
@@ -2565,12 +2931,12 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/List.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
 const __default__ = {
-  layout: _sfc_main$c
+  layout: _sfc_main$d
 };
 const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
   __name: "Show",
@@ -2672,13 +3038,13 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/Show.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$1
 }, Symbol.toStringTag, { value: "Module" }));
 const Show_vue_vue_type_style_index_0_scoped_898ece04_lang = "";
 const _sfc_main = {
-  layout: _sfc_main$e
+  layout: _sfc_main$f
 };
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-[800px] mx-auto space-y-7" }, _attrs))} data-v-898ece04><section data-v-898ece04><h2 data-v-898ece04>Horarios de atención</h2><ul class="list-disc" data-v-898ece04><li data-v-898ece04>Lunes a viernes de 10:00 a 18:00.</li><li data-v-898ece04>Sábados de 09:00 a 13:00</li><li data-v-898ece04>No trabajamos domingos ni feriados, en caso de necesitar algo con urgencia, escribir por WhatsApp indicándonos lo que necesitas, pero no aseguramos la respuesta en el momento. </li></ul></section><section data-v-898ece04><h2 data-v-898ece04>¿En qué tamaño se envían los archivos?</h2><p data-v-898ece04><strong data-v-898ece04>Kits imprimibles: </strong>Enviamos los archivos a tu dirección de correo electrónico en formato PDF y tamaño A4 (21x29,7cm), a menos que solicites el tamaño A3. Los archivos se abren utilizando Adobe Acrobat Reader, que se encuentra disponible en todas las computadoras y es GRATUITO. Vas a recibir un archivo con INSTRUCCIONES sobre el tipo de papel recomendado para cada elemento a imprimir. Al tener los archivos en tu correo electrónico, no tienen fecha de caducidad, por lo que podés utilizarlos en cualquier momento. En cuanto a los afiches de bienvenida son los únicos que van en ambos tamaños A4 y A3, no lo enviamos en otros tamaños, ante cualquier duda consultar antes de comprar. </p><p data-v-898ece04><strong data-v-898ece04>Invitación fija (estática):</strong> Formato PNG. </p><p data-v-898ece04><strong data-v-898ece04>Invitación interactiva (botones):</strong> Formato PDF. </p><p data-v-898ece04><strong data-v-898ece04>Invitación animada(video):</strong> Formato MP4. </p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cuál es el costo de envío?</h2><p data-v-898ece04>El envío es <strong data-v-898ece04>GRATUITO</strong>.</p><p data-v-898ece04>Para <strong data-v-898ece04>kits imprimibles</strong> los archivos se envían por mail, en caso de necesitarlo por WhatsApp, por favor aclararlo al momento de la confirmación de la compra.</p><p data-v-898ece04>Para <strong data-v-898ece04>invitaciones digitales</strong>, el archivo se enviará por mail y por WhatsApp, es responsabilidad del cliente guardar el archivo, no podemos reenviarlo después de 48hs de haberlo hecho ya que manejamos un gran volumen de archivos y nos resulta imposible tenerlos a todos guardados, es probable que luego de una semana su archivo ya no exista en nuestra base y cualquier cambio implicaría hacerla nuevamente. Por favor tenga esto en cuenta antes de pasar los datos del evento. Si no está seguro de la fecha y horario, puede dejar pendiente la creación de esta para el momento adecuado, se puede abonar con anticipación para reservar precio 😉.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cómo se realizan los envíos?</h2><p data-v-898ece04>Por mail a la cuenta que nos indiques en el mail de confirmación.</p><p data-v-898ece04>Las invitaciones también se enviarán por WhatsApp para que puedas compartirla en el momento.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cuánto tarda en llegar mi pedido?</h2><p data-v-898ece04>Si se trata de un kit personalizado, el plazo es 48 horas desde el momento en que nos envías los datos para editarlo. Los kits sin personalizar se envían normalmente en el día.</p><p data-v-898ece04>Si lo necesitas urgente por favor escribinos por whatsapp para ver si tenemos disponibilidad de envío.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Se pueden pedir cambios una vez recibido el pedido?</h2><p data-v-898ece04>No, una vez recibido no se puede reenviar, en caso de necesitar algún cambio el mismo tendrá un costo extra, por eso pedimos que aclaren todo al momento de hacer la compra y ANTES de recibir su archivo. </p><p data-v-898ece04>En <strong data-v-898ece04>invitaciones digitales</strong> pedimos que no pasen los datos hasta no estar seguros del horario y dirección del evento ya que un mínimo cambio puede significar tener que armarla desde cero, por lo tanto, se cobrará un extra si la invitación ya fue enviada.</p><p data-v-898ece04>Para DISEÑOS NUEVOS de invitaciones, donde el cliente no ve un ejemplo previo de como es la invitación, SI están permitidas hasta dos modificaciones luego de recibir el archivo, las modificaciones las hacemos en una sola tanda de cambios, luego de eso cualquier otra modificación llevará un costo extra. Asegurarse de pedir todo ANTES de que empecemos el proceso creativo, ya sean frases, música de fondo, colores o tonos, etc. también pueden enviar un ejemplo que les guste para guiarnos y asegurarnos que su invitación sea justo lo que esperaban.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Cómo envío los datos para editarlo?</h2><p data-v-898ece04>Una vez confirmado el pago tendrá la opción de cargar los datos o seleccionar la opción “Datos pendientes”, en ese caso les llegará un mail/WhatsApp con el asunto/mensaje COMPRA PENDIENTE DE DATOS, con lo que necesitamos para avanzar con el envío del archivo.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Los kits se pueden editar?</h2><p data-v-898ece04>No, por el momento únicamente hacemos pedidos personalizados.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Se puede pedir más de una invitación?</h2><p data-v-898ece04>Los kits traen una invitación en archivo imprimible y en JPG para enviar por whatsapp, si por algún motivo necesita dos invitaciones iguales pero con diferente fecha u horario, puede abonar un costo extra mínimo para recibirlas.</p></section><section data-v-898ece04><h2 data-v-898ece04>¿Hacen envíos internacionales?</h2><p data-v-898ece04>¡Por supuesto! Podes abonar a través de Paypal y recibir tu archivo en el mismo plazo, solo tener en cuenta que la franja horaria de atención puede variar. Los medios de envío son los mismos, E-mail y WhatsApp. Asegurate de agendar el numero completo de WhatsApp indicando formato internacional completo.</p></section><section data-v-898ece04><h2 data-v-898ece04>Otras consultas</h2><p data-v-898ece04>Escribinos por WhatsApp o envianos un E-mail y te responderemos a la brevedad 😊.</p></section></div>`);
@@ -2690,7 +3056,7 @@ _sfc_main.setup = (props, ctx) => {
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const Show = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-898ece04"]]);
-const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Show
 }, Symbol.toStringTag, { value: "Module" }));
@@ -2699,7 +3065,7 @@ createServer(
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Auth/Login.vue": __vite_glob_0_0, "./Pages/Checkout/Invitation.vue": __vite_glob_0_1, "./Pages/Checkout/Partials/Step1Information.vue": __vite_glob_0_2, "./Pages/Checkout/Partials/Step2PayMentMethodSelection.vue": __vite_glob_0_3, "./Pages/Checkout/Partials/Step3Confirmation.vue": __vite_glob_0_4, "./Pages/Checkout/Partials/Step4Payment.vue": __vite_glob_0_5, "./Pages/Dashboard.vue": __vite_glob_0_6, "./Pages/Gallery/Partials/Invitation.vue": __vite_glob_0_7, "./Pages/Gallery/Show.vue": __vite_glob_0_8, "./Pages/Home.vue": __vite_glob_0_9, "./Pages/Invitations/Create.vue": __vite_glob_0_10, "./Pages/Invitations/List.vue": __vite_glob_0_11, "./Pages/Notifications/List.vue": __vite_glob_0_12, "./Pages/Orders/List.vue": __vite_glob_0_13, "./Pages/Orders/Show.vue": __vite_glob_0_14, "./Pages/Preguntas/Show.vue": __vite_glob_0_15 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Auth/Login.vue": __vite_glob_0_0, "./Pages/Checkout/Invitation.vue": __vite_glob_0_1, "./Pages/Checkout/Partials/Step1Information.vue": __vite_glob_0_2, "./Pages/Checkout/Partials/Step2PayMentMethodSelection.vue": __vite_glob_0_3, "./Pages/Checkout/Partials/Step3Confirmation.vue": __vite_glob_0_4, "./Pages/Checkout/Partials/Step4Payment.vue": __vite_glob_0_5, "./Pages/Dashboard.vue": __vite_glob_0_6, "./Pages/Gallery/Partials/Invitation.vue": __vite_glob_0_7, "./Pages/Gallery/Show.vue": __vite_glob_0_8, "./Pages/Home.vue": __vite_glob_0_9, "./Pages/Invitations/Create.vue": __vite_glob_0_10, "./Pages/Invitations/Edit.vue": __vite_glob_0_11, "./Pages/Invitations/List.vue": __vite_glob_0_12, "./Pages/Notifications/List.vue": __vite_glob_0_13, "./Pages/Orders/List.vue": __vite_glob_0_14, "./Pages/Orders/Show.vue": __vite_glob_0_15, "./Pages/Preguntas/Show.vue": __vite_glob_0_16 });
       return pages[`./Pages/${name}.vue`];
     },
     setup({ App, props, plugin }) {
