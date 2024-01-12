@@ -41,7 +41,7 @@ class OrderCreated extends Notification
                     ->greeting('Buenos días!')
                     ->subject('Pedido confirmado')
                     ->line('Tenes un nuevo pedido.')
-                    ->action('Ver', route('orders.show', ['order' => $this->order->id]));
+                    ->action('Ver', route('order.show', ['order' => $this->order->id]));
     }
 
     /**

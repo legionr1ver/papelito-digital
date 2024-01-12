@@ -15,10 +15,11 @@ class TypeSeeder extends Seeder
     public function run(): void
     {
         Type::factory()
-            ->count(2)
+            ->count(3)
             ->state(new Sequence(
-                ['id' => Type::FIJA, 'name' => 'Fija', 'slug' => 'fija'],
-                ['id' => Type::ANIMADA, 'name' => 'Animada', 'slug' => 'animada'],
+                ['id' => Type::STATIC_INVITATION, 'name' => 'Invitación Fija', 'slug' => 'fija'],
+                ['id' => Type::ANIMATED_INVITATION, 'name' => 'Invitación Animada', 'slug' => 'animada'],
+                ['id' => Type::KIT, 'name' => 'Kit imprimible', 'slug' => 'kit'],
             ))
             ->create();
     }

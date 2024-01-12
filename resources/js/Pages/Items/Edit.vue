@@ -15,7 +15,7 @@ import Button from '@/Components/Button.vue';
 import Alert from '@/Components/Alert.vue';
 
 const props = defineProps({
-  invitation: {
+  item: {
     type: Object,
     required: true,
   },
@@ -27,12 +27,14 @@ const props = defineProps({
 
 const form = useForm({
   _method: 'put',
-  title: props.invitation.title,
-  description: props.invitation.description,
-  price: props.invitation.price,
+  title: props.item.title,
+  description: props.item.description,
+  price: props.item.price,
   tagInput: null,
-  tags: props.invitation.tags.map(t => t.label),
+  tags: props.item.tags.map(t => t.label),
   thumbnail: null,
+  files: null,
+  filesDelete: [],
 });
 
 const unselectedTags = computed(() => {
@@ -58,14 +60,7 @@ function deselectTag(tag){
 
     <Alert v-if="$page.props.flash.message" type="success">{{ $page.props.flash.message }}</Alert>
 
-    <div class="max-w-[400px]">
-      <img class="max-w-full" v-if="invitation.type_id === 1" :src="invitation.source_url" :alt="`Invitation ${invitation.title}`">
-      <video class="max-w-full" v-if="invitation.type_id === 2" :src="invitation.source_url" controls>
-        No puede reproducir la invitation "{{ invitation.title }}"
-      </video>
-    </div>
-
-    <form @submit.prevent="form.post(`/invitations/${invitation.id}`)" class="py-5 space-y-5">
+    <form @submit.prevent="form.post(`/item/${item.id}`)" class="py-5 space-y-5">
       <div>
         <Label for="title">Titulo</Label>
         <Input v-model="form.title" id="title" type="text" required />
@@ -98,13 +93,33 @@ function deselectTag(tag){
         <Alert v-if="form.errors.tags" type="danger">{{ form.errors.tags }}</Alert>
       </div>
       <div>
-        <Label for="thumbnail">Thumbnail o carátula (para el video)</Label>
-        <div class="max-w-[400px] m-7 font-bold text-xl">
-          <img v-if="invitation.thumbnail_url" :src="invitation.thumbnail_url">
-          <p v-else>Sin carátula.</p>
-        </div>
-        <input @input="form.thumbnail = $event.target.files[0]" class="block" id="thumbnail" type="file" accept="image/*" >
+        <img class="max-w-[400px] my-1" :src="`/item/${item.id}/thumbnail`" :alt="`Thumbnail del artículo ${item.title}`">
+        <Label for="thumbnail" class="my-1">Miñatura del artículo</Label>
+        <input @input="form.thumbnail = $event.target.files[0]" class="block my-1" id="thumbnail" type="file" accept="image/*" >
         <Alert v-if="form.errors.thumbnail" type="danger">{{ form.errors.thumbnail }}</Alert>
+      </div>
+
+      <div>
+        <ul class="grid grid-cols-6 gap-3">
+          <li v-for="file in item.files">
+
+            <img v-if="file.mime.startsWith('image/')" class="block max-w-full" :src="`/file/${file.id}`" :alt="`Achivo adjunto del artículo ${item.title}`">
+
+            <video v-if="file.mime.startsWith('video/')" class="block max-w-full" :src="`/file/${file.id}`" controls>
+              No se pudo reproducir el video.
+            </video>
+
+            <div class="text-center p-2">
+              <input :id="`eliminar-${file.id}`" v-model="form.filesDelete" :value="file.id" type="checkbox" class="mx-1">
+              <Label :for="`eliminar-${file.id}`">Eliminar</Label>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <Label for="files" class="my-1">Imagenes y videos</Label>
+          <input @input="form.files = $event.target.files" class="block my-1" id="files" type="file" accept="image/*,video/*" multiple >
+          <Alert v-if="form.errors.files" type="danger">{{ form.errors.files }}</Alert>
+        </div>
       </div>
 
       <div class="flex">

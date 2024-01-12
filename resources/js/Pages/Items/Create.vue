@@ -11,6 +11,7 @@ import { ref, computed } from 'vue';
 import { useForm } from '@inertiajs/vue3';
 import Label from '@/Components/Label.vue';
 import Input from '@/Components/Input.vue';
+import Select from '@/Components/Select.vue';
 import Button from '@/Components/Button.vue';
 import Alert from '@/Components/Alert.vue';
 
@@ -25,9 +26,10 @@ const form = useForm({
   title: null,
   description: null,
   price: null,
+  type_id: 1,
   tagInput: null,
   tags: [],
-  source: null,
+  files: null,
   thumbnail: null,
 });
 const sourceInput = ref(null);
@@ -50,7 +52,7 @@ function deselectTag(tag){
 }
 
 function submit(){
-  form.post('/invitations', {
+  form.post('/item', {
     onSuccess: () => {
       form.reset();
       sourceInput.value.value = '';
@@ -62,7 +64,7 @@ function submit(){
 
 <template>
   <div>
-    <h1 class="text-3xl">Nueva Invitacion</h1>
+    <h1 class="text-3xl">Nueva artículo</h1>
 
     <Alert v-if="$page.props.flash.message" type="success">{{ $page.props.flash.message }}</Alert>
 
@@ -83,6 +85,15 @@ function submit(){
         <Alert v-if="form.errors.price" type="danger">{{ form.errors.price }}</Alert>
       </div>
       <div>
+        <Label for="type">Tipo</Label>
+        <Select v-model="form.type_id" id="type">
+          <option value="1">Invitación estática</option>
+          <option value="2">Invitación animada</option>
+          <option value="3">Kit imprimible</option>
+        </Select>
+        <Alert v-if="form.errors.price" type="danger">{{ form.errors.price }}</Alert>
+      </div>
+      <div>
         <Label for="tags">Tags</Label>
         <Input @change="selectTag" @keydown.enter.prevent="selectTag" v-model="form.tagInput" id="tags" ref="tagInput" type="text" list="tagsDatalist" />
         <datalist id="tagsDatalist">
@@ -98,15 +109,17 @@ function submit(){
         </div>
         <Alert v-if="form.errors.tags" type="danger">{{ form.errors.tags }}</Alert>
       </div>
+      
       <div>
-        <Label for="source">Imagen o Video de la invitacion</Label>
-        <input ref="sourceInput" @input="form.source = $event.target.files[0]" class="block" id="source" type="file" accept="video/*,image/*" required >
-        <Alert v-if="form.errors.source" type="danger">{{ form.errors.source }}</Alert>
-      </div>
-      <div>
-        <Label for="thumbnail">Thumbnail o carátula (para el video)</Label>
+        <Label for="thumbnail">Miñatura del artículo</Label>
         <input ref="thumbnailInput" @input="form.thumbnail = $event.target.files[0]" class="block" id="thumbnail" type="file" accept="image/*" >
         <Alert v-if="form.errors.thumbnail" type="danger">{{ form.errors.thumbnail }}</Alert>
+      </div>
+
+      <div>
+        <Label for="source">Imagenes y videos</Label>
+        <input ref="sourceInput" @input="form.files = $event.target.files" class="block" id="source" type="file" accept="video/*,image/*" required multiple >
+        <Alert v-if="form.errors.files" type="danger">{{ form.errors.files }}</Alert>
       </div>
 
       <div class="flex">

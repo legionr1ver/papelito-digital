@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->boolean('finished')->default(false);
+        Schema::create('item_tag', function (Blueprint $table) {
+            $table->foreignId('item_id')->constrained();
+            $table->foreignId('tag_id')->constrained();
+            $table->timestamps();
         });
     }
 
@@ -21,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('finished');
-        });
+        Schema::dropIfExists('item_tag');
     }
 };

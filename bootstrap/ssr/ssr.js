@@ -1,13 +1,13 @@
-import { mergeProps, useSSRContext, withCtx, createTextVNode, unref, toDisplayString, ref, computed, onMounted, reactive, createVNode, openBlock, createBlock, createCommentVNode, createSSRApp, h } from "vue";
-import { ssrRenderAttrs, ssrRenderSlot, ssrRenderClass, ssrRenderComponent, ssrInterpolate, ssrIncludeBooleanAttr, ssrLooseContain, ssrRenderAttr, ssrLooseEqual, ssrRenderStyle, ssrRenderList } from "vue/server-renderer";
+import { mergeProps, useSSRContext, withCtx, createTextVNode, unref, toDisplayString, ref, computed, onMounted, reactive, createVNode, openBlock, createBlock, createCommentVNode, Fragment, renderList, createSSRApp, h } from "vue";
+import { ssrRenderAttrs, ssrRenderSlot, ssrRenderClass, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrIncludeBooleanAttr, ssrLooseContain, ssrRenderStyle, ssrRenderList } from "vue/server-renderer";
 import { useForm, Link, usePage, createInertiaApp } from "@inertiajs/vue3";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faUser, faPenToSquare, faCircleXmark, faTrashCan, faEnvelope, faEnvelopeOpen, faBell, faFileImage, faFileVideo, faCircleCheck } from "@fortawesome/free-regular-svg-icons";
-import { faDollar, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faAngleLeft, faReceipt } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faPenToSquare, faCircleXmark, faTrashCan, faEnvelope, faEnvelopeOpen, faBell, faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
-const _sfc_main$o = {
+const _sfc_main$p = {
   __name: "Input",
   __ssrInlineRender: true,
   props: ["modelValue"],
@@ -21,11 +21,11 @@ const _sfc_main$o = {
     };
   }
 };
-const _sfc_setup$o = _sfc_main$o.setup;
-_sfc_main$o.setup = (props, ctx) => {
+const _sfc_setup$p = _sfc_main$p.setup;
+_sfc_main$p.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Input.vue");
-  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
+  return _sfc_setup$p ? _sfc_setup$p(props, ctx) : void 0;
 };
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -34,20 +34,20 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$n = {};
+const _sfc_main$o = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   _push(`<label${ssrRenderAttrs(mergeProps({ class: "text-gray-400 text-md" }, _attrs))}>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</label>`);
 }
-const _sfc_setup$n = _sfc_main$n.setup;
-_sfc_main$n.setup = (props, ctx) => {
+const _sfc_setup$o = _sfc_main$o.setup;
+_sfc_main$o.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Label.vue");
-  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
+  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
 };
-const Label = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["ssrRender", _sfc_ssrRender$1]]);
-const _sfc_main$m = {
+const Label = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["ssrRender", _sfc_ssrRender$1]]);
+const _sfc_main$n = {
   __name: "Button",
   __ssrInlineRender: true,
   props: {
@@ -72,13 +72,13 @@ const _sfc_main$m = {
     };
   }
 };
-const _sfc_setup$m = _sfc_main$m.setup;
-_sfc_main$m.setup = (props, ctx) => {
+const _sfc_setup$n = _sfc_main$n.setup;
+_sfc_main$n.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Button.vue");
-  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
+  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
 };
-const _sfc_main$l = {
+const _sfc_main$m = {
   __name: "Alert",
   __ssrInlineRender: true,
   props: {
@@ -112,13 +112,13 @@ const _sfc_main$l = {
     };
   }
 };
-const _sfc_setup$l = _sfc_main$l.setup;
-_sfc_main$l.setup = (props, ctx) => {
+const _sfc_setup$m = _sfc_main$m.setup;
+_sfc_main$m.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Alert.vue");
-  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
+  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
 };
-const _sfc_main$k = {
+const _sfc_main$l = {
   __name: "Login",
   __ssrInlineRender: true,
   setup(__props) {
@@ -140,7 +140,7 @@ const _sfc_main$k = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
+      _push(ssrRenderComponent(_sfc_main$p, {
         for: "email",
         modelValue: unref(form).email,
         "onUpdate:modelValue": ($event) => unref(form).email = $event,
@@ -160,7 +160,7 @@ const _sfc_main$k = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
+      _push(ssrRenderComponent(_sfc_main$p, {
         for: "password",
         modelValue: unref(form).password,
         "onUpdate:modelValue": ($event) => unref(form).password = $event,
@@ -169,7 +169,7 @@ const _sfc_main$k = {
       }, null, _parent));
       _push(`</div>`);
       if (unref(form).errors.email) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.email)}`);
@@ -185,7 +185,7 @@ const _sfc_main$k = {
         _push(`<!---->`);
       }
       if (unref(form).errors.password) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.password)}`);
@@ -200,7 +200,7 @@ const _sfc_main$k = {
       } else {
         _push(`<!---->`);
       }
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         loading: unref(form).processing,
         type: "submit"
       }, {
@@ -219,46 +219,63 @@ const _sfc_main$k = {
     };
   }
 };
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Auth/Login.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$k
+  default: _sfc_main$l
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$j = {
+const _sfc_main$k = {
   __name: "Step1Information",
   __ssrInlineRender: true,
   props: [
-    "invitation",
-    "name",
-    "address",
+    "item",
+    "page_step",
+    "birthday_name",
+    "birthday_age",
+    "birthday_main_address",
+    "birthday_secondary_address",
+    "birthday_date",
+    "birthday_from_time",
+    "birthday_to_time",
     "observation",
-    "phone_number",
+    "contact_name",
+    "contact_number",
+    "high_priority",
     "map_ubication",
     "whatsapp_confirmation"
   ],
-  emits: ["submitted"],
-  setup(__props, { emit }) {
-    const props = __props;
-    const name = ref(props.name);
-    const address = ref(props.address);
-    const observation = ref(props.observation);
-    const phone_number = ref(props.phone_number);
-    const map_ubication = ref(props.map_ubication);
-    const whatsapp_confirmation = ref(props.whatsapp_confirmation);
+  emits: [
+    "update:page_step",
+    "update:birthday_name",
+    "update:birthday_age",
+    "update:birthday_main_address",
+    "update:birthday_secondary_address",
+    "update:birthday_date",
+    "update:birthday_from_time",
+    "update:birthday_to_time",
+    "update:observation",
+    "update:contact_name",
+    "update:contact_number",
+    "update:high_priority",
+    "update:map_ubication",
+    "update:whatsapp_confirmation"
+  ],
+  setup(__props) {
+    const confirmation = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(_attrs)}><div class="mb-5"><h2 class="text-2xl mb-5">¿En que formato voy a recibir la invitaión?</h2><ul class="mb-5 space-y-5"><li><strong>Invitación fija (estática):</strong> Formato PNG. </li><li><strong>Invitación interactiva (botones):</strong> Formato PDF.<br> Sirve para agregar botones con links a la Ubicación del evento (google maps) o botón de &quot;confirmación asistencia&quot; (a whatsapp). </li><li><strong>Invitación animada (video):</strong> Formato MP4.<br> Animación y musica de fondo, duran entre 20 y 30 seg. </li></ul>`);
-      if (props.invitation.type_id == 1) {
-        _push(`<section><h2 class="text-2xl mb-5">Extras</h2><ul><li class="flex items-center"><input${ssrIncludeBooleanAttr(Array.isArray(map_ubication.value) ? ssrLooseContain(map_ubication.value, null) : map_ubication.value) ? " checked" : ""} id="add-map-ubication" type="checkbox" class="m-2 accent-primary"><label for="add-map-ubication">+$150 Agregar ubiación en mapa.</label></li><li class="flex items-center"><input${ssrIncludeBooleanAttr(Array.isArray(whatsapp_confirmation.value) ? ssrLooseContain(whatsapp_confirmation.value, null) : whatsapp_confirmation.value) ? " checked" : ""} id="add-whatsapp-confirmation" type="checkbox" class="m-2 accent-primary"><label for="add-whatsapp-confirmation">+$150 Agregar confirmación de asistencia por whatsapp.</label></li></ul></section>`);
+      _push(`<form${ssrRenderAttrs(_attrs)}><div class="mb-5 space-y-8"><section><h2 class="text-2xl mb-5">¿En que formato voy a recibir la invitaión?</h2><ul class="mb-5 space-y-5"><li><strong>Invitación fija (estática):</strong> Formato PNG. </li><li><strong>Invitación interactiva (botones):</strong> Formato PDF.<br> Sirve para agregar botones con links a la Ubicación del evento (google maps) o botón de &quot;confirmación asistencia&quot; (a whatsapp). </li><li><strong>Invitación animada (video):</strong> Formato MP4.<br> Animación y musica de fondo, duran entre 20 y 30 seg. </li></ul></section><section><h2 class="text-2xl mb-5">Datos para la celebración</h2><div class="grid text-gray-400 space-y-5"><div class="grid"><label for="name"><div>Nombre del cumpleañero</div><small>Tal como quieras que figure en la tarjeta</small></label><input${ssrRenderAttr("value", __props.birthday_name)} class="p-2 border border-[rgb(225, 227, 230)]" id="name" type="text" placeholder="Ej: Nacho" required></div><div class="grid"><label for="edad"><div>Edad a cumplir</div><small>Solo si es necesario</small></label><input${ssrRenderAttr("value", __props.birthday_age)} class="p-2 border border-[rgb(225, 227, 230)]" id="edad" type="number" step="1" min="0" placeholder="Ej: 2"></div><div class="grid"><label for="direccion"><div>Dirección del evento</div></label><input${ssrRenderAttr("value", __props.birthday_main_address)} class="p-2 border border-[rgb(225, 227, 230)]" id="direccion" type="text" placeholder="Ej: Las Lilas 123, Barrio San Juan, Escobar" required></div><div class="grid"><label for="segunda_direccion"><div>Segunda dirección del evento</div><small>Para bautismos/confirmaciones/comuniones</small></label><input${ssrRenderAttr("value", __props.birthday_secondary_address)} class="p-2 border border-[rgb(225, 227, 230)]" id="segunda_direccion" type="text" placeholder="Ej: Parroquia Nuestra señora del Carmen,  Las Lilas 123, Escobar"></div><div class="grid"><label for="fecha"><div>Fecha del evento</div></label><input${ssrRenderAttr("value", __props.birthday_date)} class="p-2 border border-[rgb(225, 227, 230)]" id="fecha" type="date" required></div><div class="grid grid-cols-2"><div><label for="desde" class="me-5">Desde</label><input${ssrRenderAttr("value", __props.birthday_from_time)} class="p-2 border border-[rgb(225, 227, 230)]" id="desde" type="time"></div><div><label for="hasta" class="me-5">Hasta</label><input${ssrRenderAttr("value", __props.birthday_to_time)} class="p-2 border border-[rgb(225, 227, 230)]" id="hasta" type="time"></div></div><div class="grid"><label for="comentarios"><div>Comentarios</div><small>Cualquier frase que quieras incluir en la invitación</small></label><textarea id="comentarios" class="p-2 border border-[rgb(225, 227, 230)]" placeholder="Ej: traer traje de baño, confirmar asistencia, te espero, etc" rows="4">${ssrInterpolate(__props.observation)}</textarea></div></div></section><section><h2 class="text-2xl mb-5">Información de contacto</h2><div class="text-gray-400 space-y-5"><div class="grid"><label for="nombre_contacto"><div>Nombre</div></label><input${ssrRenderAttr("value", __props.contact_name)} class="p-2 border border-[rgb(225, 227, 230)]" id="nombre_contacto" type="text" required></div><div class="grid"><label for="telefono_contacto"><div>Teléfono</div></label><input${ssrRenderAttr("value", __props.contact_number)} class="p-2 border border-[rgb(225, 227, 230)]" id="nombre_contacto" type="text" required></div></div></section><section><h2 class="text-2xl mb-5">Confirmación</h2><div class="grid"><p class="mb-2"> Una vez realizada la invitación solo se podrá hacer cambios una cantidad limitada de veces. Por favor verificar que los datos ingresados sean correctos. </p><div class="flex items-center text-xl"><input${ssrIncludeBooleanAttr(Array.isArray(confirmation.value) ? ssrLooseContain(confirmation.value, null) : confirmation.value) ? " checked" : ""} id="confirmacion" type="checkbox" class="m-2 accent-primary"><label for="confirmacion" class="grid"><strong>¡Confirmo que los datos ingresados son correctos!</strong><span class="text-sm text-red-600 font-semibold">Requerido</span></label></div></div></section><section><h2 class="text-2xl mb-5">Extras</h2><ul><li class="flex items-center"><input${ssrIncludeBooleanAttr(__props.high_priority) ? " checked" : ""} id="urgente" type="checkbox" class="m-2 accent-primary"><label for="urgente">+$200 Elaboración en menos de 24hs. <strong>¡Urgente!</strong></label></li>`);
+      if (__props.item.type_id == 1) {
+        _push(`<!--[--><li class="flex items-center"><input${ssrIncludeBooleanAttr(__props.whatsapp_confirmation) ? " checked" : ""} id="add-whatsapp-confirmation" type="checkbox" class="m-2 accent-primary"><label for="add-whatsapp-confirmation">+$150 Agregar confirmación de asistencia por whatsapp.</label></li><li class="flex items-center"><input${ssrIncludeBooleanAttr(__props.map_ubication) ? " checked" : ""} id="map-confirmation" type="checkbox" class="m-2 accent-primary"><label for="map-confirmation">+$150 Agregar ubicación en el mapa.</label></li><!--]-->`);
       } else {
         _push(`<!---->`);
       }
-      _push(`</div><form id="information-step-form" class="grid text-gray-400"><label class="mt-1" for="name">Nombre</label><input${ssrRenderAttr("value", name.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="name" name="name" type="text" required><label class="mt-1" for="address">Dirección</label><input${ssrRenderAttr("value", address.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="address" name="address" type="text" required><label class="mt-1" for="observation">Observación</label><textarea rows="4" class="resize-y p-2 border border-[rgb(225, 227, 230)]" id="observation" name="observation">${ssrInterpolate(observation.value)}</textarea><label class="mt-1" for="phone_number">Teléfono</label><input${ssrRenderAttr("value", phone_number.value)} class="p-2 border border-[rgb(225, 227, 230)]" id="phone_number" name="phone_number" type="text" required></form><div class="grid grid-cols-2 gap-2 my-2">`);
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(`</ul></section></div><div class="grid grid-cols-2 gap-2 my-2">`);
+      _push(ssrRenderComponent(_sfc_main$n, {
         type: "buttom",
         disabled: ""
       }, {
@@ -273,71 +290,9 @@ const _sfc_main$j = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         type: "submit",
-        form: "information-step-form"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Siguiente`);
-          } else {
-            return [
-              createTextVNode("Siguiente")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</div></div>`);
-    };
-  }
-};
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step1Information.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
-};
-const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: _sfc_main$j
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$i = {
-  __name: "Step2PayMentMethodSelection",
-  __ssrInlineRender: true,
-  props: {
-    payment_method: {
-      type: String,
-      required: true
-    }
-  },
-  emits: ["goBack", "submitted"],
-  setup(__props, { emit }) {
-    const props = __props;
-    const payment_method = ref(props.payment_method);
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(`<form${ssrRenderAttrs(mergeProps({
-        id: "payment-method-selection-step-form",
-        class: "mb-5"
-      }, _attrs))}><h2 class="text-2xl mb-5">Seleccione el medio de pago </h2><ul class="mb-5 space-y-5"><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input class="mx-2" type="radio" name="payment_method" value="transferencia"${ssrIncludeBooleanAttr(ssrLooseEqual(payment_method.value, "transferencia")) ? " checked" : ""}><div class="p-2">Transferencia</div><img class="w-14 p-2" src="/assets/images/icons/bank-transfer.webp"><div class="p-2 ms-auto font-bold">Descuento 10%</div></li><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input class="mx-2" type="radio" name="payment_method" value="mercado_pago"${ssrIncludeBooleanAttr(ssrLooseEqual(payment_method.value, "mercado_pago")) ? " checked" : ""}><div class="p-2">Mercado pago</div><img class="w-14 p-2" src="/assets/images/cards/mercadopago.webp"><div class="p-2 ms-auto font-bold">Sin descuento</div></li></ul><div class="grid grid-cols-2 gap-2 my-2">`);
-      _push(ssrRenderComponent(_sfc_main$m, {
-        type: "button",
-        onClick: ($event) => _ctx.$emit("goBack")
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Volver`);
-          } else {
-            return [
-              createTextVNode("Volver")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
-        type: "submit",
-        form: "payment-method-selection-step-form"
+        disabled: !confirmation.value
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -354,109 +309,214 @@ const _sfc_main$i = {
     };
   }
 };
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step1Information.vue");
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+};
+const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$k
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$j = {
+  __name: "Step2PayMentMethodSelection",
+  __ssrInlineRender: true,
+  props: [
+    "page_step",
+    "payment_method"
+  ],
+  emits: [
+    "update:page_step",
+    "update:payment_method"
+  ],
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<form${ssrRenderAttrs(mergeProps({
+        id: "payment-method-selection-step-form",
+        class: "mb-5"
+      }, _attrs))}><h2 class="text-2xl mb-5">Seleccione el medio de pago </h2><ul class="mb-5 space-y-5"><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input${ssrIncludeBooleanAttr(__props.payment_method == "transferencia") ? " checked" : ""} class="mx-2" type="radio" name="payment_method" value="transferencia"><div class="p-2">Transferencia</div><img class="w-14 p-2" src="/assets/images/icons/bank-transfer.webp"><div class="p-2 ms-auto font-bold">Descuento 10%</div></li><li class="cursor-pointer flex items-center p-3 border border-primary rounded"><input${ssrIncludeBooleanAttr(__props.payment_method == "mercado_pago") ? " checked" : ""} class="mx-2" type="radio" name="payment_method" value="mercado_pago"><div class="p-2">Mercado pago</div><img class="w-14 p-2" src="/assets/images/cards/mercadopago.webp"><div class="p-2 ms-auto font-bold">Sin descuento</div></li></ul><div class="grid grid-cols-2 gap-2 my-2">`);
+      _push(ssrRenderComponent(_sfc_main$n, {
+        type: "button",
+        onClick: ($event) => _ctx.$emit("update:page_step", 1)
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Volver`);
+          } else {
+            return [
+              createTextVNode("Volver")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$n, {
+        type: "submit",
+        disabled: __props.payment_method == ""
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Siguiente`);
+          } else {
+            return [
+              createTextVNode("Siguiente")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></form>`);
+    };
+  }
+};
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step2PayMentMethodSelection.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
 const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$i
+  default: _sfc_main$j
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$h = {
+const Step3Confirmation_vue_vue_type_style_index_0_scoped_ecdf1033_lang = "";
+const _sfc_main$i = {
   __name: "Step3Confirmation",
   __ssrInlineRender: true,
   props: [
-    "invitation",
-    "name",
-    "address",
-    "observation",
-    "phone_number",
-    "map_ubication",
-    "whatsapp_confirmation",
-    "payment_method"
+    "page_step",
+    "item",
+    "form"
   ],
-  emits: ["goBack", "submitted"],
+  emits: [
+    "update:page_step"
+  ],
   setup(__props, { emit }) {
     const props = __props;
-    const states = Object.freeze({
-      INITIAL: Symbol(),
-      LOADING: Symbol(),
-      ERROR: Symbol(),
-      SUCCESS: Symbol()
+    const finalPrice = computed(() => {
+      let price = props.item.price;
+      if (props.form.high_priority)
+        price += 200;
+      if (props.form.map_ubication)
+        price += 150;
+      if (props.form.whatsapp_confirmation)
+        price += 150;
+      if (props.form.payment_method === "transferencia")
+        price *= 0.9;
+      return price;
     });
-    const state = ref(states.INITIAL);
-    const errorMessage = ref(null);
-    const final_price = computed(() => {
-      return Math.floor((props.invitation.price + (props.map_ubication ? 150 : 0) + (props.whatsapp_confirmation ? 150 : 0)) * (props.payment_method === "transferencia" ? 0.9 : 1));
-    });
-    async function submit() {
-      try {
-        state.value = states.LOADING;
-        const response = await axios.post("/orders", {
-          invitation_id: props.invitation.id,
-          name: props.name,
-          address: props.address,
-          observation: props.observation,
-          phone_number: props.phone_number,
-          map_ubication: props.map_ubication,
-          whatsapp_confirmation: props.whatsapp_confirmation,
-          payment_method: props.payment_method
-        });
-        emit("submitted", response.data);
-        state.value = states.SUCCESS;
-      } catch (error) {
-        state.value = states.ERROR;
-        errorMessage.value = error.response.data;
-      }
-    }
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(_attrs)}>`);
-      if (state.value === unref(states).INITIAL) {
-        _push(`<div><h2 class="text-2xl mb-5">Resumen de su compra</h2><div class="space-y-2"><div>Invitación: <strong>${ssrInterpolate(props.invitation.title)}</strong></div><div>Tipo: <strong>${ssrInterpolate(props.invitation.type.name)}</strong></div><div>Ubicación en mapa: <strong>${ssrInterpolate(props.map_ubication ? "Si" : "No")}</strong></div><div>Confirmación por whatsapp: <strong>${ssrInterpolate(props.whatsapp_confirmation ? "Si" : "No")}</strong></div><div>Observación: <strong>${ssrInterpolate(props.observation)}</strong></div><div>Precio final: <strong>$ ${ssrInterpolate(final_price.value)}</strong></div><div>Metodo de pago: <strong>${ssrInterpolate(props.payment_method == "transferencia" ? "Transferencia" : "Mercado pago")}</strong></div></div><div class="grid grid-cols-2 gap-2 my-2">`);
-        _push(ssrRenderComponent(_sfc_main$m, {
-          type: "button",
-          onClick: ($event) => _ctx.$emit("goBack")
-        }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`Volver`);
-            } else {
-              return [
-                createTextVNode("Volver")
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-        _push(ssrRenderComponent(_sfc_main$m, {
-          type: "button",
-          onClick: submit
-        }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`Confirmar`);
-            } else {
-              return [
-                createTextVNode("Confirmar")
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-        _push(`</div></div>`);
+      _push(`<!--[--><section id="resumen" data-v-ecdf1033><h2 class="text-2xl mb-5" data-v-ecdf1033>Resumen de la compra</h2><ul class="space-y-5" data-v-ecdf1033><li data-v-ecdf1033><span data-v-ecdf1033>Precio de la invitacion</span><span class="font-bold" data-v-ecdf1033>+$${ssrInterpolate(__props.item.price)}</span></li>`);
+      if (__props.form.high_priority) {
+        _push(`<li data-v-ecdf1033><span data-v-ecdf1033>Elaboración en menos de 24hs</span><span class="font-bold" data-v-ecdf1033>+$200</span></li>`);
       } else {
         _push(`<!---->`);
       }
-      if (state.value === unref(states).LOADING) {
+      if (__props.form.whatsapp_confirmation) {
+        _push(`<li data-v-ecdf1033><span data-v-ecdf1033>Confirmación de asistencia</span><span class="font-bold" data-v-ecdf1033>+$150</span></li>`);
+      } else {
+        _push(`<!---->`);
+      }
+      if (__props.form.map_ubication) {
+        _push(`<li data-v-ecdf1033><span data-v-ecdf1033>Ubicación en el mapa</span><span class="font-bold" data-v-ecdf1033>+$150</span></li>`);
+      } else {
+        _push(`<!---->`);
+      }
+      if (__props.form.payment_method == "transferencia") {
+        _push(`<li data-v-ecdf1033><span data-v-ecdf1033>Descuento por transferencia</span><span class="font-bold" data-v-ecdf1033>-10%</span></li>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<li data-v-ecdf1033><span data-v-ecdf1033>Total</span><span class="font-bold" data-v-ecdf1033>$${ssrInterpolate(finalPrice.value)}</span></li></ul></section><div class="grid grid-cols-2 gap-2 my-2" data-v-ecdf1033>`);
+      _push(ssrRenderComponent(_sfc_main$n, {
+        type: "button",
+        onClick: ($event) => _ctx.$emit("update:page_step", __props.page_step - 1)
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Volver`);
+          } else {
+            return [
+              createTextVNode("Volver")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$n, {
+        type: "button",
+        onClick: ($event) => _ctx.$emit("update:page_step", __props.page_step + 1)
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Confirmar`);
+          } else {
+            return [
+              createTextVNode("Confirmar")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><!--]-->`);
+    };
+  }
+};
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step3Confirmation.vue");
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+};
+const Step3Confirmation = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["__scopeId", "data-v-ecdf1033"]]);
+const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: Step3Confirmation
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$h = {
+  __name: "Step4OrderCreation",
+  __ssrInlineRender: true,
+  props: [
+    "form",
+    "item"
+  ],
+  emits: [
+    "order-created"
+  ],
+  setup(__props, { emit: emits }) {
+    const props = __props;
+    const possibleStatus = {
+      LOADING: Symbol("loading"),
+      ERROR: Symbol("error")
+    };
+    const status = ref(possibleStatus.LOADING);
+    async function createOrder() {
+      try {
+        status.value = possibleStatus.LOADING;
+        const response = await axios.post("/order", {
+          item_id: props.item.id,
+          ...props.form
+        });
+        emits("order-created", response.data);
+      } catch (error) {
+        status.value = possibleStatus.ERROR;
+      }
+    }
+    onMounted(createOrder);
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(_attrs)}>`);
+      if (status.value === possibleStatus.LOADING) {
         _push(`<div class="flex justify-center items-center"><svg class="animate-spin -ml-1 mr-3 h-14 w-14 text-primary my-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></div>`);
       } else {
         _push(`<!---->`);
       }
-      if (state.value === unref(states).ERROR) {
+      if (status.value === possibleStatus.ERROR) {
         _push(`<div class="flex justify-center items-center"><div><img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error"><div>`);
-        _push(ssrRenderComponent(_sfc_main$m, { onClick: submit }, {
+        _push(ssrRenderComponent(_sfc_main$n, {
+          onClick: createOrder,
+          class: "m-5"
+        }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`Volver a intentar`);
@@ -472,11 +532,6 @@ const _sfc_main$h = {
       } else {
         _push(`<!---->`);
       }
-      if (state.value === unref(states).SUCCESS) {
-        _push(`<div></div>`);
-      } else {
-        _push(`<!---->`);
-      }
       _push(`</div>`);
     };
   }
@@ -484,15 +539,15 @@ const _sfc_main$h = {
 const _sfc_setup$h = _sfc_main$h.setup;
 _sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step3Confirmation.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step4OrderCreation.vue");
   return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
-const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$h
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$g = {
-  __name: "Step4Payment",
+  __name: "Step5Payment",
   __ssrInlineRender: true,
   props: {
     mercadopago_public_key: {
@@ -574,7 +629,7 @@ const _sfc_main$g = {
     }
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "mb-5" }, _attrs))}><div style="${ssrRenderStyle(props.order.payment_method === "transferencia" ? null : { display: "none" })}"><div class="py-4"><h2 class="text-2xl mb-2">Pago por transferencia</h2><p class="py-1"> Por favor luego de realizar la transferencia envianos el comprobante por whatsapp a <a class="underline text-primary" href="tel:+549111521664157">+54 9 11 2166 4157</a> o por mail a <a class="underline text-primary" href="mailto:contacto@papelitodigital.com.ar">contacto@papelitodigital.com.ar</a></p><p class="py-1"> El monto a abonar es de <strong class="text-xl p-2">$${ssrInterpolate(props.order.price)}</strong></p></div><div class="py-4"><h2 class="text-2xl mb-2">Información de cuenta</h2><div class="divide-y-2"><div class="flex p-2"><span class="flex-initial">CBU</span><strong class="ms-auto flex-initial">0720071788000017486868</strong></div><div class="flex p-2"><span class="flex-initial">Alias</span><strong class="ms-auto flex-initial">PAPELITO.DIGITAL</strong></div><div class="flex p-2"><span class="flex-initial">Titular de cuenta</span><strong class="ms-auto flex-initial">Silvero Gabriela Giselle</strong></div></div></div></div><div style="${ssrRenderStyle(props.order.payment_method === "mercado_pago" ? null : { display: "none" })}"><div style="${ssrRenderStyle(state.value === unref(states).LOADING ? null : { display: "none" })}" class="flex justify-center items-center"><svg class="animate-spin -ml-1 mr-3 h-14 w-14 text-primary my-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></div><div style="${ssrRenderStyle(state.value === unref(states).ERROR ? null : { display: "none" })}" class="flex justify-center items-center"><div><img class="max-w-[200px] mx-auto" src="/assets/images/stickers/ocurrio-un-error.webp" alt="Ocurrio un error"><div>`);
-      _push(ssrRenderComponent(_sfc_main$m, { onClick: createMercadoPagoPayment }, {
+      _push(ssrRenderComponent(_sfc_main$n, { onClick: createMercadoPagoPayment }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Volver a intentar`);
@@ -609,10 +664,10 @@ const _sfc_main$g = {
 const _sfc_setup$g = _sfc_main$g.setup;
 _sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step4Payment.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step5Payment.vue");
   return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
-const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$g
 }, Symbol.toStringTag, { value: "Module" }));
@@ -888,14 +943,14 @@ const __default__$9 = {
   layout: _sfc_main$f
 };
 const _sfc_main$e = /* @__PURE__ */ Object.assign(__default__$9, {
-  __name: "Invitation",
+  __name: "Item",
   __ssrInlineRender: true,
   props: {
     previous_url: {
       type: String,
       required: true
     },
-    invitation: {
+    item: {
       type: Object,
       required: true
     },
@@ -906,53 +961,58 @@ const _sfc_main$e = /* @__PURE__ */ Object.assign(__default__$9, {
   },
   setup(__props) {
     const props = __props;
-    const constants = Object.freeze({
-      PAGE_STEP_1_INFORMATION: Symbol(),
-      PAGE_STEP_2_PAYMENT_METHOD: Symbol(),
-      PAGE_STEP_3_CONFIRMATION: Symbol(),
-      PAGE_STEP_4_PAYMENT: Symbol()
-    });
-    const page_step = ref(constants.PAGE_STEP_1_INFORMATION);
+    library.add(faChevronLeft, faChevronRight);
+    const selected = ref(props.item.files[0].id);
+    const page_step = ref(1);
+    const order = ref(null);
     const form = reactive({
-      name: "",
-      address: "",
-      observation: "",
-      phone_number: "",
+      birthday_name: "Mauro",
+      birthday_age: 34,
+      birthday_main_address: "Tapia 441",
+      birthday_secondary_address: "Belgrano",
+      birthday_date: "1989-12-05",
+      birthday_from_time: "06:00",
+      birthday_to_time: "23:00",
+      observation: "No vengan",
+      contact_name: "Mauro (si es para mi)",
+      contact_number: "1150404755",
+      high_priority: true,
       map_ubication: false,
       whatsapp_confirmation: false,
-      payment_method: "transferencia"
+      payment_method: ""
     });
-    const order = ref(null);
-    function step1Submitted(data) {
-      form.name = data.name;
-      form.address = data.address;
-      form.observation = data.observation;
-      form.phone_number = data.phone_number;
-      form.map_ubication = data.map_ubication;
-      form.whatsapp_confirmation = data.whatsapp_confirmation;
-      page_step.value = constants.PAGE_STEP_2_PAYMENT_METHOD;
-    }
-    function step2Submitted(payment_method) {
-      form.payment_method = payment_method;
-      page_step.value = constants.PAGE_STEP_3_CONFIRMATION;
-    }
-    async function step3Submitted(createdOrder) {
-      order.value = createdOrder;
-      page_step.value = constants.PAGE_STEP_4_PAYMENT;
-    }
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-[1200px] mx-auto mb-16 grid md:grid-cols-2" }, _attrs))}><div class="">`);
-      if (__props.invitation.type_id == 1) {
-        _push(`<img class="p-2 mx-auto max-w-full"${ssrRenderAttr("src", __props.invitation.source_url)}>`);
-      } else {
-        _push(`<!---->`);
-      }
-      if (__props.invitation.type_id == 2) {
-        _push(`<video class="p-2 mx-auto max-w-full"${ssrRenderAttr("src", __props.invitation.source_url)} loop controls></video>`);
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div class="p-5"><header class="pb-10">`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-[1200px] mx-auto mb-16 grid md:grid-cols-2" }, _attrs))}><div class="grid grid-cols-[100px_1fr] gap-3"><ul class="space-y-4"><!--[-->`);
+      ssrRenderList(__props.item.files, (file) => {
+        _push(`<li class="border border-primary rounded hover:outline cursor-pointer">`);
+        if (file.mime.startsWith("image/")) {
+          _push(`<img class="max-w-full"${ssrRenderAttr("src", `/file/${file.id}`)}${ssrRenderAttr("alt", `Imagen de l artículo ${__props.item.title}`)}>`);
+        } else {
+          _push(`<!---->`);
+        }
+        if (file.mime.startsWith("video/")) {
+          _push(`<video class="max-w-full"${ssrRenderAttr("src", `/file/${file.id}`)}> No se puede reproducir video </video>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`</li>`);
+      });
+      _push(`<!--]--></ul><ul><!--[-->`);
+      ssrRenderList(__props.item.files, (file) => {
+        _push(`<li><div style="${ssrRenderStyle(selected.value === file.id ? null : { display: "none" })}" class="flex items-center justify-center">`);
+        if (file.mime.startsWith("image/")) {
+          _push(`<img${ssrRenderAttr("src", `/file/${file.id}`)}${ssrRenderAttr("alt", `Imagen de l artículo ${__props.item.title}`)}>`);
+        } else {
+          _push(`<!---->`);
+        }
+        if (file.mime.startsWith("video/")) {
+          _push(`<video${ssrRenderAttr("src", `/file/${file.id}`)} controls> No se puede reproducir video </video>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`</div></li>`);
+      });
+      _push(`<!--]--></ul></div><div class="p-5"><header class="pb-10 grid">`);
       _push(ssrRenderComponent(unref(Link), {
         href: __props.previous_url,
         class: "text-primary"
@@ -968,33 +1028,75 @@ const _sfc_main$e = /* @__PURE__ */ Object.assign(__default__$9, {
         }),
         _: 1
       }, _parent));
-      _push(`<div class="text-5xl text-primary font-serif"><h2 class="mb-4">${ssrInterpolate(__props.invitation.title)}</h2></div></header><div>`);
-      if (page_step.value === unref(constants).PAGE_STEP_1_INFORMATION) {
-        _push(ssrRenderComponent(_sfc_main$j, mergeProps({
-          invitation: props.invitation
-        }, form, { onSubmitted: step1Submitted }), null, _parent));
+      _push(`<h2 class="text-5xl text-primary font-serif">${ssrInterpolate(__props.item.title)}</h2></header><div>`);
+      if (page_step.value === 1) {
+        _push(ssrRenderComponent(_sfc_main$k, {
+          item: props.item,
+          page_step: page_step.value,
+          "onUpdate:page_step": ($event) => page_step.value = $event,
+          birthday_name: form.birthday_name,
+          "onUpdate:birthday_name": ($event) => form.birthday_name = $event,
+          birthday_age: form.birthday_age,
+          "onUpdate:birthday_age": ($event) => form.birthday_age = $event,
+          birthday_main_address: form.birthday_main_address,
+          "onUpdate:birthday_main_address": ($event) => form.birthday_main_address = $event,
+          birthday_secondary_address: form.birthday_secondary_address,
+          "onUpdate:birthday_secondary_address": ($event) => form.birthday_secondary_address = $event,
+          birthday_date: form.birthday_date,
+          "onUpdate:birthday_date": ($event) => form.birthday_date = $event,
+          birthday_from_time: form.birthday_from_time,
+          "onUpdate:birthday_from_time": ($event) => form.birthday_from_time = $event,
+          birthday_to_time: form.birthday_to_time,
+          "onUpdate:birthday_to_time": ($event) => form.birthday_to_time = $event,
+          observation: form.observation,
+          "onUpdate:observation": ($event) => form.observation = $event,
+          contact_name: form.contact_name,
+          "onUpdate:contact_name": ($event) => form.contact_name = $event,
+          contact_number: form.contact_number,
+          "onUpdate:contact_number": ($event) => form.contact_number = $event,
+          high_priority: form.high_priority,
+          "onUpdate:high_priority": ($event) => form.high_priority = $event,
+          map_ubication: form.map_ubication,
+          "onUpdate:map_ubication": ($event) => form.map_ubication = $event,
+          whatsapp_confirmation: form.whatsapp_confirmation,
+          "onUpdate:whatsapp_confirmation": ($event) => form.whatsapp_confirmation = $event
+        }, null, _parent));
       } else {
         _push(`<!---->`);
       }
-      if (page_step.value === unref(constants).PAGE_STEP_2_PAYMENT_METHOD) {
-        _push(ssrRenderComponent(_sfc_main$i, mergeProps(form, {
-          onGoBack: ($event) => page_step.value = unref(constants).PAGE_STEP_1_INFORMATION,
-          onSubmitted: step2Submitted
-        }), null, _parent));
+      if (page_step.value === 2) {
+        _push(ssrRenderComponent(_sfc_main$j, {
+          page_step: page_step.value,
+          "onUpdate:page_step": ($event) => page_step.value = $event,
+          payment_method: form.payment_method,
+          "onUpdate:payment_method": ($event) => form.payment_method = $event
+        }, null, _parent));
       } else {
         _push(`<!---->`);
       }
-      if (page_step.value === unref(constants).PAGE_STEP_3_CONFIRMATION) {
-        _push(ssrRenderComponent(_sfc_main$h, mergeProps({
-          invitation: props.invitation
-        }, form, {
-          onGoBack: ($event) => page_step.value = unref(constants).PAGE_STEP_2_PAYMENT_METHOD,
-          onSubmitted: step3Submitted
-        }), null, _parent));
+      if (page_step.value === 3) {
+        _push(ssrRenderComponent(Step3Confirmation, {
+          page_step: page_step.value,
+          "onUpdate:page_step": ($event) => page_step.value = $event,
+          item: __props.item,
+          form
+        }, null, _parent));
       } else {
         _push(`<!---->`);
       }
-      if (page_step.value === unref(constants).PAGE_STEP_4_PAYMENT) {
+      if (page_step.value === 4) {
+        _push(ssrRenderComponent(_sfc_main$h, {
+          form,
+          item: __props.item,
+          onOrderCreated: (newOrder) => {
+            order.value = newOrder;
+            page_step.value++;
+          }
+        }, null, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      if (page_step.value === 5) {
         _push(ssrRenderComponent(_sfc_main$g, {
           order: order.value,
           mercadopago_public_key: __props.mercadopago_public_key
@@ -1009,7 +1111,7 @@ const _sfc_main$e = /* @__PURE__ */ Object.assign(__default__$9, {
 const _sfc_setup$e = _sfc_main$e.setup;
 _sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Invitation.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Item.vue");
   return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
 const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
@@ -1085,7 +1187,7 @@ const _sfc_main$d = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(Link), {
-        href: "/orders",
+        href: "/order",
         as: "div",
         class: [{ "bg-gray-200": _ctx.$page.component === "Orders/Create" }, "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer"]
       }, {
@@ -1106,11 +1208,11 @@ const _sfc_main$d = {
         }),
         _: 1
       }, _parent));
-      _push(`</div><div class="mb-4 px-4"><p class="pl-4 text-sm font-semibold mb-1">INVITACIONES</p>`);
+      _push(`</div><div class="mb-4 px-4"><p class="pl-4 text-sm font-semibold mb-1">ARTÍCULOS</p>`);
       _push(ssrRenderComponent(unref(Link), {
-        href: "/invitations/create",
+        href: "/item/create",
         as: "div",
-        class: [{ "bg-gray-200": _ctx.$page.component === "Invitations/Create" }, "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer"]
+        class: [{ "bg-gray-200": _ctx.$page.component === "Item/Create" }, "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer"]
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -1130,9 +1232,9 @@ const _sfc_main$d = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(Link), {
-        href: "/invitations",
+        href: "/item",
         as: "div",
-        class: [{ "bg-gray-200": _ctx.$page.component === "Invitations/List" }, "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer"]
+        class: [{ "bg-gray-200": _ctx.$page.component === "Item/List" }, "w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer"]
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -1242,22 +1344,16 @@ _sfc_main$c.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Dashboard.vue");
   return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$c
 }, Symbol.toStringTag, { value: "Module" }));
-const TYPE_FIJA = 1;
-const TYPE_ANIMADA = 2;
 const _sfc_main$b = {
-  __name: "Invitation",
+  __name: "Item",
   __ssrInlineRender: true,
   props: {
     id: {
       type: Number,
-      required: true
-    },
-    source_url: {
-      type: String,
       required: true
     },
     title: {
@@ -1265,80 +1361,82 @@ const _sfc_main$b = {
       required: true
     },
     price: {
-      type: Number
-    },
-    description: {
-      type: String
-    },
-    type_id: {
       type: Number,
+      required: true
+    },
+    tags: {
+      type: Array,
+      required: true
+    },
+    type: {
+      type: Object,
       required: true
     }
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<article${ssrRenderAttrs(mergeProps({ class: "grid grid-rows-[350px_auto_auto]" }, _attrs))}>`);
-      _push(ssrRenderComponent(unref(Link), {
+      _push(ssrRenderComponent(unref(Link), mergeProps({
         href: `/checkout/${__props.id}`,
-        class: "group flex justify-center items-center hover:brightness-50 transition-all relative"
-      }, {
+        as: "article",
+        class: "grid grid-rows-[auto_auto_1fr_auto] gap-3 shadow p-5 rounded cursor-pointer transition-transform hover:-translate-y-2"
+      }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            if (__props.type_id == TYPE_FIJA) {
-              _push2(`<img${ssrRenderAttr("src", __props.source_url)} class="max-h-full"${_scopeId}>`);
+            _push2(`<div class="flex"${_scopeId}><strong class="flex-1"${_scopeId}><span class="me-2"${_scopeId}>${ssrInterpolate(__props.title)}</span><small class="text-primary"${_scopeId}>(${ssrInterpolate(__props.type.name)})</small></strong><span class="flex-initial"${_scopeId}>$${ssrInterpolate(__props.price)}</span></div><div class="text-xs"${_scopeId}>`);
+            if (__props.tags.length > 0) {
+              _push2(`<ul class="flex"${_scopeId}><!--[-->`);
+              ssrRenderList(__props.tags, (tag) => {
+                _push2(`<li class="px-2 mx-1 bg-primary text-white rounded-full"${_scopeId}>${ssrInterpolate(tag.label)}</li>`);
+              });
+              _push2(`<!--]--></ul>`);
             } else {
-              _push2(`<!---->`);
+              _push2(`<p${_scopeId}> Sin tags </p>`);
             }
-            if (__props.type_id == TYPE_ANIMADA) {
-              _push2(`<video${ssrRenderAttr("src", __props.source_url)} class="max-h-full"${_scopeId}></video>`);
-            } else {
-              _push2(`<!---->`);
-            }
+            _push2(`</div><div class="flex items-center justify-center"${_scopeId}><img${ssrRenderAttr("src", `/item/${__props.id}/thumbnail`)} class="max-w-full max-h-[200px]"${_scopeId}></div><button type="button" class="bg-primary text-white py-2 rounded"${_scopeId}> Comprar </button>`);
           } else {
             return [
-              __props.type_id == TYPE_FIJA ? (openBlock(), createBlock("img", {
-                key: 0,
-                src: __props.source_url,
-                class: "max-h-full"
-              }, null, 8, ["src"])) : createCommentVNode("", true),
-              __props.type_id == TYPE_ANIMADA ? (openBlock(), createBlock("video", {
-                key: 1,
-                src: __props.source_url,
-                class: "max-h-full"
-              }, null, 8, ["src"])) : createCommentVNode("", true)
+              createVNode("div", { class: "flex" }, [
+                createVNode("strong", { class: "flex-1" }, [
+                  createVNode("span", { class: "me-2" }, toDisplayString(__props.title), 1),
+                  createVNode("small", { class: "text-primary" }, "(" + toDisplayString(__props.type.name) + ")", 1)
+                ]),
+                createVNode("span", { class: "flex-initial" }, "$" + toDisplayString(__props.price), 1)
+              ]),
+              createVNode("div", { class: "text-xs" }, [
+                __props.tags.length > 0 ? (openBlock(), createBlock("ul", {
+                  key: 0,
+                  class: "flex"
+                }, [
+                  (openBlock(true), createBlock(Fragment, null, renderList(__props.tags, (tag) => {
+                    return openBlock(), createBlock("li", { class: "px-2 mx-1 bg-primary text-white rounded-full" }, toDisplayString(tag.label), 1);
+                  }), 256))
+                ])) : (openBlock(), createBlock("p", { key: 1 }, " Sin tags "))
+              ]),
+              createVNode("div", { class: "flex items-center justify-center" }, [
+                createVNode("img", {
+                  src: `/item/${__props.id}/thumbnail`,
+                  class: "max-w-full max-h-[200px]"
+                }, null, 8, ["src"])
+              ]),
+              createVNode("button", {
+                type: "button",
+                class: "bg-primary text-white py-2 rounded"
+              }, " Comprar ")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<div class="p-2 flex"><strong class="flex-1">${ssrInterpolate(__props.title)}</strong><span class="flex-initial">$${ssrInterpolate(__props.price)}</span></div>`);
-      _push(ssrRenderComponent(unref(Link), {
-        href: `/checkout/${__props.id}`,
-        as: "button",
-        class: "bg-primary text-white py-2 mt-1 mx-2 rounded shadow-lg"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(` Comprar `);
-          } else {
-            return [
-              createTextVNode(" Comprar ")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</article>`);
     };
   }
 };
 const _sfc_setup$b = _sfc_main$b.setup;
 _sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Gallery/Partials/Invitation.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Gallery/Partials/Item.vue");
   return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$b
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1349,7 +1447,7 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign(__default__$7, {
   __name: "Show",
   __ssrInlineRender: true,
   props: {
-    invitations: {
+    items: {
       type: Object,
       required: true
     },
@@ -1366,37 +1464,19 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign(__default__$7, {
   },
   setup(__props) {
     const props = __props;
-    const search = ref(props.filters.search);
+    ref(props.filters.search);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-[1200px] mx-auto mb-16 flex" }, _attrs))}><div id="buscador-galeria" class="hidden lg:block flex-initial p-10"><form class="mb-12 flex"><button type="submit" class="flex-initial flex items-center border-t border-s border-b border-[rgb(225, 227, 230)] p-2"><svg class="text-gray-400" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg></button><input${ssrRenderAttr("value", search.value)} class="flex-1 p-2 border-t border-e border-b border-[rgb(225, 227, 230)] w-full" type="search"></form><div class="mb-12"><h2 class="font-serif text-4xl text-primary mb-4">Temáticas</h2><ul class="space-y-1 text-md text-gray-500"><li><button>Baby Shower</button></li><li><button>Comuniones</button></li><li><button>Bautismos</button></li><li><button>Bodas</button></li><li><button>Cumpleaños Adultos</button></li><li><button>Cumpleaños Niños</button></li></ul></div><div class="mb-12"><h2 class="font-serif text-4xl text-primary mb-4">Tipo</h2><ul class="space-y-1 text-md text-gray-500"><li class="flex items-center"><button>Todas</button></li><li class="flex items-center"><button>Fijas</button></li><li class="flex items-center"><button>Animadas</button></li></ul></div></div><div id="galeria" class="flex-1 px-5"><div class="flex p-4 text-md text-gray-500"><div class="flex-1">`);
-      if (!props.filters.tag && !props.filters.type && !props.filters.search) {
-        _push(`<p>Mostrando todas las invitaciones</p>`);
-      } else {
-        _push(`<!---->`);
-      }
-      if (props.filters.type) {
-        _push(`<button class="bg-primary text-white rounded-full px-3 py-1 m-1 text-sm inline-flex items-center hover:outline hover:outline-1 hover:outline-gray-400"><span class="me-2">Invitaciones ${ssrInterpolate(props.filters.type.name)}</span><span class="font-bold">x</span></button>`);
-      } else {
-        _push(`<!---->`);
-      }
-      if (props.filters.tag) {
-        _push(`<button class="bg-primary text-white rounded-full px-3 py-1 m-1 text-sm inline-flex items-center hover:outline hover:outline-1 hover:outline-gray-400"><span class="me-2">${ssrInterpolate(props.filters.tag.label)}</span><span class="font-bold">x</span></button>`);
-      } else {
-        _push(`<!---->`);
-      }
-      if (props.filters.search) {
-        _push(`<button class="bg-primary text-white rounded-full px-3 py-1 m-1 text-sm inline-flex items-center hover:outline hover:outline-1 hover:outline-gray-400"><span class="me-2">Buscando &quot;${ssrInterpolate(props.filters.search)}&quot;</span><span class="font-bold">x</span></button>`);
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><p class="flex-initial">Hay <strong>${ssrInterpolate(props.invitations.data.length)}</strong> invitaciones.</p></div>`);
-      if (props.invitations.data.length > 0) {
-        _push(`<div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8"><!--[-->`);
-        ssrRenderList(props.invitations.data, (invitation) => {
-          _push(ssrRenderComponent(_sfc_main$b, invitation, null, _parent));
+      _push(`<div${ssrRenderAttrs(mergeProps({
+        id: "galeria",
+        class: "max-w-[1200px] mx-auto my-16"
+      }, _attrs))}><h1 class="text-5xl underline text-primary font-serif mb-8">Nuestros diseños</h1>`);
+      if (props.items.data.length > 0) {
+        _push(`<div class="px-2"><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-14"><!--[-->`);
+        ssrRenderList(props.items.data, (item) => {
+          _push(ssrRenderComponent(_sfc_main$b, item, null, _parent));
         });
         _push(`<!--]--></div><ul class="p-10 flex justify-center"><!--[-->`);
-        ssrRenderList(props.invitations.links, (link) => {
+        ssrRenderList(props.items.links, (link) => {
           _push(`<li class="px-2 py-1 bg-primary text-white font-bold">`);
           _push(ssrRenderComponent(unref(Link), {
             class: "disabled:text-gray-300",
@@ -1421,9 +1501,9 @@ const _sfc_main$a = /* @__PURE__ */ Object.assign(__default__$7, {
         });
         _push(`<!--]--></ul></div>`);
       } else {
-        _push(`<div class="text-md text-gray-500 grid justify-center"><p class="text-2xl text-center"> No se encontraron invitaciones.<br> Contanos por Whatsapp tu idea y la armamos a tu gusto. </p><img class="mx-auto max-w-[200px] p-3" src="/assets/images/stickers/sin-resultados.webp" alt="No hay resultados para la búsqueda"></div>`);
+        _push(`<div><p class="text-2xl text-center text-md text-gray-500"> No se encontraron invitaciones.<br> Contanos por Whatsapp tu idea y la armamos a tu gusto. </p><img class="mx-auto max-w-[200px] p-3" src="/assets/images/stickers/sin-resultados.webp" alt="No hay resultados para la búsqueda"></div>`);
       }
-      _push(`</div></div>`);
+      _push(`</div>`);
     };
   }
 });
@@ -1433,7 +1513,7 @@ _sfc_main$a.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Gallery/Show.vue");
   return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$a
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1698,7 +1778,7 @@ const _sfc_main$9 = /* @__PURE__ */ Object.assign(__default__$6, {
         }),
         _: 1
       }, _parent));
-      _push(`</div><div class="text-center p-10"><h3 class="mb-8 text-primary text-[22px] font-serif">¿Buscas una tematica nueva?</h3><a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&amp;app_absent=0" target="_blank" class="text-white text-[16px] font-extrabold py-4 px-10 bg-primary rounded-full">CONTÁCTANOS AHORA</a></div></div><div id="kits-imprimibles" class="p-20 bg-[#d2b4de]"><div class="max-w-[1200px] mx-auto"><header class="text-white text-center mb-12"><h2 class="text-[56px] font-serif mb-4">Kits imprimibles para decoràr tus eventos</h2><p class="text-[26px] leading-8"> No pierdas tiempo diseñando, empeza cuanto antes con tu<br> proyecto, decora tu fiesta o emprende con nuestras plantillas </p></header><div class="grid md:grid-cols-3 gap-8 text-primary text-[26px] font-serif text-center uppercase"><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/imprimi.webp"><h3 class="mt-10">Imprimí</h3></div><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/recorta.webp"><h3 class="mt-10">Recortá</h3></div><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/pega.webp"><h3 class="mt-10">Pegá</h3></div></div><p class="text-center text-white text-[56px] font-serif mt-5"> y listo! </p></div></div><div id="clientes-satisfechos" class="max-w-[1200px] mx-auto p-20"><h2 class="text-[40px] text-primary text-center font-serif mb-8">Clientes satisfechos</h2><div class="grid md:grid-cols-3 gap-12"><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div></div></div><div id="quienes-somos" class="grid grid-cols-[2fr_1fr] gap-6 max-w-[1200px] mx-auto p-20"><div class="font-serif text-center"><header><p class="text-[20px] text-[#fc8dca]">SOBRE NOSOTROS</p><h2 class="text-[77px] text-primary text-center mb-8">¿Quienes somos?</h2></header><div class="text-[#59524b] space-y-5 uppercase"><p>¡SOY GISELLE, Y ESTOY ENCANTADA DE CONOCERTE!</p><p>SOY ESTUDIANTE DE LICENCIATURA EN ADMINISTRACIÓN. PERO MI VERDADERA PASIÓN RADICA EN EL MUNDO DEL DISEÑO. DESDE QUE ERA JOVEN, SIEMPRE SENTI UN AMOR PROFUNDO POR LA CREATIVIDAD Y LA EXPRESIÓN ARTÍSTICA.</p><p>DECIDÍ FUSIONAR MI AMOR POR EL DISEÑO CON MI CONOCIMIENTO EN ADMINISTRACIÓN Y EMPRENDER MI PROPIO CAMINO. ASÍ NACIÓ MI PROYECTO: CREAR INVITACIONES DIGITALES EN VIDEO QUE SON MÁS QUE SIMPLES PALABRAS EN UNA PANTALLA. SON PEQUEÑAS OBRAS DE ARTE ANIMADAS, LLENAS DE COLOR Y VIDA, DISEÑADAS PARA HACER QUE CADA OCASIÓN ESPECIAL SEA AÚN MÁS MEMORABLE. CADA PROYECTO ES UNA OPORTUNIDAD PARA MÍ DE DESPLEGAR MI CREATIVIDAD Y OFRECERTE ALGO ÚNICO Y PERSONALIZADO. TENGO UN PEQUEÑO EQUIPO QUE ME ACOMPAÑA EN ESTA HERMOSA TAREA, MI COMPAÑERO DE VIDA PROGRAMANDO LA WEB, LAS INVITACIONES MAS COMPLEJAS Y DANDOLE VIDA A MIS IDEAS. TAMBIEN ESTAN MIS AYUDANTES DE CONFIANZA MICA Y SABRI &lt;3. </p><p> ¡GRACIAS POR VISITAR MI PÁGINA Y POR CONSIDERAR CONFIAR EN MÍ PARA TUS INVITACIONES ESPECIALES!<br> CON CARIÑO, GISELLE </p></div><div class="mt-12"><a href="mailto:contacto@papelitodigital.com.ar" target="_blank" class="text-[16px] text-[#fc8dca] underline underline-offset-8">ENVIAME UN EMAIL</a></div></div><div class="flex"><img class="object-cover" src="/assets/images/quienes-somos.webp"></div></div><!--]-->`);
+      _push(`</div><div class="text-center p-10"><h3 class="mb-8 text-primary text-[22px] font-serif">¿Buscas una tematica nueva?</h3><a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&amp;app_absent=0" target="_blank" class="text-white text-[16px] font-extrabold py-4 px-10 bg-primary rounded-full">CONTÁCTANOS AHORA</a></div></div><div id="kits-imprimibles" class="p-20 bg-[#d2b4de]"><div class="max-w-[1200px] mx-auto"><header class="text-white text-center mb-12"><h2 class="text-[56px] font-serif mb-4">Kits imprimibles para decoràr tus eventos</h2><p class="text-[26px] leading-8"> No pierdas tiempo diseñando, empeza cuanto antes con tu<br> proyecto, decora tu fiesta o emprende con nuestras plantillas </p></header><div class="grid md:grid-cols-3 gap-8 text-primary text-[26px] font-serif text-center uppercase"><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/imprimi.webp"><h3 class="mt-10">Imprimí</h3></div><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/recorta.webp"><h3 class="mt-10">Recortá</h3></div><div class="bg-white rounded-xl py-12 px-8"><img class="rounded w-[302px] h-[170px] mx-auto" src="/assets/images/kits-imprimibles/pega.webp"><h3 class="mt-10">Pegá</h3></div></div><p class="text-center text-white text-[56px] font-serif mt-5"> y listo! </p></div></div><div id="clientes-satisfechos" class="max-w-[1200px] mx-auto p-20"><h2 class="text-[40px] text-primary text-center font-serif mb-8">Clientes satisfechos</h2><div class="grid md:grid-cols-3 gap-12"><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div><div><img src="/assets/images/clientes-satisfechos/cliente-mauro.webp"></div></div></div><div id="quienes-somos" class="grid grid-cols-[2fr_1fr] gap-6 max-w-[1200px] mx-auto p-20"><div class="font-serif text-center"><header><p class="text-[20px] text-[#fc8dca]">SOBRE NOSOTROS</p><h2 class="text-[77px] text-primary text-center mb-8">¿Quienes somos?</h2></header><div class="text-[#59524b] space-y-5 uppercase"><p>¡SOY GISELLE, Y ESTOY ENCANTADA DE CONOCERTE!</p><p>SOY ESTUDIANTE DE LICENCIATURA EN ADMINISTRACIÓN. PERO MI VERDADERA PASIÓN RADICA EN EL MUNDO DEL DISEÑO. DESDE QUE ERA JOVEN, SIEMPRE SENTI UN AMOR PROFUNDO POR LA CREATIVIDAD Y LA EXPRESIÓN ARTÍSTICA.</p><p>DECIDÍ FUSIONAR MI AMOR POR EL DISEÑO CON MI CONOCIMIENTO EN ADMINISTRACIÓN Y EMPRENDER MI PROPIO CAMINO. ASÍ NACIÓ MI PROYECTO: CREAR INVITACIONES DIGITALES EN VIDEO QUE SON MÁS QUE SIMPLES PALABRAS EN UNA PANTALLA. SON PEQUEÑAS OBRAS DE ARTE ANIMATED_INVITATIONS, LLENAS DE COLOR Y VIDA, DISEÑADAS PARA HACER QUE CADA OCASIÓN ESPECIAL SEA AÚN MÁS MEMORABLE. CADA PROYECTO ES UNA OPORTUNIDAD PARA MÍ DE DESPLEGAR MI CREATIVIDAD Y OFRECERTE ALGO ÚNICO Y PERSONALIZADO. TENGO UN PEQUEÑO EQUIPO QUE ME ACOMPAÑA EN ESTA HERMOSA TAREA, MI COMPAÑERO DE VIDA PROGRAMANDO LA WEB, LAS INVITACIONES MAS COMPLEJAS Y DANDOLE VIDA A MIS IDEAS. TAMBIEN ESTAN MIS AYUDANTES DE CONFIANZA MICA Y SABRI &lt;3. </p><p> ¡GRACIAS POR VISITAR MI PÁGINA Y POR CONSIDERAR CONFIAR EN MÍ PARA TUS INVITACIONES ESPECIALES!<br> CON CARIÑO, GISELLE </p></div><div class="mt-12"><a href="mailto:contacto@papelitodigital.com.ar" target="_blank" class="text-[16px] text-[#fc8dca] underline underline-offset-8">ENVIAME UN EMAIL</a></div></div><div class="flex"><img class="object-cover" src="/assets/images/quienes-somos.webp"></div></div><!--]-->`);
     };
   }
 });
@@ -1708,14 +1788,36 @@ _sfc_main$9.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Home.vue");
   return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$9
 }, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$8 = {
+  __name: "Select",
+  __ssrInlineRender: true,
+  props: ["modelValue"],
+  emits: ["update:modelValue"],
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<select${ssrRenderAttrs(mergeProps({
+        value: __props.modelValue,
+        class: "w-full p-2 border border-[rgb(225, 227, 230)] accent-primary"
+      }, _attrs))}>`);
+      ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
+      _push(`</select>`);
+    };
+  }
+};
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Select.vue");
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+};
 const __default__$5 = {
   layout: _sfc_main$d
 };
-const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
+const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$5, {
   __name: "Create",
   __ssrInlineRender: true,
   props: {
@@ -1730,9 +1832,10 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
       title: null,
       description: null,
       price: null,
+      type_id: 1,
       tagInput: null,
       tags: [],
-      source: null,
+      files: null,
       thumbnail: null
     });
     ref(null);
@@ -1747,9 +1850,9 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
       form.tagInput = "";
     }
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(_attrs)}><h1 class="text-3xl">Nueva Invitacion</h1>`);
+      _push(`<div${ssrRenderAttrs(_attrs)}><h1 class="text-3xl">Nueva artículo</h1>`);
       if (_ctx.$page.props.flash.message) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "success" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "success" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
@@ -1777,7 +1880,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
+      _push(ssrRenderComponent(_sfc_main$p, {
         modelValue: unref(form).title,
         "onUpdate:modelValue": ($event) => unref(form).title = $event,
         id: "title",
@@ -1785,7 +1888,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         required: ""
       }, null, _parent));
       if (unref(form).errors.title) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.title)}`);
@@ -1813,14 +1916,14 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
+      _push(ssrRenderComponent(_sfc_main$p, {
         modelValue: unref(form).description,
         "onUpdate:modelValue": ($event) => unref(form).description = $event,
         id: "description",
         type: "text"
       }, null, _parent));
       if (unref(form).errors.description) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.description)}`);
@@ -1848,7 +1951,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
+      _push(ssrRenderComponent(_sfc_main$p, {
         modelValue: unref(form).price,
         "onUpdate:modelValue": ($event) => unref(form).price = $event,
         id: "price",
@@ -1858,7 +1961,54 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         required: ""
       }, null, _parent));
       if (unref(form).errors.price) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.price)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.price), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "type" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Tipo`);
+          } else {
+            return [
+              createTextVNode("Tipo")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$8, {
+        modelValue: unref(form).type_id,
+        "onUpdate:modelValue": ($event) => unref(form).type_id = $event,
+        id: "type"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<option value="1"${_scopeId}>Invitación estática</option><option value="2"${_scopeId}>Invitación animada</option><option value="3"${_scopeId}>Kit imprimible</option>`);
+          } else {
+            return [
+              createVNode("option", { value: "1" }, "Invitación estática"),
+              createVNode("option", { value: "2" }, "Invitación animada"),
+              createVNode("option", { value: "3" }, "Kit imprimible")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      if (unref(form).errors.price) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.price)}`);
@@ -1886,7 +2036,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
+      _push(ssrRenderComponent(_sfc_main$p, {
         onChange: selectTag,
         onKeydown: selectTag,
         modelValue: unref(form).tagInput,
@@ -1912,13 +2062,43 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
       }
       _push(`</div>`);
       if (unref(form).errors.tags) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(unref(form).errors.tags)}`);
             } else {
               return [
                 createTextVNode(toDisplayString(unref(form).errors.tags), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "thumbnail" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Miñatura del artículo`);
+          } else {
+            return [
+              createTextVNode("Miñatura del artículo")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<input class="block" id="thumbnail" type="file" accept="image/*">`);
+      if (unref(form).errors.thumbnail) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.thumbnail)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.thumbnail), 1)
               ];
             }
           }),
@@ -1931,54 +2111,24 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
       _push(ssrRenderComponent(Label, { for: "source" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`Imagen o Video de la invitacion`);
+            _push2(`Imagenes y videos`);
           } else {
             return [
-              createTextVNode("Imagen o Video de la invitacion")
+              createTextVNode("Imagenes y videos")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<input class="block" id="source" type="file" accept="video/*,image/*" required>`);
-      if (unref(form).errors.source) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
+      _push(`<input class="block" id="source" type="file" accept="video/*,image/*" required multiple>`);
+      if (unref(form).errors.files) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(`${ssrInterpolate(unref(form).errors.source)}`);
+              _push2(`${ssrInterpolate(unref(form).errors.files)}`);
             } else {
               return [
-                createTextVNode(toDisplayString(unref(form).errors.source), 1)
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div>`);
-      _push(ssrRenderComponent(Label, { for: "thumbnail" }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Thumbnail o carátula (para el video)`);
-          } else {
-            return [
-              createTextVNode("Thumbnail o carátula (para el video)")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`<input class="block" id="thumbnail" type="file" accept="image/*">`);
-      if (unref(form).errors.thumbnail) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(unref(form).errors.thumbnail)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(unref(form).errors.thumbnail), 1)
+                createTextVNode(toDisplayString(unref(form).errors.files), 1)
               ];
             }
           }),
@@ -1988,7 +2138,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         _push(`<!---->`);
       }
       _push(`</div><div class="flex">`);
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         loading: unref(form).processing,
         disabled: unref(form).processing,
         class: "me-5"
@@ -2004,318 +2154,7 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign(__default__$5, {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
-        type: "button",
-        onClick: ($event) => unref(form).cancel(),
-        disabled: !unref(form).processing
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(` Cancelar `);
-          } else {
-            return [
-              createTextVNode(" Cancelar ")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</div></form></div>`);
-    };
-  }
-});
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/Create.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
-};
-const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: _sfc_main$8
-}, Symbol.toStringTag, { value: "Module" }));
-const __default__$4 = {
-  layout: _sfc_main$d
-};
-const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
-  __name: "Edit",
-  __ssrInlineRender: true,
-  props: {
-    invitation: {
-      type: Object,
-      required: true
-    },
-    tags: {
-      type: Array,
-      required: true
-    }
-  },
-  setup(__props) {
-    const props = __props;
-    const form = useForm({
-      _method: "put",
-      title: props.invitation.title,
-      description: props.invitation.description,
-      price: props.invitation.price,
-      tagInput: null,
-      tags: props.invitation.tags.map((t) => t.label),
-      thumbnail: null
-    });
-    const unselectedTags = computed(() => {
-      return props.tags.filter((t) => !form.tags.includes(t.label));
-    });
-    function selectTag() {
-      if (!form.tags.includes(form.tagInput)) {
-        form.tags.push(form.tagInput);
-      }
-      form.tagInput = "";
-    }
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(_attrs)}><h1 class="text-3xl">Editar Invitacion</h1>`);
-      if (_ctx.$page.props.flash.message) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "success" }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(_ctx.$page.props.flash.message), 1)
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`<div class="max-w-[400px]">`);
-      if (__props.invitation.type_id === 1) {
-        _push(`<img class="max-w-full"${ssrRenderAttr("src", __props.invitation.source_url)}${ssrRenderAttr("alt", `Invitation ${__props.invitation.title}`)}>`);
-      } else {
-        _push(`<!---->`);
-      }
-      if (__props.invitation.type_id === 2) {
-        _push(`<video class="max-w-full"${ssrRenderAttr("src", __props.invitation.source_url)} controls> No puede reproducir la invitation &quot;${ssrInterpolate(__props.invitation.title)}&quot; </video>`);
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><form class="py-5 space-y-5"><div>`);
-      _push(ssrRenderComponent(Label, { for: "title" }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Titulo`);
-          } else {
-            return [
-              createTextVNode("Titulo")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
-        modelValue: unref(form).title,
-        "onUpdate:modelValue": ($event) => unref(form).title = $event,
-        id: "title",
-        type: "text",
-        required: ""
-      }, null, _parent));
-      if (unref(form).errors.title) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(unref(form).errors.title)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(unref(form).errors.title), 1)
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div>`);
-      _push(ssrRenderComponent(Label, { for: "description" }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Descripcion`);
-          } else {
-            return [
-              createTextVNode("Descripcion")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
-        modelValue: unref(form).description,
-        "onUpdate:modelValue": ($event) => unref(form).description = $event,
-        id: "description",
-        type: "text"
-      }, null, _parent));
-      if (unref(form).errors.description) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(unref(form).errors.description)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(unref(form).errors.description), 1)
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div>`);
-      _push(ssrRenderComponent(Label, { for: "price" }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Precio`);
-          } else {
-            return [
-              createTextVNode("Precio")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
-        modelValue: unref(form).price,
-        "onUpdate:modelValue": ($event) => unref(form).price = $event,
-        id: "price",
-        type: "number",
-        step: "1",
-        min: "1",
-        required: ""
-      }, null, _parent));
-      if (unref(form).errors.price) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(unref(form).errors.price)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(unref(form).errors.price), 1)
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div>`);
-      _push(ssrRenderComponent(Label, { for: "tags" }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Tags`);
-          } else {
-            return [
-              createTextVNode("Tags")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(_sfc_main$o, {
-        onChange: selectTag,
-        onKeydown: selectTag,
-        modelValue: unref(form).tagInput,
-        "onUpdate:modelValue": ($event) => unref(form).tagInput = $event,
-        id: "tags",
-        ref: "tagInput",
-        type: "text",
-        list: "tagsDatalist"
-      }, null, _parent));
-      _push(`<datalist id="tagsDatalist"><!--[-->`);
-      ssrRenderList(unselectedTags.value, (tag) => {
-        _push(`<option>${ssrInterpolate(tag.label)}</option>`);
-      });
-      _push(`<!--]--></datalist><div class="p-2">`);
-      if (unref(form).tags.length === 0) {
-        _push(`<p>No se seleccionaron tags</p>`);
-      } else {
-        _push(`<ul class="flex"><!--[-->`);
-        ssrRenderList(unref(form).tags, (tag) => {
-          _push(`<li class="bg-blue-400 text-white text-xs rounded-full py-1 px-2 mx-1 hover:cursor-pointer hover:outline"><span class="me-1">${ssrInterpolate(tag)}</span></li>`);
-        });
-        _push(`<!--]--></ul>`);
-      }
-      _push(`</div>`);
-      if (unref(form).errors.tags) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(unref(form).errors.tags)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(unref(form).errors.tags), 1)
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div>`);
-      _push(ssrRenderComponent(Label, { for: "thumbnail" }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Thumbnail o carátula (para el video)`);
-          } else {
-            return [
-              createTextVNode("Thumbnail o carátula (para el video)")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`<div class="max-w-[400px] m-7 font-bold text-xl">`);
-      if (__props.invitation.thumbnail_url) {
-        _push(`<img${ssrRenderAttr("src", __props.invitation.thumbnail_url)}>`);
-      } else {
-        _push(`<p>Sin carátula.</p>`);
-      }
-      _push(`</div><input class="block" id="thumbnail" type="file" accept="image/*">`);
-      if (unref(form).errors.thumbnail) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "danger" }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(unref(form).errors.thumbnail)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(unref(form).errors.thumbnail), 1)
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div class="flex">`);
-      _push(ssrRenderComponent(_sfc_main$m, {
-        loading: unref(form).processing,
-        disabled: unref(form).processing,
-        class: "me-5"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(` Guardar `);
-          } else {
-            return [
-              createTextVNode(" Guardar ")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         type: "button",
         onClick: ($event) => unref(form).cancel(),
         disabled: !unref(form).processing
@@ -2338,21 +2177,383 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$4, {
 const _sfc_setup$7 = _sfc_main$7.setup;
 _sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/Edit.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Items/Create.vue");
   return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
 const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$7
 }, Symbol.toStringTag, { value: "Module" }));
+const __default__$4 = {
+  layout: _sfc_main$d
+};
+const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
+  __name: "Edit",
+  __ssrInlineRender: true,
+  props: {
+    item: {
+      type: Object,
+      required: true
+    },
+    tags: {
+      type: Array,
+      required: true
+    }
+  },
+  setup(__props) {
+    const props = __props;
+    const form = useForm({
+      _method: "put",
+      title: props.item.title,
+      description: props.item.description,
+      price: props.item.price,
+      tagInput: null,
+      tags: props.item.tags.map((t) => t.label),
+      thumbnail: null,
+      files: null,
+      filesDelete: []
+    });
+    const unselectedTags = computed(() => {
+      return props.tags.filter((t) => !form.tags.includes(t.label));
+    });
+    function selectTag() {
+      if (!form.tags.includes(form.tagInput)) {
+        form.tags.push(form.tagInput);
+      }
+      form.tagInput = "";
+    }
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(_attrs)}><h1 class="text-3xl">Editar Invitacion</h1>`);
+      if (_ctx.$page.props.flash.message) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "success" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(_ctx.$page.props.flash.message), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<form class="py-5 space-y-5"><div>`);
+      _push(ssrRenderComponent(Label, { for: "title" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Titulo`);
+          } else {
+            return [
+              createTextVNode("Titulo")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$p, {
+        modelValue: unref(form).title,
+        "onUpdate:modelValue": ($event) => unref(form).title = $event,
+        id: "title",
+        type: "text",
+        required: ""
+      }, null, _parent));
+      if (unref(form).errors.title) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.title)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.title), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "description" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Descripcion`);
+          } else {
+            return [
+              createTextVNode("Descripcion")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$p, {
+        modelValue: unref(form).description,
+        "onUpdate:modelValue": ($event) => unref(form).description = $event,
+        id: "description",
+        type: "text"
+      }, null, _parent));
+      if (unref(form).errors.description) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.description)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.description), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "price" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Precio`);
+          } else {
+            return [
+              createTextVNode("Precio")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$p, {
+        modelValue: unref(form).price,
+        "onUpdate:modelValue": ($event) => unref(form).price = $event,
+        id: "price",
+        type: "number",
+        step: "1",
+        min: "1",
+        required: ""
+      }, null, _parent));
+      if (unref(form).errors.price) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.price)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.price), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "tags" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Tags`);
+          } else {
+            return [
+              createTextVNode("Tags")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$p, {
+        onChange: selectTag,
+        onKeydown: selectTag,
+        modelValue: unref(form).tagInput,
+        "onUpdate:modelValue": ($event) => unref(form).tagInput = $event,
+        id: "tags",
+        ref: "tagInput",
+        type: "text",
+        list: "tagsDatalist"
+      }, null, _parent));
+      _push(`<datalist id="tagsDatalist"><!--[-->`);
+      ssrRenderList(unselectedTags.value, (tag) => {
+        _push(`<option>${ssrInterpolate(tag.label)}</option>`);
+      });
+      _push(`<!--]--></datalist><div class="p-2">`);
+      if (unref(form).tags.length === 0) {
+        _push(`<p>No se seleccionaron tags</p>`);
+      } else {
+        _push(`<ul class="flex"><!--[-->`);
+        ssrRenderList(unref(form).tags, (tag) => {
+          _push(`<li class="bg-blue-400 text-white text-xs rounded-full py-1 px-2 mx-1 hover:cursor-pointer hover:outline"><span class="me-1">${ssrInterpolate(tag)}</span></li>`);
+        });
+        _push(`<!--]--></ul>`);
+      }
+      _push(`</div>`);
+      if (unref(form).errors.tags) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.tags)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.tags), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div><img class="max-w-[400px] my-1"${ssrRenderAttr("src", `/item/${__props.item.id}/thumbnail`)}${ssrRenderAttr("alt", `Thumbnail del artículo ${__props.item.title}`)}>`);
+      _push(ssrRenderComponent(Label, {
+        for: "thumbnail",
+        class: "my-1"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Miñatura del artículo`);
+          } else {
+            return [
+              createTextVNode("Miñatura del artículo")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<input class="block my-1" id="thumbnail" type="file" accept="image/*">`);
+      if (unref(form).errors.thumbnail) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.thumbnail)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.thumbnail), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div><ul class="grid grid-cols-6 gap-3"><!--[-->`);
+      ssrRenderList(__props.item.files, (file) => {
+        _push(`<li>`);
+        if (file.mime.startsWith("image/")) {
+          _push(`<img class="block max-w-full"${ssrRenderAttr("src", `/file/${file.id}`)}${ssrRenderAttr("alt", `Achivo adjunto del artículo ${__props.item.title}`)}>`);
+        } else {
+          _push(`<!---->`);
+        }
+        if (file.mime.startsWith("video/")) {
+          _push(`<video class="block max-w-full"${ssrRenderAttr("src", `/file/${file.id}`)} controls> No se pudo reproducir el video. </video>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<div class="text-center p-2"><input${ssrRenderAttr("id", `eliminar-${file.id}`)}${ssrIncludeBooleanAttr(Array.isArray(unref(form).filesDelete) ? ssrLooseContain(unref(form).filesDelete, file.id) : unref(form).filesDelete) ? " checked" : ""}${ssrRenderAttr("value", file.id)} type="checkbox" class="mx-1">`);
+        _push(ssrRenderComponent(Label, {
+          for: `eliminar-${file.id}`
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`Eliminar`);
+            } else {
+              return [
+                createTextVNode("Eliminar")
+              ];
+            }
+          }),
+          _: 2
+        }, _parent));
+        _push(`</div></li>`);
+      });
+      _push(`<!--]--></ul><div>`);
+      _push(ssrRenderComponent(Label, {
+        for: "files",
+        class: "my-1"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Imagenes y videos`);
+          } else {
+            return [
+              createTextVNode("Imagenes y videos")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<input class="block my-1" id="files" type="file" accept="image/*,video/*" multiple>`);
+      if (unref(form).errors.files) {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.files)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.files), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div></div><div class="flex">`);
+      _push(ssrRenderComponent(_sfc_main$n, {
+        loading: unref(form).processing,
+        disabled: unref(form).processing,
+        class: "me-5"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Guardar `);
+          } else {
+            return [
+              createTextVNode(" Guardar ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$n, {
+        type: "button",
+        onClick: ($event) => unref(form).cancel(),
+        disabled: !unref(form).processing
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Cancelar `);
+          } else {
+            return [
+              createTextVNode(" Cancelar ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></form></div>`);
+    };
+  }
+});
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Items/Edit.vue");
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+};
+const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$6
+}, Symbol.toStringTag, { value: "Module" }));
 const __default__$3 = {
   layout: _sfc_main$d
 };
-const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
+const _sfc_main$5 = /* @__PURE__ */ Object.assign(__default__$3, {
   __name: "List",
   __ssrInlineRender: true,
   props: {
-    paginatedInvitations: {
+    paginatedItems: {
       type: Object,
       requird: true
     }
@@ -2360,9 +2561,9 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
   setup(__props) {
     library.add(faPenToSquare, faCircleXmark);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><h1 class="text-3xl">Invitaciones</h1>`);
+      _push(`<!--[--><h1 class="text-3xl">Artículos</h1>`);
       if (_ctx.$page.props.flash.message) {
-        _push(ssrRenderComponent(_sfc_main$l, { type: "success" }, {
+        _push(ssrRenderComponent(_sfc_main$m, { type: "success" }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(_ctx.$page.props.flash.message)}`);
@@ -2378,11 +2579,11 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
         _push(`<!---->`);
       }
       _push(`<ul class="p-7 grid lg:grid-cols-5 gap-10"><!--[-->`);
-      ssrRenderList(__props.paginatedInvitations.data, (invitation) => {
-        _push(`<li><header class="flex items-center"><h2 class="flex-1 text-xl py-2 text-blue-400">${ssrInterpolate(invitation.title)}</h2><div class="flex-initial text-xl">`);
+      ssrRenderList(__props.paginatedItems.data, (item) => {
+        _push(`<li><header class="flex items-center"><h2 class="flex-1 text-xl py-2 text-blue-400">${ssrInterpolate(item.title)}</h2><div class="flex-initial text-xl">`);
         _push(ssrRenderComponent(unref(Link), {
           as: "button",
-          href: `/invitations/${invitation.id}/edit`,
+          href: `/item/${item.id}/edit`,
           class: "p-1 hover:text-blue-400 transition-colors"
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -2398,7 +2599,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
         }, _parent));
         _push(ssrRenderComponent(unref(Link), {
           as: "button",
-          href: `/invitations/${invitation.id}`,
+          href: `/item/${item.id}`,
           method: "delete",
           class: "p-1 hover:text-blue-400 transition-colors",
           "preserve-scroll": ""
@@ -2414,44 +2615,33 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$3, {
           }),
           _: 2
         }, _parent));
-        _push(`</div></header><div class="py-1"><span>Descripcion: </span><strong class="ms-2">${ssrInterpolate(invitation.description)}</strong></div><div class="py-1"><span>Precio: </span><strong class="ms-2">$${ssrInterpolate(invitation.price)}</strong></div><div class="py-1"><span class="me-2">Tags:</span>`);
-        if (invitation.tags.length === 0) {
+        _push(`</div></header><div class="py-1"><span>Descripcion: </span><strong class="ms-2">${ssrInterpolate(item.description)}</strong></div><div class="py-1"><span>Precio: </span><strong class="ms-2">$${ssrInterpolate(item.price)}</strong></div><div class="py-1"><span class="me-2">Tags:</span>`);
+        if (item.tags.length === 0) {
           _push(`<strong>Sin tags</strong>`);
         } else {
           _push(`<div class="flex"><!--[-->`);
-          ssrRenderList(invitation.tags, (tag) => {
+          ssrRenderList(item.tags, (tag) => {
             _push(`<span class="bg-blue-400 text-white text-xs rounded-full py-1 px-2 mx-1">${ssrInterpolate(tag.label)}</span>`);
           });
           _push(`<!--]--></div>`);
         }
-        _push(`</div><div class="py-1"><span>Tipo: </span><strong class="ms-2">${ssrInterpolate(invitation.type.name)}</strong></div><div class="py-1">`);
-        if (invitation.type_id === 1) {
-          _push(`<img class="max-w-full"${ssrRenderAttr("src", invitation.source_url)}${ssrRenderAttr("alt", `Invitation ${invitation.title}`)}>`);
-        } else {
-          _push(`<!---->`);
-        }
-        if (invitation.type_id === 2) {
-          _push(`<video class="max-w-full"${ssrRenderAttr("src", invitation.source_url)} controls> No puede reproducir la invitation &quot;${ssrInterpolate(invitation.title)}&quot; </video>`);
-        } else {
-          _push(`<!---->`);
-        }
-        _push(`</div></li>`);
+        _push(`</div><div class="py-1"><span>Tipo: </span><strong class="ms-2">${ssrInterpolate(item.type.name)}</strong></div><div class="py-1"><img class="max-w-full"${ssrRenderAttr("src", `/item/${item.id}/thumbnail`)}${ssrRenderAttr("alt", `Thumbnail del artículo ${item.title}`)}></div></li>`);
       });
       _push(`<!--]--></ul><!--]-->`);
     };
   }
 });
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Invitations/List.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Items/List.vue");
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$6
+  default: _sfc_main$5
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$5 = {
+const _sfc_main$4 = {
   __name: "Pagination",
   __ssrInlineRender: true,
   props: {
@@ -2491,16 +2681,16 @@ const _sfc_main$5 = {
     };
   }
 };
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Pagination.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
 const __default__$2 = {
   layout: _sfc_main$d
 };
-const _sfc_main$4 = /* @__PURE__ */ Object.assign(__default__$2, {
+const _sfc_main$3 = /* @__PURE__ */ Object.assign(__default__$2, {
   __name: "List",
   __ssrInlineRender: true,
   props: {
@@ -2551,7 +2741,7 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign(__default__$2, {
             _push(`<!--[--> Tiene un nuevo pedido. `);
             _push(ssrRenderComponent(unref(Link), {
               class: "m-1 text-primary font-bold hover:underline",
-              href: `/orders/${notification.data.order_id}`
+              href: `/order/${notification.data.order_id}`
             }, {
               default: withCtx((_, _push2, _parent2, _scopeId) => {
                 if (_push2) {
@@ -2572,7 +2762,7 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign(__default__$2, {
             _push(`<!--[--> Un pedido pedido ya fue <strong class="text-green-500 m-1">Pagado</strong>. `);
             _push(ssrRenderComponent(unref(Link), {
               class: "m-1 text-primary font-bold hover:underline",
-              href: `/orders/${notification.data.order_id}`
+              href: `/order/${notification.data.order_id}`
             }, {
               default: withCtx((_, _push2, _parent2, _scopeId) => {
                 if (_push2) {
@@ -2649,45 +2839,23 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign(__default__$2, {
         });
         _push(`<!--]--></ul></div>`);
       }
-      _push(ssrRenderComponent(_sfc_main$5, {
+      _push(ssrRenderComponent(_sfc_main$4, {
         links: __props.paginatedNotifications.links
       }, null, _parent));
       _push(`<!--]-->`);
     };
   }
 });
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Notifications/List.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
-};
-const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: _sfc_main$4
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$3 = {
-  __name: "Select",
-  __ssrInlineRender: true,
-  props: ["modelValue"],
-  emits: ["update:modelValue"],
-  setup(__props) {
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(`<select${ssrRenderAttrs(mergeProps({
-        value: __props.modelValue,
-        class: "w-full p-2 border border-[rgb(225, 227, 230)] accent-primary"
-      }, _attrs))}>`);
-      ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-      _push(`</select>`);
-    };
-  }
-};
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Select.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Notifications/List.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
+const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$3
+}, Symbol.toStringTag, { value: "Module" }));
 const __default__$1 = {
   layout: _sfc_main$d
 };
@@ -2706,39 +2874,39 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
   },
   setup(__props) {
     const props = __props;
-    library.add(faFileImage, faFileVideo, faCircleCheck, faDollar);
+    library.add(faCircleCheck, faCircleXmark);
     const search = useForm({
       query: props.search.query,
       finished: props.search.finished
     });
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><h1 class="text-3xl">Pedidos</h1><form class="py-2 flex">`);
-      _push(ssrRenderComponent(_sfc_main$o, {
+      _push(ssrRenderComponent(_sfc_main$p, {
         modelValue: unref(search).query,
         "onUpdate:modelValue": ($event) => unref(search).query = $event,
         class: "max-w-xs me-3",
         type: "search",
         placeholder: "Buscar.."
       }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$3, {
+      _push(ssrRenderComponent(_sfc_main$8, {
         modelValue: unref(search).finished,
         "onUpdate:modelValue": ($event) => unref(search).finished = $event,
         class: "max-w-xs me-3"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<option value=""${_scopeId}>Todas</option><option value="false"${_scopeId}>Pendiente</option><option value="true"${_scopeId}>Finalizado</option>`);
+            _push2(`<option value=""${_scopeId}>Todas</option><option value="0"${_scopeId}>Pendiente</option><option value="1"${_scopeId}>Finalizado</option>`);
           } else {
             return [
               createVNode("option", { value: "" }, "Todas"),
-              createVNode("option", { value: "false" }, "Pendiente"),
-              createVNode("option", { value: "true" }, "Finalizado")
+              createVNode("option", { value: "0" }, "Pendiente"),
+              createVNode("option", { value: "1" }, "Finalizado")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_sfc_main$m, {
+      _push(ssrRenderComponent(_sfc_main$n, {
         class: "p-0",
         type: "submit"
       }, {
@@ -2757,145 +2925,60 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
       if (__props.paginatedOrders.data.length === 0) {
         _push(`<p class="text-2xl text-center mx-3 my-6">No hay pedidos</p>`);
       } else {
-        _push(`<table class="w-full my-3 text-center"><thead class="bg-primary text-white"><th class="py-1" scope="col">Invitación</th><th scope="col">Tipo</th><th scope="col">Nombre</th><th scope="col">Estado</th><th scope="col">Medio de pago</th><th scope="col">Pagado</th><th scope="col">Fecha</th><th scope="col"></th></thead><tbody><!--[-->`);
+        _push(`<table class="w-full my-3 text-center"><thead class="bg-primary text-white"><th class="py-1" scope="col">Artículo</th><th scope="col">Cumpleañero/a</th><th scope="col">Contacto</th><th scope="col">Prioridad</th><th scope="col">Pagado</th><th scope="col">Estado</th><th scope="col">Fecha</th><th scope="col"></th></thead><tbody><!--[-->`);
         ssrRenderList(__props.paginatedOrders.data, (order) => {
-          _push(`<tr class="even:bg-slate-50"><td class="py-4">${ssrInterpolate(order.invitation.title)}</td><td>`);
-          if (order.invitation.type_id === 1) {
-            _push(`<!--[-->`);
+          _push(`<tr class="even:bg-slate-50"><td class="py-4"><strong>${ssrInterpolate(order.item.title)}</strong><small class="mx-2">(${ssrInterpolate(order.item.type.name)})</small></td><td>${ssrInterpolate(order.birthday_name)}</td><td>${ssrInterpolate(order.contact_name)}</td><td>`);
+          if (order.high_priority) {
             _push(ssrRenderComponent(unref(FontAwesomeIcon), {
-              class: "mx-2 text-2xl",
-              icon: ["far", "file-image"]
+              icon: ["far", "circle-check"],
+              class: "text-green-500"
             }, null, _parent));
-            _push(`<span>Fija</span><!--]-->`);
           } else {
-            _push(`<!---->`);
-          }
-          if (order.invitation.type_id === 2) {
-            _push(`<!--[-->`);
             _push(ssrRenderComponent(unref(FontAwesomeIcon), {
-              class: "mx-2 text-2xl",
-              icon: ["far", "file-video"]
+              icon: ["far", "circle-xmark"],
+              class: "text-red-500"
             }, null, _parent));
-            _push(`<span>Video</span><!--]-->`);
-          } else {
-            _push(`<!---->`);
-          }
-          _push(`</td><td>${ssrInterpolate(order.name)}</td><td>`);
-          if (order.finished) {
-            _push(`<strong class="text-green-600">Finalizado</strong>`);
-          } else {
-            _push(`<strong class="text-red-600">Pendiente</strong>`);
           }
           _push(`</td><td>`);
-          if (order.payment_method === "transferencia") {
-            _push(`<span>Transferencia</span>`);
+          if (order.payment_reference) {
+            _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+              icon: ["far", "circle-check"],
+              class: "text-green-500"
+            }, null, _parent));
           } else {
-            _push(`<span>Mercado Pago</span>`);
+            _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+              icon: ["far", "circle-xmark"],
+              class: "text-red-500"
+            }, null, _parent));
           }
-          _push(`</td><td>${ssrInterpolate(order.paid ? "Si" : "No")}</td><td>${ssrInterpolate(new Date(order.created_at).toLocaleDateString())}</td><td>`);
+          _push(`</td><td>`);
+          if (order.finished) {
+            _push(`<strong class="text-green-500">Finalizado</strong>`);
+          } else {
+            _push(`<strong class="text-red-500">Pendiente</strong>`);
+          }
+          _push(`</td><td>${ssrInterpolate(new Date(order.created_at).toLocaleString())}</td><td>`);
           _push(ssrRenderComponent(unref(Link), {
-            href: `/orders/${order.id}`,
+            href: `/order/${order.id}`,
             as: "button",
             class: "py-1 px-4 rounded bg-primary font-bold text-white me-2"
           }, {
             default: withCtx((_, _push2, _parent2, _scopeId) => {
               if (_push2) {
-                _push2(` Ver`);
+                _push2(` Ver `);
               } else {
                 return [
-                  createTextVNode(" Ver")
+                  createTextVNode(" Ver ")
                 ];
               }
             }),
             _: 2
           }, _parent));
-          if (order.paid) {
-            _push(ssrRenderComponent(unref(Link), {
-              as: "button",
-              href: `/orders/${order.id}`,
-              data: { paid: false },
-              method: "patch",
-              "preserve-scroll": "",
-              class: "py-1 px-4 me-2 rounded bg-green-600 font-bold text-white"
-            }, {
-              default: withCtx((_, _push2, _parent2, _scopeId) => {
-                if (_push2) {
-                  _push2(ssrRenderComponent(unref(FontAwesomeIcon), { icon: "fa-solid fa-dollar-sign" }, null, _parent2, _scopeId));
-                } else {
-                  return [
-                    createVNode(unref(FontAwesomeIcon), { icon: "fa-solid fa-dollar-sign" })
-                  ];
-                }
-              }),
-              _: 2
-            }, _parent));
-          } else {
-            _push(ssrRenderComponent(unref(Link), {
-              as: "button",
-              href: `/orders/${order.id}`,
-              data: { paid: true },
-              method: "patch",
-              "preserve-scroll": "",
-              class: "py-1 px-4 me-2 rounded bg-red-600 font-bold text-white"
-            }, {
-              default: withCtx((_, _push2, _parent2, _scopeId) => {
-                if (_push2) {
-                  _push2(ssrRenderComponent(unref(FontAwesomeIcon), { icon: "fa-solid fa-dollar-sign" }, null, _parent2, _scopeId));
-                } else {
-                  return [
-                    createVNode(unref(FontAwesomeIcon), { icon: "fa-solid fa-dollar-sign" })
-                  ];
-                }
-              }),
-              _: 2
-            }, _parent));
-          }
-          if (order.finished) {
-            _push(ssrRenderComponent(unref(Link), {
-              as: "button",
-              href: `/orders/${order.id}`,
-              data: { finished: false },
-              method: "patch",
-              "preserve-scroll": "",
-              class: "py-1 px-4 rounded bg-green-600 font-bold text-white"
-            }, {
-              default: withCtx((_, _push2, _parent2, _scopeId) => {
-                if (_push2) {
-                  _push2(ssrRenderComponent(unref(FontAwesomeIcon), { icon: "fa-regular fa-circle-check" }, null, _parent2, _scopeId));
-                } else {
-                  return [
-                    createVNode(unref(FontAwesomeIcon), { icon: "fa-regular fa-circle-check" })
-                  ];
-                }
-              }),
-              _: 2
-            }, _parent));
-          } else {
-            _push(ssrRenderComponent(unref(Link), {
-              as: "button",
-              href: `/orders/${order.id}`,
-              data: { finished: true },
-              method: "patch",
-              "preserve-scroll": "",
-              class: "py-1 px-4 rounded bg-red-600 font-bold text-white"
-            }, {
-              default: withCtx((_, _push2, _parent2, _scopeId) => {
-                if (_push2) {
-                  _push2(ssrRenderComponent(unref(FontAwesomeIcon), { icon: "fa-regular fa-circle-check" }, null, _parent2, _scopeId));
-                } else {
-                  return [
-                    createVNode(unref(FontAwesomeIcon), { icon: "fa-regular fa-circle-check" })
-                  ];
-                }
-              }),
-              _: 2
-            }, _parent));
-          }
           _push(`</td></tr>`);
         });
         _push(`<!--]--></tbody></table>`);
       }
-      _push(ssrRenderComponent(_sfc_main$5, {
+      _push(ssrRenderComponent(_sfc_main$4, {
         links: __props.paginatedOrders.links
       }, null, _parent));
       _push(`<!--]-->`);
@@ -2908,10 +2991,11 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/List.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
+const Show_vue_vue_type_style_index_0_scoped_a92a237e_lang = "";
 const __default__ = {
   layout: _sfc_main$d
 };
@@ -2925,10 +3009,17 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
     }
   },
   setup(__props) {
-    library.add(faAngleLeft);
+    const props = __props;
+    library.add(faAngleLeft, faReceipt, faCircleCheck, faCircleXmark, faPenToSquare);
+    const paymentReferenceForm = useForm({
+      payment_reference: ""
+    });
+    const finishedForm = useForm({
+      finished: !props.order.finished
+    });
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><header class="flex items-center my-2">`);
-      _push(ssrRenderComponent(unref(Link), { href: "/orders" }, {
+      _push(`<!--[--><header class="flex items-center my-2 text-3xl" data-v-a92a237e>`);
+      _push(ssrRenderComponent(unref(Link), { href: "/order" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(unref(FontAwesomeIcon), { icon: ["fas", "angle-left"] }, null, _parent2, _scopeId));
@@ -2940,72 +3031,86 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
         }),
         _: 1
       }, _parent));
-      _push(`<h1 class="text-3xl mx-4">Pedido</h1></header><article class="flex"><div class="flex-initial max-w-[300px]">`);
-      if (__props.order.invitation.type_id === 1) {
-        _push(`<img class="max-w-full"${ssrRenderAttr("src", __props.order.invitation.source_url)}>`);
+      _push(`<h1 class="mx-4" data-v-a92a237e>Pedido número #${ssrInterpolate(__props.order.id)}</h1>`);
+      if (__props.order.finished) {
+        _push(`<small class="text-green-500" data-v-a92a237e>Terminado!</small>`);
+      } else {
+        _push(`<small class="text-red-500" data-v-a92a237e>Pendiente!</small>`);
+      }
+      _push(`</header><div class="flex items-center gap-3 p-4" data-v-a92a237e><form class="flex items-center border p-1" data-v-a92a237e><input type="text" class="me-2"${ssrRenderAttr("value", unref(paymentReferenceForm).payment_reference)} required data-v-a92a237e>`);
+      if (unref(paymentReferenceForm).errors.payment_reference) {
+        _push(`<p class="mx-2" data-v-a92a237e>${ssrInterpolate(unref(paymentReferenceForm).errors.payment_reference)}</p>`);
       } else {
         _push(`<!---->`);
       }
-      if (__props.order.invitation.type_id === 2) {
-        _push(`<video class="max-w-full"${ssrRenderAttr("src", __props.order.invitation.source_url)}></video>`);
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</div><div class="flex-1 space-y-1 m-3"><div><span class="me-3">Nombre</span><strong>${ssrInterpolate(__props.order.name)}</strong></div><div><span class="me-3">Dirección</span><strong>${ssrInterpolate(__props.order.address)}</strong></div><div><span class="me-3">Observación</span><strong>${ssrInterpolate(__props.order.observation)}</strong></div><div><span class="me-3">Teléfono</span><strong>${ssrInterpolate(__props.order.phone_number)}</strong></div><div><span class="me-3">Ubicación en mapa</span><strong>${ssrInterpolate(__props.order.map_ubication ? "Si" : "No")}</strong></div><div><span class="me-3">Confirmación por Whatsapp</span><strong>${ssrInterpolate(__props.order.whatsapp_confirmation ? "Si" : "No")}</strong></div><div><span class="me-3">Precio</span><strong>$${ssrInterpolate(__props.order.price)}</strong></div><div><span class="me-3">Método de pago</span><strong>${ssrInterpolate(__props.order.payment_method)}</strong></div><div><span class="me-3">Código de pago</span><strong>${ssrInterpolate(__props.order.payment_external_id)}</strong></div><div><span class="me-3">Fecha</span><strong>${ssrInterpolate(new Date(__props.order.created_at).toLocaleDateString())}</strong></div><div><span class="me-3">Estado Pago</span>`);
-      if (__props.order.paid) {
-        _push(`<strong class="text-green-600">Pagado</strong>`);
-      } else {
-        _push(`<strong class="text-red-600">Impago</strong>`);
-      }
-      _push(`</div><div><span class="me-3">Estado Pedido</span>`);
+      _push(`<button${ssrIncludeBooleanAttr(unref(paymentReferenceForm).processing) ? " disabled" : ""} type="submit" class="flex-1 py-1 px-3 bg-blue-400 rounded text-white font-bold" data-v-a92a237e>`);
+      _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+        class: "me-2",
+        icon: ["fas", "receipt"]
+      }, null, _parent));
+      _push(` Ingresar referencia del pago </button></form><button${ssrIncludeBooleanAttr(unref(finishedForm).processing) ? " disabled" : ""} class="py-1 px-3 bg-blue-400 rounded text-white font-bold" data-v-a92a237e>`);
       if (__props.order.finished) {
-        _push(`<strong class="text-green-600">Finalizado</strong>`);
+        _push(`<!--[-->`);
+        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+          class: "me-2",
+          icon: ["far", "circle-xmark"]
+        }, null, _parent));
+        _push(` Marcar como pendiente <!--]-->`);
       } else {
-        _push(`<strong class="text-red-600">Pendiente</strong>`);
+        _push(`<!--[-->`);
+        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+          class: "me-2",
+          icon: ["far", "circle-check"]
+        }, null, _parent));
+        _push(` Marcar como finalizado <!--]-->`);
       }
-      _push(`</div><div class="my-2">`);
+      _push(`</button></div><article class="my-7 max-w-2xl mx-auto space-y-12" data-v-a92a237e><section data-v-a92a237e><h2 class="text-4xl text-primary mb-5" data-v-a92a237e>General</h2><ul class="space-y-2" data-v-a92a237e><li data-v-a92a237e><span data-v-a92a237e>Artículo:</span><span data-v-a92a237e><span class="me-2" data-v-a92a237e>${ssrInterpolate(__props.order.item.title)}</span><small class="me-4" data-v-a92a237e>(${ssrInterpolate(__props.order.item.type.name)} años)</small>`);
+      _push(ssrRenderComponent(unref(Link), {
+        href: `/item/${__props.order.item.id}/edit`,
+        class: "text-sm text-white font-bold px-2 py-1 rounded bg-blue-300"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Ver`);
+          } else {
+            return [
+              createTextVNode("Ver")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</span></li><li data-v-a92a237e><span data-v-a92a237e>Prioridad:</span>`);
+      if (__props.order.high_priority) {
+        _push(`<span class="text-green-500 font-bold" data-v-a92a237e>Si</span>`);
+      } else {
+        _push(`<span class="text-red-500 font-bold" data-v-a92a237e>No</span>`);
+      }
+      _push(`</li><li data-v-a92a237e><span data-v-a92a237e>Ubicación en mapa:</span>`);
+      if (__props.order.map_ubication) {
+        _push(`<span class="text-green-500 font-bold" data-v-a92a237e>Si</span>`);
+      } else {
+        _push(`<span class="text-red-500 font-bold" data-v-a92a237e>No</span>`);
+      }
+      _push(`</li><li data-v-a92a237e><span data-v-a92a237e>Confirmación por whatsapp:</span>`);
+      if (__props.order.whatsapp_confirmation) {
+        _push(`<span class="text-green-500 font-bold" data-v-a92a237e>Si</span>`);
+      } else {
+        _push(`<span class="text-red-500 font-bold" data-v-a92a237e>No</span>`);
+      }
+      _push(`</li><li data-v-a92a237e><span data-v-a92a237e>Precio final:</span><span data-v-a92a237e>$${ssrInterpolate(__props.order.price)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Fecha:</span><span data-v-a92a237e>${ssrInterpolate(new Date(__props.order.created_at).toLocaleString())}</span></li><li data-v-a92a237e><span data-v-a92a237e>Método de pago:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.payment_method)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Referencia del pago:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.payment_reference)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Finalizado:</span><span class="text-xl" data-v-a92a237e>`);
       if (__props.order.finished) {
-        _push(ssrRenderComponent(unref(Link), {
-          as: "button",
-          href: `/orders/${__props.order.id}`,
-          data: { finished: false },
-          method: "patch",
-          "preserve-scroll": "",
-          class: "py-1 px-4 rounded bg-red-600 font-bold text-white"
-        }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`Pendiente`);
-            } else {
-              return [
-                createTextVNode("Pendiente")
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
+        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+          icon: ["far", "circle-check"],
+          class: "text-green-500"
+        }, null, _parent));
       } else {
-        _push(ssrRenderComponent(unref(Link), {
-          as: "button",
-          href: `/orders/${__props.order.id}`,
-          data: { finished: true },
-          method: "patch",
-          "preserve-scroll": "",
-          class: "py-1 px-4 rounded bg-green-600 font-bold text-white"
-        }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`Finalizar`);
-            } else {
-              return [
-                createTextVNode("Finalizar")
-              ];
-            }
-          }),
-          _: 1
-        }, _parent));
+        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+          icon: ["far", "circle-xmark"],
+          class: "text-red-500"
+        }, null, _parent));
       }
-      _push(`</div></div></article><!--]-->`);
+      _push(`</span></li></ul></section><section data-v-a92a237e><h2 class="text-4xl text-primary mb-5" data-v-a92a237e>Evento</h2><ul class="space-y-2" data-v-a92a237e><li data-v-a92a237e><span data-v-a92a237e>Nombre:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.birthday_name)}</span> <small data-v-a92a237e>(${ssrInterpolate(__props.order.birthday_age)} años)</small></li><li data-v-a92a237e><span data-v-a92a237e>Dirección principal:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.birthday_main_address)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Dirección secundaria:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.birthday_secondary_address)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Fecha:</span><span data-v-a92a237e>${ssrInterpolate(new Date(__props.order.birthday_date).toLocaleDateString())}</span></li><li data-v-a92a237e><span data-v-a92a237e>Horario:</span><span data-v-a92a237e>Desde ${ssrInterpolate(__props.order.birthday_from_time.slice(0, 5))} hasta ${ssrInterpolate(__props.order.birthday_to_time.slice(0, 5))}</span></li><li data-v-a92a237e><span data-v-a92a237e>Observación:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.observation)}</span></li></ul></section><section data-v-a92a237e><h2 class="text-4xl text-primary mb-5" data-v-a92a237e>Contacto</h2><ul class="space-y-2" data-v-a92a237e><li data-v-a92a237e><span data-v-a92a237e>Nombre:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.contact_name)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Teléfono:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.contact_number)}</span></li></ul></section></article><!--]-->`);
     };
   }
 });
@@ -3015,9 +3120,10 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/Show.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Show$1 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-a92a237e"]]);
+const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$1
+  default: Show$1
 }, Symbol.toStringTag, { value: "Module" }));
 const Show_vue_vue_type_style_index_0_scoped_898ece04_lang = "";
 const _sfc_main = {
@@ -3033,7 +3139,7 @@ _sfc_main.setup = (props, ctx) => {
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const Show = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-898ece04"]]);
-const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_17 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Show
 }, Symbol.toStringTag, { value: "Module" }));
@@ -3042,7 +3148,7 @@ createServer(
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Auth/Login.vue": __vite_glob_0_0, "./Pages/Checkout/Invitation.vue": __vite_glob_0_1, "./Pages/Checkout/Partials/Step1Information.vue": __vite_glob_0_2, "./Pages/Checkout/Partials/Step2PayMentMethodSelection.vue": __vite_glob_0_3, "./Pages/Checkout/Partials/Step3Confirmation.vue": __vite_glob_0_4, "./Pages/Checkout/Partials/Step4Payment.vue": __vite_glob_0_5, "./Pages/Dashboard.vue": __vite_glob_0_6, "./Pages/Gallery/Partials/Invitation.vue": __vite_glob_0_7, "./Pages/Gallery/Show.vue": __vite_glob_0_8, "./Pages/Home.vue": __vite_glob_0_9, "./Pages/Invitations/Create.vue": __vite_glob_0_10, "./Pages/Invitations/Edit.vue": __vite_glob_0_11, "./Pages/Invitations/List.vue": __vite_glob_0_12, "./Pages/Notifications/List.vue": __vite_glob_0_13, "./Pages/Orders/List.vue": __vite_glob_0_14, "./Pages/Orders/Show.vue": __vite_glob_0_15, "./Pages/Preguntas/Show.vue": __vite_glob_0_16 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Auth/Login.vue": __vite_glob_0_0, "./Pages/Checkout/Item.vue": __vite_glob_0_1, "./Pages/Checkout/Partials/Step1Information.vue": __vite_glob_0_2, "./Pages/Checkout/Partials/Step2PayMentMethodSelection.vue": __vite_glob_0_3, "./Pages/Checkout/Partials/Step3Confirmation.vue": __vite_glob_0_4, "./Pages/Checkout/Partials/Step4OrderCreation.vue": __vite_glob_0_5, "./Pages/Checkout/Partials/Step5Payment.vue": __vite_glob_0_6, "./Pages/Dashboard.vue": __vite_glob_0_7, "./Pages/Gallery/Partials/Item.vue": __vite_glob_0_8, "./Pages/Gallery/Show.vue": __vite_glob_0_9, "./Pages/Home.vue": __vite_glob_0_10, "./Pages/Items/Create.vue": __vite_glob_0_11, "./Pages/Items/Edit.vue": __vite_glob_0_12, "./Pages/Items/List.vue": __vite_glob_0_13, "./Pages/Notifications/List.vue": __vite_glob_0_14, "./Pages/Orders/List.vue": __vite_glob_0_15, "./Pages/Orders/Show.vue": __vite_glob_0_16, "./Pages/Preguntas/Show.vue": __vite_glob_0_17 });
       return pages[`./Pages/${name}.vue`];
     },
     setup({ App, props, plugin }) {

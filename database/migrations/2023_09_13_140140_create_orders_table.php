@@ -13,17 +13,24 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('invitation_id')->constrained();
-            $table->string('name', 50);
-            $table->string('address', 500);
+            $table->foreignId('item_id')->constrained();
+            $table->string('birthday_name', 50)->nullable();
+            $table->integer('birthday_age')->nullable();
+            $table->string('birthday_main_address', 500);
+            $table->string('birthday_secondary_address', 500)->nullable();
+            $table->date('birthday_date');
+            $table->time('birthday_from_time');
+            $table->time('birthday_to_time')->nullable();
             $table->string('observation', 500)->nullable();
-            $table->string('phone_number', 50);
+            $table->string('contact_name', 50);
+            $table->string('contact_number', 50);
+            $table->boolean('high_priority')->default(false);
             $table->boolean('map_ubication')->default(false);
             $table->boolean('whatsapp_confirmation')->default(false);
             $table->decimal('price');
             $table->string('payment_method', 50);
-            $table->string('payment_external_id')->nullable();
-            $table->string('payment_extra')->nullable();
+            $table->string('payment_reference')->nullable();
+            $table->boolean('finished')->default(false);
             $table->timestamps();
         });
     }

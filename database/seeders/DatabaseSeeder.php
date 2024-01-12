@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use Database\Seeders\TypeSeeder;
 use Database\Seeders\TagSeeder;
-use Database\Seeders\InvitationSeeder;
+use Database\Seeders\ItemSeeder;
 use App\Models\User;
 
 class DatabaseSeeder extends Seeder
@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TypeSeeder::class,
             TagSeeder::class,
-            InvitationSeeder::class,
         ]);
 
         User::factory()->create([

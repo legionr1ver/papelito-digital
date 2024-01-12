@@ -4,7 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\InvitationController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ItemFileController;
 use App\Http\Controllers\MercadoPagoController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NotificationController;
@@ -30,9 +31,12 @@ Route::get('/checkout/{id}', [CheckoutController::class,'show'])->name('checkout
 Route::post('/mercado-pago/preference/{orderId}', [MercadoPagoController::class, 'preference'])->name('mercado-pago.preference');
 Route::post('/mercado-pago/process', [MercadoPagoController::class, 'process'])->name('mercado-pago.process');
 
+Route::get('/item/{item}/thumbnail', [ItemController::class, 'thumbnail']);
+Route::get('/file/{file}', ItemFileController::class);
+
 Route::resources([
-    'invitations' => InvitationController::class,
-    'orders' => OrderController::class,
+    'item' => ItemController::class,
+    'order' => OrderController::class,
 ]);
 
 Route::middleware('auth')->group(function(){
@@ -46,10 +50,10 @@ Route::middleware('auth')->group(function(){
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resources([
-        'notifications' => NotificationController::class,
+        'notification' => NotificationController::class,
     ]);
 
-    Route::post('notifications-all/read', [NotificationController::class,'read'])->name('notifications-all.read');
+    Route::post('notification-all/read', [NotificationController::class,'read'])->name('notification-all.read');
 });
 
 require __DIR__.'/auth.php';

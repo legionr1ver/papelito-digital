@@ -16,7 +16,7 @@ class MercadoPagoController extends Controller
      */
     public function preference($orderId)
     {
-        $order = Order::with('invitation')->findOrFail($orderId);
+        $order = Order::with('item')->findOrFail($orderId);
 
         $response = Http::acceptJson()
             ->withToken( config('mercadopago.access_token') )
@@ -25,7 +25,7 @@ class MercadoPagoController extends Controller
                 'items' => [
                     [
                         'id' => $order->id,
-                        'title' => 'Invitacion: ' . $order->invitation->title,
+                        'title' => 'Invitacion: ' . $order->item->title,
                         'quantity' => 1,
                         'unit_price' => $order->price,
                     ],

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 use Inertia\Response;
-use App\Models\Invitation;
-use App\Http\Requests\StoreInvitationRequest;
-use App\Http\Requests\UpdateInvitationRequest;
+use App\Models\Item;
+use App\Http\Requests\StoreItemRequest;
+use App\Http\Requests\UpdateItemRequest;
 
 class CheckoutController extends Controller
 {
@@ -29,7 +29,7 @@ class CheckoutController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreInvitationRequest $request)
+    public function store(StoreItemRequest $request)
     {
         //
     }
@@ -39,17 +39,17 @@ class CheckoutController extends Controller
      */
     public function show($id) : Response
     {
-        return Inertia::render('Checkout/Invitation', [
+        return Inertia::render('Checkout/Item', [
             'previous_url' => url()->previous('/gallery'),
             'mercadopago_public_key' => config('mercadopago.public_key'),
-            'invitation' => Invitation::with('type')->findOrFail($id),
+            'item' => Item::with('type','files')->findOrFail($id),
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Invitation $invitation)
+    public function edit(Item $item)
     {
         //
     }
@@ -57,7 +57,7 @@ class CheckoutController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateInvitationRequest $request, Invitation $invitation)
+    public function update(UpdateItemRequest $request, Item $item)
     {
         //
     }
@@ -65,7 +65,7 @@ class CheckoutController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Invitation $invitation)
+    public function destroy(Item $item)
     {
         //
     }

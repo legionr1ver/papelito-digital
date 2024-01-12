@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Invitation;
+use App\Models\Item;
 use App\Models\Tag;
 use App\Models\Type;
 use Illuminate\Http\Request;
@@ -12,7 +12,7 @@ class GalleryController extends Controller
 {
     public function __invoke(Request $request): Response
     {
-        $q = Invitation::select('id','title','type_id','source','thumbnail','price');
+        $q = Item::select('id','title', 'type_id','thumbnail','price')->with('tags','type');
 
         if( $search = $request->input('search') )
         {
@@ -33,7 +33,7 @@ class GalleryController extends Controller
             $q->where('type_id', $type);
 
         return Inertia::render('Gallery/Show', [
-            'invitations' => $q->paginate(15)->withQueryString(),
+            'items' => $q->paginate(15)->withQueryString(),
             'filters' => [
                 'search' => $search,
                 'tag' => $tag ? Tag::findOrFail($tag) : '',

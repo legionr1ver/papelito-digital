@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Type;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Invitation>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Item>
  */
-class InvitationFactory extends Factory
+class ItemFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,7 +20,7 @@ class InvitationFactory extends Factory
         return [
             'title' => fake()->word(),
             'description' => fake()->sentence(),
-            'type_id' => Type::FIJA,
+            'type_id' => Type::STATIC_INVITATION,
             'source' => 'SOURCE',
             'price' => fake()->numberBetween(1000,2000),
         ];

@@ -41,7 +41,7 @@ class OrderPaid extends Notification
                     ->greeting('Buenos días!')
                     ->subject('Pedido Pagado')
                     ->line('Se realizo el pago de un pedido.')
-                    ->action('Ver', route('orders.show', ['order' => $this->order->id]));
+                    ->action('Ver', route('order.show', ['order' => $this->order->id]));
     }
 
     /**

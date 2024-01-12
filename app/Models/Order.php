@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use App\Models\Invitation;
+use App\Models\Item;
 
 class Order extends Model
 {
@@ -17,16 +17,17 @@ class Order extends Model
      * @var array
      */
     protected $casts = [
+        'high_priority' => 'boolean',
         'map_ubication' => 'boolean',
         'whatsapp_confirmation' => 'boolean',
         'price' => 'double',
     ];
 
     /**
-     * Get the order's invitation
+     * Get the order's item
      */
-    public function invitation(): BelongsTo
+    public function item(): BelongsTo
     {
-        return $this->belongsTo(Invitation::class);
+        return $this->belongsTo(Item::class);
     }
 }

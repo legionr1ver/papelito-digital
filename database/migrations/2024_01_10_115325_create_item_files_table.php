@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->boolean('paid')->default(false);
+        Schema::create('item_files', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('item_id')->constrained();
+            $table->string('source');
+            $table->string('mime', 50);
+            $table->timestamps();
         });
     }
 
@@ -21,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('paid');
-        });
+        Schema::dropIfExists('item_files');
     }
 };

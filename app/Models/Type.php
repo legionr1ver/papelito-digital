@@ -9,6 +9,7 @@ class Type extends Model
 {
     use HasFactory;
 
-    const FIJA = 1;
-    const ANIMADA = 2;
+    const STATIC_INVITATION = 1;
+    const ANIMATED_INVITATION = 2;
+    const KIT = 3;
 }

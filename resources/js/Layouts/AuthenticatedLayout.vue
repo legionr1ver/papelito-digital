@@ -70,7 +70,7 @@ const user = page.props.auth.user;
                     </svg>
                     <span class="text-gray-700">Notificaciones</span>
                     </Link>
-                    <Link href="/orders" as="div" :class="{ 'bg-gray-200': $page.component === 'Orders/Create' }"
+                    <Link href="/order" as="div" :class="{ 'bg-gray-200': $page.component === 'Orders/Create' }"
                         class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
                     <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
                         <path
@@ -82,9 +82,9 @@ const user = page.props.auth.user;
                 </div>
 
                 <div class="mb-4 px-4">
-                    <p class="pl-4 text-sm font-semibold mb-1">INVITACIONES</p>
-                    <Link href="/invitations/create" as="div"
-                        :class="{ 'bg-gray-200': $page.component === 'Invitations/Create' }"
+                    <p class="pl-4 text-sm font-semibold mb-1">ARTÍCULOS</p>
+                    <Link href="/item/create" as="div"
+                        :class="{ 'bg-gray-200': $page.component === 'Item/Create' }"
                         class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
                     <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
                         <path
@@ -93,7 +93,7 @@ const user = page.props.auth.user;
                     </svg>
                     <span class="text-gray-700">Agregar</span>
                     </Link>
-                    <Link href="/invitations" as="div" :class="{ 'bg-gray-200': $page.component === 'Invitations/List' }"
+                    <Link href="/item" as="div" :class="{ 'bg-gray-200': $page.component === 'Item/List' }"
                         class="w-full flex items-center text-blue-400 h-10 pl-4 hover:bg-gray-200 rounded-lg cursor-pointer">
                     <svg class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20">
                         <path
