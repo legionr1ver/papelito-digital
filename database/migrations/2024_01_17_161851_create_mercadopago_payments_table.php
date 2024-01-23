@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mercado_payments', function (Blueprint $table) {
+        Schema::create('mercadopago_payments', function (Blueprint $table) {
             $table->id();
+            $table->string('preference_id');
+            $table->json('payment_json')->nullable();
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mercado_payments');
+        Schema::dropIfExists('mercadopago_payments');
     }
 };

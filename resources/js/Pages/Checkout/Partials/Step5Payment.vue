@@ -26,7 +26,7 @@ const props = defineProps({
 
         <PaypalPayment v-if="props.order.payment_method === 'paypal'" :order="order" :paypal_client_id="paypal_client_id" />
 
-        <MercadopagoPayment v-if="props.order.payment_method === 'mercadopago'" :order="order" />
+        <MercadopagoPayment v-if="props.order.payment_method === 'mercadopago'" :order="order" :mercadopago_public_key="mercadopago_public_key" />
 
     </div>
 </template>

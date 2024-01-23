@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\MercadoPayment>
  */
-class MercadoPaymentFactory extends Factory
+class MercadopagoPaymentFactory extends Factory
 {
     /**
      * Define the model's default state.
