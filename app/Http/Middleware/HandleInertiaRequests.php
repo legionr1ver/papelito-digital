@@ -43,6 +43,9 @@ class HandleInertiaRequests extends Middleware
             'flash' => [
                 'message' => fn () => $request->session()->get('message')
             ],
+            'currency' => $request->session()->get('currency', 'ars') === 'ars'
+                ? ['code' => 'ars', 'label' => '$']
+                : ['code' => 'usd', 'label' => 'U$D']
         ]);
     }
 }

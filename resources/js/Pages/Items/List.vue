@@ -48,7 +48,7 @@ defineProps({
         </div>
         <div class="py-1">
           <span>Precio: </span>
-          <strong class="ms-2">${{ item.price }}</strong>
+          <strong class="ms-2">ARS ${{ item.ars_price }} / USD ${{ item.usd_price }}</strong>
         </div>
         <div class="py-1">
           <span class="me-2">Tags:</span>

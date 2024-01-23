@@ -25,7 +25,8 @@ const props = defineProps({
 const form = useForm({
   title: null,
   description: null,
-  price: null,
+  ars_price: null,
+  usd_price: null,
   type_id: 1,
   tagInput: null,
   tags: [],
@@ -80,9 +81,14 @@ function submit(){
         <Alert v-if="form.errors.description" type="danger">{{ form.errors.description }}</Alert>
       </div>
       <div>
-        <Label for="price">Precio</Label>
-        <Input v-model="form.price" id="price" type="number" step="1" min="1" required />
-        <Alert v-if="form.errors.price" type="danger">{{ form.errors.price }}</Alert>
+        <Label for="ars-price">Precio en pesos</Label>
+        <Input v-model="form.ars_price" id="ars-price" type="number" step="1" min="1" required />
+        <Alert v-if="form.errors.ars_price" type="danger">{{ form.errors.ars_price }}</Alert>
+      </div>
+      <div>
+        <Label for="usd-price">Precio en dólares</Label>
+        <Input v-model="form.usd_price" id="usd-price" type="number" step="1" min="1" required />
+        <Alert v-if="form.errors.usd_price" type="danger">{{ form.errors.usd_price }}</Alert>
       </div>
       <div>
         <Label for="type">Tipo</Label>

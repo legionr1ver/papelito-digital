@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('description', 500)->nullable();
             $table->foreignId('type_id')->constrained();
             $table->string('thumbnail')->nullable();
-            $table->decimal('price');
+            $table->decimal('ars_price');
+            $table->decimal('usd_price');
             $table->softDeletes();
             $table->timestamps();
         });

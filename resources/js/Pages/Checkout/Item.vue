@@ -8,21 +8,27 @@ export default {
 
 <script setup>
 import { ref, reactive, computed } from 'vue';
-import { Link } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import Step1Information from './Partials/Step1Information.vue';
 import Step2PayMentMethodSelection from './Partials/Step2PayMentMethodSelection.vue';
 import Step3Confirmation from './Partials/Step3Confirmation.vue';
 import Step4OrderCreation from './Partials/Step4OrderCreation.vue';
 import Step5Payment from './Partials/Step5Payment.vue';
 
-/* fontawesome */
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-library.add(faChevronLeft, faChevronRight);
-
 const props = defineProps({
     previous_url: {
+        type: String,
+        required: true,
+    },
+    configurations: {
+        type: Object,
+        required: true,
+    },
+    paypal_client_id: {
+        type: String,
+        required: true,
+    },
+    mercadopago_public_key: {
         type: String,
         required: true,
     },
@@ -30,12 +36,9 @@ const props = defineProps({
         type: Object,
         required: true,
     },
-    mercadopago_public_key: {
-        type: String,
-        required: true,
-    },
 });
 
+const page = usePage();
 const selected = ref(props.item.files[0].id);
 const page_step = ref(1);
 const order = ref(null);
@@ -51,9 +54,13 @@ const form = reactive({
     contact_name: 'Mauro (si es para mi)',
     contact_number: '1150404755',
     high_priority: true,
-    map_ubication: false,
-    whatsapp_confirmation: false,
+    map_ubication: true,
+    whatsapp_confirmation: true,
     payment_method: '',
+    currency: page.props.currency.code,
+});
+const configurationsMap = computed(() => {
+    return new Map( props.configurations.map(c => [c.variable, parseInt(c.value)]) );
 });
 </script>
 
@@ -95,6 +102,7 @@ const form = reactive({
             <div>
                 <Step1Information v-if="page_step === 1"
                     :item="props.item"
+                    :configurations="configurationsMap"
                     v-model:page_step="page_step"
                     v-model:birthday_name="form.birthday_name"
                     v-model:birthday_age="form.birthday_age"
@@ -117,6 +125,7 @@ const form = reactive({
                 <Step3Confirmation v-if="page_step === 3"
                     v-model:page_step="page_step"
                     :item="item"
+                    :configurations="configurationsMap"
                     :form="form"/>
 
                 <Step4OrderCreation v-if="page_step === 4"
@@ -126,7 +135,8 @@ const form = reactive({
 
                 <Step5Payment v-if="page_step === 5"
                     :order="order"
-                    :mercadopago_public_key="mercadopago_public_key" />
+                    :mercadopago_public_key="mercadopago_public_key"
+                    :paypal_client_id="paypal_client_id" />
             </div>
         </div>
     </div>

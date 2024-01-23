@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\App;
 use App\Models\Tag;
 use App\Models\Order;
 use App\Models\ItemFile;
@@ -23,7 +24,8 @@ class Item extends Model
      * @var array
      */
     protected $casts = [
-        'price' => 'double',
+        'ars_price' => 'double',
+        'usd_price' => 'double',
     ];
 
     /**

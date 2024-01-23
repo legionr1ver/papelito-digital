@@ -7,8 +7,7 @@ export default {
 </script>
 
 <script setup>
-import { ref } from 'vue';
-import { router, Link } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
 import Item from './Partials/Item.vue';
 
 const props = defineProps({
@@ -27,22 +26,6 @@ const props = defineProps({
         },
     },
 });
-
-const search = ref(props.filters.search);
-
-function filter(filter){
-    const currentFilters = {
-        search: props.filters.search,
-        tag: props.filters.tags?.id || '',
-        type: props.filters.type?.id || '',
-    };
-    const newFilters = {...currentFilters, ...filter};
-
-    router.get('/gallery', newFilters, {
-        preserveScroll: true,
-    });
-}
-
 </script>
 
 <template>

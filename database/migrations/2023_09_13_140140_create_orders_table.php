@@ -28,9 +28,10 @@ return new class extends Migration
             $table->boolean('map_ubication')->default(false);
             $table->boolean('whatsapp_confirmation')->default(false);
             $table->decimal('price');
+            $table->string('currency');
             $table->string('payment_method', 50);
-            $table->string('payment_reference')->nullable();
             $table->boolean('finished')->default(false);
+            $table->nullableMorphs('payment');
             $table->timestamps();
         });
     }

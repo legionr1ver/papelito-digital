@@ -1,9 +1,11 @@
 <script setup>
-import {ref} from 'vue';
+import { ref } from 'vue';
 import Button from '@/Components/Button.vue';
+import { usePage } from '@inertiajs/vue3';
 
-defineProps([
+const props = defineProps([
     'item',
+    'configurations',
     'page_step',
     'birthday_name',
     'birthday_age',
@@ -20,7 +22,7 @@ defineProps([
     'whatsapp_confirmation',
 ]);
 
-defineEmits([
+const emit = defineEmits([
     'update:page_step',
     'update:birthday_name',
     'update:birthday_age',
@@ -37,6 +39,7 @@ defineEmits([
     'update:whatsapp_confirmation',
 ]);
 
+const page = usePage();
 const confirmation = ref(false);
 </script>
 
@@ -174,18 +177,18 @@ const confirmation = ref(false);
                 <ul>
                     <li class="flex items-center">
                         <input @input="$emit('update:high_priority', $event.target.checked)" :checked="high_priority" id="urgente" type="checkbox" class="m-2 accent-primary">
-                        <label for="urgente">+$200 Elaboración en menos de 24hs. <strong>¡Urgente!</strong></label>
+                        <label for="urgente">+{{ page.props.currency.label }} {{ props.configurations.get(`high_priority_price_${page.props.currency.code}`) }} Elaboración en menos de 24hs. <strong>¡Urgente!</strong></label>
                     </li>
 
                     <template v-if="item.type_id == 1">
                         <li class="flex items-center">
                             <input @change="$emit('update:whatsapp_confirmation', $event.target.checked)" :checked="whatsapp_confirmation" id="add-whatsapp-confirmation" type="checkbox" class="m-2 accent-primary">
-                            <label for="add-whatsapp-confirmation">+$150 Agregar confirmación de asistencia por
+                            <label for="add-whatsapp-confirmation">+{{ page.props.currency.label }} {{ props.configurations.get(`whatsapp_confirmation_price_${page.props.currency.code}`) }} Agregar confirmación de asistencia por
                                 whatsapp.</label>
                         </li>
                         <li class="flex items-center">
                             <input @change="$emit('update:map_ubication', $event.target.checked)" :checked="map_ubication" id="map-confirmation" type="checkbox" class="m-2 accent-primary">
-                            <label for="map-confirmation">+$150 Agregar ubicación en el mapa.</label>
+                            <label for="map-confirmation">+{{ page.props.currency.label }} {{ props.configurations.get(`map_ubication_price_${page.props.currency.code}`) }} Agregar ubicación en el mapa.</label>
                         </li>
                     </template>
                 </ul>

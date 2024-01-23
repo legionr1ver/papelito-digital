@@ -1,7 +1,7 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 
-defineProps({
+const props = defineProps({
     id: {
         type: Number,
         required: true,
@@ -10,7 +10,11 @@ defineProps({
         type: String,
         required: true,
     },
-    price: {
+    ars_price: {
+        type: Number,
+        required: true,
+    },
+    usd_price: {
         type: Number,
         required: true,
     },
@@ -23,6 +27,8 @@ defineProps({
         required: true,
     },
 });
+
+const page = usePage();
 </script>
 
 <template>
@@ -32,7 +38,7 @@ defineProps({
                 <span class="me-2">{{ title }}</span>
                 <small class="text-primary">({{ type.name }})</small>
             </strong>
-            <span class="flex-initial">${{ price }}</span>
+            <span class="flex-initial">{{ page.props.currency.label }} {{ props[`${page.props.currency.code}_price`] }}</span>
         </div>
         <div class="text-xs">
             <ul v-if="tags.length > 0" class="flex">

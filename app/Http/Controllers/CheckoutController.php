@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use Inertia\Inertia;
 use Inertia\Response;
 use App\Models\Item;
+use App\Models\Configuration;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 
@@ -41,6 +43,8 @@ class CheckoutController extends Controller
     {
         return Inertia::render('Checkout/Item', [
             'previous_url' => url()->previous('/gallery'),
+            'configurations' => Configuration::all(),
+            'paypal_client_id' => config('paypal.client_id'),
             'mercadopago_public_key' => config('mercadopago.public_key'),
             'item' => Item::with('type','files')->findOrFail($id),
         ]);

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Item;
+use App\Models\Configuration;
 use App\Events\OrderCreated;
 use App\Events\OrderPaid;
 
@@ -93,15 +95,12 @@ class OrderController extends Controller
             'map_ubication' => 'required|boolean',
             'whatsapp_confirmation' => 'required|boolean',
             'payment_method' => 'required',
+            'currency' => 'required|in:usd,ars',
         ]);
 
-        $item = Item::findOrFail($request->item_id);
-        $price = floor((
-                $item->price
-                + ( $request->boolean('high_priority') ? 200 : 0 )
-                + ( $request->boolean('map_ubication') ? 150 : 0 )
-                + ( $request->boolean('whatsapp_confirmation') ? 150 : 0 )
-            ) * ( $request->input('payment_method') === 'transferencia' ? 0.9 : 1 ));
+        $configurations = Configuration::get()->mapWithKeys(function($item, $key){
+            return [$item->variable => $item->value];
+        });
 
         $order = new Order();
         $order->item_id = $request->input('item_id');
@@ -112,6 +111,7 @@ class OrderController extends Controller
         $order->birthday_date = $request->input('birthday_date');
         $order->birthday_from_time = $request->input('birthday_from_time');
         $order->birthday_to_time = $request->input('birthday_to_time');
+        $order->observation = $request->input('observation');
         $order->contact_name = $request->input('contact_name');
         $order->contact_number = $request->input('contact_number');
         $order->high_priority = $request->input('high_priority');
@@ -119,7 +119,15 @@ class OrderController extends Controller
         $order->whatsapp_confirmation = $request->input('whatsapp_confirmation');
         $order->payment_method = $request->input('payment_method');
         
-        $order->price = $price;
+        $currency = $request->input('currency');
+
+        $order->currency = $currency;
+        $order->price = $order->calculatePrice(
+            $currency, 
+            $configurations->get("high_priority_price_$currency"), 
+            $configurations->get("map_ubication_price_$currency"), 
+            $configurations->get("whatsapp_confirmation_price_$currency")
+        );
         $order->save();
 
         OrderCreated::dispatch($order);

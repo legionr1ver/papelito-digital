@@ -54,7 +54,8 @@ class ItemController extends Controller
             $item = new Item();
             $item->title = $request->input('title');
             $item->description = $request->input('description');
-            $item->price = $request->input('price');
+            $item->ars_price = $request->input('ars_price');
+            $item->usd_price = $request->input('usd_price');
             $item->type_id = $request->input('type_id');
             $item->thumbnail = $request->file('thumbnail')->store('items/thumnails');
             $item->save();
@@ -118,7 +119,8 @@ class ItemController extends Controller
 
         $item->title = $request->input('title');
         $item->description = $request->input('description');
-        $item->price = $request->input('price');
+        $item->ars_price = $request->input('ars_price');
+        $item->usd_price = $request->input('usd_price');
         if( $request->hasFile('thumbnail') )
             $item->thumbnail = $request->file('thumbnail')->store('items');
         $item->save();

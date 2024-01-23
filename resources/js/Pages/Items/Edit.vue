@@ -29,7 +29,8 @@ const form = useForm({
   _method: 'put',
   title: props.item.title,
   description: props.item.description,
-  price: props.item.price,
+  ars_price: props.item.ars_price,
+  usd_price: props.item.usd_price,
   tagInput: null,
   tags: props.item.tags.map(t => t.label),
   thumbnail: null,
@@ -72,9 +73,14 @@ function deselectTag(tag){
         <Alert v-if="form.errors.description" type="danger">{{ form.errors.description }}</Alert>
       </div>
       <div>
-        <Label for="price">Precio</Label>
-        <Input v-model="form.price" id="price" type="number" step="1" min="1" required />
-        <Alert v-if="form.errors.price" type="danger">{{ form.errors.price }}</Alert>
+        <Label for="ars-price">Precio en pesos</Label>
+        <Input v-model="form.ars_price" id="ars-price" type="number" step="1" min="1" required />
+        <Alert v-if="form.errors.ars_price" type="danger">{{ form.errors.ars_price }}</Alert>
+      </div>
+      <div>
+        <Label for="usd-price">Precio en dólares</Label>
+        <Input v-model="form.usd_price" id="usd-price" type="number" step="1" min="1" required />
+        <Alert v-if="form.errors.usd_price" type="danger">{{ form.errors.usd_price }}</Alert>
       </div>
       <div>
         <Label for="tags">Tags</Label>

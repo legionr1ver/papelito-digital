@@ -6,10 +6,12 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ItemFileController;
-use App\Http\Controllers\MercadoPagoController;
+//use App\Http\Controllers\MercadoPagoController;
+use App\Http\Controllers\PayPalPaymentController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PreguntasController;
+use App\Http\Controllers\CurrencyController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -28,9 +30,13 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('/gallery/{slug?}', GalleryController::class)->name('gallery');
 Route::get('/preguntas', PreguntasController::class)->name('preguntas');
 Route::get('/checkout/{id}', [CheckoutController::class,'show'])->name('checkout');
-Route::post('/mercado-pago/preference/{orderId}', [MercadoPagoController::class, 'preference'])->name('mercado-pago.preference');
-Route::post('/mercado-pago/process', [MercadoPagoController::class, 'process'])->name('mercado-pago.process');
+//Route::post('/mercado-pago/preference/{orderId}', [MercadoPagoController::class, 'preference'])->name('mercado-pago.preference');
+//Route::post('/mercado-pago/process', [MercadoPagoController::class, 'process'])->name('mercado-pago.process');
 
+Route::post('/paypal-payment/{order}/create', [PayPalPaymentController::class, 'create'])->name('paypal-payment.create');
+Route::post('/paypal-payment/{order}/capture', [PayPalPaymentController::class, 'capture'])->name('paypal-payment.capture');
+
+Route::get('/currency/{code}', CurrencyController::class);
 Route::get('/item/{item}/thumbnail', [ItemController::class, 'thumbnail']);
 Route::get('/file/{file}', ItemFileController::class);
 

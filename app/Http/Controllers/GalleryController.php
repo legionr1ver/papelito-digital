@@ -12,7 +12,7 @@ class GalleryController extends Controller
 {
     public function __invoke(Request $request): Response
     {
-        $q = Item::select('id','title', 'type_id','thumbnail','price')->with('tags','type');
+        $q = Item::select('id','title', 'type_id','thumbnail','ars_price', 'usd_price')->with('tags','type');
 
         if( $search = $request->input('search') )
         {

@@ -1,7 +1,9 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import { router } from '@inertiajs/vue3';
 import { reactive } from 'vue';
+
+const page = usePage();
 
 const search = reactive({
     type: '',
@@ -26,24 +28,30 @@ function submitSearch() {
                 </Link>
             </div>
             <div class="flex-1 grid items-center">
-                <form id="search" class="p-2 flex text-sm text-gray-400" @submit.prevent="submitSearch">
-                    <select v-model="search.type" class="hidden lg:block p-3 border border-[rgb(225, 227, 230)]"
-                        aria-label="Tipo de invitacion">
-                        <option value="">Todas</option>
-                        <option value="1">Fijas</option>
-                        <option value="2">Animadas</option>
-                    </select>
-                    <button type="submit" class="border-s p-3 border-t border-b border-[rgb(225, 227, 230)]"
-                        aria-label="Buscar">
-                        <svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path
-                                d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z">
-                            </path>
-                        </svg>
-                    </button>
-                    <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full"
-                        name="search" type="search" placeholder="Busca invitaciones por tema">
-                </form>
+                <div class="flex">
+                    <form id="search" class="flex-1 p-2 flex text-sm text-gray-400" @submit.prevent="submitSearch">
+                        <select v-model="search.type" class="hidden lg:block p-3 border border-[rgb(225, 227, 230)]"
+                            aria-label="Tipo de invitacion">
+                            <option value="">Todas</option>
+                            <option value="1">Fijas</option>
+                            <option value="2">Animadas</option>
+                        </select>
+                        <button type="submit" class="border-s p-3 border-t border-b border-[rgb(225, 227, 230)]"
+                            aria-label="Buscar">
+                            <svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z">
+                                </path>
+                            </svg>
+                        </button>
+                        <input v-model="search.search" class="p-3 border-t border-e border-b border-[rgb(225, 227, 230)] w-full"
+                            name="search" type="search" placeholder="Busca invitaciones por tema">
+                    </form>
+                    <div class="flex justify-center items-center">
+                        <Link class="bg-primary py-1 px-2 text-xs rounded text-white font-bold me-3" href="/currency/ars">ARS</Link>
+                        <Link class="bg-primary py-1 px-2 text-xs rounded text-white font-bold" href="/currency/usd">U$D</Link>
+                    </div>
+                </div>
                 <nav class="hidden lg:grid grid-cols-[1fr_auto] items-center">
                     <ul class="grid grid-flow-col justify-evenly py-4 text-primary font-serif text-xl">
                         <Link as="li" class="relative flex items-center cursor-pointer group" href="/gallery"
