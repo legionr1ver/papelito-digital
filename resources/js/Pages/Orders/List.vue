@@ -54,8 +54,9 @@ const search = useForm({
     <thead class="bg-primary text-white">
       <th class="py-1" scope="col">Artículo</th>
       <th scope="col">Cumpleañero/a</th>
-      <th scope="col">Contacto</th>
+      <th scope="col">Monto</th>
       <th scope="col">Prioridad</th>
+      <th scope="col">Método de pago</th>
       <th scope="col">Pagado</th>
       <th scope="col">Estado</th>
       <th scope="col">Fecha</th>
@@ -68,13 +69,18 @@ const search = useForm({
           <small class="mx-2">({{ order.item.type.name }})</small>
         </td>
         <td>{{ order.birthday_name }}</td>
-        <td>{{ order.contact_name }}</td>
+        <td class="uppercase">{{ order.currency }} {{ order.price }}</td>
         <td>
           <FontAwesomeIcon v-if="order.high_priority" :icon="['far', 'circle-check']" class="text-green-500" />
           <FontAwesomeIcon v-else :icon="['far', 'circle-xmark']" class="text-red-500" />
         </td>
         <td>
-          <FontAwesomeIcon v-if="order.payment_reference" :icon="['far', 'circle-check']" class="text-green-500" />
+          <img class="w-10 mx-auto" v-if="order.payment_method === 'transferencia'" src="/assets/images/icons/bank-transfer.webp" alt="Transferencia bancaria">
+          <img class="w-14 mx-auto" v-if="order.payment_method === 'mercadopago'" src="/assets/images/cards/mercadopago.webp" alt="Mercado pago">
+          <img class="w-14 mx-auto" v-if="order.payment_method === 'paypal'" src="/assets/images/cards/paypal-logo.webp" alt="Paypal">
+        </td>
+        <td>
+          <FontAwesomeIcon v-if="order.payment?.is_paid" :icon="['far', 'circle-check']" class="text-green-500" />
           <FontAwesomeIcon v-else :icon="['far', 'circle-xmark']" class="text-red-500" />
         </td>
         <td>

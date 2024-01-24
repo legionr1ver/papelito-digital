@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('mercadopago_payments', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid');
             $table->string('preference_id');
             $table->json('payment_json')->nullable();
             $table->timestamps();

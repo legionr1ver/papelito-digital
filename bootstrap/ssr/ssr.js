@@ -385,7 +385,7 @@ const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   __proto__: null,
   default: _sfc_main$m
 }, Symbol.toStringTag, { value: "Module" }));
-const Step3Confirmation_vue_vue_type_style_index_0_scoped_3d334c8c_lang = "";
+const Step3Confirmation_vue_vue_type_style_index_0_scoped_22d45d77_lang = "";
 const _sfc_main$l = {
   __name: "Step3Confirmation",
   __ssrInlineRender: true,
@@ -415,28 +415,28 @@ const _sfc_main$l = {
       return Math.floor(price);
     });
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><section id="resumen" data-v-3d334c8c><h2 class="text-2xl mb-5" data-v-3d334c8c>Resumen de la compra</h2><ul class="space-y-5" data-v-3d334c8c><li data-v-3d334c8c><span data-v-3d334c8c>Precio de la invitacion</span><span class="font-bold" data-v-3d334c8c>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.item[`${unref(currency)}_price`])}</span></li>`);
+      _push(`<!--[--><section id="resumen" data-v-22d45d77><h2 class="text-2xl mb-5" data-v-22d45d77>Resumen de la compra</h2><ul class="space-y-5" data-v-22d45d77><li data-v-22d45d77><span data-v-22d45d77>Precio de la invitacion</span><span class="font-bold" data-v-22d45d77>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.item[`${unref(currency)}_price`])}</span></li>`);
       if (__props.form.high_priority) {
-        _push(`<li data-v-3d334c8c><span data-v-3d334c8c>Elaboración en menos de 24hs</span><span class="font-bold" data-v-3d334c8c>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.configurations.get(`high_priority_price_${unref(currency)}`))}</span></li>`);
+        _push(`<li data-v-22d45d77><span data-v-22d45d77>Elaboración en menos de 24hs</span><span class="font-bold" data-v-22d45d77>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.configurations.get(`high_priority_price_${unref(currency)}`))}</span></li>`);
       } else {
         _push(`<!---->`);
       }
       if (__props.form.whatsapp_confirmation) {
-        _push(`<li data-v-3d334c8c><span data-v-3d334c8c>Confirmación de asistencia</span><span class="font-bold" data-v-3d334c8c>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.configurations.get(`whatsapp_confirmation_price_${unref(currency)}`))}</span></li>`);
+        _push(`<li data-v-22d45d77><span data-v-22d45d77>Confirmación de asistencia</span><span class="font-bold" data-v-22d45d77>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.configurations.get(`whatsapp_confirmation_price_${unref(currency)}`))}</span></li>`);
       } else {
         _push(`<!---->`);
       }
       if (__props.form.map_ubication) {
-        _push(`<li data-v-3d334c8c><span data-v-3d334c8c>Ubicación en el mapa</span><span class="font-bold" data-v-3d334c8c>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.configurations.get(`map_ubication_price_${unref(currency)}`))}</span></li>`);
+        _push(`<li data-v-22d45d77><span data-v-22d45d77>Ubicación en el mapa</span><span class="font-bold" data-v-22d45d77>+${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(__props.configurations.get(`map_ubication_price_${unref(currency)}`))}</span></li>`);
       } else {
         _push(`<!---->`);
       }
       if (__props.form.payment_method == "transferencia") {
-        _push(`<li data-v-3d334c8c><span data-v-3d334c8c>Descuento por transferencia</span><span class="font-bold" data-v-3d334c8c>-10%</span></li>`);
+        _push(`<li data-v-22d45d77><span data-v-22d45d77>Descuento por transferencia</span><span class="font-bold" data-v-22d45d77>-10%</span></li>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<li data-v-3d334c8c><span data-v-3d334c8c>Total</span><span class="font-bold" data-v-3d334c8c>$${ssrInterpolate(finalPrice.value)}</span></li></ul></section><div class="grid grid-cols-2 gap-2 my-2" data-v-3d334c8c>`);
+      _push(`<li data-v-22d45d77><span data-v-22d45d77>Total</span><span class="font-bold" data-v-22d45d77>${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(finalPrice.value)}</span></li></ul></section><div class="grid grid-cols-2 gap-2 my-2" data-v-22d45d77>`);
       _push(ssrRenderComponent(_sfc_main$q, {
         type: "button",
         onClick: ($event) => _ctx.$emit("update:page_step", __props.page_step - 1)
@@ -477,7 +477,7 @@ _sfc_main$l.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Checkout/Partials/Step3Confirmation.vue");
   return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const Step3Confirmation = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["__scopeId", "data-v-3d334c8c"]]);
+const Step3Confirmation = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["__scopeId", "data-v-22d45d77"]]);
 const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Step3Confirmation
@@ -1128,19 +1128,19 @@ const _sfc_main$e = /* @__PURE__ */ Object.assign(__default__$9, {
     const page_step = ref(1);
     const order = ref(null);
     const form = reactive({
-      birthday_name: "Mauro",
-      birthday_age: 34,
-      birthday_main_address: "Tapia 441",
-      birthday_secondary_address: "Belgrano",
-      birthday_date: "1989-12-05",
-      birthday_from_time: "06:00",
-      birthday_to_time: "23:00",
-      observation: "No vengan",
-      contact_name: "Mauro (si es para mi)",
-      contact_number: "1150404755",
-      high_priority: true,
-      map_ubication: true,
-      whatsapp_confirmation: true,
+      birthday_name: "",
+      birthday_age: "",
+      birthday_main_address: "",
+      birthday_secondary_address: "",
+      birthday_date: "",
+      birthday_from_time: "",
+      birthday_to_time: "",
+      observation: "",
+      contact_name: "",
+      contact_number: "",
+      high_priority: false,
+      map_ubication: false,
+      whatsapp_confirmation: false,
       payment_method: "",
       currency: page.props.currency.code
     });
@@ -3177,9 +3177,10 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
       if (__props.paginatedOrders.data.length === 0) {
         _push(`<p class="text-2xl text-center mx-3 my-6">No hay pedidos</p>`);
       } else {
-        _push(`<table class="w-full my-3 text-center"><thead class="bg-primary text-white"><th class="py-1" scope="col">Artículo</th><th scope="col">Cumpleañero/a</th><th scope="col">Contacto</th><th scope="col">Prioridad</th><th scope="col">Pagado</th><th scope="col">Estado</th><th scope="col">Fecha</th><th scope="col"></th></thead><tbody><!--[-->`);
+        _push(`<table class="w-full my-3 text-center"><thead class="bg-primary text-white"><th class="py-1" scope="col">Artículo</th><th scope="col">Cumpleañero/a</th><th scope="col">Monto</th><th scope="col">Prioridad</th><th scope="col">Método de pago</th><th scope="col">Pagado</th><th scope="col">Estado</th><th scope="col">Fecha</th><th scope="col"></th></thead><tbody><!--[-->`);
         ssrRenderList(__props.paginatedOrders.data, (order) => {
-          _push(`<tr class="even:bg-slate-50"><td class="py-4"><strong>${ssrInterpolate(order.item.title)}</strong><small class="mx-2">(${ssrInterpolate(order.item.type.name)})</small></td><td>${ssrInterpolate(order.birthday_name)}</td><td>${ssrInterpolate(order.contact_name)}</td><td>`);
+          var _a;
+          _push(`<tr class="even:bg-slate-50"><td class="py-4"><strong>${ssrInterpolate(order.item.title)}</strong><small class="mx-2">(${ssrInterpolate(order.item.type.name)})</small></td><td>${ssrInterpolate(order.birthday_name)}</td><td class="uppercase">${ssrInterpolate(order.currency)} ${ssrInterpolate(order.price)}</td><td>`);
           if (order.high_priority) {
             _push(ssrRenderComponent(unref(FontAwesomeIcon), {
               icon: ["far", "circle-check"],
@@ -3192,7 +3193,23 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
             }, null, _parent));
           }
           _push(`</td><td>`);
-          if (order.payment_reference) {
+          if (order.payment_method === "transferencia") {
+            _push(`<img class="w-10 mx-auto" src="/assets/images/icons/bank-transfer.webp" alt="Transferencia bancaria">`);
+          } else {
+            _push(`<!---->`);
+          }
+          if (order.payment_method === "mercadopago") {
+            _push(`<img class="w-14 mx-auto" src="/assets/images/cards/mercadopago.webp" alt="Mercado pago">`);
+          } else {
+            _push(`<!---->`);
+          }
+          if (order.payment_method === "paypal") {
+            _push(`<img class="w-14 mx-auto" src="/assets/images/cards/paypal-logo.webp" alt="Paypal">`);
+          } else {
+            _push(`<!---->`);
+          }
+          _push(`</td><td>`);
+          if ((_a = order.payment) == null ? void 0 : _a.is_paid) {
             _push(ssrRenderComponent(unref(FontAwesomeIcon), {
               icon: ["far", "circle-check"],
               class: "text-green-500"
@@ -3247,7 +3264,7 @@ const __vite_glob_0_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
-const Show_vue_vue_type_style_index_0_scoped_a92a237e_lang = "";
+const Show_vue_vue_type_style_index_0_scoped_20dec48c_lang = "";
 const __default__ = {
   layout: _sfc_main$d
 };
@@ -3263,14 +3280,14 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
   setup(__props) {
     const props = __props;
     library.add(faAngleLeft, faReceipt, faCircleCheck, faCircleXmark, faPenToSquare);
-    const paymentReferenceForm = useForm({
-      payment_reference: ""
-    });
-    const finishedForm = useForm({
-      finished: !props.order.finished
+    ref(null);
+    const transferPaymentForm = useForm({
+      reference: "",
+      receipt_image: null
     });
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><header class="flex items-center my-2 text-3xl" data-v-a92a237e>`);
+      var _a, _b, _c;
+      _push(`<!--[--><header class="flex items-center my-2 text-3xl" data-v-20dec48c>`);
       _push(ssrRenderComponent(unref(Link), { href: "/order" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -3283,40 +3300,69 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
         }),
         _: 1
       }, _parent));
-      _push(`<h1 class="mx-4" data-v-a92a237e>Pedido número #${ssrInterpolate(__props.order.id)}</h1>`);
+      _push(`<h1 class="mx-4" data-v-20dec48c>Pedido número #${ssrInterpolate(__props.order.id)}</h1>`);
       if (__props.order.finished) {
-        _push(`<small class="text-green-500" data-v-a92a237e>Terminado!</small>`);
+        _push(`<small class="text-green-500" data-v-20dec48c>Terminado!</small>`);
       } else {
-        _push(`<small class="text-red-500" data-v-a92a237e>Pendiente!</small>`);
+        _push(`<small class="text-red-500" data-v-20dec48c>Pendiente!</small>`);
       }
-      _push(`</header><div class="flex items-center gap-3 p-4" data-v-a92a237e><form class="flex items-center border p-1" data-v-a92a237e><input type="text" class="me-2"${ssrRenderAttr("value", unref(paymentReferenceForm).payment_reference)} required data-v-a92a237e>`);
-      if (unref(paymentReferenceForm).errors.payment_reference) {
-        _push(`<p class="mx-2" data-v-a92a237e>${ssrInterpolate(unref(paymentReferenceForm).errors.payment_reference)}</p>`);
+      _push(`</header><div class="flex items-center gap-3 p-4" data-v-20dec48c><form style="${ssrRenderStyle(props.order.payment_method === "transferencia" ? null : { display: "none" })}" class="flex-1 flex items-center border p-2 gap-2" data-v-20dec48c>`);
+      if ((_a = __props.order.payment) == null ? void 0 : _a.receipt_image) {
+        _push(`<p class="text-blue-500" data-v-20dec48c>Ya hay un comprobante cargado.</p>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<button${ssrIncludeBooleanAttr(unref(paymentReferenceForm).processing) ? " disabled" : ""} type="submit" class="flex-1 py-1 px-3 bg-blue-400 rounded text-white font-bold" data-v-a92a237e>`);
+      _push(`<input class="flex-1 p-1" placeholder="Ej: Número de comprobante" type="text"${ssrRenderAttr("value", unref(transferPaymentForm).reference)} data-v-20dec48c><input class="flex-1" type="file" accept="image/*" data-v-20dec48c><button${ssrIncludeBooleanAttr(unref(transferPaymentForm).processing) ? " disabled" : ""} type="submit" class="flex-1 py-1 px-3 bg-blue-400 rounded text-white font-bold" data-v-20dec48c>`);
       _push(ssrRenderComponent(unref(FontAwesomeIcon), {
         class: "me-2",
         icon: ["fas", "receipt"]
       }, null, _parent));
-      _push(` Ingresar referencia del pago </button></form><button${ssrIncludeBooleanAttr(unref(finishedForm).processing) ? " disabled" : ""} class="py-1 px-3 bg-blue-400 rounded text-white font-bold" data-v-a92a237e>`);
-      if (__props.order.finished) {
-        _push(`<!--[-->`);
-        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
-          class: "me-2",
-          icon: ["far", "circle-xmark"]
-        }, null, _parent));
-        _push(` Marcar como pendiente <!--]-->`);
-      } else {
-        _push(`<!--[-->`);
-        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
-          class: "me-2",
-          icon: ["far", "circle-check"]
-        }, null, _parent));
-        _push(` Marcar como finalizado <!--]-->`);
-      }
-      _push(`</button></div><article class="my-7 max-w-2xl mx-auto space-y-12" data-v-a92a237e><section data-v-a92a237e><h2 class="text-4xl text-primary mb-5" data-v-a92a237e>General</h2><ul class="space-y-2" data-v-a92a237e><li data-v-a92a237e><span data-v-a92a237e>Artículo:</span><span data-v-a92a237e><span class="me-2" data-v-a92a237e>${ssrInterpolate(__props.order.item.title)}</span><small class="me-4" data-v-a92a237e>(${ssrInterpolate(__props.order.item.type.name)} años)</small>`);
+      _push(` Ingresar pago </button></form>`);
+      _push(ssrRenderComponent(unref(Link), {
+        as: "button",
+        href: `/order/${props.order.id}`,
+        method: "put",
+        data: { finished: !props.order.finished },
+        class: "py-1 px-3 bg-blue-400 rounded text-white font-bold"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            if (__props.order.finished) {
+              _push2(`<!--[-->`);
+              _push2(ssrRenderComponent(unref(FontAwesomeIcon), {
+                class: "me-2",
+                icon: ["far", "circle-xmark"]
+              }, null, _parent2, _scopeId));
+              _push2(` Marcar como pendiente <!--]-->`);
+            } else {
+              _push2(`<!--[-->`);
+              _push2(ssrRenderComponent(unref(FontAwesomeIcon), {
+                class: "me-2",
+                icon: ["far", "circle-check"]
+              }, null, _parent2, _scopeId));
+              _push2(` Marcar como finalizado <!--]-->`);
+            }
+          } else {
+            return [
+              __props.order.finished ? (openBlock(), createBlock(Fragment, { key: 0 }, [
+                createVNode(unref(FontAwesomeIcon), {
+                  class: "me-2",
+                  icon: ["far", "circle-xmark"]
+                }),
+                createTextVNode(" Marcar como pendiente ")
+              ], 64)) : (openBlock(), createBlock(Fragment, { key: 1 }, [
+                createVNode(unref(FontAwesomeIcon), {
+                  class: "me-2",
+                  icon: ["far", "circle-check"]
+                }),
+                createTextVNode(" Marcar como finalizado ")
+              ], 64))
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><article class="my-7 max-w-2xl mx-auto space-y-12" data-v-20dec48c><section data-v-20dec48c><h2 class="text-4xl text-primary mb-5" data-v-20dec48c>General</h2><ul class="space-y-2" data-v-20dec48c><li data-v-20dec48c><span data-v-20dec48c>Artículo:</span><span data-v-20dec48c><span class="me-2" data-v-20dec48c>${ssrInterpolate(__props.order.item.title)}</span><small class="me-4" data-v-20dec48c>(${ssrInterpolate(__props.order.item.type.name)} años)</small>`);
       _push(ssrRenderComponent(unref(Link), {
         href: `/item/${__props.order.item.id}/edit`,
         class: "text-sm text-white font-bold px-2 py-1 rounded bg-blue-300"
@@ -3332,25 +3378,42 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
         }),
         _: 1
       }, _parent));
-      _push(`</span></li><li data-v-a92a237e><span data-v-a92a237e>Prioridad:</span>`);
+      _push(`</span></li><li data-v-20dec48c><span data-v-20dec48c>Prioridad:</span>`);
       if (__props.order.high_priority) {
-        _push(`<span class="text-green-500 font-bold" data-v-a92a237e>Si</span>`);
+        _push(`<span class="text-green-500 font-bold" data-v-20dec48c>Si</span>`);
       } else {
-        _push(`<span class="text-red-500 font-bold" data-v-a92a237e>No</span>`);
+        _push(`<span class="text-red-500 font-bold" data-v-20dec48c>No</span>`);
       }
-      _push(`</li><li data-v-a92a237e><span data-v-a92a237e>Ubicación en mapa:</span>`);
+      _push(`</li><li data-v-20dec48c><span data-v-20dec48c>Ubicación en mapa:</span>`);
       if (__props.order.map_ubication) {
-        _push(`<span class="text-green-500 font-bold" data-v-a92a237e>Si</span>`);
+        _push(`<span class="text-green-500 font-bold" data-v-20dec48c>Si</span>`);
       } else {
-        _push(`<span class="text-red-500 font-bold" data-v-a92a237e>No</span>`);
+        _push(`<span class="text-red-500 font-bold" data-v-20dec48c>No</span>`);
       }
-      _push(`</li><li data-v-a92a237e><span data-v-a92a237e>Confirmación por whatsapp:</span>`);
+      _push(`</li><li data-v-20dec48c><span data-v-20dec48c>Confirmación por whatsapp:</span>`);
       if (__props.order.whatsapp_confirmation) {
-        _push(`<span class="text-green-500 font-bold" data-v-a92a237e>Si</span>`);
+        _push(`<span class="text-green-500 font-bold" data-v-20dec48c>Si</span>`);
       } else {
-        _push(`<span class="text-red-500 font-bold" data-v-a92a237e>No</span>`);
+        _push(`<span class="text-red-500 font-bold" data-v-20dec48c>No</span>`);
       }
-      _push(`</li><li data-v-a92a237e><span data-v-a92a237e>Precio final:</span><span data-v-a92a237e>$${ssrInterpolate(__props.order.price)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Fecha:</span><span data-v-a92a237e>${ssrInterpolate(new Date(__props.order.created_at).toLocaleString())}</span></li><li data-v-a92a237e><span data-v-a92a237e>Método de pago:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.payment_method)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Referencia del pago:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.payment_reference)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Finalizado:</span><span class="text-xl" data-v-a92a237e>`);
+      _push(`</li><li data-v-20dec48c><span data-v-20dec48c>Precio final:</span><span class="uppercase" data-v-20dec48c>${ssrInterpolate(__props.order.currency)} ${ssrInterpolate(__props.order.price)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Fecha:</span><span data-v-20dec48c>${ssrInterpolate(new Date(__props.order.created_at).toLocaleString())}</span></li><li data-v-20dec48c><span data-v-20dec48c>Método de pago:</span><span class="uppercase" data-v-20dec48c>${ssrInterpolate(__props.order.payment_method)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Pagado:</span><span class="text-xl flex items-center" data-v-20dec48c>`);
+      if ((_b = __props.order.payment) == null ? void 0 : _b.receipt_image) {
+        _push(`<a${ssrRenderAttr("href", `/transfer-payment/${props.order.id}/view`)} target="_blank" class="text-xs text-primary underline me-2" data-v-20dec48c>Ver comprobante</a>`);
+      } else {
+        _push(`<!---->`);
+      }
+      if ((_c = __props.order.payment) == null ? void 0 : _c.is_paid) {
+        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+          icon: ["far", "circle-check"],
+          class: "text-green-500"
+        }, null, _parent));
+      } else {
+        _push(ssrRenderComponent(unref(FontAwesomeIcon), {
+          icon: ["far", "circle-xmark"],
+          class: "text-red-500"
+        }, null, _parent));
+      }
+      _push(`</span></li><li data-v-20dec48c><span data-v-20dec48c>Finalizado:</span><span class="text-xl" data-v-20dec48c>`);
       if (__props.order.finished) {
         _push(ssrRenderComponent(unref(FontAwesomeIcon), {
           icon: ["far", "circle-check"],
@@ -3362,7 +3425,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
           class: "text-red-500"
         }, null, _parent));
       }
-      _push(`</span></li></ul></section><section data-v-a92a237e><h2 class="text-4xl text-primary mb-5" data-v-a92a237e>Evento</h2><ul class="space-y-2" data-v-a92a237e><li data-v-a92a237e><span data-v-a92a237e>Nombre:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.birthday_name)}</span> <small data-v-a92a237e>(${ssrInterpolate(__props.order.birthday_age)} años)</small></li><li data-v-a92a237e><span data-v-a92a237e>Dirección principal:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.birthday_main_address)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Dirección secundaria:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.birthday_secondary_address)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Fecha:</span><span data-v-a92a237e>${ssrInterpolate(new Date(__props.order.birthday_date).toLocaleDateString())}</span></li><li data-v-a92a237e><span data-v-a92a237e>Horario:</span><span data-v-a92a237e>Desde ${ssrInterpolate(__props.order.birthday_from_time.slice(0, 5))} hasta ${ssrInterpolate(__props.order.birthday_to_time.slice(0, 5))}</span></li><li data-v-a92a237e><span data-v-a92a237e>Observación:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.observation)}</span></li></ul></section><section data-v-a92a237e><h2 class="text-4xl text-primary mb-5" data-v-a92a237e>Contacto</h2><ul class="space-y-2" data-v-a92a237e><li data-v-a92a237e><span data-v-a92a237e>Nombre:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.contact_name)}</span></li><li data-v-a92a237e><span data-v-a92a237e>Teléfono:</span><span data-v-a92a237e>${ssrInterpolate(__props.order.contact_number)}</span></li></ul></section></article><!--]-->`);
+      _push(`</span></li></ul></section><section data-v-20dec48c><h2 class="text-4xl text-primary mb-5" data-v-20dec48c>Evento</h2><ul class="space-y-2" data-v-20dec48c><li data-v-20dec48c><span data-v-20dec48c>Nombre:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.birthday_name)}</span> <small data-v-20dec48c>(${ssrInterpolate(__props.order.birthday_age)} años)</small></li><li data-v-20dec48c><span data-v-20dec48c>Dirección principal:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.birthday_main_address)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Dirección secundaria:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.birthday_secondary_address)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Fecha:</span><span data-v-20dec48c>${ssrInterpolate(new Date(__props.order.birthday_date).toLocaleDateString())}</span></li><li data-v-20dec48c><span data-v-20dec48c>Horario:</span><span data-v-20dec48c>Desde ${ssrInterpolate(__props.order.birthday_from_time.slice(0, 5))} hasta ${ssrInterpolate(__props.order.birthday_to_time.slice(0, 5))}</span></li><li data-v-20dec48c><span data-v-20dec48c>Observación:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.observation)}</span></li></ul></section><section data-v-20dec48c><h2 class="text-4xl text-primary mb-5" data-v-20dec48c>Contacto</h2><ul class="space-y-2" data-v-20dec48c><li data-v-20dec48c><span data-v-20dec48c>Nombre:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.contact_name)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Teléfono:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.contact_number)}</span></li></ul></section></article><!--]-->`);
     };
   }
 });
@@ -3372,7 +3435,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/Show.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const Show$1 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-a92a237e"]]);
+const Show$1 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-20dec48c"]]);
 const __vite_glob_0_19 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Show$1

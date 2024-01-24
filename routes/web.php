@@ -7,6 +7,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ItemFileController;
 use App\Http\Controllers\PayPalPaymentController;
+use App\Http\Controllers\TransferPaymentController;
 use App\Http\Controllers\MercadopagoPaymentController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NotificationController;
@@ -37,6 +38,9 @@ Route::post('/mercadopago-payment/{order}/state', [MercadopagoPaymentController:
 
 Route::post('/paypal-payment/{order}/create', [PayPalPaymentController::class, 'create'])->name('paypal-payment.create');
 Route::post('/paypal-payment/{order}/capture', [PayPalPaymentController::class, 'capture'])->name('paypal-payment.capture');
+
+Route::post('/transfer-payment/{order}', [TransferPaymentController::class, 'store'])->name('transfer-payment.store');
+Route::get('/transfer-payment/{order}/view', [TransferPaymentController::class, 'view'])->name('transfer-payment.view');
 
 Route::get('/currency/{code}', CurrencyController::class);
 Route::get('/item/{item}/thumbnail', [ItemController::class, 'thumbnail']);

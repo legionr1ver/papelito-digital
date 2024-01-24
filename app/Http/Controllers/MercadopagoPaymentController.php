@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use App\Exceptions\PaymentRejectedException;
 use App\Models\Order;
 use App\Models\MercadopagoPayment;
@@ -52,6 +53,7 @@ class MercadopagoPaymentController extends Controller
         DB::transaction(function () use ($response, $order) {
 
             $payment = new MercadopagoPayment();
+            $payment->uuid = Str::uuid();
             $payment->preference_id = $response['id'];
             $payment->save();
 
@@ -79,7 +81,7 @@ class MercadopagoPaymentController extends Controller
 
         $response = Http::acceptJson()
             ->withToken(config('mercadopago.access_token'))
-            ->withHeader('X-Idempotency-Key', $order->id)
+            ->withHeader('X-Idempotency-Key', $order->payment->uuid)
             ->post('https://api.mercadopago.com/v1/payments', [
 
                 'external_reference' => $order->id,

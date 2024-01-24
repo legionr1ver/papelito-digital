@@ -23,7 +23,7 @@ class OrderController extends Controller
             'finished' => 'nullable',
         ]);
 
-        $q = Order::with('item.type')
+        $q = Order::with('item.type','payment')
             ->orderBy('created_at','desc');
 
         $q->when($request->input('query'), function($query, $q){
@@ -48,7 +48,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        $order->load('item.type');
+        $order->load('item.type','payment');
 
         return Inertia::render('Orders/Show', [
             'order' => $order,
@@ -62,11 +62,9 @@ class OrderController extends Controller
     {
         $request->validate([
             'finished' => 'sometimes|boolean',
-            'payment_reference' => 'sometimes',
         ]);
         
         $order->finished = $request->input('finished', $order->finished);
-        $order->payment_reference = $request->input('payment_reference', $order->payment_reference);
         $order->save();
 
         //OrderPaid::dispatchIf($order->paid, $order);
@@ -122,11 +120,14 @@ class OrderController extends Controller
         $currency = $request->input('currency');
 
         $order->currency = $currency;
+        
+        $discount = $request->input('payment_method') === 'transferencia' ? 0.1 : 0;
         $order->price = $order->calculatePrice(
             $currency, 
             $configurations->get("high_priority_price_$currency"), 
             $configurations->get("map_ubication_price_$currency"), 
-            $configurations->get("whatsapp_confirmation_price_$currency")
+            $configurations->get("whatsapp_confirmation_price_$currency"),
+            $discount
         );
         $order->save();
 

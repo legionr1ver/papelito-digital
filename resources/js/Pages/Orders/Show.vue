@@ -7,6 +7,7 @@ export default {
 
 <script setup>
 import { Link, useForm } from '@inertiajs/vue3';
+import { ref } from 'vue';
 
 /* fontawesome */
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -22,17 +23,18 @@ const props = defineProps({
   },
 });
 
-const paymentReferenceForm = useForm({
-  payment_reference: '',
+const receiptImageInput = ref(null);
+const transferPaymentForm = useForm({
+  reference: '',
+  receipt_image: null,
 });
 
-const finishedForm = useForm({
-  finished: !props.order.finished,
-});
-
-function submitPaymentReference(){
-  paymentReferenceForm.put(`/order/${props.order.id}`, {
-    onSuccess: () => paymentReferenceForm.reset(),
+function submitTransferPayment(){
+  transferPaymentForm.post(`/transfer-payment/${props.order.id}`, {
+    onSuccess: () => {
+      transferPaymentForm.reset();
+      receiptImageInput.value.value = '';
+    },
   });
 }
 </script>
@@ -52,17 +54,21 @@ function submitPaymentReference(){
 
   <div class="flex items-center gap-3 p-4">
 
-    <form @submit.prevent="submitPaymentReference" class="flex items-center border p-1">
-      <input type="text" class="me-2" v-model="paymentReferenceForm.payment_reference" required>
-      <p v-if="paymentReferenceForm.errors.payment_reference" class="mx-2">{{ paymentReferenceForm.errors.payment_reference }}</p>
+    <form v-show="props.order.payment_method === 'transferencia'" @submit.prevent="submitTransferPayment" class="flex-1 flex items-center border p-2 gap-2">
 
-      <button :disabled="paymentReferenceForm.processing" type="submit" class="flex-1 py-1 px-3 bg-blue-400 rounded text-white font-bold">
+      <p v-if="order.payment?.receipt_image" class="text-blue-500">Ya hay un comprobante cargado.</p>
+
+      <input class="flex-1 p-1" placeholder="Ej: Número de comprobante" type="text" v-model="transferPaymentForm.reference">
+      
+      <input class="flex-1" ref="receiptImageInput" @input="transferPaymentForm.receipt_image = $event.target.files[0]" type="file" accept="image/*">
+
+      <button :disabled="transferPaymentForm.processing" type="submit" class="flex-1 py-1 px-3 bg-blue-400 rounded text-white font-bold">
         <FontAwesomeIcon class="me-2" :icon="['fas', 'receipt']" />
-        Ingresar referencia del pago
+        Ingresar pago
       </button>
     </form>
 
-    <button :disabled="finishedForm.processing" @click="finishedForm.put(`/order/${props.order.id}`)" class="py-1 px-3 bg-blue-400 rounded text-white font-bold">
+    <Link as="button" :href="`/order/${props.order.id}`" method="put" :data="{finished: !props.order.finished}" class="py-1 px-3 bg-blue-400 rounded text-white font-bold">
       <template v-if="order.finished">
         <FontAwesomeIcon class="me-2" :icon="['far', 'circle-xmark']" />
         Marcar como pendiente
@@ -71,7 +77,7 @@ function submitPaymentReference(){
         <FontAwesomeIcon class="me-2" :icon="['far', 'circle-check']" />
         Marcar como finalizado
       </template>
-    </button>
+    </Link>
       
   </div>
 
@@ -106,7 +112,7 @@ function submitPaymentReference(){
         </li>
         <li>
           <span>Precio final:</span>
-          <span>${{ order.price }}</span>
+          <span class="uppercase">{{ order.currency }} {{ order.price }}</span>
         </li>
         <li>
           <span>Fecha:</span>
@@ -114,12 +120,14 @@ function submitPaymentReference(){
         </li>
         <li>
           <span>Método de pago:</span>
-          <span>{{ order.payment_method }}</span>
+          <span class="uppercase">{{ order.payment_method }}</span>
         </li>
         <li>
-          <span>Referencia del pago:</span>
-          <span>
-            {{ order.payment_reference }}
+          <span>Pagado:</span>
+          <span class="text-xl flex items-center">
+            <a v-if="order.payment?.receipt_image" :href="`/transfer-payment/${props.order.id}/view`" target="_blank" class="text-xs text-primary underline me-2">Ver comprobante</a>
+            <FontAwesomeIcon v-if="order.payment?.is_paid" :icon="['far', 'circle-check']" class="text-green-500" />
+            <FontAwesomeIcon v-else :icon="['far', 'circle-xmark']" class="text-red-500" />
           </span>
         </li>
         <li>

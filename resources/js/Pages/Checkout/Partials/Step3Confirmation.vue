@@ -54,7 +54,7 @@ const finalPrice = computed(() => {
             </li>
             <li>
                 <span>Total</span>
-                <span class="font-bold">${{ finalPrice }}</span>
+                <span class="font-bold">{{ page.props.currency.label }} {{ finalPrice }}</span>
             </li>
         </ul>
     </section>

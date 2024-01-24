@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Models\Item;
 
 class Order extends Model
@@ -22,6 +23,7 @@ class Order extends Model
         'map_ubication' => 'boolean',
         'whatsapp_confirmation' => 'boolean',
         'price' => 'double',
+        'finished' => 'boolean',
     ];
 
     /**
@@ -43,11 +45,13 @@ class Order extends Model
     /**
      * Calculate order's price
      */
-    public function calculatePrice(string $currency, float $highPriorityPrice, float $mapUbicationPrice, float $whatsappConfirmationPrice): float
+    public function calculatePrice(string $currency, float $highPriorityPrice, float $mapUbicationPrice, float $whatsappConfirmationPrice, float $discount): float
     {
-        return $this->item->{$currency.'_price'}
+        $price = $this->item->{$currency.'_price'}
             + ($this->high_priority ? $highPriorityPrice : 0)
             + ($this->map_ubication ? $mapUbicationPrice : 0)
             + ($this->whatsapp_confirmation ? $whatsappConfirmationPrice : 0);
+
+        return floor( $price *= (1 - $discount) );
     }
 }
