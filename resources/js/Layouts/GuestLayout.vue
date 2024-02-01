@@ -20,7 +20,7 @@ function submitSearch() {
         <div id="top" class="bg-secondary text-center text-white p-2 text-xl">
             <p class="font-serif">Envíos gratis por E-mail o Whatsapp</p>
         </div>
-        <div class="max-w-[1200px] mx-auto flex">
+        <div class="max-w-[1200px] mx-auto flex px-2">
             <div class="flex-initial flex items-center">
                 <Link href="/">
                 <img class="max-w-[5rem] lg:max-w-[7rem] mx-auto p-3" src="/assets/images/logo.png"

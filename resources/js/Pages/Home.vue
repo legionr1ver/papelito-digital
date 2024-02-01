@@ -71,25 +71,23 @@ import { Link } from '@inertiajs/vue3';
             </Link>
         </div>
     </div>
-    <div id="plazos-de-entrega" class="p-20 bg-[#d2b4de]">
-        <div class="max-w-[1200px] mx-auto grid grid-cols-1 gap-y-8 lg:grid-cols-2 font-serif">
+    <div id="plazos-de-entrega" class="p-5 bg-[#d2b4de]">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 items-center gap-y-8 lg:grid-cols-2 font-serif">
             <div>
-                <div
-                    class="relative max-w-[560px] mx-auto h-[545px] bg-[url('/assets/images/tiempos-de-entrega/times-background.svg')] bg-no-repeat bg-cover">
-                    <div class="absolute max-w-[370px] top-[86px] left-[96px]">
-                        <h2 class="text-[#5f86e1] text-[44px] mb-4">Plazos de entrega</h2>
-                        <ul class="text-[#88a3e2] text-[23px] list-disc leading-6 space-y-3">
+                <div class="relative max-w-[500px] mx-auto">
+                    <img class="w-full h-[585px] object-cover" src="/assets/images/tiempos-de-entrega/times-background.svg">
+                    <div class="absolute top-[20%] left-[20%] w-[63%]">
+                        <h2 class="text-[#5f86e1] text-3xl mb-4">Plazos de entrega</h2>
+                        <ul class="text-[#88a3e2] text-xl list-disc leading-6 space-y-3">
                             <li>Hasta 72Hs hábiles para todos los diseños</li>
-                            <li>Elegì la opcion “super rapida” si la necesitas para el mismo dìa (antes de las 16hs)
-                            </li>
-                            <li>En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según
-                                disponibilidad</li>
+                            <li>Elegì la opcion “super rapida” si la necesitas para el mismo dìa (antes de las 16hs)</li>
+                            <li>En caso de querer un diseño nuevo el tiempo mínimo es de 72Hs hábiles según disponibilidad</li>
                         </ul>
                     </div>
-                    <div
-                        class="absolute bottom-[-31px] right-[-31px] bg-[url('/assets/images/tiempos-de-entrega/star-background.svg')] w-[230px] h-[230px] bg-no-repeat bg-cover">
-                        <p class="text-white text-center w-[128px] absolute top-[50px] left-[50px]">Si no tenes algun
-                            dato podes reservarla igual y dejar pendiente el armado</p>
+
+                    <div class="hidden">
+                        <img src="/assets/images/tiempos-de-entrega/star-background.svg">
+                        <p class="text-white text-center w-[128px] absolute top-[50px] left-[50px]">Si no tenes algun dato podes reservarla igual y dejar pendiente el armado</p>
                     </div>
                 </div>
             </div>
@@ -125,7 +123,7 @@ import { Link } from '@inertiajs/vue3';
             </div>
         </div>
     </div>
-    <div id="categorias-mas-pedidas" class="max-w-[1200px] mx-auto p-20">
+    <div id="categorias-mas-pedidas" class="max-w-[1200px] mx-auto p-5">
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Categorías mas pedidas</h2>
         <div class="grid md:grid-cols-3 gap-4 text-xl text-primary font-bold">
             <Link href="/gallery" :data="{slug:'baby-showers'}" as="div" class="grid items-center cursor-pointer group">
@@ -167,11 +165,10 @@ import { Link } from '@inertiajs/vue3';
         </div>
         <div class="text-center p-10">
             <h3 class="mb-8 text-primary text-[22px] font-serif">¿Buscas una tematica nueva?</h3>
-            <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank" class="text-white text-[16px] font-extrabold py-4 px-10 bg-primary rounded-full">CONTÁCTANOS
-                AHORA</a>
+            <a href="https://api.whatsapp.com/message/MQG3D2XP3BMWD1?autoload=1&app_absent=0" target="_blank" class="text-white text-xl font-extrabold py-3 px-6 bg-primary rounded-full">CONTÁCTANOS</a>
         </div>
     </div>
-    <div id="kits-imprimibles" class="p-20 bg-[#d2b4de]">
+    <div id="kits-imprimibles" class="p-5 bg-[#d2b4de]">
         <div class="max-w-[1200px] mx-auto">
             <header class="text-white text-center mb-12">
                 <h2 class="text-[56px] font-serif mb-4">Kits imprimibles para decoràr tus eventos</h2>
@@ -199,9 +196,9 @@ import { Link } from '@inertiajs/vue3';
             </p>
         </div>
     </div>
-    <div id="clientes-satisfechos" class="max-w-[1200px] mx-auto p-20">
+    <div id="clientes-satisfechos" class="max-w-[1200px] mx-auto p-5">
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Clientes satisfechos</h2>
-        <div class="grid md:grid-cols-3 gap-12">
+        <div class="grid md:grid-cols-3 gap-12 justify-center">
             <div>
                 <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
             </div>
@@ -213,7 +210,7 @@ import { Link } from '@inertiajs/vue3';
             </div>
         </div>
     </div>
-    <div id="quienes-somos" class="grid grid-cols-[2fr_1fr] gap-6 max-w-[1200px] mx-auto p-20">
+    <div id="quienes-somos" class="grid grid-flow-col gap-6 max-w-[1200px] mx-auto p-5">
         <div class="font-serif text-center">
             <header>
                 <p class="text-[20px] text-[#fc8dca]">SOBRE NOSOTROS</p>
@@ -246,7 +243,7 @@ import { Link } from '@inertiajs/vue3';
                 <a href="mailto:contacto@papelitodigital.com.ar" target="_blank" class="text-[16px] text-[#fc8dca] underline underline-offset-8">ENVIAME UN EMAIL</a>
             </div>
         </div>
-        <div class="flex">
+        <div class="hidden md:flex">
             <img class="object-cover" src="/assets/images/quienes-somos.webp">
         </div>
     </div>
