@@ -200,13 +200,13 @@ import { Link } from '@inertiajs/vue3';
         <h2 class="text-[40px] text-primary text-center font-serif mb-8">Clientes satisfechos</h2>
         <div class="grid md:grid-cols-3 gap-12 justify-center">
             <div>
-                <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
+                <img src="/assets/images/clientes-satisfechos/testimonio-anonimo.webp">
             </div>
             <div>
-                <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
+                <img src="/assets/images/clientes-satisfechos/testimonio-beel.webp">
             </div>
             <div>
-                <img src="/assets/images/clientes-satisfechos/cliente-mauro.webp">
+                <img src="/assets/images/clientes-satisfechos/testimonio-bren.webp">
             </div>
         </div>
     </div>

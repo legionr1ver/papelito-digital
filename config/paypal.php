@@ -12,8 +12,8 @@ return [
     |
     */
 
-    'client_id' => env('PAYPAL_CLIENT_ID'),
-    'client_secret' => env('PAYPAL_CLIENT_SECRET'),
+    'client_id' => env('PAYPAL_CLIENT_ID', 'AcmdOT3_Bw6ofMIPOPxQmOyr9V_TzxoddkSmBKPxBQhmYTCDCtLNxAXKgf7HeznH2aH_fZXSi3b-c1N1'),
+    'client_secret' => env('PAYPAL_CLIENT_SECRET', 'EIcemcTQtmVXSWmDAfkYyDqVhKCFGJ0izuZmdb8RFShA-lqdfaz8LIGquZ9o5WBCBBuj_an0hLlPanK9'),
 
     /*
     |--------------------------------------------------------------------------
