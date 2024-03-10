@@ -6,7 +6,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ItemFileController;
-use App\Http\Controllers\PayPalPaymentController;
+use App\Http\Controllers\PaypalPaymentController;
 use App\Http\Controllers\TransferPaymentController;
 use App\Http\Controllers\MercadopagoPaymentController;
 use App\Http\Controllers\CheckoutController;
@@ -36,8 +36,8 @@ Route::post('/mercadopago-payment/{order}/preference', [MercadopagoPaymentContro
 Route::post('/mercadopago-payment/{order}/payment', [MercadopagoPaymentController::class, 'payment'])->name('mercadopago-payment.payment');
 Route::post('/mercadopago-payment/{order}/state', [MercadopagoPaymentController::class, 'state'])->name('mercadopago-payment.state');
 
-Route::post('/paypal-payment/{order}/create', [PayPalPaymentController::class, 'create'])->name('paypal-payment.create');
-Route::post('/paypal-payment/{order}/capture', [PayPalPaymentController::class, 'capture'])->name('paypal-payment.capture');
+Route::post('/paypal-payment/{order}/create', [PaypalPaymentController::class, 'create'])->name('paypal-payment.create');
+Route::post('/paypal-payment/{order}/capture', [PaypalPaymentController::class, 'capture'])->name('paypal-payment.capture');
 
 Route::post('/transfer-payment/{order}', [TransferPaymentController::class, 'store'])->name('transfer-payment.store');
 Route::get('/transfer-payment/{order}/view', [TransferPaymentController::class, 'view'])->name('transfer-payment.view');
