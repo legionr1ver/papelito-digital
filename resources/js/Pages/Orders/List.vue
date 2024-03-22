@@ -65,8 +65,8 @@ const search = useForm({
     <tbody>
       <tr v-for="order in paginatedOrders.data" class="even:bg-slate-50">
         <td class="py-4">
-          <strong>{{ order.item.title }}</strong>
-          <small class="mx-2">({{ order.item.type.name }})</small>
+          <strong>{{ order.item?.title || 'Eliminado' }}</strong>
+          <small class="mx-2">({{ order.item?.type.name || 'Eliminado' }})</small>
         </td>
         <td>{{ order.birthday_name }}</td>
         <td class="uppercase">{{ order.currency }} {{ order.price }}</td>

@@ -39,6 +39,8 @@ class MercadopagoPaymentController extends Controller
                         'title' => $order->item->title,
                         'quantity' => 1,
                         'unit_price' => $order->price,
+                        'category_id' => 'services',
+                        'description' => $order->item->description,
                     ],
                 ],
                 'auto_return' => 'approved',
@@ -97,7 +99,8 @@ class MercadopagoPaymentController extends Controller
                         'type' => $request->input('payer.identification.type'),
                         'number' => $request->input('payer.identification.number'),
                     ]
-                ]
+                ],
+                "binary_mode" => true,
             ])
             ->throw();
 

@@ -3179,8 +3179,8 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
       } else {
         _push(`<table class="w-full my-3 text-center"><thead class="bg-primary text-white"><th class="py-1" scope="col">Artículo</th><th scope="col">Cumpleañero/a</th><th scope="col">Monto</th><th scope="col">Prioridad</th><th scope="col">Método de pago</th><th scope="col">Pagado</th><th scope="col">Estado</th><th scope="col">Fecha</th><th scope="col"></th></thead><tbody><!--[-->`);
         ssrRenderList(__props.paginatedOrders.data, (order) => {
-          var _a;
-          _push(`<tr class="even:bg-slate-50"><td class="py-4"><strong>${ssrInterpolate(order.item.title)}</strong><small class="mx-2">(${ssrInterpolate(order.item.type.name)})</small></td><td>${ssrInterpolate(order.birthday_name)}</td><td class="uppercase">${ssrInterpolate(order.currency)} ${ssrInterpolate(order.price)}</td><td>`);
+          var _a, _b, _c;
+          _push(`<tr class="even:bg-slate-50"><td class="py-4"><strong>${ssrInterpolate(((_a = order.item) == null ? void 0 : _a.title) || "Eliminado")}</strong><small class="mx-2">(${ssrInterpolate(((_b = order.item) == null ? void 0 : _b.type.name) || "Eliminado")})</small></td><td>${ssrInterpolate(order.birthday_name)}</td><td class="uppercase">${ssrInterpolate(order.currency)} ${ssrInterpolate(order.price)}</td><td>`);
           if (order.high_priority) {
             _push(ssrRenderComponent(unref(FontAwesomeIcon), {
               icon: ["far", "circle-check"],
@@ -3209,7 +3209,7 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign(__default__$1, {
             _push(`<!---->`);
           }
           _push(`</td><td>`);
-          if ((_a = order.payment) == null ? void 0 : _a.is_paid) {
+          if ((_c = order.payment) == null ? void 0 : _c.is_paid) {
             _push(ssrRenderComponent(unref(FontAwesomeIcon), {
               icon: ["far", "circle-check"],
               class: "text-green-500"
