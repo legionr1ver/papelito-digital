@@ -89,10 +89,10 @@ function submitTransferPayment(){
       <ul class="space-y-2">
         <li>
           <span>Artículo:</span>
-          <span>
+          <span class="flex gap-2 items-center">
             <span class="me-2">{{ order.item.title }}</span>
-            <small class="me-4">({{ order.item.type.name }} años)</small>
             <Link :href="`/item/${order.item.id}/edit`" class="text-sm text-white font-bold px-2 py-1 rounded bg-blue-300">Ver</Link>
+            <a v-if="order.item.canva_url" class="text-sm text-white font-bold px-2 py-1 rounded bg-blue-300" :href="order.item.canva_url" target="_blank">Canva</a>
           </span>
         </li>
         <li>

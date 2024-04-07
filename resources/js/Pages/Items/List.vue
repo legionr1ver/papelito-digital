@@ -43,6 +43,13 @@ defineProps({
           </div>
         </header>
         <div class="py-1">
+          <span>Canva: </span>
+          <strong>
+            <a v-if="item.canva_url" :href="item.canva_url" target="_blank" class="text-white bg-primary p-1 rounded">Link</a>
+            <span v-else class="ms-2">-</span>
+          </strong>
+        </div>
+        <div class="py-1">
           <span>Descripcion: </span>
           <strong class="ms-2">{{ item.description }}</strong>
         </div>

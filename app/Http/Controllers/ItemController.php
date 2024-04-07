@@ -53,6 +53,7 @@ class ItemController extends Controller
 
             $item = new Item();
             $item->title = $request->input('title');
+            $item->canva_url = $request->input('canva_url');
             $item->description = $request->input('description');
             $item->ars_price = $request->input('ars_price');
             $item->usd_price = $request->input('usd_price');
@@ -118,6 +119,7 @@ class ItemController extends Controller
         $item->tags()->sync($tagsId);
 
         $item->title = $request->input('title');
+        $item->canva_url = $request->input('canva_url');
         $item->description = $request->input('description');
         $item->ars_price = $request->input('ars_price');
         $item->usd_price = $request->input('usd_price');

@@ -24,6 +24,7 @@ const props = defineProps({
 
 const form = useForm({
   title: null,
+  canva_url: null,
   description: null,
   ars_price: null,
   usd_price: null,
@@ -74,6 +75,11 @@ function submit(){
         <Label for="title">Titulo</Label>
         <Input v-model="form.title" id="title" type="text" required />
         <Alert v-if="form.errors.title" type="danger">{{ form.errors.title }}</Alert>
+      </div>
+      <div>
+        <Label for="canva-url">Link Canva</Label>
+        <Input v-model="form.canva_url" id="canva-url" type="url" />
+        <Alert v-if="form.errors.canva_url" type="danger">{{ form.errors.canva_url }}</Alert>
       </div>
       <div>
         <Label for="description">Descripcion</Label>

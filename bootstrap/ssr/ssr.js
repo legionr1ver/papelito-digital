@@ -2004,6 +2004,7 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$5, {
     const props = __props;
     const form = useForm({
       title: null,
+      canva_url: null,
       description: null,
       ars_price: null,
       usd_price: null,
@@ -2070,6 +2071,41 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign(__default__$5, {
             } else {
               return [
                 createTextVNode(toDisplayString(unref(form).errors.title), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "canva-url" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Link Canva`);
+          } else {
+            return [
+              createTextVNode("Link Canva")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$s, {
+        modelValue: unref(form).canva_url,
+        "onUpdate:modelValue": ($event) => unref(form).canva_url = $event,
+        id: "canva-url",
+        type: "url"
+      }, null, _parent));
+      if (unref(form).errors.canva_url) {
+        _push(ssrRenderComponent(_sfc_main$p, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.canva_url)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.canva_url), 1)
               ];
             }
           }),
@@ -2418,6 +2454,7 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
     const form = useForm({
       _method: "put",
       title: props.item.title,
+      canva_url: props.item.canva_url,
       description: props.item.description,
       ars_price: props.item.ars_price,
       usd_price: props.item.usd_price,
@@ -2482,6 +2519,41 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign(__default__$4, {
             } else {
               return [
                 createTextVNode(toDisplayString(unref(form).errors.title), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div>`);
+      _push(ssrRenderComponent(Label, { for: "canva-url" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Link Canva`);
+          } else {
+            return [
+              createTextVNode("Link Canva")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_sfc_main$s, {
+        modelValue: unref(form).canva_url,
+        "onUpdate:modelValue": ($event) => unref(form).canva_url = $event,
+        id: "canva-url",
+        type: "url"
+      }, null, _parent));
+      if (unref(form).errors.canva_url) {
+        _push(ssrRenderComponent(_sfc_main$p, { type: "danger" }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(unref(form).errors.canva_url)}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(unref(form).errors.canva_url), 1)
               ];
             }
           }),
@@ -2867,7 +2939,13 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign(__default__$3, {
           }),
           _: 2
         }, _parent));
-        _push(`</div></header><div class="py-1"><span>Descripcion: </span><strong class="ms-2">${ssrInterpolate(item.description)}</strong></div><div class="py-1"><span>Precio: </span><strong class="ms-2">ARS $${ssrInterpolate(item.ars_price)} / USD $${ssrInterpolate(item.usd_price)}</strong></div><div class="py-1"><span class="me-2">Tags:</span>`);
+        _push(`</div></header><div class="py-1"><span>Canva: </span><strong>`);
+        if (item.canva_url) {
+          _push(`<a${ssrRenderAttr("href", item.canva_url)} target="_blank" class="text-white bg-primary p-1 rounded">Link</a>`);
+        } else {
+          _push(`<span class="ms-2">-</span>`);
+        }
+        _push(`</strong></div><div class="py-1"><span>Descripcion: </span><strong class="ms-2">${ssrInterpolate(item.description)}</strong></div><div class="py-1"><span>Precio: </span><strong class="ms-2">ARS $${ssrInterpolate(item.ars_price)} / USD $${ssrInterpolate(item.usd_price)}</strong></div><div class="py-1"><span class="me-2">Tags:</span>`);
         if (item.tags.length === 0) {
           _push(`<strong>Sin tags</strong>`);
         } else {
@@ -3264,7 +3342,7 @@ const __vite_glob_0_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
-const Show_vue_vue_type_style_index_0_scoped_20dec48c_lang = "";
+const Show_vue_vue_type_style_index_0_scoped_239534a9_lang = "";
 const __default__ = {
   layout: _sfc_main$d
 };
@@ -3287,7 +3365,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
     });
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b, _c;
-      _push(`<!--[--><header class="flex items-center my-2 text-3xl" data-v-20dec48c>`);
+      _push(`<!--[--><header class="flex items-center my-2 text-3xl" data-v-239534a9>`);
       _push(ssrRenderComponent(unref(Link), { href: "/order" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -3300,19 +3378,19 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
         }),
         _: 1
       }, _parent));
-      _push(`<h1 class="mx-4" data-v-20dec48c>Pedido número #${ssrInterpolate(__props.order.id)}</h1>`);
+      _push(`<h1 class="mx-4" data-v-239534a9>Pedido número #${ssrInterpolate(__props.order.id)}</h1>`);
       if (__props.order.finished) {
-        _push(`<small class="text-green-500" data-v-20dec48c>Terminado!</small>`);
+        _push(`<small class="text-green-500" data-v-239534a9>Terminado!</small>`);
       } else {
-        _push(`<small class="text-red-500" data-v-20dec48c>Pendiente!</small>`);
+        _push(`<small class="text-red-500" data-v-239534a9>Pendiente!</small>`);
       }
-      _push(`</header><div class="flex items-center gap-3 p-4" data-v-20dec48c><form style="${ssrRenderStyle(props.order.payment_method === "transferencia" ? null : { display: "none" })}" class="flex-1 flex items-center border p-2 gap-2" data-v-20dec48c>`);
+      _push(`</header><div class="flex items-center gap-3 p-4" data-v-239534a9><form style="${ssrRenderStyle(props.order.payment_method === "transferencia" ? null : { display: "none" })}" class="flex-1 flex items-center border p-2 gap-2" data-v-239534a9>`);
       if ((_a = __props.order.payment) == null ? void 0 : _a.receipt_image) {
-        _push(`<p class="text-blue-500" data-v-20dec48c>Ya hay un comprobante cargado.</p>`);
+        _push(`<p class="text-blue-500" data-v-239534a9>Ya hay un comprobante cargado.</p>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<input class="flex-1 p-1" placeholder="Ej: Número de comprobante" type="text"${ssrRenderAttr("value", unref(transferPaymentForm).reference)} data-v-20dec48c><input class="flex-1" type="file" accept="image/*" data-v-20dec48c><button${ssrIncludeBooleanAttr(unref(transferPaymentForm).processing) ? " disabled" : ""} type="submit" class="flex-1 py-1 px-3 bg-blue-400 rounded text-white font-bold" data-v-20dec48c>`);
+      _push(`<input class="flex-1 p-1" placeholder="Ej: Número de comprobante" type="text"${ssrRenderAttr("value", unref(transferPaymentForm).reference)} data-v-239534a9><input class="flex-1" type="file" accept="image/*" data-v-239534a9><button${ssrIncludeBooleanAttr(unref(transferPaymentForm).processing) ? " disabled" : ""} type="submit" class="flex-1 py-1 px-3 bg-blue-400 rounded text-white font-bold" data-v-239534a9>`);
       _push(ssrRenderComponent(unref(FontAwesomeIcon), {
         class: "me-2",
         icon: ["fas", "receipt"]
@@ -3362,7 +3440,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
         }),
         _: 1
       }, _parent));
-      _push(`</div><article class="my-7 max-w-2xl mx-auto space-y-12" data-v-20dec48c><section data-v-20dec48c><h2 class="text-4xl text-primary mb-5" data-v-20dec48c>General</h2><ul class="space-y-2" data-v-20dec48c><li data-v-20dec48c><span data-v-20dec48c>Artículo:</span><span data-v-20dec48c><span class="me-2" data-v-20dec48c>${ssrInterpolate(__props.order.item.title)}</span><small class="me-4" data-v-20dec48c>(${ssrInterpolate(__props.order.item.type.name)} años)</small>`);
+      _push(`</div><article class="my-7 max-w-2xl mx-auto space-y-12" data-v-239534a9><section data-v-239534a9><h2 class="text-4xl text-primary mb-5" data-v-239534a9>General</h2><ul class="space-y-2" data-v-239534a9><li data-v-239534a9><span data-v-239534a9>Artículo:</span><span class="flex gap-2 items-center" data-v-239534a9><span class="me-2" data-v-239534a9>${ssrInterpolate(__props.order.item.title)}</span>`);
       _push(ssrRenderComponent(unref(Link), {
         href: `/item/${__props.order.item.id}/edit`,
         class: "text-sm text-white font-bold px-2 py-1 rounded bg-blue-300"
@@ -3378,27 +3456,32 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
         }),
         _: 1
       }, _parent));
-      _push(`</span></li><li data-v-20dec48c><span data-v-20dec48c>Prioridad:</span>`);
+      if (__props.order.item.canva_url) {
+        _push(`<a class="text-sm text-white font-bold px-2 py-1 rounded bg-blue-300"${ssrRenderAttr("href", __props.order.item.canva_url)} target="_blank" data-v-239534a9>Canva</a>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</span></li><li data-v-239534a9><span data-v-239534a9>Prioridad:</span>`);
       if (__props.order.high_priority) {
-        _push(`<span class="text-green-500 font-bold" data-v-20dec48c>Si</span>`);
+        _push(`<span class="text-green-500 font-bold" data-v-239534a9>Si</span>`);
       } else {
-        _push(`<span class="text-red-500 font-bold" data-v-20dec48c>No</span>`);
+        _push(`<span class="text-red-500 font-bold" data-v-239534a9>No</span>`);
       }
-      _push(`</li><li data-v-20dec48c><span data-v-20dec48c>Ubicación en mapa:</span>`);
+      _push(`</li><li data-v-239534a9><span data-v-239534a9>Ubicación en mapa:</span>`);
       if (__props.order.map_ubication) {
-        _push(`<span class="text-green-500 font-bold" data-v-20dec48c>Si</span>`);
+        _push(`<span class="text-green-500 font-bold" data-v-239534a9>Si</span>`);
       } else {
-        _push(`<span class="text-red-500 font-bold" data-v-20dec48c>No</span>`);
+        _push(`<span class="text-red-500 font-bold" data-v-239534a9>No</span>`);
       }
-      _push(`</li><li data-v-20dec48c><span data-v-20dec48c>Confirmación por whatsapp:</span>`);
+      _push(`</li><li data-v-239534a9><span data-v-239534a9>Confirmación por whatsapp:</span>`);
       if (__props.order.whatsapp_confirmation) {
-        _push(`<span class="text-green-500 font-bold" data-v-20dec48c>Si</span>`);
+        _push(`<span class="text-green-500 font-bold" data-v-239534a9>Si</span>`);
       } else {
-        _push(`<span class="text-red-500 font-bold" data-v-20dec48c>No</span>`);
+        _push(`<span class="text-red-500 font-bold" data-v-239534a9>No</span>`);
       }
-      _push(`</li><li data-v-20dec48c><span data-v-20dec48c>Precio final:</span><span class="uppercase" data-v-20dec48c>${ssrInterpolate(__props.order.currency)} ${ssrInterpolate(__props.order.price)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Fecha:</span><span data-v-20dec48c>${ssrInterpolate(new Date(__props.order.created_at).toLocaleString())}</span></li><li data-v-20dec48c><span data-v-20dec48c>Método de pago:</span><span class="uppercase" data-v-20dec48c>${ssrInterpolate(__props.order.payment_method)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Pagado:</span><span class="text-xl flex items-center" data-v-20dec48c>`);
+      _push(`</li><li data-v-239534a9><span data-v-239534a9>Precio final:</span><span class="uppercase" data-v-239534a9>${ssrInterpolate(__props.order.currency)} ${ssrInterpolate(__props.order.price)}</span></li><li data-v-239534a9><span data-v-239534a9>Fecha:</span><span data-v-239534a9>${ssrInterpolate(new Date(__props.order.created_at).toLocaleString())}</span></li><li data-v-239534a9><span data-v-239534a9>Método de pago:</span><span class="uppercase" data-v-239534a9>${ssrInterpolate(__props.order.payment_method)}</span></li><li data-v-239534a9><span data-v-239534a9>Pagado:</span><span class="text-xl flex items-center" data-v-239534a9>`);
       if ((_b = __props.order.payment) == null ? void 0 : _b.receipt_image) {
-        _push(`<a${ssrRenderAttr("href", `/transfer-payment/${props.order.id}/view`)} target="_blank" class="text-xs text-primary underline me-2" data-v-20dec48c>Ver comprobante</a>`);
+        _push(`<a${ssrRenderAttr("href", `/transfer-payment/${props.order.id}/view`)} target="_blank" class="text-xs text-primary underline me-2" data-v-239534a9>Ver comprobante</a>`);
       } else {
         _push(`<!---->`);
       }
@@ -3413,7 +3496,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
           class: "text-red-500"
         }, null, _parent));
       }
-      _push(`</span></li><li data-v-20dec48c><span data-v-20dec48c>Finalizado:</span><span class="text-xl" data-v-20dec48c>`);
+      _push(`</span></li><li data-v-239534a9><span data-v-239534a9>Finalizado:</span><span class="text-xl" data-v-239534a9>`);
       if (__props.order.finished) {
         _push(ssrRenderComponent(unref(FontAwesomeIcon), {
           icon: ["far", "circle-check"],
@@ -3425,7 +3508,7 @@ const _sfc_main$1 = /* @__PURE__ */ Object.assign(__default__, {
           class: "text-red-500"
         }, null, _parent));
       }
-      _push(`</span></li></ul></section><section data-v-20dec48c><h2 class="text-4xl text-primary mb-5" data-v-20dec48c>Evento</h2><ul class="space-y-2" data-v-20dec48c><li data-v-20dec48c><span data-v-20dec48c>Nombre:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.birthday_name)}</span> <small data-v-20dec48c>(${ssrInterpolate(__props.order.birthday_age)} años)</small></li><li data-v-20dec48c><span data-v-20dec48c>Dirección principal:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.birthday_main_address)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Dirección secundaria:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.birthday_secondary_address)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Fecha:</span><span data-v-20dec48c>${ssrInterpolate(new Date(__props.order.birthday_date).toLocaleDateString())}</span></li><li data-v-20dec48c><span data-v-20dec48c>Horario:</span><span data-v-20dec48c>Desde ${ssrInterpolate(__props.order.birthday_from_time.slice(0, 5))} hasta ${ssrInterpolate(__props.order.birthday_to_time.slice(0, 5))}</span></li><li data-v-20dec48c><span data-v-20dec48c>Observación:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.observation)}</span></li></ul></section><section data-v-20dec48c><h2 class="text-4xl text-primary mb-5" data-v-20dec48c>Contacto</h2><ul class="space-y-2" data-v-20dec48c><li data-v-20dec48c><span data-v-20dec48c>Nombre:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.contact_name)}</span></li><li data-v-20dec48c><span data-v-20dec48c>Teléfono:</span><span data-v-20dec48c>${ssrInterpolate(__props.order.contact_number)}</span></li></ul></section></article><!--]-->`);
+      _push(`</span></li></ul></section><section data-v-239534a9><h2 class="text-4xl text-primary mb-5" data-v-239534a9>Evento</h2><ul class="space-y-2" data-v-239534a9><li data-v-239534a9><span data-v-239534a9>Nombre:</span><span data-v-239534a9>${ssrInterpolate(__props.order.birthday_name)}</span> <small data-v-239534a9>(${ssrInterpolate(__props.order.birthday_age)} años)</small></li><li data-v-239534a9><span data-v-239534a9>Dirección principal:</span><span data-v-239534a9>${ssrInterpolate(__props.order.birthday_main_address)}</span></li><li data-v-239534a9><span data-v-239534a9>Dirección secundaria:</span><span data-v-239534a9>${ssrInterpolate(__props.order.birthday_secondary_address)}</span></li><li data-v-239534a9><span data-v-239534a9>Fecha:</span><span data-v-239534a9>${ssrInterpolate(new Date(__props.order.birthday_date).toLocaleDateString())}</span></li><li data-v-239534a9><span data-v-239534a9>Horario:</span><span data-v-239534a9>Desde ${ssrInterpolate(__props.order.birthday_from_time.slice(0, 5))} hasta ${ssrInterpolate(__props.order.birthday_to_time.slice(0, 5))}</span></li><li data-v-239534a9><span data-v-239534a9>Observación:</span><span data-v-239534a9>${ssrInterpolate(__props.order.observation)}</span></li></ul></section><section data-v-239534a9><h2 class="text-4xl text-primary mb-5" data-v-239534a9>Contacto</h2><ul class="space-y-2" data-v-239534a9><li data-v-239534a9><span data-v-239534a9>Nombre:</span><span data-v-239534a9>${ssrInterpolate(__props.order.contact_name)}</span></li><li data-v-239534a9><span data-v-239534a9>Teléfono:</span><span data-v-239534a9>${ssrInterpolate(__props.order.contact_number)}</span></li></ul></section></article><!--]-->`);
     };
   }
 });
@@ -3435,7 +3518,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Orders/Show.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const Show$1 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-20dec48c"]]);
+const Show$1 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-239534a9"]]);
 const __vite_glob_0_19 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Show$1
