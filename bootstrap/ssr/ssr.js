@@ -1,4 +1,4 @@
-import { mergeProps, useSSRContext, withCtx, createTextVNode, unref, toDisplayString, ref, computed, onMounted, onUnmounted, reactive, createVNode, openBlock, createBlock, createCommentVNode, Fragment, renderList, createSSRApp, h } from "vue";
+import { mergeProps, useSSRContext, withCtx, createTextVNode, unref, toDisplayString, ref, computed, onMounted, onUnmounted, reactive, createVNode, openBlock, createBlock, createCommentVNode, Fragment, createSSRApp, h } from "vue";
 import { ssrRenderAttrs, ssrRenderSlot, ssrRenderClass, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrIncludeBooleanAttr, ssrLooseContain, ssrRenderStyle, ssrRenderList } from "vue/server-renderer";
 import { useForm, usePage, Link, createInertiaApp } from "@inertiajs/vue3";
 import axios$1 from "axios";
@@ -1553,50 +1553,25 @@ const _sfc_main$b = {
       _push(ssrRenderComponent(unref(Link), mergeProps({
         href: `/checkout/${__props.id}`,
         as: "article",
-        class: "grid grid-rows-[auto_auto_1fr_auto] gap-3 shadow p-5 rounded cursor-pointer transition-transform hover:-translate-y-2"
+        class: "grid grid-rows-[auto_auto_1fr_auto] gap-1 cursor-pointer transition-transform hover:-translate-y-2"
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex"${_scopeId}><strong class="flex-1"${_scopeId}><span class="me-2"${_scopeId}>${ssrInterpolate(__props.title)}</span><small class="text-primary"${_scopeId}>(${ssrInterpolate(__props.type.name)})</small></strong><span class="flex-initial"${_scopeId}>${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(props[`${unref(page).props.currency.code}_price`])}</span></div><div class="text-xs"${_scopeId}>`);
-            if (__props.tags.length > 0) {
-              _push2(`<ul class="flex"${_scopeId}><!--[-->`);
-              ssrRenderList(__props.tags, (tag) => {
-                _push2(`<li class="px-2 mx-1 bg-primary text-white rounded-full"${_scopeId}>${ssrInterpolate(tag.label)}</li>`);
-              });
-              _push2(`<!--]--></ul>`);
-            } else {
-              _push2(`<p${_scopeId}> Sin tags </p>`);
-            }
-            _push2(`</div><div class="flex items-center justify-center"${_scopeId}><img${ssrRenderAttr("src", `/item/${__props.id}/thumbnail`)} class="max-w-full max-h-[200px]"${_scopeId}></div><button type="button" class="bg-primary text-white py-2 rounded"${_scopeId}> Comprar </button>`);
+            _push2(`<img${ssrRenderAttr("src", `/item/${__props.id}/thumbnail`)} class="max-w-full"${_scopeId}><div class="text-center text-sm"${_scopeId}>${ssrInterpolate(__props.title)} | ${ssrInterpolate(__props.type.name)}</div><div class="text-center text-xl font-bold"${_scopeId}>${ssrInterpolate(unref(page).props.currency.label)} ${ssrInterpolate(props[`${unref(page).props.currency.code}_price`])}</div><div class="px-5"${_scopeId}><button type="button" class="bg-primary text-white rounded w-full py-1"${_scopeId}> Ver </button></div>`);
           } else {
             return [
-              createVNode("div", { class: "flex" }, [
-                createVNode("strong", { class: "flex-1" }, [
-                  createVNode("span", { class: "me-2" }, toDisplayString(__props.title), 1),
-                  createVNode("small", { class: "text-primary" }, "(" + toDisplayString(__props.type.name) + ")", 1)
-                ]),
-                createVNode("span", { class: "flex-initial" }, toDisplayString(unref(page).props.currency.label) + " " + toDisplayString(props[`${unref(page).props.currency.code}_price`]), 1)
-              ]),
-              createVNode("div", { class: "text-xs" }, [
-                __props.tags.length > 0 ? (openBlock(), createBlock("ul", {
-                  key: 0,
-                  class: "flex"
-                }, [
-                  (openBlock(true), createBlock(Fragment, null, renderList(__props.tags, (tag) => {
-                    return openBlock(), createBlock("li", { class: "px-2 mx-1 bg-primary text-white rounded-full" }, toDisplayString(tag.label), 1);
-                  }), 256))
-                ])) : (openBlock(), createBlock("p", { key: 1 }, " Sin tags "))
-              ]),
-              createVNode("div", { class: "flex items-center justify-center" }, [
-                createVNode("img", {
-                  src: `/item/${__props.id}/thumbnail`,
-                  class: "max-w-full max-h-[200px]"
-                }, null, 8, ["src"])
-              ]),
-              createVNode("button", {
-                type: "button",
-                class: "bg-primary text-white py-2 rounded"
-              }, " Comprar ")
+              createVNode("img", {
+                src: `/item/${__props.id}/thumbnail`,
+                class: "max-w-full"
+              }, null, 8, ["src"]),
+              createVNode("div", { class: "text-center text-sm" }, toDisplayString(__props.title) + " | " + toDisplayString(__props.type.name), 1),
+              createVNode("div", { class: "text-center text-xl font-bold" }, toDisplayString(unref(page).props.currency.label) + " " + toDisplayString(props[`${unref(page).props.currency.code}_price`]), 1),
+              createVNode("div", { class: "px-5" }, [
+                createVNode("button", {
+                  type: "button",
+                  class: "bg-primary text-white rounded w-full py-1"
+                }, " Ver ")
+              ])
             ];
           }
         }),
